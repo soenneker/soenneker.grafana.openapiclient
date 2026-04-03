@@ -30,6 +30,22 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string EmbeddedImageTheme { get; set; }
 #endif
+        /// <summary>The footerFontFamily property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FooterFontFamily { get; set; }
+#nullable restore
+#else
+        public string FooterFontFamily { get; set; }
+#endif
+        /// <summary>The footerItems property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem>? FooterItems { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem> FooterItems { get; set; }
+#endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
         /// <summary>The orgId property</summary>
@@ -77,6 +93,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "branding", n => { Branding = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions>(global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions.CreateFromDiscriminatorValue); } },
                 { "embeddedImageTheme", n => { EmbeddedImageTheme = n.GetStringValue(); } },
+                { "footerFontFamily", n => { FooterFontFamily = n.GetStringValue(); } },
+                { "footerItems", n => { FooterItems = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem>(global::Soenneker.Grafana.OpenApiClient.Models.FooterItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "orgId", n => { OrgId = n.GetLongValue(); } },
                 { "pdfDashboardTitleEnabled", n => { PdfDashboardTitleEnabled = n.GetBoolValue(); } },
@@ -95,6 +113,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions>("branding", Branding);
             writer.WriteStringValue("embeddedImageTheme", EmbeddedImageTheme);
+            writer.WriteStringValue("footerFontFamily", FooterFontFamily);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem>("footerItems", FooterItems);
             writer.WriteLongValue("id", Id);
             writer.WriteLongValue("orgId", OrgId);
             writer.WriteBoolValue("pdfDashboardTitleEnabled", PdfDashboardTitleEnabled);
