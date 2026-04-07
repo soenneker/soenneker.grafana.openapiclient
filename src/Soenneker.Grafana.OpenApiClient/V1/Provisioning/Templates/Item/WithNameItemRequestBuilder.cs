@@ -40,6 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.PublicError">When receiving a 409 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item.WithNameItemRequestBuilder.WithNameItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,6 +66,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.PublicError">When receiving a 404 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.NotificationTemplate?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -92,6 +94,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.PublicError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.PublicError">When receiving a 409 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.NotificationTemplate?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.NotificationTemplateContent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -116,6 +119,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item.WithNameItemRequestBuilder.WithNameItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
@@ -135,6 +139,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -155,6 +160,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToPutRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.NotificationTemplateContent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -176,6 +182,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item.WithNameItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item.WithNameItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.Item.WithNameItemRequestBuilder(rawUrl, RequestAdapter);

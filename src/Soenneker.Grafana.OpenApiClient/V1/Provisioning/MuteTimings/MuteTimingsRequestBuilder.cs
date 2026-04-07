@@ -20,6 +20,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
     public partial class MuteTimingsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The export property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Export.ExportRequestBuilder Export
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
@@ -27,6 +28,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.v1.provisioning.muteTimings.item collection</summary>
         /// <param name="position">Mute timing name</param>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.WithNameItemRequestBuilder"/></returns>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.WithNameItemRequestBuilder this[string position]
         {
             get
@@ -59,6 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeInterval>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -85,6 +88,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ValidationError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeInterval?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeInterval body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -108,6 +112,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -128,6 +133,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeInterval body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -149,6 +155,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.MuteTimingsRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.MuteTimingsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.MuteTimingsRequestBuilder(rawUrl, RequestAdapter);

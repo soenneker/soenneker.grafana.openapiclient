@@ -20,6 +20,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints
     public partial class ContactPointsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The export property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export.ExportRequestBuilder Export
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
@@ -27,6 +28,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.v1.provisioning.contactPoints.item collection</summary>
         /// <param name="position">UID is the contact point unique identifier</param>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item.WithUItemRequestBuilder"/></returns>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item.WithUItemRequestBuilder this[string position]
         {
             get
@@ -59,6 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.EmbeddedContactPoint>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.ContactPointsRequestBuilder.ContactPointsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -85,6 +88,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ValidationError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.EmbeddedContactPoint?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.EmbeddedContactPoint body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -108,6 +112,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.ContactPointsRequestBuilder.ContactPointsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
@@ -128,6 +133,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">EmbeddedContactPoint is the contact point type that is usedby grafanas embedded alertmanager implementation.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.EmbeddedContactPoint body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -149,6 +155,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.ContactPointsRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.ContactPointsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.ContactPointsRequestBuilder(rawUrl, RequestAdapter);

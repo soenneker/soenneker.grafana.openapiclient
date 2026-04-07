@@ -39,6 +39,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -64,6 +65,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ValidationError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.Ack?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.EmbeddedContactPoint body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -87,6 +89,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -107,6 +110,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">EmbeddedContactPoint is the contact point type that is usedby grafanas embedded alertmanager implementation.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToPutRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.EmbeddedContactPoint body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -128,6 +132,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item.WithUItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item.WithUItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item.WithUItemRequestBuilder(rawUrl, RequestAdapter);
