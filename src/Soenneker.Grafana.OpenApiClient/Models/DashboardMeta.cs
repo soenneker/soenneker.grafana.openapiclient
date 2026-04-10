@@ -84,8 +84,6 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public bool? IsFolder { get; set; }
         /// <summary>The isSnapshot property</summary>
         public bool? IsSnapshot { get; set; }
-        /// <summary>The isStarred property</summary>
-        public bool? IsStarred { get; set; }
         /// <summary>The provisioned property</summary>
         public bool? Provisioned { get; set; }
         /// <summary>The provisionedExternalId property</summary>
@@ -176,7 +174,6 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "hasAcl", n => { HasAcl = n.GetBoolValue(); } },
                 { "isFolder", n => { IsFolder = n.GetBoolValue(); } },
                 { "isSnapshot", n => { IsSnapshot = n.GetBoolValue(); } },
-                { "isStarred", n => { IsStarred = n.GetBoolValue(); } },
                 { "provisioned", n => { Provisioned = n.GetBoolValue(); } },
                 { "provisionedExternalId", n => { ProvisionedExternalId = n.GetStringValue(); } },
                 { "publicDashboardEnabled", n => { PublicDashboardEnabled = n.GetBoolValue(); } },
@@ -212,7 +209,6 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteBoolValue("hasAcl", HasAcl);
             writer.WriteBoolValue("isFolder", IsFolder);
             writer.WriteBoolValue("isSnapshot", IsSnapshot);
-            writer.WriteBoolValue("isStarred", IsStarred);
             writer.WriteBoolValue("provisioned", Provisioned);
             writer.WriteStringValue("provisionedExternalId", ProvisionedExternalId);
             writer.WriteBoolValue("publicDashboardEnabled", PublicDashboardEnabled);
