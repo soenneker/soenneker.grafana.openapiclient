@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Grafana.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class GrafanaOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class GrafanaOpenApiClientTests : HostedUnitTest
 {
-    public GrafanaOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public GrafanaOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
