@@ -38,7 +38,7 @@ jobs:
         run: dotnet build test/Soenneker.Grafana.OpenApiClient.Tests/Soenneker.Grafana.OpenApiClient.Tests.csproj --configuration Release --no-restore --verbosity minimal
 
       - name: Test
-        run: dotnet test test/Soenneker.Grafana.OpenApiClient.Tests/Soenneker.Grafana.OpenApiClient.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
+        run: dotnet test --project test/Soenneker.Grafana.OpenApiClient.Tests/Soenneker.Grafana.OpenApiClient.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
 
       - name: Pack
         run: dotnet pack src/Soenneker.Grafana.OpenApiClient/Soenneker.Grafana.OpenApiClient.csproj --configuration Release --no-build --no-restore --output . --verbosity minimal
