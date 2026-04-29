@@ -116,6 +116,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #endif
         /// <summary>The updated property</summary>
         public DateTimeOffset? Updated { get; set; }
+        /// <summary>The urls property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem>? Urls { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem> Urls { get; set; }
+#endif
         /// <summary>The userId property</summary>
         public long? UserId { get; set; }
         /// <summary>
@@ -161,6 +169,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "uid", n => { Uid = n.GetStringValue(); } },
                 { "updated", n => { Updated = n.GetDateTimeOffsetValue(); } },
+                { "urls", n => { Urls = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem>(global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "userId", n => { UserId = n.GetLongValue(); } },
             };
         }
@@ -189,6 +198,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("uid", Uid);
             writer.WriteDateTimeOffsetValue("updated", Updated);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem>("urls", Urls);
             writer.WriteLongValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

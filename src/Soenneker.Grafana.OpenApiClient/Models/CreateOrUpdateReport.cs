@@ -100,6 +100,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Subject { get; set; }
 #endif
+        /// <summary>The urls property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem>? Urls { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem> Urls { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateReport"/> and sets the default values.
         /// </summary>
@@ -138,6 +146,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportSchedule>(global::Soenneker.Grafana.OpenApiClient.Models.ReportSchedule.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
+                { "urls", n => { Urls = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem>(global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -160,6 +169,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportSchedule>("schedule", Schedule);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("subject", Subject);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ReportURLItem>("urls", Urls);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
