@@ -23,7 +23,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string HomeDashboardUID { get; set; }
 #endif
-        /// <summary>Selected language (beta)</summary>
+        /// <summary>Selected language</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Language { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public global::Soenneker.Grafana.OpenApiClient.Models.PreferencesQueryHistoryPreference QueryHistory { get; set; }
 #endif
-        /// <summary>Selected locale (beta)</summary>
+        /// <summary>Selected locale (beta)TODO: Will be removed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegionalFormat { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string RegionalFormat { get; set; }
 #endif
-        /// <summary>light, dark, empty is default</summary>
+        /// <summary>user interface theme</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Theme { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Theme { get; set; }
 #endif
-        /// <summary>The timezone selectionTODO: this should use the timezone defined in common</summary>
+        /// <summary>The timezone selection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Timezone { get; set; }
