@@ -23,6 +23,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string HomeDashboardUID { get; set; }
 #endif
+        /// <summary>Explicit home URL (NOTE: this can only be modified in the system settings)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HomeURL { get; set; }
+#nullable restore
+#else
+        public string HomeURL { get; set; }
+#endif
         /// <summary>Selected language</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,6 +105,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "homeDashboardUID", n => { HomeDashboardUID = n.GetStringValue(); } },
+                { "homeURL", n => { HomeURL = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "navbar", n => { Navbar = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PreferencesNavbarPreference>(global::Soenneker.Grafana.OpenApiClient.Models.PreferencesNavbarPreference.CreateFromDiscriminatorValue); } },
                 { "queryHistory", n => { QueryHistory = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PreferencesQueryHistoryPreference>(global::Soenneker.Grafana.OpenApiClient.Models.PreferencesQueryHistoryPreference.CreateFromDiscriminatorValue); } },
@@ -113,6 +122,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("homeDashboardUID", HomeDashboardUID);
+            writer.WriteStringValue("homeURL", HomeURL);
             writer.WriteStringValue("language", Language);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PreferencesNavbarPreference>("navbar", Navbar);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PreferencesQueryHistoryPreference>("queryHistory", QueryHistory);
