@@ -176,7 +176,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
             [QueryParameter("excludeUid")]
             public string ExcludeUid { get; set; }
 #endif
-            /// <summary>A comma separated list of folder ID(s) to filter the elements by.Deprecated: Use FolderFilterUIDs instead.</summary>
+            /// <summary>&quot;A comma separated list of folder ID(s) to filter the elements by.Deprecated: Use FolderFilterUIDs instead.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("folderFilter")]

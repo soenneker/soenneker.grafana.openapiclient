@@ -53,7 +53,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
         {
         }
         /// <summary>
-        /// Returns all org users within the current organization. Accessible to users with org admin role.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.
+        /// &quot;Returns all org users within the current organization. Accessible to users with org admin role.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.&quot;
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -81,7 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds a global user to the current organization.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:add` with scope `users:*`.
+        /// &quot;Adds a global user to the current organization.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:add` with scope `users:*`.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="body">The request body</param>
@@ -110,7 +110,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns all org users within the current organization. Accessible to users with org admin role.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.
+        /// &quot;Returns all org users within the current organization. Accessible to users with org admin role.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -129,7 +129,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
             return requestInfo;
         }
         /// <summary>
-        /// Adds a global user to the current organization.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:add` with scope `users:*`.
+        /// &quot;Adds a global user to the current organization.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:add` with scope `users:*`.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -160,7 +160,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
             return new global::Soenneker.Grafana.OpenApiClient.Org.Users.UsersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns all org users within the current organization. Accessible to users with org admin role.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.
+        /// &quot;Returns all org users within the current organization. Accessible to users with org admin role.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersRequestBuilderGetQueryParameters 

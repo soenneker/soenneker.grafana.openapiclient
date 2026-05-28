@@ -3,8 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Grafana.OpenApiClient.Licensing.Check;
-using Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissions;
-using Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissionsCsv;
 using Soenneker.Grafana.OpenApiClient.Licensing.RefreshStats;
 using Soenneker.Grafana.OpenApiClient.Licensing.Token;
 using System.Collections.Generic;
@@ -23,16 +21,6 @@ namespace Soenneker.Grafana.OpenApiClient.Licensing
         public global::Soenneker.Grafana.OpenApiClient.Licensing.Check.CheckRequestBuilder Check
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Licensing.Check.CheckRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The customPermissions property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissions.CustomPermissionsRequestBuilder CustomPermissions
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissions.CustomPermissionsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The customPermissionsCsv property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissionsCsv.CustomPermissionsCsvRequestBuilder CustomPermissionsCsv
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissionsCsv.CustomPermissionsCsvRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The refreshStats property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Licensing.RefreshStats.RefreshStatsRequestBuilder RefreshStats

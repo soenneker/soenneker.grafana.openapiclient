@@ -17,12 +17,12 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json? Dashboard { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardRequest_dashboard? Dashboard { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json Dashboard { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardRequest_dashboard Dashboard { get; set; }
 #endif
-        /// <summary>Deprecated: use FolderUID instead</summary>
+        /// <summary>&quot;Deprecated: use FolderUID instead&quot;</summary>
         public long? FolderId { get; set; }
         /// <summary>The folderUid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dashboard", n => { Dashboard = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>(global::Soenneker.Grafana.OpenApiClient.Models.Json.CreateFromDiscriminatorValue); } },
+                { "dashboard", n => { Dashboard = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardRequest_dashboard>(global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardRequest_dashboard.CreateFromDiscriminatorValue); } },
                 { "folderId", n => { FolderId = n.GetLongValue(); } },
                 { "folderUid", n => { FolderUid = n.GetStringValue(); } },
                 { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardInput>(global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardInput.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -99,7 +99,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>("dashboard", Dashboard);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardRequest_dashboard>("dashboard", Dashboard);
             writer.WriteLongValue("folderId", FolderId);
             writer.WriteStringValue("folderUid", FolderUid);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ImportDashboardInput>("inputs", Inputs);

@@ -24,7 +24,6 @@ using Soenneker.Grafana.OpenApiClient.Licensing;
 using Soenneker.Grafana.OpenApiClient.Logout;
 using Soenneker.Grafana.OpenApiClient.Org;
 using Soenneker.Grafana.OpenApiClient.Orgs;
-using Soenneker.Grafana.OpenApiClient.Playlists;
 using Soenneker.Grafana.OpenApiClient.Public;
 using Soenneker.Grafana.OpenApiClient.QueryHistory;
 using Soenneker.Grafana.OpenApiClient.RecordingRules;
@@ -141,11 +140,6 @@ namespace Soenneker.Grafana.OpenApiClient
         public global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsRequestBuilder Orgs
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The playlists property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Playlists.PlaylistsRequestBuilder Playlists
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Playlists.PlaylistsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The public property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Public.PublicRequestBuilder Public

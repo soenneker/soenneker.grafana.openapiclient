@@ -2,12 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Grafana.OpenApiClient.Dashboards.Db;
-using Soenneker.Grafana.OpenApiClient.Dashboards.Home;
 using Soenneker.Grafana.OpenApiClient.Dashboards.Import;
 using Soenneker.Grafana.OpenApiClient.Dashboards.Interpolate;
 using Soenneker.Grafana.OpenApiClient.Dashboards.PublicDashboards;
-using Soenneker.Grafana.OpenApiClient.Dashboards.Tags;
 using Soenneker.Grafana.OpenApiClient.Dashboards.Uid;
 using System.Collections.Generic;
 using System.IO;
@@ -21,16 +18,6 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DashboardsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The db property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Db.DbRequestBuilder Db
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Db.DbRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The home property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Home.HomeRequestBuilder Home
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Home.HomeRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The import property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.Import.ImportRequestBuilder Import
         {
@@ -45,11 +32,6 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.PublicDashboards.PublicDashboardsRequestBuilder PublicDashboards
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.PublicDashboards.PublicDashboardsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The tags property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Tags.TagsRequestBuilder Tags
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Tags.TagsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The uid property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.UidRequestBuilder Uid

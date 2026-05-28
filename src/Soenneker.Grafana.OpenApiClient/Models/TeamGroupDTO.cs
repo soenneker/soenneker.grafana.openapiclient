@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string TeamUid { get; set; }
 #endif
-        /// <summary>Deprecated: always empty; no per-entry id.</summary>
+        /// <summary>&quot;Deprecated: always empty; no per-entry id.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Uid { get; set; }

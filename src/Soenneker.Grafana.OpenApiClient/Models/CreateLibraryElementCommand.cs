@@ -15,7 +15,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of the folder where the library element is stored.Deprecated: use FolderUID instead</summary>
+        /// <summary>&quot;ID of the folder where the library element is stored.Deprecated: use FolderUID instead&quot;</summary>
         public long? FolderId { get; set; }
         /// <summary>UID of the folder where the library element is stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

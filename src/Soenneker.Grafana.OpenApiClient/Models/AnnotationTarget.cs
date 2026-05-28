@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
     /// <summary>
-    /// TODO: this should be a regular DataQuery that depends on the selected dashboardthese match the properties of the &quot;grafana&quot; datasouce that is default in most dashboards
+    /// &quot;TODO: this should be a regular DataQuery that depends on the selected dashboardthese match the properties of the \&quot;grafana\&quot; datasouce that is default in most dashboards&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AnnotationTarget : IAdditionalDataHolder, IParsable

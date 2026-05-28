@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards
 {
     /// <summary>
-    /// Builds and executes requests for operations under \dashboards\uid\{dashboardU-id}\public-dashboards
+    /// Builds and executes requests for operations under \dashboards\uid\{dashboardUid}\public-dashboards
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublicDashboardsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PublicDashboardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}/public-dashboards", pathParameters)
+        public PublicDashboardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}/public-dashboards", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PublicDashboardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}/public-dashboards", rawUrl)
+        public PublicDashboardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}/public-dashboards", rawUrl)
         {
         }
         /// <summary>

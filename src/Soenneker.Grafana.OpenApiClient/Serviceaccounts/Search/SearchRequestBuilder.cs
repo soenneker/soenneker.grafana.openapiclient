@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Search
         {
         }
         /// <summary>
-        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:*`
+        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:*`&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SearchOrgServiceAccountsResult"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Search
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SearchOrgServiceAccountsResult>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SearchOrgServiceAccountsResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:*`
+        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:*`&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -89,7 +89,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Search
             return new global::Soenneker.Grafana.OpenApiClient.Serviceaccounts.Search.SearchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:*`
+        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:*`&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 

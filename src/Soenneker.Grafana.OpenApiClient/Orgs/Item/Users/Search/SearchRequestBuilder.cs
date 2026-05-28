@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Search
         {
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SearchOrgUsersQueryResult"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Search
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SearchOrgUsersQueryResult>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SearchOrgUsersQueryResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \dashboards\uid\{dashboardU-id}\public-dashboards\{uid}
+    /// Builds and executes requests for operations under \dashboards\uid\{dashboardUid}\public-dashboards\{uid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithUItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}/public-dashboards/{uid}", pathParameters)
+        public WithUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}/public-dashboards/{uid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}/public-dashboards/{uid}", rawUrl)
+        public WithUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}/public-dashboards/{uid}", rawUrl)
         {
         }
         /// <summary>

@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Ds.Query
         {
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:query`.
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:query`.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.QueryDataResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Grafana.OpenApiClient.Ds.Query
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.QueryDataResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.QueryDataResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:query`.
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:query`.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

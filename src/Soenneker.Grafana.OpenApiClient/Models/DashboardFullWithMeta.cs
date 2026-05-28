@@ -17,10 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json? Dashboard { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DashboardFullWithMeta_dashboard? Dashboard { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json Dashboard { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DashboardFullWithMeta_dashboard Dashboard { get; set; }
 #endif
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dashboard", n => { Dashboard = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>(global::Soenneker.Grafana.OpenApiClient.Models.Json.CreateFromDiscriminatorValue); } },
+                { "dashboard", n => { Dashboard = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DashboardFullWithMeta_dashboard>(global::Soenneker.Grafana.OpenApiClient.Models.DashboardFullWithMeta_dashboard.CreateFromDiscriminatorValue); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DashboardMeta>(global::Soenneker.Grafana.OpenApiClient.Models.DashboardMeta.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>("dashboard", Dashboard);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DashboardFullWithMeta_dashboard>("dashboard", Dashboard);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DashboardMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }

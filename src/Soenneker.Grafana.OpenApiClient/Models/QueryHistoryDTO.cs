@@ -37,10 +37,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The queries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json? Queries { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO_queries? Queries { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json Queries { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO_queries Queries { get; set; }
 #endif
         /// <summary>The starred property</summary>
         public bool? Starred { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetLongValue(); } },
                 { "createdBy", n => { CreatedBy = n.GetLongValue(); } },
                 { "datasourceUid", n => { DatasourceUid = n.GetStringValue(); } },
-                { "queries", n => { Queries = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>(global::Soenneker.Grafana.OpenApiClient.Models.Json.CreateFromDiscriminatorValue); } },
+                { "queries", n => { Queries = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO_queries>(global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO_queries.CreateFromDiscriminatorValue); } },
                 { "starred", n => { Starred = n.GetBoolValue(); } },
                 { "uid", n => { Uid = n.GetStringValue(); } },
             };
@@ -97,7 +97,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("createdAt", CreatedAt);
             writer.WriteLongValue("createdBy", CreatedBy);
             writer.WriteStringValue("datasourceUid", DatasourceUid);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>("queries", Queries);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO_queries>("queries", Queries);
             writer.WriteBoolValue("starred", Starred);
             writer.WriteStringValue("uid", Uid);
             writer.WriteAdditionalData(AdditionalData);

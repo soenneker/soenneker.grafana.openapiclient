@@ -7,7 +7,6 @@ using Soenneker.Grafana.OpenApiClient.Models;
 using Soenneker.Grafana.OpenApiClient.Reports.Dashboards;
 using Soenneker.Grafana.OpenApiClient.Reports.Email;
 using Soenneker.Grafana.OpenApiClient.Reports.Images;
-using Soenneker.Grafana.OpenApiClient.Reports.Item;
 using Soenneker.Grafana.OpenApiClient.Reports.Render;
 using Soenneker.Grafana.OpenApiClient.Reports.Settings;
 using Soenneker.Grafana.OpenApiClient.Reports.TestEmail;
@@ -53,19 +52,6 @@ namespace Soenneker.Grafana.OpenApiClient.Reports
         public global::Soenneker.Grafana.OpenApiClient.Reports.TestEmail.TestEmailRequestBuilder TestEmail
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Reports.TestEmail.TestEmailRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.reports.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Reports.Item.ReportsItemRequestBuilder"/></returns>
-        [Obsolete("")]
-        public global::Soenneker.Grafana.OpenApiClient.Reports.Item.ReportsItemRequestBuilder this[long position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Reports.Item.ReportsItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Reports.ReportsRequestBuilder"/> and sets the default values.

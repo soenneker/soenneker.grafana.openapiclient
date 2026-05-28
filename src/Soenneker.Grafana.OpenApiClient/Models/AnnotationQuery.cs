@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
     /// <summary>
-    /// TODO docsFROM: AnnotationQuery in grafana-data/src/types/annotations.ts
+    /// &quot;TODO docsFROM: AnnotationQuery in grafana-data/src/types/annotations.ts&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AnnotationQuery : IAdditionalDataHolder, IParsable
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Placement { get; set; }
 #endif
-        /// <summary>TODO: this should be a regular DataQuery that depends on the selected dashboardthese match the properties of the &quot;grafana&quot; datasouce that is default in most dashboards</summary>
+        /// <summary>&quot;TODO: this should be a regular DataQuery that depends on the selected dashboardthese match the properties of the \&quot;grafana\&quot; datasouce that is default in most dashboards&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.AnnotationTarget? Target { get; set; }

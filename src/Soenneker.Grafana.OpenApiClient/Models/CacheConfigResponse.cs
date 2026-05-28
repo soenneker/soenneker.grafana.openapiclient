@@ -26,7 +26,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string DataSourceUID { get; set; }
 #endif
-        /// <summary>These are returned by the HTTP API, but are managed internally - read-onlyNote: &apos;created&apos; and &apos;updated&apos; are special properties managed automatically by xorm, but we are setting them manually</summary>
+        /// <summary>&quot;These are returned by the HTTP API, but are managed internally - read-onlyNote: &apos;created&apos; and &apos;updated&apos; are special properties managed automatically by xorm, but we are setting them manually&quot;</summary>
         public long? DefaultTTLMs { get; set; }
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }

@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #endif
         /// <summary>The created property</summary>
         public long? Created { get; set; }
-        /// <summary>Deprecated: Use DashboardUID and OrgID instead</summary>
+        /// <summary>&quot;Deprecated: Use DashboardUID and OrgID instead&quot;</summary>
         public long? DashboardId { get; set; }
         /// <summary>The dashboardUID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,10 +47,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json? Data { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.Annotation_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json Data { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.Annotation_data Data { get; set; }
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -151,7 +151,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "created", n => { Created = n.GetLongValue(); } },
                 { "dashboardId", n => { DashboardId = n.GetLongValue(); } },
                 { "dashboardUID", n => { DashboardUID = n.GetStringValue(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>(global::Soenneker.Grafana.OpenApiClient.Models.Json.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Annotation_data>(global::Soenneker.Grafana.OpenApiClient.Models.Annotation_data.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "login", n => { Login = n.GetStringValue(); } },
@@ -180,7 +180,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("created", Created);
             writer.WriteLongValue("dashboardId", DashboardId);
             writer.WriteStringValue("dashboardUID", DashboardUID);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Annotation_data>("data", Data);
             writer.WriteStringValue("email", Email);
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("login", Login);

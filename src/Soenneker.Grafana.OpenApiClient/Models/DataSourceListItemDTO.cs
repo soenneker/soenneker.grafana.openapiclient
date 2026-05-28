@@ -39,10 +39,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The jsonData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json? JsonData { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO_jsonData? JsonData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json JsonData { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO_jsonData JsonData { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,7 +134,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "database", n => { Database = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "isDefault", n => { IsDefault = n.GetBoolValue(); } },
-                { "jsonData", n => { JsonData = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>(global::Soenneker.Grafana.OpenApiClient.Models.Json.CreateFromDiscriminatorValue); } },
+                { "jsonData", n => { JsonData = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO_jsonData>(global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO_jsonData.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "orgId", n => { OrgId = n.GetLongValue(); } },
                 { "readOnly", n => { ReadOnly = n.GetBoolValue(); } },
@@ -158,7 +158,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("database", Database);
             writer.WriteLongValue("id", Id);
             writer.WriteBoolValue("isDefault", IsDefault);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>("jsonData", JsonData);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO_jsonData>("jsonData", JsonData);
             writer.WriteStringValue("name", Name);
             writer.WriteLongValue("orgId", OrgId);
             writer.WriteBoolValue("readOnly", ReadOnly);

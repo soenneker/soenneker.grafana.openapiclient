@@ -59,7 +59,7 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules
         {
         }
         /// <summary>
-        /// Lists all rules in the database: active or deleted.
+        /// &quot;Lists all rules in the database: active or deleted.&quot;
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.RecordingRuleJSON&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -151,7 +151,7 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RecordingRuleJSON>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RecordingRuleJSON.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all rules in the database: active or deleted.
+        /// &quot;Lists all rules in the database: active or deleted.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -23,7 +23,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string HomeDashboardUID { get; set; }
 #endif
-        /// <summary>Explicit home URL (NOTE: this can only be modified in the system settings)</summary>
+        /// <summary>&quot;Explicit home URL (NOTE: this can only be modified in the system settings)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HomeURL { get; set; }

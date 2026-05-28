@@ -38,7 +38,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public bool? IsRegion { get; set; }
         /// <summary>The panelId property</summary>
         public long? PanelId { get; set; }
-        /// <summary>TODO docsFROM: AnnotationQuery in grafana-data/src/types/annotations.ts</summary>
+        /// <summary>&quot;TODO docsFROM: AnnotationQuery in grafana-data/src/types/annotations.ts&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.AnnotationQuery? Source { get; set; }

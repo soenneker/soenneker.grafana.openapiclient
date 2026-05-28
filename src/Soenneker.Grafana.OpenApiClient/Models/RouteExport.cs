@@ -57,7 +57,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match Match { get; set; }
 #endif
-        /// <summary>Matchers is a slice of Matchers that is sortable, implements Stringer, andprovides a Matches method to match a LabelSet against all Matchers in theslice. Note that some users of Matchers might require it to be sorted.</summary>
+        /// <summary>Matchers matchers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Grafana.OpenApiClient.Models.Matcher>? Matchers { get; set; }
@@ -68,10 +68,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The match_re property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.MatchRegexps? MatchRe { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match_re? MatchRe { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.MatchRegexps MatchRe { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match_re MatchRe { get; set; }
 #endif
         /// <summary>The mute_time_intervals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,7 +144,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "group_interval", n => { GroupInterval = n.GetStringValue(); } },
                 { "group_wait", n => { GroupWait = n.GetStringValue(); } },
                 { "match", n => { Match = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match>(global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match.CreateFromDiscriminatorValue); } },
-                { "match_re", n => { MatchRe = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.MatchRegexps>(global::Soenneker.Grafana.OpenApiClient.Models.MatchRegexps.CreateFromDiscriminatorValue); } },
+                { "match_re", n => { MatchRe = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match_re>(global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match_re.CreateFromDiscriminatorValue); } },
                 { "matchers", n => { Matchers = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Matcher>(global::Soenneker.Grafana.OpenApiClient.Models.Matcher.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "mute_time_intervals", n => { MuteTimeIntervals = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "object_matchers", n => { ObjectMatchers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -167,7 +167,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("group_wait", GroupWait);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match>("match", Match);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Matcher>("matchers", Matchers);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.MatchRegexps>("match_re", MatchRe);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.RouteExport_match_re>("match_re", MatchRe);
             writer.WriteCollectionOfPrimitiveValues<string>("mute_time_intervals", MuteTimeIntervals);
             writer.WriteObjectValue<UntypedNode>("object_matchers", ObjectMatchers);
             writer.WriteStringValue("receiver", Receiver);

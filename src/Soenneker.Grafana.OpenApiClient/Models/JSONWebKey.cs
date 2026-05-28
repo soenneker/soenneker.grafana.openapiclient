@@ -58,10 +58,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>Key is the Go in-memory representation of this key. It must have oneof these types:ed25519.PublicKeyed25519.PrivateKeyecdsa.PublicKeyecdsa.PrivateKeyrsa.PublicKeyrsa.PrivateKey[]byte (a symmetric key)When marshaling this JSONWebKey into JSON, the &quot;kty&quot; header parameterwill be automatically set based on the type of this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Key { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.JSONWebKey_Key? Key { get; set; }
 #nullable restore
 #else
-        public UntypedNode Key { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.JSONWebKey_Key Key { get; set; }
 #endif
         /// <summary>Key identifier, parsed from `kid` header.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "CertificateThumbprintSHA256", n => { CertificateThumbprintSHA256 = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "Certificates", n => { Certificates = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Certificate>(global::Soenneker.Grafana.OpenApiClient.Models.Certificate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "CertificatesURL", n => { CertificatesURL = n.GetStringValue(); } },
-                { "Key", n => { Key = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "Key", n => { Key = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.JSONWebKey_Key>(global::Soenneker.Grafana.OpenApiClient.Models.JSONWebKey_Key.CreateFromDiscriminatorValue); } },
                 { "KeyID", n => { KeyID = n.GetStringValue(); } },
                 { "Use", n => { Use = n.GetStringValue(); } },
             };
@@ -126,7 +126,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("CertificatesURL", CertificatesURL);
             writer.WriteCollectionOfPrimitiveValues<byte?>("CertificateThumbprintSHA1", CertificateThumbprintSHA1);
             writer.WriteCollectionOfPrimitiveValues<byte?>("CertificateThumbprintSHA256", CertificateThumbprintSHA256);
-            writer.WriteObjectValue<UntypedNode>("Key", Key);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.JSONWebKey_Key>("Key", Key);
             writer.WriteStringValue("KeyID", KeyID);
             writer.WriteStringValue("Use", Use);
             writer.WriteAdditionalData(AdditionalData);

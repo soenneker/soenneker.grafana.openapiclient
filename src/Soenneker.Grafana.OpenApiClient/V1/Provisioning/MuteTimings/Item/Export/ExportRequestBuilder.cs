@@ -39,7 +39,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Expor
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.PermissionDenied">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Export.AlertingFileExport403Error">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Export.ExportRequestBuilder.ExportRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Expor
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "403", global::Soenneker.Grafana.OpenApiClient.Models.PermissionDenied.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Export.AlertingFileExport403Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

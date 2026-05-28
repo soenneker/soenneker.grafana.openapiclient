@@ -26,10 +26,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The Value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Value { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue_Value? Value { get; set; }
 #nullable restore
 #else
-        public UntypedNode Value { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue_Value Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Type", n => { Type = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
-                { "Value", n => { Value = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "Value", n => { Value = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue_Value>(global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue_Value.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<long?>("Type", Type);
-            writer.WriteObjectValue<UntypedNode>("Value", Value);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue_Value>("Value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

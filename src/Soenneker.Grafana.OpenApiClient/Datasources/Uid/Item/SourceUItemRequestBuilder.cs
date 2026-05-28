@@ -58,7 +58,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
         {
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -87,7 +87,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.DataSource"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -118,7 +118,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.DataSource>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DataSource.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Similar to creating a data source, `password` and `basicAuthPassword` should be defined undersecureJsonData in order to be stored securely as an encrypted blob in the database. Then, theencrypted fields are listed under secureJsonFields section in the response.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).
+        /// &quot;Similar to creating a data source, `password` and `basicAuthPassword` should be defined undersecureJsonData in order to be stored securely as an encrypted blob in the database. Then, theencrypted fields are listed under secureJsonFields section in the response.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse"/></returns>
         /// <param name="body">Also acts as api DTO</param>
@@ -149,7 +149,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -168,7 +168,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
             return requestInfo;
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -187,7 +187,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
             return requestInfo;
         }
         /// <summary>
-        /// Similar to creating a data source, `password` and `basicAuthPassword` should be defined undersecureJsonData in order to be stored securely as an encrypted blob in the database. Then, theencrypted fields are listed under secureJsonFields section in the response.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).
+        /// &quot;Similar to creating a data source, `password` and `basicAuthPassword` should be defined undersecureJsonData in order to be stored securely as an encrypted blob in the database. Then, theencrypted fields are listed under secureJsonFields section in the response.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Also acts as api DTO</param>

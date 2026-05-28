@@ -18,7 +18,6 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.v1.provisioning.folder.item.ruleGroups.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups.Item.WithGroupItemRequestBuilder"/></returns>
-        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups.Item.WithGroupItemRequestBuilder this[string position]
         {
             get

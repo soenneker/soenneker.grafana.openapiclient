@@ -16,7 +16,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The extra property</summary>
+        /// <summary>Extra Additional information about the error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.PublicError_extra? Extra { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => MessageEscaped ?? string.Empty; }
-        /// <summary>The message property</summary>
+        /// <summary>Message A human readable message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MessageEscaped { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string MessageEscaped { get; set; }
 #endif
-        /// <summary>The messageId property</summary>
+        /// <summary>MessageID A unique identifier for the error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MessageId { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string MessageId { get; set; }
 #endif
-        /// <summary>The statusCode property</summary>
+        /// <summary>StatusCode The HTTP status code returned</summary>
         public long? StatusCode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PublicError"/> and sets the default values.

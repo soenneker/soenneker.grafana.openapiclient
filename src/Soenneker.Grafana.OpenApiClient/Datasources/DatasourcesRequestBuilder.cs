@@ -4,9 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Grafana.OpenApiClient.Datasources.Correlations;
-using Soenneker.Grafana.OpenApiClient.Datasources.Id;
 using Soenneker.Grafana.OpenApiClient.Datasources.Item;
-using Soenneker.Grafana.OpenApiClient.Datasources.Name;
 using Soenneker.Grafana.OpenApiClient.Datasources.Proxy;
 using Soenneker.Grafana.OpenApiClient.Datasources.Uid;
 using Soenneker.Grafana.OpenApiClient.Models;
@@ -27,16 +25,6 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
         public global::Soenneker.Grafana.OpenApiClient.Datasources.Correlations.CorrelationsRequestBuilder Correlations
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Datasources.Correlations.CorrelationsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The id property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Datasources.Id.IdRequestBuilder Id
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Datasources.Id.IdRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The name property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Datasources.Name.NameRequestBuilder Name
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Datasources.Name.NameRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The proxy property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Datasources.Proxy.ProxyRequestBuilder Proxy
@@ -77,7 +65,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
         {
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.&quot;
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -105,7 +93,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// By defining `password` and `basicAuthPassword` under secureJsonData propertyGrafana encrypts them securely as an encrypted blob in the database.The response then lists the encrypted fields under secureJsonFields.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:create`
+        /// &quot;By defining `password` and `basicAuthPassword` under secureJsonData propertyGrafana encrypts them securely as an encrypted blob in the database.The response then lists the encrypted fields under secureJsonFields.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:create`&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse"/></returns>
         /// <param name="body">Also acts as api DTO</param>
@@ -136,7 +124,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.
+        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -155,7 +143,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
             return requestInfo;
         }
         /// <summary>
-        /// By defining `password` and `basicAuthPassword` under secureJsonData propertyGrafana encrypts them securely as an encrypted blob in the database.The response then lists the encrypted fields under secureJsonFields.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:create`
+        /// &quot;By defining `password` and `basicAuthPassword` under secureJsonData propertyGrafana encrypts them securely as an encrypted blob in the database.The response then lists the encrypted fields under secureJsonFields.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:create`&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Also acts as api DTO</param>

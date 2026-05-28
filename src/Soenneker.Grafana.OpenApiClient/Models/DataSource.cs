@@ -20,13 +20,13 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Access { get; set; }
 #endif
-        /// <summary>Metadata contains user accesses for a given resourceEx: map[string]bool{&quot;create&quot;:true, &quot;delete&quot;: true}</summary>
+        /// <summary>&quot;Metadata contains user accesses for a given resourceEx: map[string]bool{\&quot;create\&quot;:true, \&quot;delete\&quot;: true}&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Metadata? AccessControl { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DataSource_accessControl? AccessControl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Metadata AccessControl { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DataSource_accessControl AccessControl { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -55,10 +55,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The jsonData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json? JsonData { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DataSource_jsonData? JsonData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Json JsonData { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.DataSource_jsonData JsonData { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -150,13 +150,13 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access", n => { Access = n.GetStringValue(); } },
-                { "accessControl", n => { AccessControl = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Metadata>(global::Soenneker.Grafana.OpenApiClient.Models.Metadata.CreateFromDiscriminatorValue); } },
+                { "accessControl", n => { AccessControl = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DataSource_accessControl>(global::Soenneker.Grafana.OpenApiClient.Models.DataSource_accessControl.CreateFromDiscriminatorValue); } },
                 { "basicAuth", n => { BasicAuth = n.GetBoolValue(); } },
                 { "basicAuthUser", n => { BasicAuthUser = n.GetStringValue(); } },
                 { "database", n => { Database = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "isDefault", n => { IsDefault = n.GetBoolValue(); } },
-                { "jsonData", n => { JsonData = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>(global::Soenneker.Grafana.OpenApiClient.Models.Json.CreateFromDiscriminatorValue); } },
+                { "jsonData", n => { JsonData = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DataSource_jsonData>(global::Soenneker.Grafana.OpenApiClient.Models.DataSource_jsonData.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "orgId", n => { OrgId = n.GetLongValue(); } },
                 { "readOnly", n => { ReadOnly = n.GetBoolValue(); } },
@@ -178,13 +178,13 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access", Access);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Metadata>("accessControl", AccessControl);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DataSource_accessControl>("accessControl", AccessControl);
             writer.WriteBoolValue("basicAuth", BasicAuth);
             writer.WriteStringValue("basicAuthUser", BasicAuthUser);
             writer.WriteStringValue("database", Database);
             writer.WriteLongValue("id", Id);
             writer.WriteBoolValue("isDefault", IsDefault);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Json>("jsonData", JsonData);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.DataSource_jsonData>("jsonData", JsonData);
             writer.WriteStringValue("name", Name);
             writer.WriteLongValue("orgId", OrgId);
             writer.WriteBoolValue("readOnly", ReadOnly);

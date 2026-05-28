@@ -177,7 +177,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AnnotationsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Find annotations for a specified alert rule by its ID.deprecated: AlertID is deprecated and will be removed in future versions. Please use AlertUID instead.</summary>
+            /// <summary>&quot;Find annotations for a specified alert rule by its ID.deprecated: AlertID is deprecated and will be removed in future versions. Please use AlertUID instead.&quot;</summary>
             [QueryParameter("alertId")]
             public long? AlertId { get; set; }
             /// <summary>Find annotations for a specified alert rule by its UID.</summary>

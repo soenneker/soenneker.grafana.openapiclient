@@ -52,7 +52,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #endif
         /// <summary>The expires property</summary>
         public DateTimeOffset? Expires { get; set; }
-        /// <summary>Deprecated: use FolderUID instead</summary>
+        /// <summary>&quot;Deprecated: use FolderUID instead&quot;</summary>
         public long? FolderId { get; set; }
         /// <summary>The folderTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
