@@ -100,7 +100,7 @@ namespace Soenneker.Grafana.OpenApiClient.Reports
         /// <summary>
         /// Available to org admins only and with a valid license.You need to have a permission with action `reports.admin:create`.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Reports.ReportsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateReportResponseResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -111,11 +111,11 @@ namespace Soenneker.Grafana.OpenApiClient.Reports
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Reports.ReportsPostResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateReport body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateReportResponseResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateReport body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Reports.ReportsPostResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateReport body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateReportResponseResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateReport body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -128,7 +128,7 @@ namespace Soenneker.Grafana.OpenApiClient.Reports
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Reports.ReportsPostResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Reports.ReportsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.CreateReportResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.CreateReportResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Available to org admins only and with a valid or expired license.You need to have a permission with action `reports:read` with scope `reports:*`.

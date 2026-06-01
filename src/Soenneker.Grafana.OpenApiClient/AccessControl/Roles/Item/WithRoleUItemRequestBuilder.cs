@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \access-control\roles\{roleUID}
+    /// Builds and executes requests for operations under \access-control\roles\{roleUid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithRoleUItemRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoleUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUID}{?force*,global*}", pathParameters)
+        public WithRoleUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUid}{?force*,global*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoleUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUID}{?force*,global*}", rawUrl)
+        public WithRoleUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUid}{?force*,global*}", rawUrl)
         {
         }
         /// <summary>
@@ -69,18 +69,18 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         /// <summary>
         /// Get a role for the given UID.You need to have a permission with action `roles:read` and scope `roles:*`.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RoleDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -89,12 +89,12 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RoleDto"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,11 +104,11 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateRoleCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateRoleCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateRoleCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateRoleCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -120,7 +120,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only delete a custom role with the same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to delete a custom role which allows to do that.

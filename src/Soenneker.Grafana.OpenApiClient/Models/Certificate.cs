@@ -67,10 +67,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The ExcludedIPRanges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.IPNet>? ExcludedIPRanges { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.IpNet>? ExcludedIPRanges { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.IPNet> ExcludedIPRanges { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.IpNet> ExcludedIPRanges { get; set; }
 #endif
         /// <summary>The ExcludedURIDomains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -175,10 +175,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The PermittedIPRanges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.IPNet>? PermittedIPRanges { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.IpNet>? PermittedIPRanges { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.IPNet> PermittedIPRanges { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.IpNet> PermittedIPRanges { get; set; }
 #endif
         /// <summary>The PermittedURIDomains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -215,10 +215,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The PublicKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Certificate_PublicKey? PublicKey { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey? PublicKey { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Certificate_PublicKey PublicKey { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey PublicKey { get; set; }
 #endif
         /// <summary>The PublicKeyAlgorithm property</summary>
         public long? PublicKeyAlgorithm { get; set; }
@@ -358,7 +358,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "EmailAddresses", n => { EmailAddresses = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "ExcludedDNSDomains", n => { ExcludedDNSDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "ExcludedEmailAddresses", n => { ExcludedEmailAddresses = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "ExcludedIPRanges", n => { ExcludedIPRanges = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IPNet>(global::Soenneker.Grafana.OpenApiClient.Models.IPNet.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ExcludedIPRanges", n => { ExcludedIPRanges = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IpNet>(global::Soenneker.Grafana.OpenApiClient.Models.IpNet.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "ExcludedURIDomains", n => { ExcludedURIDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "ExtKeyUsage", n => { ExtKeyUsage = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "Extensions", n => { Extensions = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Extension>(global::Soenneker.Grafana.OpenApiClient.Models.Extension.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -379,12 +379,12 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "PermittedDNSDomains", n => { PermittedDNSDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "PermittedDNSDomainsCritical", n => { PermittedDNSDomainsCritical = n.GetBoolValue(); } },
                 { "PermittedEmailAddresses", n => { PermittedEmailAddresses = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "PermittedIPRanges", n => { PermittedIPRanges = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IPNet>(global::Soenneker.Grafana.OpenApiClient.Models.IPNet.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "PermittedIPRanges", n => { PermittedIPRanges = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IpNet>(global::Soenneker.Grafana.OpenApiClient.Models.IpNet.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "PermittedURIDomains", n => { PermittedURIDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Policies", n => { Policies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "PolicyIdentifiers", n => { PolicyIdentifiers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "PolicyMappings", n => { PolicyMappings = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping>(global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "PublicKey", n => { PublicKey = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Certificate_PublicKey>(global::Soenneker.Grafana.OpenApiClient.Models.Certificate_PublicKey.CreateFromDiscriminatorValue); } },
+                { "PublicKey", n => { PublicKey = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey>(global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey.CreateFromDiscriminatorValue); } },
                 { "PublicKeyAlgorithm", n => { PublicKeyAlgorithm = n.GetLongValue(); } },
                 { "Raw", n => { Raw = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "RawIssuer", n => { RawIssuer = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
@@ -418,7 +418,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("EmailAddresses", EmailAddresses);
             writer.WriteCollectionOfPrimitiveValues<string>("ExcludedDNSDomains", ExcludedDNSDomains);
             writer.WriteCollectionOfPrimitiveValues<string>("ExcludedEmailAddresses", ExcludedEmailAddresses);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IPNet>("ExcludedIPRanges", ExcludedIPRanges);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IpNet>("ExcludedIPRanges", ExcludedIPRanges);
             writer.WriteCollectionOfPrimitiveValues<string>("ExcludedURIDomains", ExcludedURIDomains);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Extension>("Extensions", Extensions);
             writer.WriteCollectionOfPrimitiveValues<long?>("ExtKeyUsage", ExtKeyUsage);
@@ -439,12 +439,12 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("PermittedDNSDomains", PermittedDNSDomains);
             writer.WriteBoolValue("PermittedDNSDomainsCritical", PermittedDNSDomainsCritical);
             writer.WriteCollectionOfPrimitiveValues<string>("PermittedEmailAddresses", PermittedEmailAddresses);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IPNet>("PermittedIPRanges", PermittedIPRanges);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.IpNet>("PermittedIPRanges", PermittedIPRanges);
             writer.WriteCollectionOfPrimitiveValues<string>("PermittedURIDomains", PermittedURIDomains);
             writer.WriteCollectionOfPrimitiveValues<string>("Policies", Policies);
             writer.WriteObjectValue<UntypedNode>("PolicyIdentifiers", PolicyIdentifiers);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping>("PolicyMappings", PolicyMappings);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Certificate_PublicKey>("PublicKey", PublicKey);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey>("PublicKey", PublicKey);
             writer.WriteLongValue("PublicKeyAlgorithm", PublicKeyAlgorithm);
             writer.WriteCollectionOfPrimitiveValues<byte?>("Raw", Raw);
             writer.WriteCollectionOfPrimitiveValues<byte?>("RawIssuer", RawIssuer);

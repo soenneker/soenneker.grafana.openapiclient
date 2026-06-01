@@ -17,14 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.user.stars.dashboard.uid.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboard_uItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboard_uItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("dashboard_uid", position);
-                return new global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboard_uItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("dashboardUid", position);
+                return new global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

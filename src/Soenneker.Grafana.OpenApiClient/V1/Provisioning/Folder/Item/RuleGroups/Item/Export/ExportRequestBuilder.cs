@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups.Item.Export
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\provisioning\folder\{FolderUID}\rule-groups\{Group}\export
+    /// Builds and executes requests for operations under \v1\provisioning\folder\{folderUid}\rule-groups\{group}\export
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExportRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{FolderUID}/rule-groups/{Group}/export{?download*,format*}", pathParameters)
+        public ExportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{folderUid}/rule-groups/{group}/export{?download*,format*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{FolderUID}/rule-groups/{Group}/export{?download*,format*}", rawUrl)
+        public ExportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{folderUid}/rule-groups/{group}/export{?download*,format*}", rawUrl)
         {
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
             public bool? Download { get; set; }
             /// <summary>Format of the downloaded file. Supported yaml, json or hcl. Accept header can also be used, but the query parameter will take precedence.</summary>
             [QueryParameter("format")]
-            public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups.Item.Export.GetFormatQueryParameterType? Format { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.RouteGetAlertRuleGroupExportFormatParameter? Format { get; set; }
         }
     }
 }

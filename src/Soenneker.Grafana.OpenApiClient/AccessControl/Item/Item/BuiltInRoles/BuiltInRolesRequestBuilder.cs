@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.BuiltInRoles
 {
     /// <summary>
-    /// Builds and executes requests for operations under \access-control\{resource}\{resourceID}\builtInRoles
+    /// Builds and executes requests for operations under \access-control\{resource}\{resourceId}\builtInRoles
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BuiltInRolesRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.BuiltInRoles
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BuiltInRolesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceID}/builtInRoles", pathParameters)
+        public BuiltInRolesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceId}/builtInRoles", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.BuiltInRoles
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BuiltInRolesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceID}/builtInRoles", rawUrl)
+        public BuiltInRolesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceId}/builtInRoles", rawUrl)
         {
         }
     }

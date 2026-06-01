@@ -18,10 +18,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO? Result { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO Result { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryResponse"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO>(global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto>(global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

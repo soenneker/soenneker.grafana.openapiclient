@@ -35,14 +35,14 @@ namespace Soenneker.Grafana.OpenApiClient.Admin.Ldap
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.admin.ldap.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Admin.Ldap.Item.WithUser_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Admin.Ldap.Item.WithUser_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Admin.Ldap.Item.WithUserNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Admin.Ldap.Item.WithUserNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_name", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Admin.Ldap.Item.WithUser_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userName", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Admin.Ldap.Item.WithUserNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

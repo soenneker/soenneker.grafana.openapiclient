@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\uid\{sourceU-id}\correlations\{correlationUID}
+    /// Builds and executes requests for operations under \datasources\uid\{sourceU-id}\correlations\{correlationUid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithCorrelationUItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCorrelationUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/correlations/{correlationUID}", pathParameters)
+        public WithCorrelationUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/correlations/{correlationUid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCorrelationUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/correlations/{correlationUID}", rawUrl)
+        public WithCorrelationUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/correlations/{correlationUid}", rawUrl)
         {
         }
         /// <summary>

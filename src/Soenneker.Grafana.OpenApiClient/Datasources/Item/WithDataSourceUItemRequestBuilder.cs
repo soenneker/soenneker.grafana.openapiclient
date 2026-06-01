@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\{dataSourceUID}
+    /// Builds and executes requests for operations under \datasources\{dataSourceUid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithDataSourceUItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDataSourceUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUID}", pathParameters)
+        public WithDataSourceUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUid}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDataSourceUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUID}", rawUrl)
+        public WithDataSourceUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUid}", rawUrl)
         {
         }
     }

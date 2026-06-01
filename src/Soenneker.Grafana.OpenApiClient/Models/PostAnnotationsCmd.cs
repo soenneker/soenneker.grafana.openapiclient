@@ -27,10 +27,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd_data? Data { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmdData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd_data Data { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmdData Data { get; set; }
 #endif
         /// <summary>The panelId property</summary>
         public long? PanelId { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "dashboardId", n => { DashboardId = n.GetLongValue(); } },
                 { "dashboardUID", n => { DashboardUID = n.GetStringValue(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd_data>(global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmdData>(global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmdData.CreateFromDiscriminatorValue); } },
                 { "panelId", n => { PanelId = n.GetLongValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("dashboardId", DashboardId);
             writer.WriteStringValue("dashboardUID", DashboardUID);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmdData>("data", Data);
             writer.WriteLongValue("panelId", PanelId);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteStringValue("text", Text);

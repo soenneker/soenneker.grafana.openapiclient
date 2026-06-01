@@ -17,14 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.QueryHistory.Star
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.queryHistory.star.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.QueryHistory.Star.Item.WithQuery_history_uItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.QueryHistory.Star.Item.WithQuery_history_uItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.QueryHistory.Star.Item.WithQueryHistoryUItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.QueryHistory.Star.Item.WithQueryHistoryUItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("query_history_uid", position);
-                return new global::Soenneker.Grafana.OpenApiClient.QueryHistory.Star.Item.WithQuery_history_uItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("queryHistoryUid", position);
+                return new global::Soenneker.Grafana.OpenApiClient.QueryHistory.Star.Item.WithQueryHistoryUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

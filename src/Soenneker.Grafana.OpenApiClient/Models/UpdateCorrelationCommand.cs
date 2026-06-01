@@ -18,10 +18,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDTO? Config { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDto? Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDTO Config { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDto Config { get; set; }
 #endif
         /// <summary>Optional description of the correlation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDTO>(global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDTO.CreateFromDiscriminatorValue); } },
+                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDto>(global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDto.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDTO>("config", Config);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigUpdateDto>("config", Config);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("type", Type);

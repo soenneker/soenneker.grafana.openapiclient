@@ -21,10 +21,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The teamGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDTO>? TeamGroups { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDto>? TeamGroups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDTO> TeamGroups { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDto> TeamGroups { get; set; }
 #endif
         /// <summary>The totalCount property</summary>
         public long? TotalCount { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "page", n => { Page = n.GetLongValue(); } },
                 { "perPage", n => { PerPage = n.GetLongValue(); } },
-                { "teamGroups", n => { TeamGroups = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDTO>(global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "teamGroups", n => { TeamGroups = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDto>(global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalCount", n => { TotalCount = n.GetLongValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("page", Page);
             writer.WriteLongValue("perPage", PerPage);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDTO>("teamGroups", TeamGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamGroupDto>("teamGroups", TeamGroups);
             writer.WriteLongValue("totalCount", TotalCount);
             writer.WriteAdditionalData(AdditionalData);
         }

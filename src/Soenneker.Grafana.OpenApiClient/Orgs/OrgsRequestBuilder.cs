@@ -26,14 +26,14 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.orgs.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Item.WithOrg_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Orgs.Item.WithOrg_ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Item.WithOrgItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Orgs.Item.WithOrgItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("org_id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Item.WithOrg_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("orgId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Item.WithOrgItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs
         /// <summary>
         /// Search all Organizations.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.OrgDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.OrgDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -64,11 +64,11 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgDTO>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsRequestBuilder.OrgsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgDto>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsRequestBuilder.OrgsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgDTO>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsRequestBuilder.OrgsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgDto>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsRequestBuilder.OrgsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -79,13 +79,13 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.OrgDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.OrgDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.OrgDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.OrgDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>
         /// Only works if [users.allow_org_create](https://grafana.com/docs/grafana/latest/administration/configuration/#allow_org_create) is set.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgResponseResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -95,11 +95,11 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsPostResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgResponseResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsPostResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgResponseResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,7 +111,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsPostResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.CreateOrgResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Search all Organizations.

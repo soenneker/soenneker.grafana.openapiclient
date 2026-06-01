@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache.Disable
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\{dataSourceUID}\cache\disable
+    /// Builds and executes requests for operations under \datasources\{dataSourceUid}\cache\disable
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DisableRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache.Disable
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DisableRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUID}/cache/disable{?dataSourceType*}", pathParameters)
+        public DisableRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUid}/cache/disable{?dataSourceType*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache.Disable
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DisableRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUID}/cache/disable{?dataSourceType*}", rawUrl)
+        public DisableRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUid}/cache/disable{?dataSourceType*}", rawUrl)
         {
         }
         /// <summary>

@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users
 {
     /// <summary>
-    /// Builds and executes requests for operations under \orgs\{org_id}\users
+    /// Builds and executes requests for operations under \orgs\{orgId}\users
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
@@ -26,14 +26,14 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.orgs.item.users.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Item.WithUser_ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Item.WithUserItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Users.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org_id}/users", pathParameters)
+        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{orgId}/users", pathParameters)
         {
         }
         /// <summary>
@@ -49,13 +49,13 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org_id}/users", rawUrl)
+        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{orgId}/users", rawUrl)
         {
         }
         /// <summary>
         /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `org.users:read` with scope `users:*`.&quot;
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -63,11 +63,11 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -77,7 +77,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Users
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

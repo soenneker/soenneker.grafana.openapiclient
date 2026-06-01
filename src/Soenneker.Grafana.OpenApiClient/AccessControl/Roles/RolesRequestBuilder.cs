@@ -26,7 +26,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("roleUID", position);
+                urlTplParams.Add("roleUid", position);
                 return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item.WithRoleUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -49,18 +49,18 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles
         /// <summary>
         /// Gets all existing roles. The response contains all global and organization local roles, for the organization which user is signed in.You need to have a permission with action `roles:read` and scope `roles:*`.The `delegatable` flag reduces the set of roles to only those for which the signed-in user has permissions to assign.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.RoleDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -69,13 +69,13 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>
         /// Creates a new custom role and maps given permissions to that role. Note that roles with the same prefix as Fixed Roles can’t be created.You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.For example, if a user does not have required permissions for creating users, they won’t be able to create a custom role which allows to do that. This is done to prevent escalation of privileges.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RoleDto"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -84,11 +84,11 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateRoleForm body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateRoleForm body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateRoleForm body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateRoleForm body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -99,7 +99,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets all existing roles. The response contains all global and organization local roles, for the organization which user is signed in.You need to have a permission with action `roles:read` and scope `roles:*`.The `delegatable` flag reduces the set of roles to only those for which the signed-in user has permissions to assign.

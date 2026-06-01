@@ -17,10 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The devices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDTO>? Devices { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDto>? Devices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDTO> Devices { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDto> Devices { get; set; }
 #endif
         /// <summary>The page property</summary>
         public long? Page { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "devices", n => { Devices = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDTO>(global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "devices", n => { Devices = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDto>(global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "page", n => { Page = n.GetLongValue(); } },
                 { "perPage", n => { PerPage = n.GetLongValue(); } },
                 { "totalCount", n => { TotalCount = n.GetLongValue(); } },
@@ -66,7 +66,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDTO>("devices", Devices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDto>("devices", Devices);
             writer.WriteLongValue("page", Page);
             writer.WriteLongValue("perPage", PerPage);
             writer.WriteLongValue("totalCount", TotalCount);

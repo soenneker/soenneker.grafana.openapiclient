@@ -17,10 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDTO>? Result { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDto>? Result { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDTO> Result { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDto> Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionsResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "result", n => { Result = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDTO>(global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "result", n => { Result = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDto>(global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDTO>("result", Result);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementConnectionDto>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

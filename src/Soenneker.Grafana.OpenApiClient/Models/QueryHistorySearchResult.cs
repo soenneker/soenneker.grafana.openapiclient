@@ -21,10 +21,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The queryHistory property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO>? QueryHistory { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto>? QueryHistory { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO> QueryHistory { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto> QueryHistory { get; set; }
 #endif
         /// <summary>The totalCount property</summary>
         public long? TotalCount { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "page", n => { Page = n.GetLongValue(); } },
                 { "perPage", n => { PerPage = n.GetLongValue(); } },
-                { "queryHistory", n => { QueryHistory = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO>(global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "queryHistory", n => { QueryHistory = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto>(global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalCount", n => { TotalCount = n.GetLongValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("page", Page);
             writer.WriteLongValue("perPage", PerPage);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDTO>("queryHistory", QueryHistory);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryDto>("queryHistory", QueryHistory);
             writer.WriteLongValue("totalCount", TotalCount);
             writer.WriteAdditionalData(AdditionalData);
         }

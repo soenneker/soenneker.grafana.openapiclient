@@ -17,10 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The annotations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_annotations? Annotations { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty? Annotations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_annotations Annotations { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty Annotations { get; set; }
 #endif
         /// <summary>The condition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,7 +47,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport> Data { get; set; }
 #endif
         /// <summary>The execErrState property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_execErrState? ExecErrState { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportExecErrState? ExecErrState { get; set; }
         /// <summary>A Duration represents the elapsed time between two instantsas an int64 nanosecond count. The representation limits thelargest representable duration to approximately 290 years.</summary>
         public long? For { get; set; }
         /// <summary>The isPaused property</summary>
@@ -57,15 +57,15 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_labels? Labels { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty? Labels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_labels Labels { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty Labels { get; set; }
 #endif
         /// <summary>The missing_series_evals_to_resolve property</summary>
         public long? MissingSeriesEvalsToResolve { get; set; }
         /// <summary>The noDataState property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_noDataState? NoDataState { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportNoDataState? NoDataState { get; set; }
         /// <summary>The notification_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -125,17 +125,17 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "annotations", n => { Annotations = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_annotations>(global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_annotations.CreateFromDiscriminatorValue); } },
+                { "annotations", n => { Annotations = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty>(global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty.CreateFromDiscriminatorValue); } },
                 { "condition", n => { Condition = n.GetStringValue(); } },
                 { "dashboardUid", n => { DashboardUid = n.GetStringValue(); } },
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport>(global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "execErrState", n => { ExecErrState = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_execErrState>(); } },
+                { "execErrState", n => { ExecErrState = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportExecErrState>(); } },
                 { "for", n => { For = n.GetLongValue(); } },
                 { "isPaused", n => { IsPaused = n.GetBoolValue(); } },
                 { "keepFiringFor", n => { KeepFiringFor = n.GetLongValue(); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_labels>(global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_labels.CreateFromDiscriminatorValue); } },
+                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty>(global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty.CreateFromDiscriminatorValue); } },
                 { "missing_series_evals_to_resolve", n => { MissingSeriesEvalsToResolve = n.GetLongValue(); } },
-                { "noDataState", n => { NoDataState = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_noDataState>(); } },
+                { "noDataState", n => { NoDataState = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportNoDataState>(); } },
                 { "notification_settings", n => { NotificationSettings = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport>(global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport.CreateFromDiscriminatorValue); } },
                 { "panelId", n => { PanelId = n.GetLongValue(); } },
                 { "record", n => { Record = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport>(global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport.CreateFromDiscriminatorValue); } },
@@ -150,17 +150,17 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_annotations>("annotations", Annotations);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty>("annotations", Annotations);
             writer.WriteStringValue("condition", Condition);
             writer.WriteStringValue("dashboardUid", DashboardUid);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport>("data", Data);
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_execErrState>("execErrState", ExecErrState);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportExecErrState>("execErrState", ExecErrState);
             writer.WriteLongValue("for", For);
             writer.WriteBoolValue("isPaused", IsPaused);
             writer.WriteLongValue("keepFiringFor", KeepFiringFor);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_labels>("labels", Labels);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty>("labels", Labels);
             writer.WriteLongValue("missing_series_evals_to_resolve", MissingSeriesEvalsToResolve);
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport_noDataState>("noDataState", NoDataState);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportNoDataState>("noDataState", NoDataState);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport>("notification_settings", NotificationSettings);
             writer.WriteLongValue("panelId", PanelId);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport>("record", Record);

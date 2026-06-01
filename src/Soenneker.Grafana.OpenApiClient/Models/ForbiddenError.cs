@@ -24,7 +24,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public global::Soenneker.Grafana.OpenApiClient.Models.PublicError Body { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
-        public override string Message { get => Body?.MessageEscaped ?? string.Empty; }
+        public override string Message { get => base.Message; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError"/> and sets the default values.
         /// </summary>

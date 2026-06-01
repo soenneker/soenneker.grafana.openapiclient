@@ -15,7 +15,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The role property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.UpdateOrgUserCommand_role? Role { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UpdateOrgUserCommandRole? Role { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.UpdateOrgUserCommand"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateOrgUserCommand_role>(); } },
+                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateOrgUserCommandRole>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateOrgUserCommand_role>("role", Role);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateOrgUserCommandRole>("role", Role);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

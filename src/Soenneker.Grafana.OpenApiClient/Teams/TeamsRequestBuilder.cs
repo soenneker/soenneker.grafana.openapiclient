@@ -26,14 +26,14 @@ namespace Soenneker.Grafana.OpenApiClient.Teams
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.teams.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Teams.Item.TeamItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Teams.Item.TeamItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Teams.Item.WithTeamItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Teams.Item.WithTeamItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("team%2Did", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Teams.Item.TeamItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("teamId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Teams.Item.WithTeamItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams
         /// <summary>
         /// Add Team.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Teams.TeamsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamResponseResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -65,11 +65,11 @@ namespace Soenneker.Grafana.OpenApiClient.Teams
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Teams.TeamsPostResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamResponseResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Teams.TeamsPostResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamResponseResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -81,7 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Teams.TeamsPostResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Teams.TeamsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.CreateTeamResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add Team.

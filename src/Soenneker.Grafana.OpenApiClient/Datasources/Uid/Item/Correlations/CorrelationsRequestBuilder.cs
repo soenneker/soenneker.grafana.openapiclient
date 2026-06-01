@@ -26,7 +26,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("correlationUID", position);
+                urlTplParams.Add("correlationUid", position);
                 return new global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations.Item.WithCorrelationUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

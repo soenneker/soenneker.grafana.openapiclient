@@ -21,10 +21,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The teams property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamDTO>? Teams { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamDto>? Teams { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamDTO> Teams { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.TeamDto> Teams { get; set; }
 #endif
         /// <summary>The totalCount property</summary>
         public long? TotalCount { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "page", n => { Page = n.GetLongValue(); } },
                 { "perPage", n => { PerPage = n.GetLongValue(); } },
-                { "teams", n => { Teams = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamDTO>(global::Soenneker.Grafana.OpenApiClient.Models.TeamDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "teams", n => { Teams = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamDto>(global::Soenneker.Grafana.OpenApiClient.Models.TeamDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalCount", n => { TotalCount = n.GetLongValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("page", Page);
             writer.WriteLongValue("perPage", PerPage);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamDTO>("teams", Teams);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.TeamDto>("teams", Teams);
             writer.WriteLongValue("totalCount", TotalCount);
             writer.WriteAdditionalData(AdditionalData);
         }

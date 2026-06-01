@@ -17,14 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.Folders
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.folders.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Folders.Item.WithFolder_uItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Folders.Item.WithFolder_uItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Folders.Item.WithFolderUItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Folders.Item.WithFolderUItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("folder_uid", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Folders.Item.WithFolder_uItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("folderUid", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Folders.Item.WithFolderUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

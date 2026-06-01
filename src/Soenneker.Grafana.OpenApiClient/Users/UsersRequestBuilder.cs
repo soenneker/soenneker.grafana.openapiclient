@@ -32,14 +32,14 @@ namespace Soenneker.Grafana.OpenApiClient.Users
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.users.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUser_ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUserItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Users
         /// <summary>
         /// Returns all users that the authenticated user has permission to view, admin permission required.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -69,11 +69,11 @@ namespace Soenneker.Grafana.OpenApiClient.Users
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -83,7 +83,7 @@ namespace Soenneker.Grafana.OpenApiClient.Users
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

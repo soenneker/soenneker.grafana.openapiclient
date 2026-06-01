@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Teams.Item.Members
 {
     /// <summary>
-    /// Builds and executes requests for operations under \teams\{team-id}\members
+    /// Builds and executes requests for operations under \teams\{teamId}\members
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.teams.item.members.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Teams.Item.Members.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Teams.Item.Members.Item.WithUser_ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Teams.Item.Members.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Teams.Item.Members.Item.WithUserItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Teams.Item.Members.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Teams.Item.Members.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item.Members
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team%2Did}/members", pathParameters)
+        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamId}/members", pathParameters)
         {
         }
         /// <summary>
@@ -43,13 +43,13 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item.Members
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team%2Did}/members", rawUrl)
+        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamId}/members", rawUrl)
         {
         }
         /// <summary>
         /// Get Team Members.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -58,11 +58,11 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item.Members
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDTO>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDto>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDTO>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDto>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -73,7 +73,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item.Members
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.TeamMemberDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

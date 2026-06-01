@@ -23,10 +23,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO>? Users { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto>? Users { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO> Users { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto> Users { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SearchUserQueryResult"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "page", n => { Page = n.GetLongValue(); } },
                 { "perPage", n => { PerPage = n.GetLongValue(); } },
                 { "totalCount", n => { TotalCount = n.GetLongValue(); } },
-                { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO>(global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto>(global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("page", Page);
             writer.WriteLongValue("perPage", PerPage);
             writer.WriteLongValue("totalCount", TotalCount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDTO>("users", Users);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDto>("users", Users);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

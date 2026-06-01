@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\{dataSourceUID}\cache
+    /// Builds and executes requests for operations under \datasources\{dataSourceUid}\cache
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CacheRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CacheRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUID}/cache{?dataSourceType*}", pathParameters)
+        public CacheRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUid}/cache{?dataSourceType*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CacheRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUID}/cache{?dataSourceType*}", rawUrl)
+        public CacheRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/{dataSourceUid}/cache{?dataSourceType*}", rawUrl)
         {
         }
         /// <summary>

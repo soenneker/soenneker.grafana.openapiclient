@@ -18,10 +18,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>Object is a JSON compatible map with string, float, int, bool, []any,or map[string]any children.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Unstructured_Object? Object { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty? Object { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Unstructured_Object Object { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty Object { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.Unstructured"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Object", n => { Object = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Unstructured_Object>(global::Soenneker.Grafana.OpenApiClient.Models.Unstructured_Object.CreateFromDiscriminatorValue); } },
+                { "Object", n => { Object = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty>(global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Unstructured_Object>("Object", Object);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty>("Object", Object);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The orgUsers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO>? OrgUsers { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto>? OrgUsers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO> OrgUsers { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto> OrgUsers { get; set; }
 #endif
         /// <summary>The page property</summary>
         public long? Page { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "orgUsers", n => { OrgUsers = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO>(global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "orgUsers", n => { OrgUsers = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto>(global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "page", n => { Page = n.GetLongValue(); } },
                 { "perPage", n => { PerPage = n.GetLongValue(); } },
                 { "totalCount", n => { TotalCount = n.GetLongValue(); } },
@@ -66,7 +66,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDTO>("orgUsers", OrgUsers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.OrgUserDto>("orgUsers", OrgUsers);
             writer.WriteLongValue("page", Page);
             writer.WriteLongValue("perPage", PerPage);
             writer.WriteLongValue("totalCount", TotalCount);

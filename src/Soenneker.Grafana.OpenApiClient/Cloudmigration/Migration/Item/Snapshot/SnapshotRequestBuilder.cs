@@ -49,7 +49,7 @@ namespace Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot
         /// <summary>
         /// If the snapshot initialization is successful, the snapshot uid is returned.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDTO"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDto"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -59,11 +59,11 @@ namespace Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDTO?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDto?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDTO> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDTO body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDto> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -75,7 +75,7 @@ namespace Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// If the snapshot initialization is successful, the snapshot uid is returned.
@@ -85,11 +85,11 @@ namespace Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDTO body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.CreateSnapshotRequestDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

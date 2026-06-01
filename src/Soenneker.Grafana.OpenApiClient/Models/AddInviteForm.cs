@@ -31,7 +31,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The role property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.AddInviteForm_role? Role { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AddInviteFormRole? Role { get; set; }
         /// <summary>The sendEmail property</summary>
         public bool? SendEmail { get; set; }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "loginOrEmail", n => { LoginOrEmail = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddInviteForm_role>(); } },
+                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddInviteFormRole>(); } },
                 { "sendEmail", n => { SendEmail = n.GetBoolValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("loginOrEmail", LoginOrEmail);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddInviteForm_role>("role", Role);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddInviteFormRole>("role", Role);
             writer.WriteBoolValue("sendEmail", SendEmail);
             writer.WriteAdditionalData(AdditionalData);
         }

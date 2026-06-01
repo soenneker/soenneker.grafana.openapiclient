@@ -7,19 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
-    /// <summary>
-    /// Matcher matcher
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class Matcher : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>is equal</summary>
-        public bool? IsEqual { get; set; }
-        /// <summary>is regex</summary>
-        public bool? IsRegex { get; set; }
-        /// <summary>name</summary>
+        /// <summary>The Name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -27,7 +22,9 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>value</summary>
+        /// <summary>The Type property</summary>
+        public long? Type { get; set; }
+        /// <summary>The Value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }
@@ -60,10 +57,9 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "isEqual", n => { IsEqual = n.GetBoolValue(); } },
-                { "isRegex", n => { IsRegex = n.GetBoolValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetStringValue(); } },
+                { "Name", n => { Name = n.GetStringValue(); } },
+                { "Type", n => { Type = n.GetLongValue(); } },
+                { "Value", n => { Value = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -73,10 +69,9 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("isEqual", IsEqual);
-            writer.WriteBoolValue("isRegex", IsRegex);
-            writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("value", Value);
+            writer.WriteStringValue("Name", Name);
+            writer.WriteLongValue("Type", Type);
+            writer.WriteStringValue("Value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

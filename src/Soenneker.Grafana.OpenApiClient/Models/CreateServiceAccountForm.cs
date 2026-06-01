@@ -25,7 +25,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The role property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.CreateServiceAccountForm_role? Role { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CreateServiceAccountFormRole? Role { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateServiceAccountForm"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "isDisabled", n => { IsDisabled = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateServiceAccountForm_role>(); } },
+                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateServiceAccountFormRole>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("isDisabled", IsDisabled);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateServiceAccountForm_role>("role", Role);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateServiceAccountFormRole>("role", Role);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

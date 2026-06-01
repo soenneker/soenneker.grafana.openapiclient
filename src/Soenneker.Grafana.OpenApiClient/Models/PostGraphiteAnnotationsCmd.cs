@@ -25,10 +25,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmd_tags? Tags { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmdTags? Tags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmd_tags Tags { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmdTags Tags { get; set; }
 #endif
         /// <summary>The what property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +66,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetStringValue(); } },
-                { "tags", n => { Tags = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmd_tags>(global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmd_tags.CreateFromDiscriminatorValue); } },
+                { "tags", n => { Tags = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmdTags>(global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmdTags.CreateFromDiscriminatorValue); } },
                 { "what", n => { What = n.GetStringValue(); } },
                 { "when", n => { When = n.GetLongValue(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("data", Data);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmd_tags>("tags", Tags);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PostGraphiteAnnotationsCmdTags>("tags", Tags);
             writer.WriteStringValue("what", What);
             writer.WriteLongValue("when", When);
             writer.WriteAdditionalData(AdditionalData);

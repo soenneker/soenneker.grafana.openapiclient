@@ -41,10 +41,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The recipients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.EmailDTO>? Recipients { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.EmailDto>? Recipients { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.EmailDTO> Recipients { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.EmailDto> Recipients { get; set; }
 #endif
         /// <summary>The share property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,7 +99,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "createdBy", n => { CreatedBy = n.GetLongValue(); } },
                 { "dashboardUid", n => { DashboardUid = n.GetStringValue(); } },
                 { "isEnabled", n => { IsEnabled = n.GetBoolValue(); } },
-                { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.EmailDTO>(global::Soenneker.Grafana.OpenApiClient.Models.EmailDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.EmailDto>(global::Soenneker.Grafana.OpenApiClient.Models.EmailDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "share", n => { Share = n.GetStringValue(); } },
                 { "timeSelectionEnabled", n => { TimeSelectionEnabled = n.GetBoolValue(); } },
                 { "uid", n => { Uid = n.GetStringValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("createdBy", CreatedBy);
             writer.WriteStringValue("dashboardUid", DashboardUid);
             writer.WriteBoolValue("isEnabled", IsEnabled);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.EmailDTO>("recipients", Recipients);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.EmailDto>("recipients", Recipients);
             writer.WriteStringValue("share", Share);
             writer.WriteBoolValue("timeSelectionEnabled", TimeSelectionEnabled);
             writer.WriteStringValue("uid", Uid);

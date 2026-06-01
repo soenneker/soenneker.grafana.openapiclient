@@ -26,14 +26,14 @@ namespace Soenneker.Grafana.OpenApiClient.QueryHistory
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.queryHistory.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.QueryHistory.Item.WithQuery_history_uItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.QueryHistory.Item.WithQuery_history_uItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.QueryHistory.Item.WithQueryHistoryUItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.QueryHistory.Item.WithQueryHistoryUItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("query_history_uid", position);
-                return new global::Soenneker.Grafana.OpenApiClient.QueryHistory.Item.WithQuery_history_uItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("queryHistoryUid", position);
+                return new global::Soenneker.Grafana.OpenApiClient.QueryHistory.Item.WithQueryHistoryUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -196,7 +196,7 @@ namespace Soenneker.Grafana.OpenApiClient.QueryHistory
 #endif
             /// <summary>Sort method</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.Grafana.OpenApiClient.QueryHistory.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.SearchQueriesSortParameter? Sort { get; set; }
             /// <summary>To range for the query history search</summary>
             [QueryParameter("to")]
             public long? To { get; set; }

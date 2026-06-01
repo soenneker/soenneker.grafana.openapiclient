@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Teams
 {
     /// <summary>
-    /// Builds and executes requests for operations under \access-control\{resource}\{resourceID}\teams
+    /// Builds and executes requests for operations under \access-control\{resource}\{resourceId}\teams
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TeamsRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Teams
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("teamID", position);
+                urlTplParams.Add("teamId", position);
                 return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Teams.Item.WithTeamItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -32,7 +32,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Teams
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TeamsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceID}/teams", pathParameters)
+        public TeamsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceId}/teams", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Teams
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TeamsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceID}/teams", rawUrl)
+        public TeamsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceId}/teams", rawUrl)
         {
         }
     }

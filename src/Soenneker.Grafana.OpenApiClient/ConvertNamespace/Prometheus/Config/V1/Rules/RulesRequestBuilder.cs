@@ -26,7 +26,7 @@ namespace Soenneker.Grafana.OpenApiClient.ConvertNamespace.Prometheus.Config.V1.
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("NamespaceTitle", position);
+                urlTplParams.Add("namespaceTitle", position);
                 return new global::Soenneker.Grafana.OpenApiClient.ConvertNamespace.Prometheus.Config.V1.Rules.Item.WithNamespaceTitleItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

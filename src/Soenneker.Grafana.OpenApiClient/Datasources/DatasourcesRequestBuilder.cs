@@ -44,7 +44,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("dataSourceUID", position);
+                urlTplParams.Add("dataSourceUid", position);
                 return new global::Soenneker.Grafana.OpenApiClient.Datasources.Item.WithDataSourceUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
         /// <summary>
         /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.&quot;
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -75,11 +75,11 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDto>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDto>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -89,13 +89,13 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DataSourceListItemDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>
         /// &quot;By defining `password` and `basicAuthPassword` under secureJsonData propertyGrafana encrypts them securely as an encrypted blob in the database.The response then lists the encrypted fields under secureJsonFields.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:create`&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse"/></returns>
         /// <param name="body">Also acts as api DTO</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,11 +105,11 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.AddDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.AddDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.AddDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.AddDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -121,7 +121,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Datasources.DatasourcesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.&quot;

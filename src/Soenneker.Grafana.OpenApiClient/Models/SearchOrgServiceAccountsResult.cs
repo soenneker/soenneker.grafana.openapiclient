@@ -22,10 +22,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The serviceAccounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDTO>? ServiceAccounts { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto>? ServiceAccounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDTO> ServiceAccounts { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto> ServiceAccounts { get; set; }
 #endif
         /// <summary>It can be used for pagination of the user listE.g. if totalCount is equal to 100 users andthe perpage parameter is set to 10 then there are 10 pages of users.</summary>
         public long? TotalCount { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "page", n => { Page = n.GetLongValue(); } },
                 { "perPage", n => { PerPage = n.GetLongValue(); } },
-                { "serviceAccounts", n => { ServiceAccounts = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDTO>(global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "serviceAccounts", n => { ServiceAccounts = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto>(global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalCount", n => { TotalCount = n.GetLongValue(); } },
             };
         }
@@ -69,7 +69,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("page", Page);
             writer.WriteLongValue("perPage", PerPage);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDTO>("serviceAccounts", ServiceAccounts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto>("serviceAccounts", ServiceAccounts);
             writer.WriteLongValue("totalCount", TotalCount);
             writer.WriteAdditionalData(AdditionalData);
         }

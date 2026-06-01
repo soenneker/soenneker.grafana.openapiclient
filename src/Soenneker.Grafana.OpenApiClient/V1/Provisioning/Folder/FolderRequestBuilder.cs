@@ -23,7 +23,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("FolderUID", position);
+                urlTplParams.Add("folderUid", position);
                 return new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.WithFolderUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

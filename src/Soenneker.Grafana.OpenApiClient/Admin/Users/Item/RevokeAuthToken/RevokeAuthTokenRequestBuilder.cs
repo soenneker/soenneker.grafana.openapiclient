@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Admin.Users.Item.RevokeAuthToken
 {
     /// <summary>
-    /// Builds and executes requests for operations under \admin\users\{user_id}\revoke-auth-token
+    /// Builds and executes requests for operations under \admin\users\{userId}\revoke-auth-token
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RevokeAuthTokenRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.Admin.Users.Item.RevokeAuthToken
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RevokeAuthTokenRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/admin/users/{user_id}/revoke-auth-token", pathParameters)
+        public RevokeAuthTokenRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/admin/users/{userId}/revoke-auth-token", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.Admin.Users.Item.RevokeAuthToken
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RevokeAuthTokenRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/admin/users/{user_id}/revoke-auth-token", rawUrl)
+        public RevokeAuthTokenRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/admin/users/{userId}/revoke-auth-token", rawUrl)
         {
         }
         /// <summary>

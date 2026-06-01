@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \access-control\teams\{teamId}\roles\{roleUID}
+    /// Builds and executes requests for operations under \access-control\teams\{teamId}\roles\{roleUid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithRoleUItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoleUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/teams/{teamId}/roles/{roleUID}", pathParameters)
+        public WithRoleUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/teams/{teamId}/roles/{roleUid}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoleUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/teams/{teamId}/roles/{roleUID}", rawUrl)
+        public WithRoleUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/teams/{teamId}/roles/{roleUid}", rawUrl)
         {
         }
         /// <summary>

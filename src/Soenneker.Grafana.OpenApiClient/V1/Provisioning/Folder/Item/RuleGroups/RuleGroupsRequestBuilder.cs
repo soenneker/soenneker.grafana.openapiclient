@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\provisioning\folder\{FolderUID}\rule-groups
+    /// Builds and executes requests for operations under \v1\provisioning\folder\{folderUid}\rule-groups
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RuleGroupsRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("Group", position);
+                urlTplParams.Add("group", position);
                 return new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups.Item.WithGroupItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -32,7 +32,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RuleGroupsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{FolderUID}/rule-groups", pathParameters)
+        public RuleGroupsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{folderUid}/rule-groups", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RuleGroupsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{FolderUID}/rule-groups", rawUrl)
+        public RuleGroupsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/folder/{folderUid}/rule-groups", rawUrl)
         {
         }
     }

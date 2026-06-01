@@ -38,14 +38,14 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.annotations.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Annotations.Item.WithAnnotation_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Annotations.Item.WithAnnotation_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Annotations.Item.WithAnnotationItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Annotations.Item.WithAnnotationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("annotation_id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Annotations.Item.WithAnnotation_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("annotationId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Annotations.Item.WithAnnotationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -93,7 +93,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         /// <summary>
         /// Creates an annotation in the Grafana database. The dashboardId and panelId fields are optional. If they are not specified then an organization annotation is created and can be queried in any dashboard that adds the Grafana annotations data source. When creating a region annotation include the timeEnd property.The format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.The response for this HTTP request is slightly different in versions prior to v6.4. In prior versions you would also get an endId if you where creating a region. But in 6.4 regions are represented using a single event with time and timeEnd properties.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Annotations.AnnotationsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationResponseResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -103,11 +103,11 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Annotations.AnnotationsPostResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationResponseResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Annotations.AnnotationsPostResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationResponseResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationsCmd body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -119,7 +119,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Annotations.AnnotationsPostResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Annotations.AnnotationsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PostAnnotationResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Starting in Grafana v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.
@@ -230,7 +230,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
             public long? To { get; set; }
             /// <summary>Return alerts or user created annotations</summary>
             [QueryParameter("type")]
-            public global::Soenneker.Grafana.OpenApiClient.Annotations.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.GetAnnotationsTypeParameter? Type { get; set; }
             /// <summary>Limit response to annotations created by specific user.</summary>
             [QueryParameter("userId")]
             public long? UserId { get; set; }

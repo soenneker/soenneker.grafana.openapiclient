@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas
 {
     /// <summary>
-    /// Builds and executes requests for operations under \orgs\{org_id}\quotas
+    /// Builds and executes requests for operations under \orgs\{orgId}\quotas
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class QuotasRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.orgs.item.quotas.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas.Item.WithQuota_targetItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas.Item.WithQuota_targetItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas.Item.WithQuotaTargetItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas.Item.WithQuotaTargetItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("quota_target", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas.Item.WithQuota_targetItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("quotaTarget", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas.Item.WithQuotaTargetItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public QuotasRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org_id}/quotas", pathParameters)
+        public QuotasRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{orgId}/quotas", pathParameters)
         {
         }
         /// <summary>
@@ -43,13 +43,13 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public QuotasRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{org_id}/quotas", rawUrl)
+        public QuotasRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/orgs/{orgId}/quotas", rawUrl)
         {
         }
         /// <summary>
         /// If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.QuotaDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.QuotaDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -58,11 +58,11 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.QuotaDTO>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.QuotaDto>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.QuotaDTO>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.QuotaDto>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -73,7 +73,7 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Item.Quotas
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.QuotaDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.QuotaDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.QuotaDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.QuotaDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

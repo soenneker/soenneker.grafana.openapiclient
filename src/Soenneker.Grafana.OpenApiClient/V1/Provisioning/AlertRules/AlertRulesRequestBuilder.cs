@@ -29,7 +29,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("UID", position);
+                urlTplParams.Add("uid", position);
                 return new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item.WithUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

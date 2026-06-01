@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.LibraryElements.Item.Connections
 {
     /// <summary>
-    /// Builds and executes requests for operations under \library-elements\{library_element_uid}\connections
+    /// Builds and executes requests for operations under \library-elements\{libraryElementUid}\connections
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConnectionsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements.Item.Connections
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConnectionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/library-elements/{library_element_uid}/connections", pathParameters)
+        public ConnectionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/library-elements/{libraryElementUid}/connections", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements.Item.Connections
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConnectionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/library-elements/{library_element_uid}/connections", rawUrl)
+        public ConnectionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/library-elements/{libraryElementUid}/connections", rawUrl)
         {
         }
         /// <summary>

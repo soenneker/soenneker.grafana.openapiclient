@@ -19,10 +19,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExport_settings? Settings { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExportSettings? Settings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExport_settings Settings { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExportSettings Settings { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +66,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "disableResolveMessage", n => { DisableResolveMessage = n.GetBoolValue(); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExport_settings>(global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExport_settings.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExportSettings>(global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExportSettings.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "uid", n => { Uid = n.GetStringValue(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("disableResolveMessage", DisableResolveMessage);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExport_settings>("settings", Settings);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReceiverExportSettings>("settings", Settings);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("uid", Uid);
             writer.WriteAdditionalData(AdditionalData);

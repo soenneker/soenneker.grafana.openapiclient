@@ -26,10 +26,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The queries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand_queries? Queries { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries? Queries { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand_queries Queries { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries Queries { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "datasourceUid", n => { DatasourceUid = n.GetStringValue(); } },
-                { "queries", n => { Queries = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand_queries>(global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand_queries.CreateFromDiscriminatorValue); } },
+                { "queries", n => { Queries = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries>(global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("datasourceUid", DatasourceUid);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand_queries>("queries", Queries);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries>("queries", Queries);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

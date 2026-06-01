@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\provisioning\alert-rules\{UID}
+    /// Builds and executes requests for operations under \v1\provisioning\alert-rules\{uid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithUItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/alert-rules/{UID}", pathParameters)
+        public WithUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/alert-rules/{uid}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/alert-rules/{UID}", rawUrl)
+        public WithUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/provisioning/alert-rules/{uid}", rawUrl)
         {
         }
     }

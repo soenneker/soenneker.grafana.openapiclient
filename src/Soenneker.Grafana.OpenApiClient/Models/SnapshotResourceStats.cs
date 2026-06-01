@@ -17,20 +17,20 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_statuses? Statuses { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsStatusesProperty? Statuses { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_statuses Statuses { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsStatusesProperty Statuses { get; set; }
 #endif
         /// <summary>The total property</summary>
         public long? Total { get; set; }
         /// <summary>The types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_types? Types { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsTypesProperty? Types { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_types Types { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsTypesProperty Types { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats"/> and sets the default values.
@@ -57,9 +57,9 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "statuses", n => { Statuses = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_statuses>(global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_statuses.CreateFromDiscriminatorValue); } },
+                { "statuses", n => { Statuses = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsStatusesProperty>(global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsStatusesProperty.CreateFromDiscriminatorValue); } },
                 { "total", n => { Total = n.GetLongValue(); } },
-                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_types>(global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_types.CreateFromDiscriminatorValue); } },
+                { "types", n => { Types = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsTypesProperty>(global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsTypesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,9 +69,9 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_statuses>("statuses", Statuses);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsStatusesProperty>("statuses", Statuses);
             writer.WriteLongValue("total", Total);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStats_types>("types", Types);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SnapshotResourceStatsTypesProperty>("types", Types);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

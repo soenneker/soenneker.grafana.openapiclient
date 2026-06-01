@@ -39,7 +39,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export.AlertingFileExport403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.RouteGetContactpointsExport403Response">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export.ExportRequestBuilder.ExportRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "403", global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export.AlertingFileExport403Error.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Grafana.OpenApiClient.Models.RouteGetContactpointsExport403Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -98,7 +98,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export
             public bool? Download { get; set; }
             /// <summary>Format of the downloaded file. Supported yaml, json or hcl. Accept header can also be used, but the query parameter will take precedence.</summary>
             [QueryParameter("format")]
-            public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Export.GetFormatQueryParameterType? Format { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.RouteGetContactpointsExportFormatParameter? Format { get; set; }
             /// <summary>Filter by name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -48,7 +48,7 @@ namespace Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot
         /// <summary>
         /// Get metadata about a snapshot, including where it is in its processing and final results.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDTO"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 400 status code</exception>
@@ -57,11 +57,11 @@ namespace Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDTO?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot.Item.WithSnapshotUItemRequestBuilder.WithSnapshotUItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot.Item.WithSnapshotUItemRequestBuilder.WithSnapshotUItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDTO> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot.Item.WithSnapshotUItemRequestBuilder.WithSnapshotUItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDto> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot.Item.WithSnapshotUItemRequestBuilder.WithSnapshotUItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -72,7 +72,7 @@ namespace Soenneker.Grafana.OpenApiClient.Cloudmigration.Migration.Item.Snapshot
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.GetSnapshotResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get metadata about a snapshot, including where it is in its processing and final results.

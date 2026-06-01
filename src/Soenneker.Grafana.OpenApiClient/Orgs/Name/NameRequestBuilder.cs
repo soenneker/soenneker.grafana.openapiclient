@@ -17,14 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.Orgs.Name
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.orgs.name.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Name.Item.WithOrg_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Orgs.Name.Item.WithOrg_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Orgs.Name.Item.WithOrgNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Orgs.Name.Item.WithOrgNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("org_name", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Name.Item.WithOrg_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("orgName", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Orgs.Name.Item.WithOrgNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

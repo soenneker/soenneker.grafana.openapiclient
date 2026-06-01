@@ -28,7 +28,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("resourceID", position);
+                urlTplParams.Add("resourceId", position);
                 return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.WithResourceItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

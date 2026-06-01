@@ -17,14 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements.Name
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.libraryElements.name.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.LibraryElements.Name.Item.WithLibrary_element_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.LibraryElements.Name.Item.WithLibrary_element_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.LibraryElements.Name.Item.WithLibraryElementNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.LibraryElements.Name.Item.WithLibraryElementNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("library_element_name", position);
-                return new global::Soenneker.Grafana.OpenApiClient.LibraryElements.Name.Item.WithLibrary_element_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("libraryElementName", position);
+                return new global::Soenneker.Grafana.OpenApiClient.LibraryElements.Name.Item.WithLibraryElementNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

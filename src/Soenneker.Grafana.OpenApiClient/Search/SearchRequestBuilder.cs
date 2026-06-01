@@ -145,7 +145,7 @@ namespace Soenneker.Grafana.OpenApiClient.Search
             public long? Page { get; set; }
             /// <summary>Set to `Edit` to return dashboards/folders that the user can edit</summary>
             [QueryParameter("permission")]
-            public global::Soenneker.Grafana.OpenApiClient.Search.GetPermissionQueryParameterType? Permission { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.SearchPermissionParameter? Permission { get; set; }
             /// <summary>Search Query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -158,7 +158,7 @@ namespace Soenneker.Grafana.OpenApiClient.Search
 #endif
             /// <summary>Sort method; for listing all the possible sort methods use the search sorting endpoint.</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.Grafana.OpenApiClient.Search.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.SearchSortParameter? Sort { get; set; }
             /// <summary>Flag indicating if only starred Dashboards should be returned</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
@@ -174,7 +174,7 @@ namespace Soenneker.Grafana.OpenApiClient.Search
 #endif
             /// <summary>Type to search for, dash-folder or dash-db</summary>
             [QueryParameter("type")]
-            public global::Soenneker.Grafana.OpenApiClient.Search.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.SearchTypeParameter? Type { get; set; }
         }
     }
 }

@@ -120,7 +120,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
         /// <summary>
         /// &quot;Similar to creating a data source, `password` and `basicAuthPassword` should be defined undersecureJsonData in order to be stored securely as an encrypted blob in the database. Then, theencrypted fields are listed under secureJsonFields section in the response.If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse"/></returns>
         /// <param name="body">Also acts as api DTO</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -130,11 +130,11 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateDataSourceCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -146,7 +146,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.CreateOrUpdateDatasourceResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabledyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).&quot;

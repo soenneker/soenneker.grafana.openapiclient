@@ -27,10 +27,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>queries.refId – Specifies an identifier of the query. Is optional and default to “A”.queries.datasourceId – Specifies the data source to be queried. Each query in the request must have an unique datasourceId.queries.maxDataPoints - Species maximum amount of data points that dashboard panel can render. Is optional and default to 100.queries.intervalMs - Specifies the time interval in milliseconds of time series. Is optional and defaults to 1000.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequest_queries>? Queries { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequestQueriesItem>? Queries { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequest_queries> Queries { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequestQueriesItem> Queries { get; set; }
 #endif
         /// <summary>To End time in epoch timestamps in milliseconds or relative using Grafana time units.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "debug", n => { Debug = n.GetBoolValue(); } },
                 { "from", n => { From = n.GetStringValue(); } },
-                { "queries", n => { Queries = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequest_queries>(global::Soenneker.Grafana.OpenApiClient.Models.MetricRequest_queries.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "queries", n => { Queries = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequestQueriesItem>(global::Soenneker.Grafana.OpenApiClient.Models.MetricRequestQueriesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "to", n => { To = n.GetStringValue(); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("debug", Debug);
             writer.WriteStringValue("from", From);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequest_queries>("queries", Queries);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.MetricRequestQueriesItem>("queries", Queries);
             writer.WriteStringValue("to", To);
             writer.WriteAdditionalData(AdditionalData);
         }

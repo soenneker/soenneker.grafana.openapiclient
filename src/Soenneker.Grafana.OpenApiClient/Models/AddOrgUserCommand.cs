@@ -23,7 +23,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public string LoginOrEmail { get; set; }
 #endif
         /// <summary>The role property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommand_role? Role { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole? Role { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommand"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "loginOrEmail", n => { LoginOrEmail = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommand_role>(); } },
+                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("loginOrEmail", LoginOrEmail);
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommand_role>("role", Role);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole>("role", Role);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

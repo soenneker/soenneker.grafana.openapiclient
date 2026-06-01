@@ -25,10 +25,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>Target data query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfig_target? Target { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigTargetProperty? Target { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfig_target Target { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigTargetProperty Target { get; set; }
 #endif
         /// <summary>The transformations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "field", n => { Field = n.GetStringValue(); } },
-                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfig_target>(global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfig_target.CreateFromDiscriminatorValue); } },
+                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigTargetProperty>(global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigTargetProperty.CreateFromDiscriminatorValue); } },
                 { "transformations", n => { Transformations = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Transformation>(global::Soenneker.Grafana.OpenApiClient.Models.Transformation.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -85,7 +85,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("field", Field);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfig_target>("target", Target);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CorrelationConfigTargetProperty>("target", Target);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Transformation>("transformations", Transformations);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

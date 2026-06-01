@@ -25,10 +25,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The model property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport_model? Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty? Model { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport_model Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty Model { get; set; }
 #endif
         /// <summary>The queryType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "datasourceUid", n => { DatasourceUid = n.GetStringValue(); } },
-                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport_model>(global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport_model.CreateFromDiscriminatorValue); } },
+                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty>(global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty.CreateFromDiscriminatorValue); } },
                 { "queryType", n => { QueryType = n.GetStringValue(); } },
                 { "refId", n => { RefId = n.GetStringValue(); } },
                 { "relativeTimeRange", n => { RelativeTimeRange = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport>(global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport.CreateFromDiscriminatorValue); } },
@@ -94,7 +94,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("datasourceUid", DatasourceUid);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport_model>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty>("model", Model);
             writer.WriteStringValue("queryType", QueryType);
             writer.WriteStringValue("refId", RefId);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport>("relativeTimeRange", RelativeTimeRange);

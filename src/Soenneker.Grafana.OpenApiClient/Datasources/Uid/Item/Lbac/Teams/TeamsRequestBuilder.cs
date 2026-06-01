@@ -36,7 +36,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams
         /// <summary>
         /// Retrieves LBAC rules for a team.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.TeamLBACRules"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.TeamLbacRules"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 400 status code</exception>
@@ -46,11 +46,11 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.TeamLBACRules?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.TeamLbacRules?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.TeamLBACRules> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.TeamLbacRules> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -62,12 +62,12 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.TeamLBACRules>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.TeamLBACRules.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.TeamLbacRules>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.TeamLbacRules.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates LBAC rules for a team.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams.TeamsPutResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacRulesResponseResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,11 +78,11 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams.TeamsPutResponse?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLBACCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacRulesResponseResponse?> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams.TeamsPutResponse> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLBACCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacRulesResponseResponse> PutAsync(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -95,7 +95,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams.TeamsPutResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams.TeamsPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacRulesResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacRulesResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves LBAC rules for a team.
@@ -124,11 +124,11 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Lbac.Teams
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLBACCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacCommand body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLBACCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.UpdateTeamLbacCommand body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -23,14 +23,14 @@ namespace Soenneker.Grafana.OpenApiClient.User.Helpflags
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.user.helpflags.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.User.Helpflags.Item.WithFlag_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.User.Helpflags.Item.WithFlag_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.User.Helpflags.Item.WithFlagItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.User.Helpflags.Item.WithFlagItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("flag_id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.User.Helpflags.Item.WithFlag_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("flagId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.User.Helpflags.Item.WithFlagItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

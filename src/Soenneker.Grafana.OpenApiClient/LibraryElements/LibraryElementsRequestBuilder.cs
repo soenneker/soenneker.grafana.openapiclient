@@ -26,14 +26,14 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
         }
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.libraryElements.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.LibraryElements.Item.WithLibrary_element_uItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.LibraryElements.Item.WithLibrary_element_uItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.LibraryElements.Item.WithLibraryElementUItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.LibraryElements.Item.WithLibraryElementUItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("library_element_uid", position);
-                return new global::Soenneker.Grafana.OpenApiClient.LibraryElements.Item.WithLibrary_element_uItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("libraryElementUid", position);
+                return new global::Soenneker.Grafana.OpenApiClient.LibraryElements.Item.WithLibraryElementUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -217,7 +217,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
 #endif
             /// <summary>Sort order of elements.</summary>
             [QueryParameter("sortDirection")]
-            public global::Soenneker.Grafana.OpenApiClient.LibraryElements.GetSortDirectionQueryParameterType? SortDirection { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.GetLibraryElementsSortDirectionParameter? SortDirection { get; set; }
             /// <summary>A comma separated list of types to filter the elements by</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

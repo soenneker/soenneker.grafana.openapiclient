@@ -51,12 +51,12 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>Deprecated. Remove before v1.0 release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match? Match { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchProperty? Match { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match Match { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchProperty Match { get; set; }
 #endif
-        /// <summary>Matchers matchers</summary>
+        /// <summary>Matchers is a slice of Matchers that is sortable, implements Stringer, andprovides a Matches method to match a LabelSet against all Matchers in theslice. Note that some users of Matchers might require it to be sorted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Grafana.OpenApiClient.Models.Matcher>? Matchers { get; set; }
@@ -67,10 +67,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The match_re property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match_re? MatchRe { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchRe? MatchRe { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match_re MatchRe { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchRe MatchRe { get; set; }
 #endif
         /// <summary>The mute_time_intervals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,8 +144,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "group_by", n => { GroupBy = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "group_interval", n => { GroupInterval = n.GetStringValue(); } },
                 { "group_wait", n => { GroupWait = n.GetStringValue(); } },
-                { "match", n => { Match = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match>(global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match.CreateFromDiscriminatorValue); } },
-                { "match_re", n => { MatchRe = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match_re>(global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match_re.CreateFromDiscriminatorValue); } },
+                { "match", n => { Match = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchProperty>(global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchProperty.CreateFromDiscriminatorValue); } },
+                { "match_re", n => { MatchRe = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchRe>(global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchRe.CreateFromDiscriminatorValue); } },
                 { "matchers", n => { Matchers = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Matcher>(global::Soenneker.Grafana.OpenApiClient.Models.Matcher.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "mute_time_intervals", n => { MuteTimeIntervals = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "object_matchers", n => { ObjectMatchers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -167,9 +167,9 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("group_by", GroupBy);
             writer.WriteStringValue("group_interval", GroupInterval);
             writer.WriteStringValue("group_wait", GroupWait);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match>("match", Match);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchProperty>("match", Match);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.Matcher>("matchers", Matchers);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport_match_re>("match_re", MatchRe);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExportMatchRe>("match_re", MatchRe);
             writer.WriteCollectionOfPrimitiveValues<string>("mute_time_intervals", MuteTimeIntervals);
             writer.WriteObjectValue<UntypedNode>("object_matchers", ObjectMatchers);
             writer.WriteLongValue("orgId", OrgId);

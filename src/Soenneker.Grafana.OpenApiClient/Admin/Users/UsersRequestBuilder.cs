@@ -20,14 +20,14 @@ namespace Soenneker.Grafana.OpenApiClient.Admin.Users
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.admin.users.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Admin.Users.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Admin.Users.Item.WithUser_ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Admin.Users.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Admin.Users.Item.WithUserItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Admin.Users.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Admin.Users.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

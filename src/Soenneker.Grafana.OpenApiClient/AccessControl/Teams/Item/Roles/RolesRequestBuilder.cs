@@ -26,7 +26,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("roleUID", position);
+                urlTplParams.Add("roleUid", position);
                 return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles.Item.WithRoleUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

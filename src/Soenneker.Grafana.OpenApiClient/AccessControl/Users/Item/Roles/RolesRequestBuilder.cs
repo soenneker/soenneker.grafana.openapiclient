@@ -26,7 +26,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("roleUID", position);
+                urlTplParams.Add("roleUid", position);
                 return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.Item.WithRoleUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -49,7 +49,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles
         /// <summary>
         /// Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.You need to have a permission with action `users.roles:read` and scope `users:id:&lt;user ID&gt;`.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.RoleDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 400 status code</exception>
@@ -57,11 +57,11 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -71,7 +71,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

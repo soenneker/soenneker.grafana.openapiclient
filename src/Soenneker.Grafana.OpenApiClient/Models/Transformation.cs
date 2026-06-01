@@ -39,7 +39,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public string MapValue { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.Transformation_type? Type { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.TransformationType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.Transformation"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "expression", n => { Expression = n.GetStringValue(); } },
                 { "field", n => { Field = n.GetStringValue(); } },
                 { "mapValue", n => { MapValue = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.Transformation_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.TransformationType>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("expression", Expression);
             writer.WriteStringValue("field", Field);
             writer.WriteStringValue("mapValue", MapValue);
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.Transformation_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.TransformationType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

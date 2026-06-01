@@ -36,17 +36,17 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboard.Snapshots
         /// <summary>
         /// List snapshots.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDTO>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Dashboard.Snapshots.SnapshotsRequestBuilder.SnapshotsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDto>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Dashboard.Snapshots.SnapshotsRequestBuilder.SnapshotsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDTO>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Dashboard.Snapshots.SnapshotsRequestBuilder.SnapshotsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDto>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Dashboard.Snapshots.SnapshotsRequestBuilder.SnapshotsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,7 +54,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboard.Snapshots
             {
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DashboardSnapshotDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

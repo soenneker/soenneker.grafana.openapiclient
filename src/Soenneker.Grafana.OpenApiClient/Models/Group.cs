@@ -25,10 +25,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The mappings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.Group_mappings? Mappings { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.GroupMappings? Mappings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.Group_mappings Mappings { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.GroupMappings Mappings { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.Group"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "groupID", n => { GroupID = n.GetStringValue(); } },
-                { "mappings", n => { Mappings = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Group_mappings>(global::Soenneker.Grafana.OpenApiClient.Models.Group_mappings.CreateFromDiscriminatorValue); } },
+                { "mappings", n => { Mappings = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.GroupMappings>(global::Soenneker.Grafana.OpenApiClient.Models.GroupMappings.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("groupID", GroupID);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Group_mappings>("mappings", Mappings);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.GroupMappings>("mappings", Mappings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

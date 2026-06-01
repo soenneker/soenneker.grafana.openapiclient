@@ -17,18 +17,18 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardID? Dashboard { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardId? Dashboard { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardID Dashboard { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardId Dashboard { get; set; }
 #endif
         /// <summary>The reportVariables property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboard_reportVariables? ReportVariables { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardReportVariablesProperty? ReportVariables { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboard_reportVariables ReportVariables { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardReportVariablesProperty ReportVariables { get; set; }
 #endif
         /// <summary>The timeRange property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,8 +63,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dashboard", n => { Dashboard = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardID>(global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardID.CreateFromDiscriminatorValue); } },
-                { "reportVariables", n => { ReportVariables = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboard_reportVariables>(global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboard_reportVariables.CreateFromDiscriminatorValue); } },
+                { "dashboard", n => { Dashboard = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardId>(global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardId.CreateFromDiscriminatorValue); } },
+                { "reportVariables", n => { ReportVariables = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardReportVariablesProperty>(global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardReportVariablesProperty.CreateFromDiscriminatorValue); } },
                 { "timeRange", n => { TimeRange = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange>(global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange.CreateFromDiscriminatorValue); } },
             };
         }
@@ -75,8 +75,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardID>("dashboard", Dashboard);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboard_reportVariables>("reportVariables", ReportVariables);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardId>("dashboard", Dashboard);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportDashboardReportVariablesProperty>("reportVariables", ReportVariables);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange>("timeRange", TimeRange);
             writer.WriteAdditionalData(AdditionalData);
         }

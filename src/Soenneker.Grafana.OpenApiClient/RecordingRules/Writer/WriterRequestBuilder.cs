@@ -65,7 +65,7 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules.Writer
         /// <summary>
         /// Return the prometheus remote write target.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -74,11 +74,11 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules.Writer
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -89,12 +89,12 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules.Writer
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// It returns a 422 if there is not an existing prometheus data source configured.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,11 +105,11 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules.Writer
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -122,7 +122,7 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules.Writer
                 { "422", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete the remote write target.
@@ -170,11 +170,11 @@ namespace Soenneker.Grafana.OpenApiClient.RecordingRules.Writer
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJSON body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Grafana.OpenApiClient.Models.PrometheusRemoteWriteTargetJson body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

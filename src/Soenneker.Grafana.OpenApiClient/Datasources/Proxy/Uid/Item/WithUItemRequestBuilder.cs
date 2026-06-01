@@ -17,14 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Proxy.Uid.Item
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.datasources.proxy.uid.item.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Proxy.Uid.Item.Item.WithDatasource_proxy_routeItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Datasources.Proxy.Uid.Item.Item.WithDatasource_proxy_routeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Proxy.Uid.Item.Item.WithDatasourceProxyRouteItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Datasources.Proxy.Uid.Item.Item.WithDatasourceProxyRouteItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("datasource_proxy_route", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Datasources.Proxy.Uid.Item.Item.WithDatasource_proxy_routeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("datasourceProxyRoute", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Datasources.Proxy.Uid.Item.Item.WithDatasourceProxyRouteItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

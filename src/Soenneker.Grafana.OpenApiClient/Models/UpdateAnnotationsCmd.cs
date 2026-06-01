@@ -17,10 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmd_data? Data { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmdData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmd_data Data { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmdData Data { get; set; }
 #endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
@@ -69,7 +69,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmd_data>(global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmd_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmdData>(global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmdData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmd_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdateAnnotationsCmdData>("data", Data);
             writer.WriteLongValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteStringValue("text", Text);

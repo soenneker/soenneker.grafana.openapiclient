@@ -49,7 +49,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryPreference QueryHistory { get; set; }
 #endif
         /// <summary>The theme property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.UpdatePrefsCmd_theme? Theme { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UpdatePrefsCmdTheme? Theme { get; set; }
         /// <summary>Any IANA timezone string (e.g. America/New_York), &apos;utc&apos;, &apos;browser&apos;, or empty string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,7 +96,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "navbar", n => { Navbar = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NavbarPreference>(global::Soenneker.Grafana.OpenApiClient.Models.NavbarPreference.CreateFromDiscriminatorValue); } },
                 { "queryHistory", n => { QueryHistory = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryPreference>(global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryPreference.CreateFromDiscriminatorValue); } },
-                { "theme", n => { Theme = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdatePrefsCmd_theme>(); } },
+                { "theme", n => { Theme = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdatePrefsCmdTheme>(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
                 { "weekStart", n => { WeekStart = n.GetStringValue(); } },
             };
@@ -113,7 +113,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("language", Language);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.NavbarPreference>("navbar", Navbar);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.QueryHistoryPreference>("queryHistory", QueryHistory);
-            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdatePrefsCmd_theme>("theme", Theme);
+            writer.WriteEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.UpdatePrefsCmdTheme>("theme", Theme);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteStringValue("weekStart", WeekStart);
             writer.WriteAdditionalData(AdditionalData);

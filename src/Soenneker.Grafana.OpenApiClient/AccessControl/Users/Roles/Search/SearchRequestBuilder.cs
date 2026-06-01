@@ -36,7 +36,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search
         /// <summary>
         /// Lists the roles that have been directly assigned to the given users. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.You need to have a permission with action `users.roles:read` and scope `users:id:*`.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search.SearchPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.ListUsersRolesResponseResponseContent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -45,11 +45,11 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search.SearchPostResponse?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.RolesSearchQuery body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.ListUsersRolesResponseResponseContent?> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.RolesSearchQuery body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search.SearchPostResponse> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.RolesSearchQuery body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Grafana.OpenApiClient.Models.ListUsersRolesResponseResponseContent> PostAsync(global::Soenneker.Grafana.OpenApiClient.Models.RolesSearchQuery body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -60,7 +60,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search.SearchPostResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Roles.Search.SearchPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.ListUsersRolesResponseResponseContent>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.ListUsersRolesResponseResponseContent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists the roles that have been directly assigned to the given users. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.You need to have a permission with action `users.roles:read` and scope `users:id:*`.

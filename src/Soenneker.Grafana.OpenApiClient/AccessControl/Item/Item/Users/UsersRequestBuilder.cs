@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Users
 {
     /// <summary>
-    /// Builds and executes requests for operations under \access-control\{resource}\{resourceID}\users
+    /// Builds and executes requests for operations under \access-control\{resource}\{resourceId}\users
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Users
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("userID", position);
+                urlTplParams.Add("userId", position);
                 return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Users.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -32,7 +32,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Users
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceID}/users", pathParameters)
+        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceId}/users", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Item.Item.Users
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceID}/users", rawUrl)
+        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/{resource}/{resourceId}/users", rawUrl)
         {
         }
     }

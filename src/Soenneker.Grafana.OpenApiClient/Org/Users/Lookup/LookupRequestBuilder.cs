@@ -36,7 +36,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users.Lookup
         /// <summary>
         /// Returns all org users within the current organization, but with less detailed information.Accessible to users with org admin role, admin in any folder or admin of any team.Mainly used by Grafana UI for providing list of users when adding team members and when editing folder/dashboard permissions.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDTO&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDto&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
@@ -44,11 +44,11 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users.Lookup
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDTO>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Org.Users.Lookup.LookupRequestBuilder.LookupRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDto>?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Org.Users.Lookup.LookupRequestBuilder.LookupRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDTO>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Org.Users.Lookup.LookupRequestBuilder.LookupRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDto>> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Org.Users.Lookup.LookupRequestBuilder.LookupRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -58,7 +58,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users.Lookup
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDTO>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.UserLookupDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

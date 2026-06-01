@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.ConvertNamespace.Prometheus.Config.V1.Rules.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \convert\prometheus\config\v1\rules\{NamespaceTitle}\{Group}
+    /// Builds and executes requests for operations under \convert\prometheus\config\v1\rules\{namespaceTitle}\{group}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithGroupItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.ConvertNamespace.Prometheus.Config.V1.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithGroupItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/convert/prometheus/config/v1/rules/{NamespaceTitle}/{Group}", pathParameters)
+        public WithGroupItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/convert/prometheus/config/v1/rules/{namespaceTitle}/{group}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.ConvertNamespace.Prometheus.Config.V1.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithGroupItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/convert/prometheus/config/v1/rules/{NamespaceTitle}/{Group}", rawUrl)
+        public WithGroupItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/convert/prometheus/config/v1/rules/{namespaceTitle}/{group}", rawUrl)
         {
         }
         /// <summary>

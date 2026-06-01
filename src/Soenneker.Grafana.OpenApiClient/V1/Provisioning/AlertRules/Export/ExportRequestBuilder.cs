@@ -105,7 +105,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Export
 #endif
             /// <summary>Format of the downloaded file. Supported yaml, json or hcl. Accept header can also be used, but the query parameter will take precedence.</summary>
             [QueryParameter("format")]
-            public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Export.GetFormatQueryParameterType? Format { get; set; }
+            public global::Soenneker.Grafana.OpenApiClient.Models.RouteGetAlertRulesExportFormatParameter? Format { get; set; }
             /// <summary>Name of group of rules to export. Must be specified only together with a single folder UID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
