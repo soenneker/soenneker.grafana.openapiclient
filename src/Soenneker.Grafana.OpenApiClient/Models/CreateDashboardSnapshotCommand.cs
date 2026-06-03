@@ -72,6 +72,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public CreateDashboardSnapshotCommand()
         {
             AdditionalData = new Dictionary<string, object>();
+            Expires = 0;
+            External = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

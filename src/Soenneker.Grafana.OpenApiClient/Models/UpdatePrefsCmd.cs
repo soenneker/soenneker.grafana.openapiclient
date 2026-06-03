@@ -72,6 +72,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public UpdatePrefsCmd()
         {
             AdditionalData = new Dictionary<string, object>();
+            HomeDashboardId = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
