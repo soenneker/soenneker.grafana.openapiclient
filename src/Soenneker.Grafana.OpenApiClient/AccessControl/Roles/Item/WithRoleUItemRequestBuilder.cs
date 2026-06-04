@@ -136,7 +136,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item.WithRoleUItemRequestBuilder.WithRoleUItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/access-control/roles/{roleUid}{?force*,global*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

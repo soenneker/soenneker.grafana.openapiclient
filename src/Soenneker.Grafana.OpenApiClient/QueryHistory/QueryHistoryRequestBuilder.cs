@@ -120,7 +120,7 @@ namespace Soenneker.Grafana.OpenApiClient.QueryHistory
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.QueryHistory.QueryHistoryRequestBuilder.QueryHistoryRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/query-history{?datasourceUid*,from*,limit*,onlyStarred*,page*,searchString*,sort*,to*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -141,7 +141,7 @@ namespace Soenneker.Grafana.OpenApiClient.QueryHistory
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/query-history", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

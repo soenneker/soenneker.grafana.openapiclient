@@ -149,7 +149,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item.Groups
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Teams.Item.Groups.GroupsRequestBuilder.GroupsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/teams/{teamId}/groups{?groupId*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
