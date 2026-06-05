@@ -41,7 +41,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LibraryElementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public LibraryElementsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/library-elements{?excludeUid*,folderFilter*,folderFilterUIDs*,kind*,page*,perPage*,searchString*,sortDirection*,typeFilter*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LibraryElementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public LibraryElementsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/library-elements{?excludeUid*,folderFilter*,folderFilterUIDs*,kind*,page*,perPage*,searchString*,sortDirection*,typeFilter*}", rawUrl)
         {
         }
         /// <summary>
@@ -124,7 +124,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.LibraryElements.LibraryElementsRequestBuilder.LibraryElementsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/library-elements{?excludeUid*,folderFilter*,folderFilterUIDs*,kind*,page*,perPage*,searchString*,sortDirection*,typeFilter*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -145,7 +145,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/library-elements", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -28,7 +28,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoleUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUid}", pathParameters)
+        public WithRoleUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUid}{?force*,global*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithRoleUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUid}", rawUrl)
+        public WithRoleUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access-control/roles/{roleUid}{?force*,global*}", rawUrl)
         {
         }
         /// <summary>
@@ -136,7 +136,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item.WithRoleUItemRequestBuilder.WithRoleUItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/access-control/roles/{roleUid}{?force*,global*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

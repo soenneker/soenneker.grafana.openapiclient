@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTeamItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamId}", pathParameters)
+        public WithTeamItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamId}{?accesscontrol*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTeamItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamId}", rawUrl)
+        public WithTeamItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamId}{?accesscontrol*}", rawUrl)
         {
         }
         /// <summary>
@@ -175,7 +175,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Teams.Item.WithTeamItemRequestBuilder.WithTeamItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/teams/{teamId}{?accesscontrol*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -53,7 +53,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AnnotationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public AnnotationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/annotations{?alertId*,alertUID*,dashboardId*,dashboardUID*,from*,limit*,matchAny*,panelId*,tags*,to*,type*,userId*}", pathParameters)
         {
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AnnotationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public AnnotationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/annotations{?alertId*,alertUID*,dashboardId*,dashboardUID*,from*,limit*,matchAny*,panelId*,tags*,to*,type*,userId*}", rawUrl)
         {
         }
         /// <summary>
@@ -135,7 +135,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.Annotations.AnnotationsRequestBuilder.AnnotationsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/annotations{?alertId*,alertUID*,dashboardId*,dashboardUID*,from*,limit*,matchAny*,panelId*,tags*,to*,type*,userId*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -156,7 +156,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/annotations", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
