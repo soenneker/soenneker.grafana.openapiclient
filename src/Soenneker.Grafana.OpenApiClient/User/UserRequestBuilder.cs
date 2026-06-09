@@ -6,7 +6,6 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Grafana.OpenApiClient.Models;
 using Soenneker.Grafana.OpenApiClient.User.AuthTokens;
 using Soenneker.Grafana.OpenApiClient.User.Email;
-using Soenneker.Grafana.OpenApiClient.User.Helpflags;
 using Soenneker.Grafana.OpenApiClient.User.Orgs;
 using Soenneker.Grafana.OpenApiClient.User.Password;
 using Soenneker.Grafana.OpenApiClient.User.Preferences;
@@ -37,11 +36,6 @@ namespace Soenneker.Grafana.OpenApiClient.User
         public global::Soenneker.Grafana.OpenApiClient.User.Email.EmailRequestBuilder Email
         {
             get => new global::Soenneker.Grafana.OpenApiClient.User.Email.EmailRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The helpflags property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.User.Helpflags.HelpflagsRequestBuilder Helpflags
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.User.Helpflags.HelpflagsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The orgs property</summary>
         public global::Soenneker.Grafana.OpenApiClient.User.Orgs.OrgsRequestBuilder Orgs

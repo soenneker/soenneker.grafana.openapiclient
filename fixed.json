@@ -9505,62 +9505,6 @@
         }
       }
     },
-    "/user/helpflags/clear": {
-      "get": {
-        "tags": [
-          "signed_in_user"
-        ],
-        "summary": "Clear user help flag.",
-        "operationId": "ClearHelpFlags",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/helpFlagResponse"
-          },
-          "401": {
-            "$ref": "#/components/responses/unauthorisedError"
-          },
-          "403": {
-            "$ref": "#/components/responses/forbiddenError"
-          },
-          "500": {
-            "$ref": "#/components/responses/internalServerError"
-          }
-        }
-      }
-    },
-    "/user/helpflags/{flagId}": {
-      "put": {
-        "tags": [
-          "signed_in_user"
-        ],
-        "summary": "Set user help flag.",
-        "operationId": "SetHelpFlag",
-        "parameters": [
-          {
-            "name": "flagId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/helpFlagResponse"
-          },
-          "401": {
-            "$ref": "#/components/responses/unauthorisedError"
-          },
-          "403": {
-            "$ref": "#/components/responses/forbiddenError"
-          },
-          "500": {
-            "$ref": "#/components/responses/internalServerError"
-          }
-        }
-      }
-    },
     "/user/orgs": {
       "get": {
         "tags": [
@@ -22698,18 +22642,6 @@
           "$ref": "#/components/schemas/TeamDto"
         }
       },
-      "HelpFlagResponseResponse": {
-        "type": "object",
-        "properties": {
-          "helpFlags1": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "message": {
-            "type": "string"
-          }
-        }
-      },
       "InterpolateDashboardResponseResponse": {
         "type": "object"
       },
@@ -27237,16 +27169,6 @@
           "application/json": {
             "schema": {
               "$ref": "#/components/schemas/ErrorResponseBody"
-            }
-          }
-        }
-      },
-      "helpFlagResponse": {
-        "description": "(empty)",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/HelpFlagResponseResponse"
             }
           }
         }
