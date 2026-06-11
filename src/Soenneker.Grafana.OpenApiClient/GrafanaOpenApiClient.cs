@@ -17,7 +17,6 @@ using Soenneker.Grafana.OpenApiClient.Dashboards;
 using Soenneker.Grafana.OpenApiClient.Datasources;
 using Soenneker.Grafana.OpenApiClient.Ds;
 using Soenneker.Grafana.OpenApiClient.Folders;
-using Soenneker.Grafana.OpenApiClient.Groupsync;
 using Soenneker.Grafana.OpenApiClient.Health;
 using Soenneker.Grafana.OpenApiClient.LibraryElements;
 using Soenneker.Grafana.OpenApiClient.Licensing;
@@ -105,11 +104,6 @@ namespace Soenneker.Grafana.OpenApiClient
         public global::Soenneker.Grafana.OpenApiClient.Folders.FoldersRequestBuilder Folders
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Folders.FoldersRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The groupsync property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Groupsync.GroupsyncRequestBuilder Groupsync
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Groupsync.GroupsyncRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The health property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Health.HealthRequestBuilder Health

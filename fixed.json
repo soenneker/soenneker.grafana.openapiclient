@@ -4987,198 +4987,6 @@
         }
       }
     },
-    "/groupsync/groups": {
-      "get": {
-        "tags": [
-          "group_attribute_sync",
-          "enterprise"
-        ],
-        "summary": "List groups that have mappings set. This endpoint is behind the feature flag \u0060groupAttributeSync\u0060 and is considered experimental.",
-        "operationId": "GetMappedGroups",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/getGroupsResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/badRequestError"
-          },
-          "401": {
-            "$ref": "#/components/responses/unauthorisedError"
-          },
-          "403": {
-            "$ref": "#/components/responses/forbiddenError"
-          },
-          "500": {
-            "$ref": "#/components/responses/internalServerError"
-          }
-        }
-      }
-    },
-    "/groupsync/groups/{groupId}": {
-      "delete": {
-        "tags": [
-          "group_attribute_sync",
-          "enterprise"
-        ],
-        "summary": "Delete mappings for a group. This endpoint is behind the feature flag \u0060groupAttributeSync\u0060 and is considered experimental.",
-        "operationId": "DeleteGroupMappings",
-        "parameters": [
-          {
-            "name": "groupId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "$ref": "#/components/responses/okResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/badRequestError"
-          },
-          "401": {
-            "$ref": "#/components/responses/unauthorisedError"
-          },
-          "403": {
-            "$ref": "#/components/responses/forbiddenError"
-          },
-          "500": {
-            "$ref": "#/components/responses/internalServerError"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "group_attribute_sync",
-          "enterprise"
-        ],
-        "summary": "Create mappings for a group. This endpoint is behind the feature flag \u0060groupAttributeSync\u0060 and is considered experimental.",
-        "operationId": "CreateGroupMappings",
-        "parameters": [
-          {
-            "name": "groupId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GroupAttributes"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "$ref": "#/components/responses/apiResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/badRequestError"
-          },
-          "401": {
-            "$ref": "#/components/responses/unauthorisedError"
-          },
-          "403": {
-            "$ref": "#/components/responses/forbiddenError"
-          },
-          "500": {
-            "$ref": "#/components/responses/internalServerError"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "group_attribute_sync",
-          "enterprise"
-        ],
-        "summary": "Update mappings for a group. This endpoint is behind the feature flag \u0060groupAttributeSync\u0060 and is considered experimental.",
-        "operationId": "UpdateGroupMappings",
-        "parameters": [
-          {
-            "name": "groupId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GroupAttributes"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "$ref": "#/components/responses/apiResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/badRequestError"
-          },
-          "401": {
-            "$ref": "#/components/responses/unauthorisedError"
-          },
-          "403": {
-            "$ref": "#/components/responses/forbiddenError"
-          },
-          "500": {
-            "$ref": "#/components/responses/internalServerError"
-          }
-        }
-      }
-    },
-    "/groupsync/groups/{groupId}/roles": {
-      "get": {
-        "tags": [
-          "group_attribute_sync",
-          "enterprise"
-        ],
-        "summary": "Get roles mapped to a group. This endpoint is behind the feature flag \u0060groupAttributeSync\u0060 and is considered experimental.",
-        "operationId": "GetGroupRoles",
-        "parameters": [
-          {
-            "name": "groupId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/getGroupRolesResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/badRequestError"
-          },
-          "401": {
-            "$ref": "#/components/responses/unauthorisedError"
-          },
-          "403": {
-            "$ref": "#/components/responses/forbiddenError"
-          },
-          "404": {
-            "$ref": "#/components/responses/notFoundError"
-          },
-          "500": {
-            "$ref": "#/components/responses/internalServerError"
-          }
-        }
-      }
-    },
     "/health": {
       "get": {
         "tags": [
@@ -12833,10 +12641,21 @@
           }
         }
       },
-      "GetResourcePermissionsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ResourcePermissionDto"
+      "GetSsoSettingsResponseResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsProperty"
+          },
+          "source": {
+            "type": "string"
+          }
         }
       },
       "Config": {
@@ -13010,16 +12829,16 @@
           }
         }
       },
+      "GetResourcePermissionsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ResourcePermissionDto"
+        }
+      },
       "GetReportsResponseResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Report"
-        }
-      },
-      "GetQuotaResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QuotaDto"
         }
       },
       "CreateAccessTokenResponseDto": {
@@ -13871,10 +13690,10 @@
         },
         "description": "Ref to a DataSource instance"
       },
-      "GetPublicAnnotationsResponseResponse": {
+      "GetQuotaResponseResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/AnnotationEvent"
+          "$ref": "#/components/schemas/QuotaDto"
         }
       },
       "DeleteCorrelationResponseBody": {
@@ -13982,6 +13801,12 @@
           }
         }
       },
+      "GetPublicAnnotationsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AnnotationEvent"
+        }
+      },
       "GetPlaylistItemsResponseResponse": {
         "type": "array",
         "items": {
@@ -13992,12 +13817,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TempUserDto"
-        }
-      },
-      "GetOrgUsersResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OrgUserDto"
         }
       },
       "EmailConfig": {
@@ -14154,7 +13973,7 @@
           }
         }
       },
-      "GetOrgUsersForCurrentOrgResponseResponse": {
+      "GetOrgUsersResponseResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/OrgUserDto"
@@ -14204,10 +14023,10 @@
         "type": "object",
         "description": "This is an object constructed with the keys as the values of the enum VisType and the value being a bag of properties"
       },
-      "GetOrgUsersForCurrentOrgLookupResponseResponse": {
+      "GetOrgUsersForCurrentOrgResponseResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/UserLookupDto"
+          "$ref": "#/components/schemas/OrgUserDto"
         }
       },
       "ExtendedReceiver": {
@@ -14747,10 +14566,10 @@
         },
         "description": "\u0022https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/data.ts#L11\nNOTE -- in javascript this can accept any \u0060[key: string]: any;\u0060 however\nthis interface only exposes the values we want to be exposed\u0022"
       },
-      "GetGroupRolesResponseResponse": {
+      "GetOrgUsersForCurrentOrgLookupResponseResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/RoleDto"
+          "$ref": "#/components/schemas/UserLookupDto"
         }
       },
       "FrameTypeVersion": {
@@ -15371,28 +15190,6 @@
           }
         },
         "description": "GlobalConfig defines configuration parameters that are valid globally\nunless overwritten."
-      },
-      "Group": {
-        "type": "object",
-        "properties": {
-          "groupID": {
-            "type": "string"
-          },
-          "mappings": {
-            "$ref": "#/components/schemas/GroupMappings"
-          }
-        }
-      },
-      "GroupAttributes": {
-        "type": "object",
-        "properties": {
-          "roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
       },
       "HttpClientConfig": {
         "title": "HTTPClientConfig configures an HTTP client.",
@@ -21987,21 +21784,6 @@
           }
         }
       },
-      "GetGroupsResponse": {
-        "type": "object",
-        "properties": {
-          "groups": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Group"
-            }
-          },
-          "total": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      },
       "GettableAlert": {
         "required": [
           "labels",
@@ -22249,14 +22031,6 @@
           "$ref": "#/components/schemas/Matcher2"
         },
         "description": "Matchers matchers"
-      },
-      "MessageResponse": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string"
-          }
-        }
       },
       "PeerStatus": {
         "required": [
@@ -22568,23 +22342,6 @@
           }
         },
         "description": "VersionInfo version info"
-      },
-      "GetSsoSettingsResponseResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "provider": {
-            "type": "string"
-          },
-          "settings": {
-            "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsProperty"
-          },
-          "source": {
-            "type": "string"
-          }
-        }
       },
       "GetSharingOptionsResponseResponse": {
         "type": "object",
@@ -22950,6 +22707,12 @@
         "type": "object",
         "additionalProperties": {
           "type": "string"
+        }
+      },
+      "GetSsoSettingsResponseResponseSettings": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsAdditionalProperties"
         }
       },
       "CorrelationConfigTarget": {
@@ -23372,12 +23135,6 @@
         },
         "description": "Extra Additional information about the error"
       },
-      "GetSsoSettingsResponseResponseSettings": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsAdditionalProperties"
-        }
-      },
       "ListSsoSettingsResponseResponseItem": {
         "type": "object",
         "properties": {
@@ -23617,12 +23374,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/FolderSearchHit"
-        }
-      },
-      "GetGroupRolesResponseResponseContent": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RoleDto"
         }
       },
       "GetOrgUsersForCurrentOrgLookupResponseResponseContent": {
@@ -23898,6 +23649,12 @@
       "CertificatePublicKey": {
         "type": "object"
       },
+      "GetSsoSettingsResponseResponseSettingsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties"
+        }
+      },
       "CorrelationConfigTargetProperty": {
         "type": "object",
         "additionalProperties": {
@@ -24060,9 +23817,6 @@
         "additionalProperties": {
           "type": "string"
         }
-      },
-      "GroupMappings": {
-        "type": "object"
       },
       "HttpClientConfigProxyConnectHeader": {
         "type": "object",
@@ -24508,16 +24262,13 @@
         },
         "description": "Extra Additional information about the error"
       },
-      "GetSsoSettingsResponseResponseSettingsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties"
-        }
-      },
       "GetHomeDashboardResponseAllOf1Dashboard": {
         "type": "object"
       },
       "AlertQueryExportModelAdditionalProperties": {
+        "type": "object"
+      },
+      "GetSsoSettingsResponseResponseSettingsAdditionalProperties": {
         "type": "object"
       },
       "CorrelationConfigTargetAdditionalProperties": {
@@ -24556,9 +24307,6 @@
       "PublicError2ExtraAdditionalProperties": {
         "type": "object"
       },
-      "GetSsoSettingsResponseResponseSettingsAdditionalProperties": {
-        "type": "object"
-      },
       "ListSsoSettingsResponseResponseItemSettingsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -24587,6 +24335,9 @@
         }
       },
       "AlertQueryExportModelPropertyAdditionalProperties": {
+        "type": "object"
+      },
+      "GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties": {
         "type": "object"
       },
       "CorrelationConfigTargetPropertyAdditionalProperties": {
@@ -24623,9 +24374,6 @@
         "type": "object"
       },
       "PublicError2ExtraPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties": {
         "type": "object"
       },
       "ListSsoSettingsResponseResponseItemSettingsPropertyAdditionalProperties": {
@@ -26184,16 +25932,6 @@
           }
         }
       },
-      "apiResponse": {
-        "description": "(empty)",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/MessageResponse"
-            }
-          }
-        }
-      },
       "badRequestError": {
         "description": "BadRequestError is returned when the request is invalid and it cannot be processed.",
         "content": {
@@ -26726,26 +26464,6 @@
           "application/json": {
             "schema": {
               "$ref": "#/components/schemas/GetFoldersResponseResponseContent"
-            }
-          }
-        }
-      },
-      "getGroupRolesResponse": {
-        "description": "(empty)",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/GetGroupRolesResponseResponseContent"
-            }
-          }
-        }
-      },
-      "getGroupsResponse": {
-        "description": "(empty)",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/GetGroupsResponse"
             }
           }
         }
