@@ -12,6 +12,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     public partial class UserSearchHitDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The accessControl property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDtoAccessControlProperty? AccessControl { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDtoAccessControlProperty AccessControl { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authLabels property</summary>
@@ -74,6 +82,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The role property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Role { get; set; }
+#nullable restore
+#else
+        public string Role { get; set; }
+#endif
         /// <summary>The uid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,6 +123,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "accessControl", n => { AccessControl = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDtoAccessControlProperty>(global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDtoAccessControlProperty.CreateFromDiscriminatorValue); } },
                 { "authLabels", n => { AuthLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "avatarUrl", n => { AvatarUrl = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetDateTimeOffsetValue(); } },
@@ -119,6 +136,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "lastSeenAtAge", n => { LastSeenAtAge = n.GetStringValue(); } },
                 { "login", n => { Login = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "role", n => { Role = n.GetStringValue(); } },
                 { "uid", n => { Uid = n.GetStringValue(); } },
             };
         }
@@ -129,6 +147,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDtoAccessControlProperty>("accessControl", AccessControl);
             writer.WriteCollectionOfPrimitiveValues<string>("authLabels", AuthLabels);
             writer.WriteStringValue("avatarUrl", AvatarUrl);
             writer.WriteDateTimeOffsetValue("created", Created);
@@ -141,6 +160,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("lastSeenAtAge", LastSeenAtAge);
             writer.WriteStringValue("login", Login);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("role", Role);
             writer.WriteStringValue("uid", Uid);
             writer.WriteAdditionalData(AdditionalData);
         }

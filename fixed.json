@@ -21349,6 +21349,9 @@
       "UserSearchHitDto": {
         "type": "object",
         "properties": {
+          "accessControl": {
+            "$ref": "#/components/schemas/UserSearchHitDtoAccessControlProperty"
+          },
           "authLabels": {
             "type": "array",
             "items": {
@@ -21389,6 +21392,9 @@
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "role": {
             "type": "string"
           },
           "uid": {
@@ -23111,6 +23117,12 @@
           "type": "boolean"
         }
       },
+      "UserSearchHitDtoAccessControl": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "boolean"
+        }
+      },
       "VictorOpsConfigCustomFields": {
         "type": "object",
         "additionalProperties": {
@@ -24192,6 +24204,12 @@
         }
       },
       "UserProfileDtoAccessControlProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "boolean"
+        }
+      },
+      "UserSearchHitDtoAccessControlProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "boolean"
