@@ -1960,6 +1960,14 @@
             }
           },
           {
+            "name": "userUID",
+            "in": "query",
+            "description": "Limit response to annotations created by a specific user, identified by UID.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "alertId",
             "in": "query",
             "description": "\u0022Find annotations for a specified alert rule by its ID.\ndeprecated: AlertID is deprecated and will be removed in future versions. Please use AlertUID instead.\u0022",
