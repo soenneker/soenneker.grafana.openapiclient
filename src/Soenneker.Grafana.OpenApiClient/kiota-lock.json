@@ -2,7 +2,7 @@
   "descriptionHash": "E16431EF498F30F41032F5A4726C39058F97AA9CF8B8A7D444F0E6826D4A4B0E665F77DDEE755C33032D1690B49D9DAF4A216A6D97038E74913BFFBDB6BC3160",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.32.2",
+  "kiotaVersion": "1.32.3",
   "clientClassName": "GrafanaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Grafana.OpenApiClient",
