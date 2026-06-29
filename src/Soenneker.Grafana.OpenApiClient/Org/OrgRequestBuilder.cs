@@ -6,7 +6,6 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Grafana.OpenApiClient.Models;
 using Soenneker.Grafana.OpenApiClient.Org.Address;
 using Soenneker.Grafana.OpenApiClient.Org.Invites;
-using Soenneker.Grafana.OpenApiClient.Org.Preferences;
 using Soenneker.Grafana.OpenApiClient.Org.Quotas;
 using Soenneker.Grafana.OpenApiClient.Org.Users;
 using System.Collections.Generic;
@@ -31,11 +30,6 @@ namespace Soenneker.Grafana.OpenApiClient.Org
         public global::Soenneker.Grafana.OpenApiClient.Org.Invites.InvitesRequestBuilder Invites
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Org.Invites.InvitesRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The preferences property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Org.Preferences.PreferencesRequestBuilder Preferences
-        {
-            get => new global::Soenneker.Grafana.OpenApiClient.Org.Preferences.PreferencesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The quotas property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Org.Quotas.QuotasRequestBuilder Quotas
