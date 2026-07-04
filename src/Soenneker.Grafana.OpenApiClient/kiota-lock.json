@@ -2,7 +2,7 @@
   "descriptionHash": "427234E0EB66566C1F341E4291757B1BC74A7D2F9D8089ED36454F374924561466988CF69444BD2C900B2A4F5DE8F68C6029DA4D6AC5F3C85EE2C036852915FB",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.32.4",
+  "kiotaVersion": "1.32.5",
   "clientClassName": "GrafanaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Grafana.OpenApiClient",
@@ -30,5 +30,6 @@
   ],
   "includePatterns": [],
   "excludePatterns": [],
-  "disabledValidationRules": []
+  "disabledValidationRules": [],
+  "allowedExternalOrigins": []
 }
