@@ -25459,7 +25459,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "time-desc",
         "x-ms-enum": {
           "name": "SearchQueriesSortParameter",
           "modelAsString": false,
@@ -25503,8 +25502,7 @@
           "View"
         ],
         "type": "string",
-        "additionalProperties": false,
-        "default": "View"
+        "additionalProperties": false
       },
       "SearchSortParameter": {
         "enum": [
@@ -25513,7 +25511,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "alpha-asc",
         "x-ms-enum": {
           "name": "SearchSortParameter",
           "modelAsString": false,
@@ -25537,7 +25534,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "yaml",
         "x-ms-enum": {
           "name": "RouteGetAlertRulesExportFormatParameter",
           "modelAsString": false,
@@ -25565,7 +25561,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "yaml",
         "x-ms-enum": {
           "name": "RouteGetAlertRuleExportFormatParameter",
           "modelAsString": false,
@@ -25593,7 +25588,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "yaml",
         "x-ms-enum": {
           "name": "RouteGetContactpointsExportFormatParameter",
           "modelAsString": false,
@@ -25621,7 +25615,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "yaml",
         "x-ms-enum": {
           "name": "RouteGetAlertRuleGroupExportFormatParameter",
           "modelAsString": false,
@@ -25649,7 +25642,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "yaml",
         "x-ms-enum": {
           "name": "RouteExportMuteTimingsFormatParameter",
           "modelAsString": false,
@@ -25677,7 +25669,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "yaml",
         "x-ms-enum": {
           "name": "RouteExportMuteTimingFormatParameter",
           "modelAsString": false,
