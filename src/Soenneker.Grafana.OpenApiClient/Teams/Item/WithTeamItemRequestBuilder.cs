@@ -60,6 +60,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,6 +77,7 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item
                 { "401", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
