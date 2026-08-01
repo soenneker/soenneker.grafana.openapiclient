@@ -2949,7 +2949,7 @@
             "content": {
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteConvertPrometheusCortexGetRules404Response"
+                  "$ref": "#/components/schemas/RouteConvertPrometheusCortexGetRules404YamlResponse"
                 }
               }
             }
@@ -3068,7 +3068,7 @@
             "content": {
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteConvertPrometheusCortexGetNamespace404Response"
+                  "$ref": "#/components/schemas/RouteConvertPrometheusCortexGetNamespace404YamlResponse"
                 }
               }
             }
@@ -3265,7 +3265,7 @@
             "content": {
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteConvertPrometheusCortexGetRuleGroup404Response"
+                  "$ref": "#/components/schemas/RouteConvertPrometheusCortexGetRuleGroup404YamlResponse"
                 }
               }
             }
@@ -3306,7 +3306,7 @@
             "content": {
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteConvertPrometheusGetRules404Response"
+                  "$ref": "#/components/schemas/RouteConvertPrometheusGetRules404YamlResponse"
                 }
               }
             }
@@ -3425,7 +3425,7 @@
             "content": {
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteConvertPrometheusGetNamespace404Response"
+                  "$ref": "#/components/schemas/RouteConvertPrometheusGetNamespace404YamlResponse"
                 }
               }
             }
@@ -3622,7 +3622,7 @@
             "content": {
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteConvertPrometheusGetRuleGroup404Response"
+                  "$ref": "#/components/schemas/RouteConvertPrometheusGetRuleGroup404YamlResponse"
                 }
               }
             }
@@ -10071,22 +10071,22 @@
               },
               "application/terraform\u002Bhcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetContactpointsExport403ResponseResponseTerraformHcl"
+                  "$ref": "#/components/schemas/RouteGetContactpointsExport403TerraformHclResponse"
                 }
               },
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetContactpointsExport403ResponseResponseYaml"
+                  "$ref": "#/components/schemas/RouteGetContactpointsExport403YamlResponse"
                 }
               },
               "text/hcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetContactpointsExport403ResponseResponseHcl"
+                  "$ref": "#/components/schemas/RouteGetContactpointsExport403HclResponse"
                 }
               },
               "text/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetContactpointsExport403ResponseResponseYaml2"
+                  "$ref": "#/components/schemas/RouteGetContactpointsExport403YamlResponseSchema"
                 }
               }
             }
@@ -10267,22 +10267,22 @@
               },
               "application/terraform\u002Bhcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTimings403ResponseResponseTerraformHcl"
+                  "$ref": "#/components/schemas/RouteExportMuteTimings403TerraformHclResponse"
                 }
               },
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTimings403ResponseResponseYaml"
+                  "$ref": "#/components/schemas/RouteExportMuteTimings403YamlResponse"
                 }
               },
               "text/hcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTimings403ResponseResponseHcl"
+                  "$ref": "#/components/schemas/RouteExportMuteTimings403HclResponse"
                 }
               },
               "text/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTimings403ResponseResponseYaml2"
+                  "$ref": "#/components/schemas/RouteExportMuteTimings403YamlResponseSchema"
                 }
               }
             }
@@ -10366,22 +10366,22 @@
               },
               "application/terraform\u002Bhcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTiming403ResponseResponseTerraformHcl"
+                  "$ref": "#/components/schemas/RouteExportMuteTiming403TerraformHclResponse"
                 }
               },
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTiming403ResponseResponseYaml"
+                  "$ref": "#/components/schemas/RouteExportMuteTiming403YamlResponse"
                 }
               },
               "text/hcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTiming403ResponseResponseHcl"
+                  "$ref": "#/components/schemas/RouteExportMuteTiming403HclResponse"
                 }
               },
               "text/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteExportMuteTiming403ResponseResponseYaml2"
+                  "$ref": "#/components/schemas/RouteExportMuteTiming403YamlResponseSchema"
                 }
               }
             }
@@ -10467,22 +10467,22 @@
               },
               "application/terraform\u002Bhcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404ResponseResponseTerraformHcl"
+                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404TerraformHclResponse"
                 }
               },
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404ResponseResponseYaml"
+                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404YamlResponse"
                 }
               },
               "text/hcl": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404ResponseResponseHcl"
+                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404HclResponse"
                 }
               },
               "text/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404ResponseResponseYaml2"
+                  "$ref": "#/components/schemas/RouteGetPolicyTreeExport404YamlResponseSchema"
                 }
               }
             }
@@ -23037,22 +23037,22 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "RouteConvertPrometheusCortexGetRules404Response": {
+      "RouteConvertPrometheusCortexGetRules404YamlResponse": {
         "type": "object"
       },
-      "RouteConvertPrometheusCortexGetNamespace404Response": {
+      "RouteConvertPrometheusCortexGetNamespace404YamlResponse": {
         "type": "object"
       },
-      "RouteConvertPrometheusCortexGetRuleGroup404Response": {
+      "RouteConvertPrometheusCortexGetRuleGroup404YamlResponse": {
         "type": "object"
       },
-      "RouteConvertPrometheusGetRules404Response": {
+      "RouteConvertPrometheusGetRules404YamlResponse": {
         "type": "object"
       },
-      "RouteConvertPrometheusGetNamespace404Response": {
+      "RouteConvertPrometheusGetNamespace404YamlResponse": {
         "type": "object"
       },
-      "RouteConvertPrometheusGetRuleGroup404Response": {
+      "RouteConvertPrometheusGetRuleGroup404YamlResponse": {
         "type": "object"
       },
       "DatasourceProxyPostByUiDcallsRequestRequestBody": {
@@ -23064,61 +23064,61 @@
       "RouteGetContactpointsExport403Response": {
         "type": "object"
       },
-      "RouteGetContactpointsExport403ResponseResponseTerraformHcl": {
+      "RouteGetContactpointsExport403TerraformHclResponse": {
         "type": "object"
       },
-      "RouteGetContactpointsExport403ResponseResponseYaml": {
+      "RouteGetContactpointsExport403YamlResponse": {
         "type": "object"
       },
-      "RouteGetContactpointsExport403ResponseResponseHcl": {
+      "RouteGetContactpointsExport403HclResponse": {
         "type": "object"
       },
-      "RouteGetContactpointsExport403ResponseResponseYaml2": {
+      "RouteGetContactpointsExport403YamlResponseSchema": {
         "type": "object"
       },
       "RouteExportMuteTimings403Response": {
         "type": "object"
       },
-      "RouteExportMuteTimings403ResponseResponseTerraformHcl": {
+      "RouteExportMuteTimings403TerraformHclResponse": {
         "type": "object"
       },
-      "RouteExportMuteTimings403ResponseResponseYaml": {
+      "RouteExportMuteTimings403YamlResponse": {
         "type": "object"
       },
-      "RouteExportMuteTimings403ResponseResponseHcl": {
+      "RouteExportMuteTimings403HclResponse": {
         "type": "object"
       },
-      "RouteExportMuteTimings403ResponseResponseYaml2": {
+      "RouteExportMuteTimings403YamlResponseSchema": {
         "type": "object"
       },
       "RouteExportMuteTiming403Response": {
         "type": "object"
       },
-      "RouteExportMuteTiming403ResponseResponseTerraformHcl": {
+      "RouteExportMuteTiming403TerraformHclResponse": {
         "type": "object"
       },
-      "RouteExportMuteTiming403ResponseResponseYaml": {
+      "RouteExportMuteTiming403YamlResponse": {
         "type": "object"
       },
-      "RouteExportMuteTiming403ResponseResponseHcl": {
+      "RouteExportMuteTiming403HclResponse": {
         "type": "object"
       },
-      "RouteExportMuteTiming403ResponseResponseYaml2": {
+      "RouteExportMuteTiming403YamlResponseSchema": {
         "type": "object"
       },
       "RouteGetPolicyTreeExport404Response": {
         "type": "object"
       },
-      "RouteGetPolicyTreeExport404ResponseResponseTerraformHcl": {
+      "RouteGetPolicyTreeExport404TerraformHclResponse": {
         "type": "object"
       },
-      "RouteGetPolicyTreeExport404ResponseResponseYaml": {
+      "RouteGetPolicyTreeExport404YamlResponse": {
         "type": "object"
       },
-      "RouteGetPolicyTreeExport404ResponseResponseHcl": {
+      "RouteGetPolicyTreeExport404HclResponse": {
         "type": "object"
       },
-      "RouteGetPolicyTreeExport404ResponseResponseYaml2": {
+      "RouteGetPolicyTreeExport404YamlResponseSchema": {
         "type": "object"
       },
       "GettableHistoricUserConfigsResponseContent": {
