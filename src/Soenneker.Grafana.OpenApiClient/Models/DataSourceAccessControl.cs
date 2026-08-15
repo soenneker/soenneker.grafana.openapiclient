@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Metadata contains user accesses for a given resourceEx: map[string]bool{\&quot;create\&quot;:true, \&quot;delete\&quot;: true}&quot;
+    /// Metadata contains user accesses for a given resourceEx: map[string]bool{&quot;create&quot;:true, &quot;delete&quot;: true}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DataSourceAccessControl : IAdditionalDataHolder, IParsable

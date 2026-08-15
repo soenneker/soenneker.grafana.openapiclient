@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #endif
         /// <summary>The created property</summary>
         public long? Created { get; set; }
-        /// <summary>&quot;Deprecated: Use DashboardUID and OrgID instead&quot;</summary>
+        /// <summary>Deprecated: Use DashboardUID and OrgID instead</summary>
         public long? DashboardId { get; set; }
         /// <summary>The dashboardUID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

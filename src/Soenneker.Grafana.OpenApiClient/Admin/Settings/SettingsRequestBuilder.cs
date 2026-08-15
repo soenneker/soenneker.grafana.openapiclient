@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Admin.Settings
         {
         }
         /// <summary>
-        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).&quot;
+        /// If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AdminGetSettingsResponseResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Grafana.OpenApiClient.Admin.Settings
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.AdminGetSettingsResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.AdminGetSettingsResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).&quot;
+        /// If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

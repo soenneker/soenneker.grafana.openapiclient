@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Item
         {
         }
         /// <summary>
-        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:delete` scope: `serviceaccounts:id:1` (single service account)&quot;
+        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:delete` scope: `serviceaccounts:id:1` (single service account)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -71,7 +71,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:id:1` (single service account)&quot;
+        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:id:1` (single service account)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -102,7 +102,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.ServiceAccountDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)&quot;
+        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.UpdateServiceAccountResponseResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.UpdateServiceAccountResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.UpdateServiceAccountResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:delete` scope: `serviceaccounts:id:1` (single service account)&quot;
+        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:delete` scope: `serviceaccounts:id:1` (single service account)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -154,7 +154,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:id:1` (single service account)&quot;
+        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:read` scope: `serviceaccounts:id:1` (single service account)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -173,7 +173,7 @@ namespace Soenneker.Grafana.OpenApiClient.Serviceaccounts.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)&quot;
+        /// Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):action: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

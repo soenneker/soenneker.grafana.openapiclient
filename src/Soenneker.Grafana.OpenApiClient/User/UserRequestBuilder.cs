@@ -8,6 +8,7 @@ using Soenneker.Grafana.OpenApiClient.User.AuthTokens;
 using Soenneker.Grafana.OpenApiClient.User.Email;
 using Soenneker.Grafana.OpenApiClient.User.Orgs;
 using Soenneker.Grafana.OpenApiClient.User.Password;
+using Soenneker.Grafana.OpenApiClient.User.Preferences;
 using Soenneker.Grafana.OpenApiClient.User.Quotas;
 using Soenneker.Grafana.OpenApiClient.User.RevokeAuthToken;
 using Soenneker.Grafana.OpenApiClient.User.Stars;
@@ -45,6 +46,11 @@ namespace Soenneker.Grafana.OpenApiClient.User
         public global::Soenneker.Grafana.OpenApiClient.User.Password.PasswordRequestBuilder Password
         {
             get => new global::Soenneker.Grafana.OpenApiClient.User.Password.PasswordRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The preferences property</summary>
+        public global::Soenneker.Grafana.OpenApiClient.User.Preferences.PreferencesRequestBuilder Preferences
+        {
+            get => new global::Soenneker.Grafana.OpenApiClient.User.Preferences.PreferencesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The quotas property</summary>
         public global::Soenneker.Grafana.OpenApiClient.User.Quotas.QuotasRequestBuilder Quotas

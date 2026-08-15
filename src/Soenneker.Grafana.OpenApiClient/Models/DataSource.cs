@@ -20,7 +20,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Access { get; set; }
 #endif
-        /// <summary>&quot;Metadata contains user accesses for a given resourceEx: map[string]bool{\&quot;create\&quot;:true, \&quot;delete\&quot;: true}&quot;</summary>
+        /// <summary>Metadata contains user accesses for a given resourceEx: map[string]bool{&quot;create&quot;:true, &quot;delete&quot;: true}</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.DataSourceAccessControl? AccessControl { get; set; }

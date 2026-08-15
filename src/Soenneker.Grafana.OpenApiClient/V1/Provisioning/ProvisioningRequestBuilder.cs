@@ -7,6 +7,7 @@ using Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints;
 using Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder;
 using Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings;
 using Soenneker.Grafana.OpenApiClient.V1.Provisioning.Policies;
+using Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -43,6 +44,11 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Policies.PoliciesRequestBuilder Policies
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Policies.PoliciesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The templates property</summary>
+        public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.TemplatesRequestBuilder Templates
+        {
+            get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.TemplatesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ProvisioningRequestBuilder"/> and sets the default values.

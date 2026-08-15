@@ -17,14 +17,15 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.dashboards.uid.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder"/></returns>
+        [Obsolete("")]
+        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("dashboardUid", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("dashboardU%2Did", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

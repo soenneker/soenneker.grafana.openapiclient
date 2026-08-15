@@ -36,7 +36,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #endif
         /// <summary>The elementId property</summary>
         public long? ElementId { get; set; }
-        /// <summary>&quot;Deprecated: this field will be removed in the future&quot;</summary>
+        /// <summary>Deprecated: this field will be removed in the future</summary>
         public long? Id { get; set; }
         /// <summary>The kind property</summary>
         public long? Kind { get; set; }

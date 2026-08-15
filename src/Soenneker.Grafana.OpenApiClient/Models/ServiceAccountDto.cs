@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;swagger: model&quot;
+    /// swagger: model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ServiceAccountDto : IAdditionalDataHolder, IParsable
