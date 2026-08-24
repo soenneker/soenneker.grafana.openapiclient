@@ -10949,7 +10949,7 @@
           "signed_in_user"
         ],
         "summary": "Unstar a dashboard.",
-        "description": "Deletes the starring of the given Dashboard for the actual user.",
+        "description": "Deletes the starring of the given Dashboard for the actual user.\n\nUse: DELETE /apis/collections.grafana.app/v1alpha1/namespaces/{namespace}/stars/{name}/update/{group}/{kind}/{id}",
         "operationId": "UnstarDashboardByUid",
         "parameters": [
           {
@@ -10977,14 +10977,15 @@
           "500": {
             "$ref": "#/components/responses/internalServerError"
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
           "signed_in_user"
         ],
         "summary": "Star a dashboard.",
-        "description": "Stars the given Dashboard for the actual user.",
+        "description": "Stars the given Dashboard for the actual user.\n\nUse: PUT /apis/collections.grafana.app/v1alpha1/namespaces/{namespace}/stars/{name}/update/{group}/{kind}/{id}",
         "operationId": "StarDashboardByUid",
         "parameters": [
           {
@@ -11012,7 +11013,8 @@
           "500": {
             "$ref": "#/components/responses/internalServerError"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/user/teams": {

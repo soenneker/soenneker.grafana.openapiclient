@@ -18,6 +18,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.user.stars.dashboard.uid.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder"/></returns>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder this[string position]
         {
             get

@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item
         {
         }
         /// <summary>
-        /// Deletes the starring of the given Dashboard for the actual user.
+        /// Deletes the starring of the given Dashboard for the actual user.Use: DELETE /apis/collections.grafana.app/v1alpha1/namespaces/{namespace}/stars/{name}/update/{group}/{kind}/{id}
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -43,6 +43,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -63,7 +64,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Stars the given Dashboard for the actual user.
+        /// Stars the given Dashboard for the actual user.Use: PUT /apis/collections.grafana.app/v1alpha1/namespaces/{namespace}/stars/{name}/update/{group}/{kind}/{id}
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,6 +73,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -92,10 +94,11 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes the starring of the given Dashboard for the actual user.
+        /// Deletes the starring of the given Dashboard for the actual user.Use: DELETE /apis/collections.grafana.app/v1alpha1/namespaces/{namespace}/stars/{name}/update/{group}/{kind}/{id}
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -111,10 +114,11 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item
             return requestInfo;
         }
         /// <summary>
-        /// Stars the given Dashboard for the actual user.
+        /// Stars the given Dashboard for the actual user.Use: PUT /apis/collections.grafana.app/v1alpha1/namespaces/{namespace}/stars/{name}/update/{group}/{kind}/{id}
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
@@ -134,6 +138,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Grafana.OpenApiClient.User.Stars.Dashboard.Uid.Item.WithDashboardUItemRequestBuilder(rawUrl, RequestAdapter);
