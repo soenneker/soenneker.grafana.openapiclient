@@ -88,6 +88,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ValidationError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.PublicError">When receiving a 409 status code</exception>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,6 +105,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings
             {
                 { "400", global::Soenneker.Grafana.OpenApiClient.Models.ValidationError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Grafana.OpenApiClient.Models.PublicError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeInterval>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeInterval.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

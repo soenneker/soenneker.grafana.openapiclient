@@ -54,6 +54,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public List<string> MuteTimeIntervals { get; set; }
 #endif
+        /// <summary>Name of the notification policy to route alerts through.Mutually exclusive with all other fields, cannot be used with contact point routing via the &quot;receiver&quot; field.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Policy { get; set; }
+#nullable restore
+#else
+        public string Policy { get; set; }
+#endif
         /// <summary>Name of the receiver to send notifications to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,6 +108,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "group_interval", n => { GroupInterval = n.GetStringValue(); } },
                 { "group_wait", n => { GroupWait = n.GetStringValue(); } },
                 { "mute_time_intervals", n => { MuteTimeIntervals = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "policy", n => { Policy = n.GetStringValue(); } },
                 { "receiver", n => { Receiver = n.GetStringValue(); } },
                 { "repeat_interval", n => { RepeatInterval = n.GetStringValue(); } },
             };
@@ -116,6 +125,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("group_interval", GroupInterval);
             writer.WriteStringValue("group_wait", GroupWait);
             writer.WriteCollectionOfPrimitiveValues<string>("mute_time_intervals", MuteTimeIntervals);
+            writer.WriteStringValue("policy", Policy);
             writer.WriteStringValue("receiver", Receiver);
             writer.WriteStringValue("repeat_interval", RepeatInterval);
             writer.WriteAdditionalData(AdditionalData);
