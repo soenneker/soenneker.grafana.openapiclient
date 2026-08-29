@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissionsCsv
         {
         }
         /// <summary>
-        /// You need to have a permission with action `licensing.reports:read`.
+        /// You need to have a permission with action `licensing.reports:read`.Deprecated. There is currently no replacement for this endpoint. Please reach out to Grafana support if you rely on this endpoint.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissionsCsv
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// You need to have a permission with action `licensing.reports:read`.
+        /// You need to have a permission with action `licensing.reports:read`.Deprecated. There is currently no replacement for this endpoint. Please reach out to Grafana support if you rely on this endpoint.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

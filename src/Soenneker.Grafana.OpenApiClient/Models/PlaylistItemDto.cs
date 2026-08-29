@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>Value depends on type and describes the playlist item.dashboard_by_id: The value is an internal numerical identifier set by Grafana. Thisis not portable as the numerical identifier is non-deterministic between different instances.Will be replaced by dashboard_by_uid in the future. (deprecated)dashboard_by_tag: The value is a tag which is set on any number of dashboards. Alldashboards behind the tag will be added to the playlist.dashboard_by_uid: The value is the dashboard UID</summary>
+        /// <summary>Value depends on type and describes the playlist item.- dashboard_by_id: The value is an internal numerical identifier set by Grafana. Thisis not portable as the numerical identifier is non-deterministic between different instances.Will be replaced by dashboard_by_uid in the future. (deprecated)- dashboard_by_tag: The value is a tag which is set on any number of dashboards. Alldashboards behind the tag will be added to the playlist.- dashboard_by_uid: The value is the dashboard UID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

@@ -144,6 +144,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public long? MaxPathLen { get; set; }
         /// <summary>MaxPathLenZero indicates that BasicConstraintsValid==trueand MaxPathLen==0 should be interpreted as an actualmaximum path length of zero. Otherwise, that combination isinterpreted as MaxPathLen not being set.</summary>
         public bool? MaxPathLenZero { get; set; }
+        /// <summary>The NotAfter property</summary>
+        public DateTimeOffset? NotAfter { get; set; }
         /// <summary>The NotBefore property</summary>
         public DateTimeOffset? NotBefore { get; set; }
         /// <summary>RFC 5280, 4.2.2.1 (Authority Information Access)</summary>
@@ -267,13 +269,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>RequireExplicitPolicyZero indicates that RequireExplicitPolicy==0 should beinterpreted as an actual maximum path length of zero. Otherwise, thatcombination is interpreted as InhibitAnyPolicy not being set.</summary>
         public bool? RequireExplicitPolicyZero { get; set; }
         /// <summary>The SerialNumber property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SerialNumber { get; set; }
-#nullable restore
-#else
-        public string SerialNumber { get; set; }
-#endif
+        public int? SerialNumber { get; set; }
         /// <summary>The Signature property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -374,6 +370,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "KeyUsage", n => { KeyUsage = n.GetLongValue(); } },
                 { "MaxPathLen", n => { MaxPathLen = n.GetLongValue(); } },
                 { "MaxPathLenZero", n => { MaxPathLenZero = n.GetBoolValue(); } },
+                { "NotAfter", n => { NotAfter = n.GetDateTimeOffsetValue(); } },
                 { "NotBefore", n => { NotBefore = n.GetDateTimeOffsetValue(); } },
                 { "OCSPServer", n => { OCSPServer = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "PermittedDNSDomains", n => { PermittedDNSDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -393,7 +390,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "RawTBSCertificate", n => { RawTBSCertificate = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "RequireExplicitPolicy", n => { RequireExplicitPolicy = n.GetLongValue(); } },
                 { "RequireExplicitPolicyZero", n => { RequireExplicitPolicyZero = n.GetBoolValue(); } },
-                { "SerialNumber", n => { SerialNumber = n.GetStringValue(); } },
+                { "SerialNumber", n => { SerialNumber = n.GetIntValue(); } },
                 { "Signature", n => { Signature = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "SignatureAlgorithm", n => { SignatureAlgorithm = n.GetLongValue(); } },
                 { "Subject", n => { Subject = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Name>(global::Soenneker.Grafana.OpenApiClient.Models.Name.CreateFromDiscriminatorValue); } },
@@ -434,6 +431,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("KeyUsage", KeyUsage);
             writer.WriteLongValue("MaxPathLen", MaxPathLen);
             writer.WriteBoolValue("MaxPathLenZero", MaxPathLenZero);
+            writer.WriteDateTimeOffsetValue("NotAfter", NotAfter);
             writer.WriteDateTimeOffsetValue("NotBefore", NotBefore);
             writer.WriteCollectionOfPrimitiveValues<string>("OCSPServer", OCSPServer);
             writer.WriteCollectionOfPrimitiveValues<string>("PermittedDNSDomains", PermittedDNSDomains);
@@ -453,7 +451,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<byte?>("RawTBSCertificate", RawTBSCertificate);
             writer.WriteLongValue("RequireExplicitPolicy", RequireExplicitPolicy);
             writer.WriteBoolValue("RequireExplicitPolicyZero", RequireExplicitPolicyZero);
-            writer.WriteStringValue("SerialNumber", SerialNumber);
+            writer.WriteIntValue("SerialNumber", SerialNumber);
             writer.WriteCollectionOfPrimitiveValues<byte?>("Signature", Signature);
             writer.WriteLongValue("SignatureAlgorithm", SignatureAlgorithm);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.Name>("Subject", Subject);

@@ -16,7 +16,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The id property</summary>
         public long? Id { get; set; }
-        /// <summary>It can be a user or a tool or a generic API client.+enum</summary>
+        /// <summary>It can be a user or a tool or a generic API client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ManagedBy { get; set; }

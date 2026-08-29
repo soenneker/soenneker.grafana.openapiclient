@@ -84,7 +84,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public global::Soenneker.Grafana.OpenApiClient.Models.ReportSchedule Schedule { get; set; }
 #endif
-        /// <summary>+enum</summary>
+        /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }

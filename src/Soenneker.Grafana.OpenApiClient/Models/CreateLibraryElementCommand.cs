@@ -25,7 +25,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string FolderUid { get; set; }
 #endif
-        /// <summary>Kind of element to create, Use 1 for library panels or 2 for c.Description:1 - library panels</summary>
+        /// <summary>Kind of element to create, Use 1 for library panels or 2 for c.Description:- 1 - library panels</summary>
         public long? Kind { get; set; }
         /// <summary>The JSON model for the library element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

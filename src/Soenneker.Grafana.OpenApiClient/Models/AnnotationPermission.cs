@@ -7,15 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
-    /// <summary>
-    /// +k8s:deepcopy-gen=true
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class AnnotationPermission : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>+k8s:deepcopy-gen=true</summary>
+        /// <summary>The dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.AnnotationActions? Dashboard { get; set; }

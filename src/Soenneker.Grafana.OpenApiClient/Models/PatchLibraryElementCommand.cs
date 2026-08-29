@@ -25,15 +25,15 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string FolderUid { get; set; }
 #endif
-        /// <summary>Kind of element to create, Use 1 for library panels or 2 for c.Description:1 - library panels</summary>
+        /// <summary>Kind of element to create, Use 1 for library panels or 2 for c.Description:- 1 - library panels</summary>
         public long? Kind { get; set; }
         /// <summary>The JSON model for the library element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty? Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel? Model { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel Model { get; set; }
 #endif
         /// <summary>Name of the library element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "folderId", n => { FolderId = n.GetLongValue(); } },
                 { "folderUid", n => { FolderUid = n.GetStringValue(); } },
                 { "kind", n => { Kind = n.GetLongValue(); } },
-                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty>(global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty.CreateFromDiscriminatorValue); } },
+                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel>(global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "uid", n => { Uid = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetLongValue(); } },
@@ -97,7 +97,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("folderId", FolderId);
             writer.WriteStringValue("folderUid", FolderUid);
             writer.WriteLongValue("kind", Kind);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel>("model", Model);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("uid", Uid);
             writer.WriteLongValue("version", Version);

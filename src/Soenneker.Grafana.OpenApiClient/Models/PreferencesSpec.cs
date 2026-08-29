@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
-    /// <summary>
-    /// +k8s:openapi-gen=true
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class PreferencesSpec : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -39,7 +38,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Language { get; set; }
 #endif
-        /// <summary>+k8s:openapi-gen=true</summary>
+        /// <summary>The navbar property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.PreferencesNavbarPreference? Navbar { get; set; }
@@ -47,7 +46,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public global::Soenneker.Grafana.OpenApiClient.Models.PreferencesNavbarPreference Navbar { get; set; }
 #endif
-        /// <summary>+k8s:openapi-gen=true</summary>
+        /// <summary>The queryHistory property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.PreferencesQueryHistoryPreference? QueryHistory { get; set; }

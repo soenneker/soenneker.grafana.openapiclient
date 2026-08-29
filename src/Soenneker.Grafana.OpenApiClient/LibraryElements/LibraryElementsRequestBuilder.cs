@@ -196,7 +196,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
             [QueryParameter("folderFilterUIDs")]
             public string FolderFilterUIDs { get; set; }
 #endif
-            /// <summary>Kind of element to search for.</summary>
+            /// <summary>Kind of element to search for.Description:- 1 - library panels</summary>
             [QueryParameter("kind")]
             public long? Kind { get; set; }
             /// <summary>The page for a set of records, given that only perPage records are returned at a time. Numbering starts at 1.</summary>
@@ -215,7 +215,7 @@ namespace Soenneker.Grafana.OpenApiClient.LibraryElements
             [QueryParameter("searchString")]
             public string SearchString { get; set; }
 #endif
-            /// <summary>Sort order of elements.</summary>
+            /// <summary>Sort order of elements.Description:- alpha-asc: ascending- alpha-desc: descending</summary>
             [QueryParameter("sortDirection")]
             public global::Soenneker.Grafana.OpenApiClient.Models.GetLibraryElementsSortDirectionParameter? SortDirection { get; set; }
             /// <summary>A comma separated list of types to filter the elements by</summary>

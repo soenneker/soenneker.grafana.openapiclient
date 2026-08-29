@@ -55,7 +55,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public List<byte?> CertificateThumbprintSHA256 { get; set; }
 #endif
-        /// <summary>Key is the Go in-memory representation of this key. It must have oneof these types:ed25519.PublicKeyed25519.PrivateKeyecdsa.PublicKeyecdsa.PrivateKeyrsa.PublicKeyrsa.PrivateKey[]byte (a symmetric key)When marshaling this JSONWebKey into JSON, the &quot;kty&quot; header parameterwill be automatically set based on the type of this field.</summary>
+        /// <summary>Key is the Go in-memory representation of this key. It must have oneof these types:- ed25519.PublicKey- ed25519.PrivateKey- *ecdsa.PublicKey- *ecdsa.PrivateKey- *rsa.PublicKey- *rsa.PrivateKey- []byte (a symmetric key)When marshaling this JSONWebKey into JSON, the &quot;kty&quot; header parameterwill be automatically set based on the type of this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Grafana.OpenApiClient.Models.JsonWebKeyKey? Key { get; set; }

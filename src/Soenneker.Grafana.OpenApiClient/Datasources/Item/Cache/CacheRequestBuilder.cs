@@ -157,6 +157,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CacheRequestBuilderGetQueryParameters 
         {
+            /// <summary>Optional datasource type used to disambiguate datasource UID lookups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("dataSourceType")]
@@ -173,6 +174,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Item.Cache
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CacheRequestBuilderPostQueryParameters 
         {
+            /// <summary>Optional datasource type used to disambiguate datasource UID lookups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("dataSourceType")]

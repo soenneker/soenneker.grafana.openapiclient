@@ -47,10 +47,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The model property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModelProperty? Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel? Model { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModelProperty Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel Model { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,7 +113,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "kind", n => { Kind = n.GetLongValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMeta>(global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMeta.CreateFromDiscriminatorValue); } },
-                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModelProperty>(global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModelProperty.CreateFromDiscriminatorValue); } },
+                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel>(global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "orgId", n => { OrgId = n.GetLongValue(); } },
                 { "schemaVersion", n => { SchemaVersion = n.GetLongValue(); } },
@@ -135,7 +135,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteLongValue("kind", Kind);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMeta>("meta", Meta);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModelProperty>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel>("model", Model);
             writer.WriteStringValue("name", Name);
             writer.WriteLongValue("orgId", OrgId);
             writer.WriteLongValue("schemaVersion", SchemaVersion);

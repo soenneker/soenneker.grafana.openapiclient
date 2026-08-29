@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Models
 {
     /// <summary>
-    /// Key is the Go in-memory representation of this key. It must have oneof these types:ed25519.PublicKeyed25519.PrivateKeyecdsa.PublicKeyecdsa.PrivateKeyrsa.PublicKeyrsa.PrivateKey[]byte (a symmetric key)When marshaling this JSONWebKey into JSON, the &quot;kty&quot; header parameterwill be automatically set based on the type of this field.
+    /// Key is the Go in-memory representation of this key. It must have oneof these types:- ed25519.PublicKey- ed25519.PrivateKey- *ecdsa.PublicKey- *ecdsa.PrivateKey- *rsa.PublicKey- *rsa.PrivateKey- []byte (a symmetric key)When marshaling this JSONWebKey into JSON, the &quot;kty&quot; header parameterwill be automatically set based on the type of this field.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JsonWebKeyKey : IAdditionalDataHolder, IParsable

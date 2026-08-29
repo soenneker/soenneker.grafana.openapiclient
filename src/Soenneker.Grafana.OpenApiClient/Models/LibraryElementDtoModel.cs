@@ -9,33 +9,27 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class AnnotationActions : IAdditionalDataHolder, IParsable
+    public partial class LibraryElementDtoModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The canAdd property</summary>
-        public bool? CanAdd { get; set; }
-        /// <summary>The canDelete property</summary>
-        public bool? CanDelete { get; set; }
-        /// <summary>The canEdit property</summary>
-        public bool? CanEdit { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AnnotationActions"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel"/> and sets the default values.
         /// </summary>
-        public AnnotationActions()
+        public LibraryElementDtoModel()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AnnotationActions"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Grafana.OpenApiClient.Models.AnnotationActions CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.AnnotationActions();
+            return new global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoModel();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,9 +39,6 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "canAdd", n => { CanAdd = n.GetBoolValue(); } },
-                { "canDelete", n => { CanDelete = n.GetBoolValue(); } },
-                { "canEdit", n => { CanEdit = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -57,9 +48,6 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("canAdd", CanAdd);
-            writer.WriteBoolValue("canDelete", CanDelete);
-            writer.WriteBoolValue("canEdit", CanEdit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

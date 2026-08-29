@@ -117,7 +117,7 @@ namespace Soenneker.Grafana.OpenApiClient.Search
             /// <summary>Flag indicating if only soft deleted Dashboards should be returned</summary>
             [QueryParameter("deleted")]
             public bool? Deleted { get; set; }
-            /// <summary>List of folder id’s to search in for dashboardsIf it&apos;s `0` then it will query for the top level foldersThis is deprecated: users should use the `folderUIDs` query parameter instead</summary>
+            /// <summary>List of folder id’s to search in for dashboardsIf it&apos;s `0` then it will query for the top level foldersThis is deprecated: users should use the `folderUIDs` query parameter insteadDeprecated: use FolderUIDs instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("folderIds")]
@@ -172,7 +172,7 @@ namespace Soenneker.Grafana.OpenApiClient.Search
             [QueryParameter("tag")]
             public string[] Tag { get; set; }
 #endif
-            /// <summary>Type to search for, dash-folder or dash-db</summary>
+            /// <summary>Type to search for, dash-folder or dash-dbDescription:- `dash-folder` - Search for folder- `dash-db` - Seatch for dashboard</summary>
             [QueryParameter("type")]
             public global::Soenneker.Grafana.OpenApiClient.Models.SearchTypeParameter? Type { get; set; }
         }

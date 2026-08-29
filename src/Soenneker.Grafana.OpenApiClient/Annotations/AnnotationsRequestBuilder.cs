@@ -228,7 +228,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
             /// <summary>Find annotations created before specific epoch datetime in milliseconds.</summary>
             [QueryParameter("to")]
             public long? To { get; set; }
-            /// <summary>Return alerts or user created annotations</summary>
+            /// <summary>Return alerts or user created annotationsDescription:- `alert`- `annotation`</summary>
             [QueryParameter("type")]
             public global::Soenneker.Grafana.OpenApiClient.Models.GetAnnotationsTypeParameter? Type { get; set; }
             /// <summary>Limit response to annotations created by specific user.</summary>

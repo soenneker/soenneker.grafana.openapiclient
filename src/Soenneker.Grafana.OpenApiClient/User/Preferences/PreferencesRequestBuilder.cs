@@ -90,7 +90,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Preferences
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Use /apis/preferences.grafana.app/v1/namespaces/{namespace}/preferences/user-{uid}
+        /// Use /apis/preferences.grafana.app/v1/namespaces/{namespace}/preferences/user-{uid}Omitting a key (`theme`, `homeDashboardUID`, `timezone`) will cause the current value to be replaced with the system default value.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="body">The request body</param>
@@ -163,7 +163,7 @@ namespace Soenneker.Grafana.OpenApiClient.User.Preferences
             return requestInfo;
         }
         /// <summary>
-        /// Use /apis/preferences.grafana.app/v1/namespaces/{namespace}/preferences/user-{uid}
+        /// Use /apis/preferences.grafana.app/v1/namespaces/{namespace}/preferences/user-{uid}Omitting a key (`theme`, `homeDashboardUID`, `timezone`) will cause the current value to be replaced with the system default value.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

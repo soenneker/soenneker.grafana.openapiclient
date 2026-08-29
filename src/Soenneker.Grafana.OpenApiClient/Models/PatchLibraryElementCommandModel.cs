@@ -11,26 +11,26 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     /// The JSON model for the library element.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PatchLibraryElementCommandModelProperty : IAdditionalDataHolder, IParsable
+    public partial class PatchLibraryElementCommandModel : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel"/> and sets the default values.
         /// </summary>
-        public PatchLibraryElementCommandModelProperty()
+        public PatchLibraryElementCommandModel()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModelProperty();
+            return new global::Soenneker.Grafana.OpenApiClient.Models.PatchLibraryElementCommandModel();
         }
         /// <summary>
         /// The deserialization information for the current model

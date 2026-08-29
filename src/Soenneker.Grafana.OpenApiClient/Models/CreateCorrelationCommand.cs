@@ -49,7 +49,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string TargetUID { get; set; }
 #endif
-        /// <summary>the type of correlation, either query for containing query information, or external for containing an external URL+enum</summary>
+        /// <summary>the type of correlation, either query for containing query information, or external for containing an external URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

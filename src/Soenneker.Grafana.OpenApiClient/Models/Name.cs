@@ -15,6 +15,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The CommonName property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CommonName { get; set; }
+#nullable restore
+#else
+        public string CommonName { get; set; }
+#endif
         /// <summary>The Country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,6 +54,38 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue> Names { get; set; }
+#endif
+        /// <summary>The Organization property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Organization { get; set; }
+#nullable restore
+#else
+        public List<string> Organization { get; set; }
+#endif
+        /// <summary>The OrganizationalUnit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? OrganizationalUnit { get; set; }
+#nullable restore
+#else
+        public List<string> OrganizationalUnit { get; set; }
+#endif
+        /// <summary>The PostalCode property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? PostalCode { get; set; }
+#nullable restore
+#else
+        public List<string> PostalCode { get; set; }
+#endif
+        /// <summary>The Province property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Province { get; set; }
+#nullable restore
+#else
+        public List<string> Province { get; set; }
 #endif
         /// <summary>The SerialNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,10 +128,15 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "CommonName", n => { CommonName = n.GetStringValue(); } },
                 { "Country", n => { Country = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "ExtraNames", n => { ExtraNames = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue>(global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "Locality", n => { Locality = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Names", n => { Names = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue>(global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Organization", n => { Organization = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "OrganizationalUnit", n => { OrganizationalUnit = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "PostalCode", n => { PostalCode = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "Province", n => { Province = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "SerialNumber", n => { SerialNumber = n.GetStringValue(); } },
                 { "StreetAddress", n => { StreetAddress = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -103,10 +148,15 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("CommonName", CommonName);
             writer.WriteCollectionOfPrimitiveValues<string>("Country", Country);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue>("ExtraNames", ExtraNames);
             writer.WriteCollectionOfPrimitiveValues<string>("Locality", Locality);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.AttributeTypeAndValue>("Names", Names);
+            writer.WriteCollectionOfPrimitiveValues<string>("Organization", Organization);
+            writer.WriteCollectionOfPrimitiveValues<string>("OrganizationalUnit", OrganizationalUnit);
+            writer.WriteCollectionOfPrimitiveValues<string>("PostalCode", PostalCode);
+            writer.WriteCollectionOfPrimitiveValues<string>("Province", Province);
             writer.WriteStringValue("SerialNumber", SerialNumber);
             writer.WriteCollectionOfPrimitiveValues<string>("StreetAddress", StreetAddress);
             writer.WriteAdditionalData(AdditionalData);
