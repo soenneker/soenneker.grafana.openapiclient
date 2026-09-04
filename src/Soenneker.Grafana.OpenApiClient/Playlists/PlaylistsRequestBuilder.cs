@@ -163,16 +163,22 @@ namespace Soenneker.Grafana.OpenApiClient.Playlists
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PlaylistsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public long? Limit { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("query")]
             public string? Query { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("query")]
             public string Query { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

@@ -157,12 +157,18 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RolesRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("delegatable")]
             public bool? Delegatable { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeHidden")]
             public bool? IncludeHidden { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("targetOrgId")]
             public long? TargetOrgId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

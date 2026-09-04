@@ -72,7 +72,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public CreateDashboardSnapshotCommand()
         {
             AdditionalData = new Dictionary<string, object>();
-            Expires = 0;
+            Expires = 0L;
             External = false;
         }
         /// <summary>

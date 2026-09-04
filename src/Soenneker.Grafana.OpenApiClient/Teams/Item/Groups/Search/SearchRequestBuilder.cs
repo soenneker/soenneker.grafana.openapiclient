@@ -107,8 +107,10 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item.Groups.Search
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("page")]
             public long? Page { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Number of items per page</summary>
             [QueryParameter("perpage")]
             public long? Perpage { get; set; }

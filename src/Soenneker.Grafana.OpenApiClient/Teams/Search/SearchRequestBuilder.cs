@@ -94,19 +94,27 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("accesscontrol")]
             public bool? Accesscontrol { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("name")]
             public string? Name { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("name")]
             public string Name { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("page")]
             public long? Page { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Number of items per pageThe totalCount field in the response can be used for pagination list E.g. if totalCount is equal to 100 teams and the perpage parameter is set to 10 then there are 10 pages of teams.</summary>
             [QueryParameter("perpage")]
             public long? Perpage { get; set; }
@@ -122,12 +130,16 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Search
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string? Sort { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("sort")]
             public string Sort { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

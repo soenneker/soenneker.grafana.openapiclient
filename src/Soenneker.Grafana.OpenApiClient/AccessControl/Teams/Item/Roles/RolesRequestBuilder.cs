@@ -213,8 +213,10 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RolesRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("targetOrgId")]
             public long? TargetOrgId { get; set; }
+            #pragma warning restore CS1591
         }
         /// <summary>
         /// You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each.
@@ -222,8 +224,10 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RolesRequestBuilderPutQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("targetOrgId")]
             public long? TargetOrgId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -219,8 +219,10 @@ namespace Soenneker.Grafana.OpenApiClient.Teams.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTeamItemRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("accesscontrol")]
             public bool? Accesscontrol { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

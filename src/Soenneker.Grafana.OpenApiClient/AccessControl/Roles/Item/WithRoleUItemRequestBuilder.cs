@@ -197,10 +197,14 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithRoleUItemRequestBuilderDeleteQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("force")]
             public bool? Force { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("global")]
             public bool? Global { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }
