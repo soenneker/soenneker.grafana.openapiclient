@@ -77,7 +77,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "201": {
@@ -199,7 +200,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -280,7 +282,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -340,7 +343,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -428,7 +432,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -483,7 +488,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -568,7 +574,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -663,7 +670,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -715,7 +723,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -894,7 +903,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -957,7 +967,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -1021,7 +1032,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -1085,7 +1097,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -1434,7 +1447,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -1705,7 +1719,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -1758,7 +1773,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -1859,7 +1875,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -1912,7 +1929,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -2092,7 +2110,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -2129,7 +2148,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -2165,7 +2185,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -2306,7 +2327,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -2351,7 +2373,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -2460,7 +2483,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -2577,7 +2601,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -3172,7 +3197,8 @@
                 "$ref": "#/components/schemas/PrometheusRuleGroup"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "202": {
@@ -3195,7 +3221,8 @@
               }
             }
           }
-        }
+        },
+        "x-raw-request": "true"
       }
     },
     "/convert/api/prom/rules/{namespaceTitle}/{group}": {
@@ -3529,7 +3556,8 @@
                 "$ref": "#/components/schemas/PrometheusRuleGroup"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "202": {
@@ -3552,7 +3580,8 @@
               }
             }
           }
-        }
+        },
+        "x-raw-request": "true"
       }
     },
     "/convert/prometheus/config/v1/rules/{namespaceTitle}/{group}": {
@@ -3715,7 +3744,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -3782,7 +3812,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -3941,7 +3972,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -4039,7 +4071,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -4202,7 +4235,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -4254,7 +4288,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -4422,7 +4457,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -4736,7 +4772,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "DatasourceProxyParam"
         },
         "responses": {
           "201": {
@@ -4821,7 +4858,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -4918,7 +4956,8 @@
                 "$ref": "#/components/schemas/UpdateCorrelationCommand"
               }
             }
-          }
+          },
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -5084,7 +5123,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -5203,7 +5243,8 @@
                 "$ref": "#/components/schemas/UpdateTeamLbacCommand"
               }
             }
-          }
+          },
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -5347,7 +5388,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -5503,7 +5545,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -5604,7 +5647,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -5740,7 +5784,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -5832,7 +5877,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -5916,7 +5962,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -6074,7 +6121,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6231,7 +6279,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6380,7 +6429,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "202": {
@@ -6433,7 +6483,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6462,7 +6513,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6534,7 +6586,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6570,7 +6623,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6629,7 +6683,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6731,7 +6786,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6768,7 +6824,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6873,7 +6930,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -6995,7 +7053,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -7097,7 +7156,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -7262,7 +7322,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -7314,7 +7375,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -7410,7 +7472,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -7501,7 +7564,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -7640,7 +7704,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -7711,7 +7776,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -7831,7 +7897,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -8129,7 +8196,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8262,7 +8330,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8321,7 +8390,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8356,7 +8426,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8393,7 +8464,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8484,7 +8556,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8586,7 +8659,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8662,7 +8736,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8867,7 +8942,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -8905,7 +8981,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -9039,7 +9116,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -9352,7 +9430,8 @@
                 "$ref": "#/components/schemas/CreateServiceAccountForm"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "201": {
@@ -9543,7 +9622,8 @@
                 "$ref": "#/components/schemas/UpdateServiceAccountForm"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -9629,7 +9709,8 @@
                 "$ref": "#/components/schemas/AddServiceAccountTokenCommand"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -9758,7 +9839,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -9895,7 +9977,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10099,7 +10182,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10300,7 +10384,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10383,7 +10468,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10428,7 +10514,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10526,7 +10613,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10602,7 +10690,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10660,7 +10749,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10766,7 +10856,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10830,7 +10921,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10864,7 +10956,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -10926,7 +11019,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -11255,7 +11349,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "200": {
@@ -11408,7 +11503,8 @@
                 "$ref": "#/components/schemas/ProvisionedAlertRule"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "201": {
@@ -11682,7 +11778,8 @@
                 "$ref": "#/components/schemas/ProvisionedAlertRule"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -11884,7 +11981,8 @@
                 "$ref": "#/components/schemas/EmbeddedContactPoint"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "202": {
@@ -12114,7 +12212,8 @@
                 "$ref": "#/components/schemas/EmbeddedContactPoint"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "202": {
@@ -12302,7 +12401,8 @@
                 "$ref": "#/components/schemas/AlertRuleGroup"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "200": {
@@ -12501,7 +12601,8 @@
                 "$ref": "#/components/schemas/MuteTimeInterval"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "201": {
@@ -12773,7 +12874,8 @@
                 "$ref": "#/components/schemas/MuteTimeInterval"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "202": {
@@ -13013,7 +13115,8 @@
                 "$ref": "#/components/schemas/Route"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "202": {
@@ -13328,7 +13431,8 @@
                 "$ref": "#/components/schemas/NotificationTemplateContent"
               }
             }
-          }
+          },
+          "x-originalParamName": "Body"
         },
         "responses": {
           "202": {
@@ -13498,7 +13602,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "204": {
@@ -13543,7 +13648,8 @@
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-originalParamName": "body"
         },
         "responses": {
           "204": {
