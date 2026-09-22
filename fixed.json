@@ -15469,11 +15469,10 @@
           }
         }
       },
-      "GetSignedInUserTeamListResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TeamDto"
-        }
+      "ConfFloat64": {
+        "type": "number",
+        "description": "ConfFloat64 is a float64. It Marshals float64 values of NaN of Inf\nto null.",
+        "format": "double"
       },
       "Config": {
         "title": "Config is the top-level configuration for Alertmanager\u0027s config files.",
@@ -15666,25 +15665,15 @@
           }
         }
       },
-      "GetSignedInUserOrgListResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UserOrgDto"
-        }
+      "CorrelationType": {
+        "type": "string",
+        "description": "the type of correlation, either query for containing query information, or external for containing an external URL"
       },
-      "GetSharingOptionsResponseResponse": {
-        "type": "object",
-        "properties": {
-          "externalEnabled": {
-            "type": "boolean"
-          },
-          "externalSnapshotName": {
-            "type": "string"
-          },
-          "externalSnapshotURL": {
-            "type": "string"
-          }
-        }
+      "CounterResetHint": {
+        "title": "CounterResetHint contains the known information about a counter reset,",
+        "type": "integer",
+        "description": "or alternatively that we are dealing with a gauge histogram, where counter resets do not apply.",
+        "format": "uint8"
       },
       "CreateAccessTokenResponseDto": {
         "type": "object",
@@ -16348,22 +16337,9 @@
           }
         }
       },
-      "GetSsoSettingsResponseResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "provider": {
-            "type": "string"
-          },
-          "settings": {
-            "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsProperty"
-          },
-          "source": {
-            "type": "string"
-          }
-        }
+      "DashboardaccessPermissionType": {
+        "type": "integer",
+        "format": "int64"
       },
       "DataLink": {
         "type": "object",
@@ -16545,11 +16521,9 @@
         },
         "description": "Ref to a DataSource instance"
       },
-      "GetResourcePermissionsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ResourcePermissionDto"
-        }
+      "DataTopic": {
+        "title": "DataTopic is used to identify which topic the frame should be assigned to.",
+        "type": "string"
       },
       "DeleteCorrelationResponseBody": {
         "type": "object",
@@ -16632,7 +16606,8 @@
             "type": "string"
           },
           "webhook_url": {
-            "$ref": "#/components/schemas/SecretUrl"
+            "type": "string",
+            "format": "url"
           },
           "webhook_url_file": {
             "type": "string"
@@ -16656,23 +16631,18 @@
           }
         }
       },
-      "GetReportsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Report"
-        }
+      "DsAccess": {
+        "type": "string"
       },
-      "GetQuotaResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QuotaDto"
-        }
+      "DsPermissionType": {
+        "type": "integer",
+        "description": "Datasource permission\nDescription:\n- \u00600\u0060 - No Access\n- \u00601\u0060 - Query\n- \u00602\u0060 - Edit",
+        "format": "int64"
       },
-      "GetPublicAnnotationsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AnnotationEvent"
-        }
+      "Duration": {
+        "type": "integer",
+        "description": "A Duration represents the elapsed time between two instants\nas an int64 nanosecond count. The representation limits the\nlargest representable duration to approximately 290 years.",
+        "format": "int64"
       },
       "EmailConfig": {
         "title": "EmailConfig configures notifications via mail.",
@@ -16828,11 +16798,9 @@
           }
         }
       },
-      "GetPlaylistItemsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PlaylistItemDto"
-        }
+      "ErrorType": {
+        "title": "ErrorType models the different API error types.",
+        "type": "string"
       },
       "EvalAlertConditionCommand": {
         "type": "object",
@@ -16878,11 +16846,11 @@
         "type": "object",
         "description": "This is an object constructed with the keys as the values of the enum VisType and the value being a bag of properties"
       },
-      "GetPendingOrgInvitesResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TempUserDto"
-        }
+      "ExtKeyUsage": {
+        "title": "ExtKeyUsage represents an extended set of actions that are valid for a given key.",
+        "type": "integer",
+        "description": "Each of the ExtKeyUsage* constants define a unique action.",
+        "format": "int64"
       },
       "ExtendedReceiver": {
         "type": "object",
@@ -17417,11 +17385,9 @@
         },
         "description": "https://github.com/grafana/grafana/blob/master/packages/grafana-data/src/types/data.ts#L11\nNOTE -- in javascript this can accept any \u0060[key: string]: any;\u0060 however\nthis interface only exposes the values we want to be exposed"
       },
-      "GetOrgUsersResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OrgUserDto"
-        }
+      "FrameType": {
+        "type": "string",
+        "description": "A FrameType string, when present in a frame\u0027s metadata, asserts that the\nframe\u0027s structure conforms to the FrameType\u0027s specification.\nThis property is currently optional, so FrameType may be FrameTypeUnknown even if the properties of\nthe Frame correspond to a defined FrameType."
       },
       "FrameTypeVersion": {
         "title": "FrameType is a 2 number version (Major / Minor).",
@@ -17981,7 +17947,8 @@
             "format": "int64"
           },
           "slack_api_url": {
-            "$ref": "#/components/schemas/SecretUrl"
+            "type": "string",
+            "format": "url"
           },
           "slack_api_url_file": {
             "type": "string"
@@ -18210,11 +18177,8 @@
           "$ref": "#/components/schemas/Hit"
         }
       },
-      "GetOrgUsersForCurrentOrgResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OrgUserDto"
-        }
+      "HitType": {
+        "type": "string"
       },
       "HostPort": {
         "title": "HostPort represents a \u0022host:port\u0022 network address.",
@@ -18447,11 +18411,10 @@
         },
         "description": "It embeds the upstream Alertmanager InhibitRule and adds Grafana-specific fields."
       },
-      "GetOrgUsersForCurrentOrgLookupResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UserLookupDto"
-        }
+      "InspectType": {
+        "title": "InspectType is a type for the Inspect property of a Notice.",
+        "type": "integer",
+        "format": "int64"
       },
       "IntegrationStatus": {
         "type": "object",
@@ -18609,11 +18572,10 @@
       "Json": {
         "type": "object"
       },
-      "GetFoldersResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/FolderSearchHit"
-        }
+      "KeyUsage": {
+        "type": "integer",
+        "description": "KeyUsage represents the set of actions that are valid for a given key. It\u0027s\na bitmap of the KeyUsage* constants.",
+        "format": "int64"
       },
       "Labels": {
         "title": "Labels is implemented by a single flat string holding name/value pairs.",
@@ -18854,7 +18816,8 @@
             "type": "string"
           },
           "webhook_url": {
-            "$ref": "#/components/schemas/SecretUrl"
+            "type": "string",
+            "format": "url"
           },
           "webhook_url_file": {
             "type": "string"
@@ -18877,7 +18840,8 @@
             "type": "string"
           },
           "webhook_url": {
-            "$ref": "#/components/schemas/SecretUrl"
+            "type": "string",
+            "format": "url"
           },
           "webhook_url_file": {
             "type": "string"
@@ -18897,11 +18861,10 @@
         },
         "description": "ManagedRoutes this type exists purely to ensure unmarshalling upstream Routes will call Validate and populate\nGroupBy and GroupByAll. Eventually, we will want this to be a separate type and make the conversion to\ndefinitions.Route explicit."
       },
-      "GetFolderPermissionListResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DashboardAclInfoDto"
-        }
+      "ManagerKind": {
+        "title": "ManagerKind is the type of manager, which is responsible for managing the resource.",
+        "type": "string",
+        "description": "It can be a user or a tool or a generic API client."
       },
       "MassDeleteAnnotationsCmd": {
         "type": "object",
@@ -18930,19 +18893,10 @@
           "type": "string"
         }
       },
-      "GetDataSourceIdResponseResponse": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "ID Identifier of the data source.",
-            "format": "int64",
-            "example": 65
-          }
-        }
+      "MatchType": {
+        "title": "MatchType is an enum for label matching types.",
+        "type": "integer",
+        "format": "int64"
       },
       "Matcher": {
         "title": "Matcher models the matching of a label.",
@@ -19277,11 +19231,10 @@
           }
         }
       },
-      "GetDashboardsTagsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DashboardTagCloudItem"
-        }
+      "NoticeSeverity": {
+        "title": "NoticeSeverity is a type for the Severity property of a Notice.",
+        "type": "integer",
+        "format": "int64"
       },
       "NotificationPolicyExport": {
         "title": "NotificationPolicyExport is the provisioned file export of alerting.NotificiationPolicyV1.",
@@ -19761,11 +19714,8 @@
           }
         }
       },
-      "GetDashboardPermissionsListResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DashboardAclInfoDto"
-        }
+      "Password": {
+        "type": "string"
       },
       "PatchAnnotationsCmd": {
         "type": "object",
@@ -20514,11 +20464,8 @@
           }
         }
       },
-      "GetCorrelationsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Correlation"
-        }
+      "Provenance": {
+        "type": "string"
       },
       "ProvisionedAlertRule": {
         "required": [
@@ -20790,11 +20737,9 @@
         },
         "description": "PublicError is derived from Error and only contains information\navailable to the end user."
       },
-      "GetCorrelationsBySourceUidResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Correlation"
-        }
+      "PublicKeyAlgorithm": {
+        "type": "integer",
+        "format": "int64"
       },
       "PushoverConfig": {
         "type": "object",
@@ -22322,14 +22267,13 @@
           }
         }
       },
-      "GetAnnotationsResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Annotation"
-        }
+      "Secret": {
+        "title": "Secret special type for storing secrets.",
+        "type": "string"
       },
       "SecretUrl": {
-        "type": "string"
+        "type": "string",
+        "format": "url"
       },
       "ServiceAccountDto": {
         "type": "object",
@@ -22551,11 +22495,8 @@
           "$ref": "#/components/schemas/SettingsBagAdditionalPropertiesProperty"
         }
       },
-      "GetAllRolesResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RoleDto"
-        }
+      "ShareType": {
+        "type": "string"
       },
       "SigV4Config": {
         "type": "object",
@@ -22578,11 +22519,9 @@
         },
         "description": "SigV4Config is the configuration for signing remote write requests with\nAWS\u0027s SigV4 verification process. Empty values will be retrieved using the\nAWS default credentials chain."
       },
-      "DevicesResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeviceDto"
-        }
+      "SignatureAlgorithm": {
+        "type": "integer",
+        "format": "int64"
       },
       "SilenceMetadata": {
         "type": "object",
@@ -22637,7 +22576,8 @@
             }
           },
           "api_url": {
-            "type": "string"
+            "type": "string",
+            "format": "url"
           },
           "api_url_file": {
             "type": "string"
@@ -22797,31 +22737,9 @@
           }
         }
       },
-      "DeleteFolderResponseResponse": {
-        "required": [
-          "id",
-          "title",
-          "message"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "ID Identifier of the deleted folder.",
-            "format": "int64",
-            "example": 65
-          },
-          "message": {
-            "type": "string",
-            "description": "Message Message of the deleted folder.",
-            "example": "Folder My Folder deleted"
-          },
-          "title": {
-            "type": "string",
-            "description": "Title of the deleted folder.",
-            "example": "My Folder"
-          }
-        }
+      "Source": {
+        "title": "Source type defines the status source.",
+        "type": "string"
       },
       "Span": {
         "title": "A Span defines a continuous sequence of buckets.",
@@ -22839,50 +22757,12 @@
           }
         }
       },
-      "DeleteDataSourceByNameResponseResponse": {
-        "required": [
-          "id",
-          "message"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "ID Identifier of the deleted data source.",
-            "format": "int64",
-            "example": 65
-          },
-          "message": {
-            "type": "string",
-            "description": "Message Message of the deleted dashboard.",
-            "example": "Dashboard My Dashboard deleted"
-          }
-        }
+      "State": {
+        "type": "string"
       },
-      "DeleteDashboardResponseResponse": {
-        "required": [
-          "uid",
-          "title",
-          "message"
-        ],
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "description": "Message Message of the deleted dashboard.",
-            "example": "Dashboard My Dashboard deleted"
-          },
-          "title": {
-            "type": "string",
-            "description": "Title Title of the deleted dashboard.",
-            "example": "My Dashboard"
-          },
-          "uid": {
-            "type": "string",
-            "description": "UID Identifier of the deleted dashboard.",
-            "example": "65"
-          }
-        }
+      "Status": {
+        "type": "integer",
+        "format": "int64"
       },
       "Success": {
         "$ref": "#/components/schemas/ResponseDetails"
@@ -22895,20 +22775,8 @@
           }
         }
       },
-      "CreateTeamResponseResponse": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string"
-          },
-          "teamId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "uid": {
-            "type": "string"
-          }
-        }
+      "SupportedTransformationTypes": {
+        "type": "string"
       },
       "SyncResult": {
         "title": "SyncResult holds the result of a sync with LDAP. This gives us information on which users were updated and how.",
@@ -23002,17 +22870,9 @@
           }
         }
       },
-      "CreateReportResponseResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "message": {
-            "type": "string"
-          }
-        }
+      "TlsVersion": {
+        "type": "integer",
+        "format": "uint16"
       },
       "TagsDto": {
         "title": "TagsDTO is the frontend DTO for Tag.",
@@ -23190,25 +23050,9 @@
           }
         }
       },
-      "CreateOrgResponseResponse": {
-        "required": [
-          "orgId",
-          "message"
-        ],
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "description": "Message Message of the created org.",
-            "example": "Data source added"
-          },
-          "orgId": {
-            "type": "integer",
-            "description": "ID Identifier of the created org.",
-            "format": "int64",
-            "example": 65
-          }
-        }
+      "TeamPermissionType": {
+        "type": "integer",
+        "format": "int64"
       },
       "TelegramConfig": {
         "title": "TelegramConfig configures notifications via Telegram.",
@@ -23296,59 +23140,11 @@
           }
         }
       },
-      "CreateOrUpdateDatasourceResponseResponse": {
-        "required": [
-          "id",
-          "name",
-          "message",
-          "datasource"
-        ],
-        "type": "object",
-        "properties": {
-          "datasource": {
-            "$ref": "#/components/schemas/DataSource"
-          },
-          "id": {
-            "type": "integer",
-            "description": "ID Identifier of the new data source.",
-            "format": "int64",
-            "example": 65
-          },
-          "message": {
-            "type": "string",
-            "description": "Message Message of the deleted dashboard.",
-            "example": "Data source added"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the new data source.",
-            "example": "My Data source"
-          }
-        }
+      "TempUserStatus": {
+        "type": "string"
       },
-      "CreateDashboardSnapshotResponseResponse": {
-        "type": "object",
-        "properties": {
-          "deleteKey": {
-            "type": "string",
-            "description": "Unique key used to delete the snapshot. It is different from the key so that only the creator can delete the snapshot."
-          },
-          "deleteUrl": {
-            "type": "string"
-          },
-          "id": {
-            "type": "integer",
-            "description": "Snapshot id",
-            "format": "int64"
-          },
-          "key": {
-            "type": "string",
-            "description": "Unique key"
-          },
-          "url": {
-            "type": "string"
-          }
-        }
+      "TemplateKind": {
+        "type": "string"
       },
       "TestRulePayload": {
         "type": "object",
@@ -23483,12 +23279,9 @@
         },
         "description": "ThresholdsConfig setup thresholds"
       },
-      "ContentResponseResponse": {
-        "type": "array",
-        "items": {
-          "type": "integer",
-          "format": "uint8"
-        }
+      "ThresholdsMode": {
+        "type": "string",
+        "description": "ThresholdsMode absolute or percentage"
       },
       "TimeInterval": {
         "title": "TimeInterval represents a named set of time intervals for which a route should be muted.",
@@ -23702,12 +23495,9 @@
           }
         }
       },
-      "CalculateDashboardDiffResponseResponse": {
-        "type": "array",
-        "items": {
-          "type": "integer",
-          "format": "uint8"
-        }
+      "TokenStatus": {
+        "type": "integer",
+        "format": "int64"
       },
       "Transformation": {
         "type": "object",
@@ -23732,11 +23522,8 @@
           "$ref": "#/components/schemas/Transformation"
         }
       },
-      "AdminGetUserAuthTokensResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UserToken"
-        }
+      "TypeValue": {
+        "type": "string"
       },
       "TypeMeta": {
         "type": "object",
@@ -23752,11 +23539,9 @@
         },
         "description": "TypeMeta describes an individual object in an API response or request\nwith strings representing the type of the object and its API schema version.\nStructures that are versioned or persisted should inline TypeMeta."
       },
-      "TestGrafanaRuleResponseResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PostableAlert"
-        }
+      "Url": {
+        "type": "string",
+        "format": "url"
       },
       "Unstructured": {
         "type": "object",
@@ -24454,11 +24239,9 @@
           }
         }
       },
-      "GettableHistoricUserConfigsResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/GettableHistoricUserConfig"
-        }
+      "VisType": {
+        "title": "VisType is used to indicate how the data should be visualized in explore.",
+        "type": "string"
       },
       "WebexConfig": {
         "title": "WebexConfig configures notifications via Webex.",
@@ -24503,7 +24286,8 @@
             "format": "int64"
           },
           "url": {
-            "type": "string"
+            "type": "string",
+            "format": "url"
           },
           "url_file": {
             "type": "string"
@@ -25256,6 +25040,375 @@
         },
         "description": "VersionInfo version info"
       },
+      "GettableHistoricUserConfigsResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GettableHistoricUserConfig"
+        }
+      },
+      "TestGrafanaRuleResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PostableAlert"
+        }
+      },
+      "AdminGetUserAuthTokensResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/UserToken"
+        }
+      },
+      "CalculateDashboardDiffResponseResponse": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "uint8"
+        }
+      },
+      "ContentResponseResponse": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "uint8"
+        }
+      },
+      "CreateDashboardSnapshotResponseResponse": {
+        "type": "object",
+        "properties": {
+          "deleteKey": {
+            "type": "string",
+            "description": "Unique key used to delete the snapshot. It is different from the key so that only the creator can delete the snapshot."
+          },
+          "deleteUrl": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Snapshot id",
+            "format": "int64"
+          },
+          "key": {
+            "type": "string",
+            "description": "Unique key"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "CreateOrUpdateDatasourceResponseResponse": {
+        "required": [
+          "id",
+          "name",
+          "message",
+          "datasource"
+        ],
+        "type": "object",
+        "properties": {
+          "datasource": {
+            "$ref": "#/components/schemas/DataSource"
+          },
+          "id": {
+            "type": "integer",
+            "description": "ID Identifier of the new data source.",
+            "format": "int64",
+            "example": 65
+          },
+          "message": {
+            "type": "string",
+            "description": "Message Message of the deleted dashboard.",
+            "example": "Data source added"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the new data source.",
+            "example": "My Data source"
+          }
+        }
+      },
+      "CreateOrgResponseResponse": {
+        "required": [
+          "orgId",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Message Message of the created org.",
+            "example": "Data source added"
+          },
+          "orgId": {
+            "type": "integer",
+            "description": "ID Identifier of the created org.",
+            "format": "int64",
+            "example": 65
+          }
+        }
+      },
+      "CreateReportResponseResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "CreateTeamResponseResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "uid": {
+            "type": "string"
+          }
+        }
+      },
+      "DeleteDashboardResponseResponse": {
+        "required": [
+          "uid",
+          "title",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Message Message of the deleted dashboard.",
+            "example": "Dashboard My Dashboard deleted"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title Title of the deleted dashboard.",
+            "example": "My Dashboard"
+          },
+          "uid": {
+            "type": "string",
+            "description": "UID Identifier of the deleted dashboard.",
+            "example": "65"
+          }
+        }
+      },
+      "DeleteDataSourceByNameResponseResponse": {
+        "required": [
+          "id",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID Identifier of the deleted data source.",
+            "format": "int64",
+            "example": 65
+          },
+          "message": {
+            "type": "string",
+            "description": "Message Message of the deleted dashboard.",
+            "example": "Dashboard My Dashboard deleted"
+          }
+        }
+      },
+      "DeleteFolderResponseResponse": {
+        "required": [
+          "id",
+          "title",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID Identifier of the deleted folder.",
+            "format": "int64",
+            "example": 65
+          },
+          "message": {
+            "type": "string",
+            "description": "Message Message of the deleted folder.",
+            "example": "Folder My Folder deleted"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the deleted folder.",
+            "example": "My Folder"
+          }
+        }
+      },
+      "DevicesResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DeviceDto"
+        }
+      },
+      "GetAllRolesResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RoleDto"
+        }
+      },
+      "GetAnnotationsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Annotation"
+        }
+      },
+      "GetCorrelationsBySourceUidResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Correlation"
+        }
+      },
+      "GetCorrelationsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Correlation"
+        }
+      },
+      "GetDashboardPermissionsListResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DashboardAclInfoDto"
+        }
+      },
+      "GetDashboardsTagsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DashboardTagCloudItem"
+        }
+      },
+      "GetDataSourceIdResponseResponse": {
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID Identifier of the data source.",
+            "format": "int64",
+            "example": 65
+          }
+        }
+      },
+      "GetFolderPermissionListResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DashboardAclInfoDto"
+        }
+      },
+      "GetFoldersResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/FolderSearchHit"
+        }
+      },
+      "GetOrgUsersForCurrentOrgLookupResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/UserLookupDto"
+        }
+      },
+      "GetOrgUsersForCurrentOrgResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OrgUserDto"
+        }
+      },
+      "GetOrgUsersResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OrgUserDto"
+        }
+      },
+      "GetPendingOrgInvitesResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TempUserDto"
+        }
+      },
+      "GetPlaylistItemsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PlaylistItemDto"
+        }
+      },
+      "GetPublicAnnotationsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AnnotationEvent"
+        }
+      },
+      "GetQuotaResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/QuotaDto"
+        }
+      },
+      "GetReportsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Report"
+        }
+      },
+      "GetResourcePermissionsResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ResourcePermissionDto"
+        }
+      },
+      "GetSsoSettingsResponseResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsProperty"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      },
+      "GetSharingOptionsResponseResponse": {
+        "type": "object",
+        "properties": {
+          "externalEnabled": {
+            "type": "boolean"
+          },
+          "externalSnapshotName": {
+            "type": "string"
+          },
+          "externalSnapshotURL": {
+            "type": "string"
+          }
+        }
+      },
+      "GetSignedInUserOrgListResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/UserOrgDto"
+        }
+      },
+      "GetSignedInUserTeamListResponseResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TeamDto"
+        }
+      },
       "GetStatusResponseResponse": {
         "type": "boolean"
       },
@@ -25627,12 +25780,6 @@
       "CreateLibraryElementCommandModel": {
         "type": "object",
         "description": "The JSON model for the library element."
-      },
-      "GetSsoSettingsResponseResponseSettings": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsAdditionalProperties"
-        }
       },
       "DataSourceSecureJsonFields": {
         "type": "object",
@@ -26057,6 +26204,12 @@
           "$ref": "#/components/schemas/PublicError2ExtraAdditionalProperties"
         },
         "description": "Extra Additional information about the error"
+      },
+      "GetSsoSettingsResponseResponseSettings": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsAdditionalProperties"
+        }
       },
       "ListSsoSettingsResponseResponseItem": {
         "type": "object",
@@ -26659,12 +26812,6 @@
       },
       "DashboardVersionMetaData": {
         "type": "object"
-      },
-      "GetSsoSettingsResponseResponseSettingsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties"
-        }
       },
       "DataSourceAccessControl": {
         "type": "object",
@@ -27319,6 +27466,12 @@
         },
         "description": "Extra Additional information about the error"
       },
+      "GetSsoSettingsResponseResponseSettingsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties"
+        }
+      },
       "GetHomeDashboardResponseAllOf1Dashboard": {
         "type": "object"
       },
@@ -27329,9 +27482,6 @@
         "type": "object"
       },
       "CorrelationConfigUpdateDtoTargetAdditionalProperties": {
-        "type": "object"
-      },
-      "GetSsoSettingsResponseResponseSettingsAdditionalProperties": {
         "type": "object"
       },
       "FieldConfigColorAdditionalProperties": {
@@ -27362,6 +27512,9 @@
         "type": "object"
       },
       "PublicError2ExtraAdditionalProperties": {
+        "type": "object"
+      },
+      "GetSsoSettingsResponseResponseSettingsAdditionalProperties": {
         "type": "object"
       },
       "ListSsoSettingsResponseResponseItemSettingsProperty": {
@@ -27400,9 +27553,6 @@
       "CorrelationConfigUpdateDtoTargetPropertyAdditionalProperties": {
         "type": "object"
       },
-      "GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties": {
-        "type": "object"
-      },
       "FieldConfigColorPropertyAdditionalProperties": {
         "type": "object"
       },
@@ -27431,6 +27581,9 @@
         "type": "object"
       },
       "PublicError2ExtraPropertyAdditionalProperties": {
+        "type": "object"
+      },
+      "GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties": {
         "type": "object"
       },
       "ListSsoSettingsResponseResponseItemSettingsPropertyAdditionalProperties": {
