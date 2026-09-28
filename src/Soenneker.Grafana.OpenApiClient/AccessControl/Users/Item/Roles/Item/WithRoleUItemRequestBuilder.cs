@@ -34,7 +34,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.Item
         {
         }
         /// <summary>
-        /// Revoke a role from a user. For bulk updates consider Set user role assignments.You need to have a permission with action `users.roles:remove` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to unassign a role which will allow to do that. This is done to prevent escalation of privileges.
+        /// Revoke a role from a user. For bulk updates consider Set user role assignments.You need to have a permission with action `users.roles:remove` and scope `permissions:type:delegate`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Revoke a role from a user. For bulk updates consider Set user role assignments.You need to have a permission with action `users.roles:remove` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to unassign a role which will allow to do that. This is done to prevent escalation of privileges.
+        /// Revoke a role from a user. For bulk updates consider Set user role assignments.You need to have a permission with action `users.roles:remove` and scope `permissions:type:delegate`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.Item
             return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Users.Item.Roles.Item.WithRoleUItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Revoke a role from a user. For bulk updates consider Set user role assignments.You need to have a permission with action `users.roles:remove` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to unassign a role which will allow to do that. This is done to prevent escalation of privileges.
+        /// Revoke a role from a user. For bulk updates consider Set user role assignments.You need to have a permission with action `users.roles:remove` and scope `permissions:type:delegate`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithRoleUItemRequestBuilderDeleteQueryParameters 

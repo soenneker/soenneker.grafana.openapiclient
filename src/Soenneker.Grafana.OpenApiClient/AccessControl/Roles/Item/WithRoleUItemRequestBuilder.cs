@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
         {
         }
         /// <summary>
-        /// Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only delete a custom role with the same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to delete a custom role which allows to do that.
+        /// Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -92,7 +92,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
+        /// You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only update custom roles with permissions which the user has.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RoleDto"/></returns>
         /// <param name="body">The request body</param>
@@ -123,7 +123,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoleDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoleDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only delete a custom role with the same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to delete a custom role which allows to do that.
+        /// Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -161,7 +161,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
             return requestInfo;
         }
         /// <summary>
-        /// You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
+        /// You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only update custom roles with permissions which the user has.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -192,7 +192,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item
             return new global::Soenneker.Grafana.OpenApiClient.AccessControl.Roles.Item.WithRoleUItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only delete a custom role with the same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to delete a custom role which allows to do that.
+        /// Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithRoleUItemRequestBuilderDeleteQueryParameters 

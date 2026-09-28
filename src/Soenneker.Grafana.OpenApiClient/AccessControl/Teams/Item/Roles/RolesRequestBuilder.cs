@@ -105,7 +105,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each.
+        /// You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each. The delegate scope is required for permissions on roles being added.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody"/></returns>
         /// <param name="body">The request body</param>
@@ -177,7 +177,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles
             return requestInfo;
         }
         /// <summary>
-        /// You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each.
+        /// You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each. The delegate scope is required for permissions on roles being added.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -219,7 +219,7 @@ namespace Soenneker.Grafana.OpenApiClient.AccessControl.Teams.Item.Roles
             #pragma warning restore CS1591
         }
         /// <summary>
-        /// You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each.
+        /// You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each. The delegate scope is required for permissions on roles being added.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RolesRequestBuilderPutQueryParameters 

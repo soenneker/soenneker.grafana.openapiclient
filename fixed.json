@@ -103,7 +103,7 @@
           "enterprise"
         ],
         "summary": "Delete a custom role.",
-        "description": "Delete a role with the given UID, and it\u2019s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.\n\nYou need to have a permission with action \u0060roles:delete\u0060 and scope \u0060permissions:type:delegate\u0060. \u0060permissions:type:delegate\u0060 scope ensures that users can only delete a custom role with the same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won\u2019t be able to delete a custom role which allows to do that.",
+        "description": "Delete a role with the given UID, and it\u2019s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.\n\nYou need to have a permission with action \u0060roles:delete\u0060 and scope \u0060permissions:type:delegate\u0060.",
         "operationId": "DeleteRole",
         "parameters": [
           {
@@ -180,7 +180,7 @@
           "enterprise"
         ],
         "summary": "Update a custom role.",
-        "description": "You need to have a permission with action \u0060roles:write\u0060 and scope \u0060permissions:type:delegate\u0060. \u0060permissions:type:delegate\u0060 scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.",
+        "description": "You need to have a permission with action \u0060roles:write\u0060 and scope \u0060permissions:type:delegate\u0060. \u0060permissions:type:delegate\u0060 scope ensures that users can only update custom roles with permissions which the user has.",
         "operationId": "UpdateRole",
         "parameters": [
           {
@@ -459,7 +459,7 @@
           "enterprise"
         ],
         "summary": "Update team role.",
-        "description": "You need to have a permission with action \u0060teams.roles:add\u0060 and \u0060teams.roles:remove\u0060 and scope \u0060permissions:type:delegate\u0060 for each.",
+        "description": "You need to have a permission with action \u0060teams.roles:add\u0060 and \u0060teams.roles:remove\u0060 and scope \u0060permissions:type:delegate\u0060 for each. The delegate scope is required for permissions on roles being added.",
         "operationId": "SetTeamRoles",
         "parameters": [
           {
@@ -694,7 +694,7 @@
           "enterprise"
         ],
         "summary": "Set user role assignments.",
-        "description": "Update the user\u2019s role assignments to match the provided set of UIDs. This will remove any assigned roles that aren\u2019t in the request and add roles that are in the set but are not already assigned to the user.\nRoles mapped through group attribute sync are not impacted.\nIf you want to add or remove a single role, consider using Add a user role assignment or Remove a user role assignment instead.\n\nYou need to have a permission with action \u0060users.roles:add\u0060 and \u0060users.roles:remove\u0060 and scope \u0060permissions:type:delegate\u0060 for each. \u0060permissions:type:delegate\u0060  scope ensures that users can only assign or unassign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won\u2019t be able to assign or unassign a role which will allow to do that. This is done to prevent escalation of privileges.",
+        "description": "Update the user\u2019s role assignments to match the provided set of UIDs. This will remove any assigned roles that aren\u2019t in the request and add roles that are in the set but are not already assigned to the user.\nRoles mapped through group attribute sync are not impacted.\nIf you want to add or remove a single role, consider using Add a user role assignment or Remove a user role assignment instead.\n\nYou need to have a permission with action \u0060users.roles:add\u0060 and \u0060users.roles:remove\u0060 and scope \u0060permissions:type:delegate\u0060 for each. The delegate scope is required for permissions on roles being added.",
         "operationId": "SetUserRoles",
         "parameters": [
           {
@@ -752,7 +752,7 @@
           "enterprise"
         ],
         "summary": "Remove a user role assignment.",
-        "description": "Revoke a role from a user. For bulk updates consider Set user role assignments.\n\nYou need to have a permission with action \u0060users.roles:remove\u0060 and scope \u0060permissions:type:delegate\u0060. \u0060permissions:type:delegate\u0060 scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won\u2019t be able to unassign a role which will allow to do that. This is done to prevent escalation of privileges.",
+        "description": "Revoke a role from a user. For bulk updates consider Set user role assignments.\n\nYou need to have a permission with action \u0060users.roles:remove\u0060 and scope \u0060permissions:type:delegate\u0060.",
         "operationId": "RemoveUserRole",
         "parameters": [
           {
