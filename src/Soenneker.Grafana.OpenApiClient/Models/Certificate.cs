@@ -240,6 +240,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public List<byte?> RawIssuer { get; set; }
 #endif
+        /// <summary>The RawSignatureAlgorithm property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<byte?>? RawSignatureAlgorithm { get; set; }
+#nullable restore
+#else
+        public List<byte?> RawSignatureAlgorithm { get; set; }
+#endif
         /// <summary>The RawSubject property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -385,6 +393,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "PublicKeyAlgorithm", n => { PublicKeyAlgorithm = n.GetLongValue(); } },
                 { "Raw", n => { Raw = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "RawIssuer", n => { RawIssuer = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
+                { "RawSignatureAlgorithm", n => { RawSignatureAlgorithm = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "RawSubject", n => { RawSubject = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "RawSubjectPublicKeyInfo", n => { RawSubjectPublicKeyInfo = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "RawTBSCertificate", n => { RawTBSCertificate = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
@@ -446,6 +455,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("PublicKeyAlgorithm", PublicKeyAlgorithm);
             writer.WriteCollectionOfPrimitiveValues<byte?>("Raw", Raw);
             writer.WriteCollectionOfPrimitiveValues<byte?>("RawIssuer", RawIssuer);
+            writer.WriteCollectionOfPrimitiveValues<byte?>("RawSignatureAlgorithm", RawSignatureAlgorithm);
             writer.WriteCollectionOfPrimitiveValues<byte?>("RawSubject", RawSubject);
             writer.WriteCollectionOfPrimitiveValues<byte?>("RawSubjectPublicKeyInfo", RawSubjectPublicKeyInfo);
             writer.WriteCollectionOfPrimitiveValues<byte?>("RawTBSCertificate", RawTBSCertificate);
