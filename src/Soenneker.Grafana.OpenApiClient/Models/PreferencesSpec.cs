@@ -14,7 +14,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>UID for the home dashboard</summary>
+        /// <summary>UID for the home dashboard. The reserved value &quot;global-home&quot; is not adashboard UID: it selects the instance default home (home_page, theconfigured home dashboard file, or the built-in home page) instead offalling through to lower-precedence preferences.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HomeDashboardUID { get; set; }

@@ -20365,7 +20365,7 @@
         "properties": {
           "homeDashboardUID": {
             "type": "string",
-            "description": "UID for the home dashboard"
+            "description": "UID for the home dashboard. The reserved value \u0022global-home\u0022 is not a\ndashboard UID: it selects the instance default home (home_page, the\nconfigured home dashboard file, or the built-in home page) instead of\nfalling through to lower-precedence preferences."
           },
           "homeURL": {
             "type": "string",
