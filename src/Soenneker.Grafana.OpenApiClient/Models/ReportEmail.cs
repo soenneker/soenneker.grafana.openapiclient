@@ -22,13 +22,21 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string Emails { get; set; }
 #endif
-        /// <summary>Send the report to the emails specified in the report. Required if emails is not present.</summary>
+        /// <summary>Numeric ID of the report. Can send either ID or UID. If both are present, UID takes precedence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
 #nullable restore
 #else
         public string Id { get; set; }
+#endif
+        /// <summary>UID of the report. Can send either ID or UID. If both are present, UID takes precedence.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Uid { get; set; }
+#nullable restore
+#else
+        public string Uid { get; set; }
 #endif
         /// <summary>Send the report to the emails specified in the report. Required if emails is not present.</summary>
         public bool? UseEmailsFromReport { get; set; }
@@ -59,6 +67,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "emails", n => { Emails = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "uid", n => { Uid = n.GetStringValue(); } },
                 { "useEmailsFromReport", n => { UseEmailsFromReport = n.GetBoolValue(); } },
             };
         }
@@ -71,6 +80,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("emails", Emails);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("uid", Uid);
             writer.WriteBoolValue("useEmailsFromReport", UseEmailsFromReport);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -13,6 +13,9 @@
   "servers": [
     {
       "url": "/api"
+    },
+    {
+      "url": "/api"
     }
   ],
   "paths": {
@@ -21311,8 +21314,12 @@
           },
           "id": {
             "type": "string",
-            "description": "Send the report to the emails specified in the report. Required if emails is not present.",
+            "description": "Numeric ID of the report. Can send either ID or UID. If both are present, UID takes precedence.",
             "format": "int64"
+          },
+          "uid": {
+            "type": "string",
+            "description": "UID of the report. Can send either ID or UID. If both are present, UID takes precedence."
           },
           "useEmailsFromReport": {
             "type": "boolean",
