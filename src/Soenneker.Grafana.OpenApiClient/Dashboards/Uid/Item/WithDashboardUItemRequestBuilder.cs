@@ -16,10 +16,10 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \dashboards\uid\{dashboardU-id}
+    /// Builds and executes requests for operations under \dashboards\uid\{dashboardUid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DashboardUItemRequestBuilder : BaseRequestBuilder
+    public partial class WithDashboardUItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The permissions property</summary>
         [Obsolete("")]
@@ -46,19 +46,19 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.Versions.VersionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DashboardUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}", pathParameters)
+        public WithDashboardUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DashboardUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}", rawUrl)
+        public WithDashboardUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}", rawUrl)
         {
         }
         /// <summary>
@@ -166,12 +166,12 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         [Obsolete("")]
-        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.DashboardUItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.WithDashboardUItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

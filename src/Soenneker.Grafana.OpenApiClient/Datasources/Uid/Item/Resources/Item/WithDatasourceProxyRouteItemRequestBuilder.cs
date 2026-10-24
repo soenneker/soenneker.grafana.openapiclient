@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Resources.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\uid\{sourceU-id}\resources\{datasourceProxyRoute}
+    /// Builds and executes requests for operations under \datasources\uid\{sourceUid}\resources\{datasourceProxyRoute}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithDatasourceProxyRouteItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Resources.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDatasourceProxyRouteItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/resources/{datasourceProxyRoute}", pathParameters)
+        public WithDatasourceProxyRouteItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}/resources/{datasourceProxyRoute}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Resources.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDatasourceProxyRouteItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/resources/{datasourceProxyRoute}", rawUrl)
+        public WithDatasourceProxyRouteItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}/resources/{datasourceProxyRoute}", rawUrl)
         {
         }
         /// <summary>

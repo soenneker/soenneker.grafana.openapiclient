@@ -217,10 +217,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The PublicKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey? PublicKey { get; set; }
+        public UntypedNode? PublicKey { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey PublicKey { get; set; }
+        public UntypedNode PublicKey { get; set; }
 #endif
         /// <summary>The PublicKeyAlgorithm property</summary>
         public long? PublicKeyAlgorithm { get; set; }
@@ -389,7 +389,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
                 { "Policies", n => { Policies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "PolicyIdentifiers", n => { PolicyIdentifiers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "PolicyMappings", n => { PolicyMappings = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping>(global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "PublicKey", n => { PublicKey = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey>(global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey.CreateFromDiscriminatorValue); } },
+                { "PublicKey", n => { PublicKey = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "PublicKeyAlgorithm", n => { PublicKeyAlgorithm = n.GetLongValue(); } },
                 { "Raw", n => { Raw = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
                 { "RawIssuer", n => { RawIssuer = n.GetCollectionOfPrimitiveValues<byte?>()?.AsList(); } },
@@ -451,7 +451,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("Policies", Policies);
             writer.WriteObjectValue<UntypedNode>("PolicyIdentifiers", PolicyIdentifiers);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping>("PolicyMappings", PolicyMappings);
-            writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CertificatePublicKey>("PublicKey", PublicKey);
+            writer.WriteObjectValue<UntypedNode>("PublicKey", PublicKey);
             writer.WriteLongValue("PublicKeyAlgorithm", PublicKeyAlgorithm);
             writer.WriteCollectionOfPrimitiveValues<byte?>("Raw", Raw);
             writer.WriteCollectionOfPrimitiveValues<byte?>("RawIssuer", RawIssuer);

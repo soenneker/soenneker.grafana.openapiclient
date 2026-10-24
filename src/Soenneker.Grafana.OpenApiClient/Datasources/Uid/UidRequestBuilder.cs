@@ -17,14 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid
     {
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.datasources.uid.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder"/></returns>
+        public global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sourceU%2Did", position);
-                return new global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sourceUid", position);
+                return new global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

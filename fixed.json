@@ -4096,7 +4096,7 @@
         }
       }
     },
-    "/dashboards/uid/{uid}": {
+    "/dashboards/uid/{dashboardUid}": {
       "delete": {
         "tags": [
           "dashboards"
@@ -4106,7 +4106,7 @@
         "operationId": "DeleteDashboardByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "dashboardUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -4142,7 +4142,7 @@
         "operationId": "GetDashboardByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "dashboardUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -4173,7 +4173,7 @@
         "deprecated": true
       }
     },
-    "/dashboards/uid/{uid}/permissions": {
+    "/dashboards/uid/{dashboardUid}/permissions": {
       "get": {
         "tags": [
           "dashboards",
@@ -4184,7 +4184,7 @@
         "operationId": "GetDashboardPermissionsListByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "dashboardUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -4221,7 +4221,7 @@
         "operationId": "UpdateDashboardPermissionsByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "dashboardUid",
             "in": "path",
             "description": "The dashboard UID",
             "required": true,
@@ -4264,7 +4264,7 @@
         "deprecated": true
       }
     },
-    "/dashboards/uid/{uid}/restore": {
+    "/dashboards/uid/{dashboardUid}/restore": {
       "post": {
         "tags": [
           "dashboards",
@@ -4275,7 +4275,7 @@
         "operationId": "RestoreDashboardVersionByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "dashboardUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -4317,7 +4317,7 @@
         "deprecated": true
       }
     },
-    "/dashboards/uid/{uid}/versions": {
+    "/dashboards/uid/{dashboardUid}/versions": {
       "get": {
         "tags": [
           "dashboards",
@@ -4327,7 +4327,7 @@
         "operationId": "GetDashboardVersionsByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "dashboardUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -4375,7 +4375,7 @@
         "deprecated": true
       }
     },
-    "/dashboards/uid/{uid}/versions/{dashboardVersionId}": {
+    "/dashboards/uid/{dashboardUid}/versions/{dashboardVersionId}": {
       "get": {
         "tags": [
           "dashboards",
@@ -4394,7 +4394,7 @@
             }
           },
           {
-            "name": "uid",
+            "name": "dashboardUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -4925,7 +4925,15 @@
           "500": {
             "$ref": "#/components/responses/internalServerError"
           }
-        }
+        },
+        "servers": [
+          {
+            "url": "/api"
+          },
+          {
+            "url": "/api"
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -4981,7 +4989,15 @@
           "500": {
             "$ref": "#/components/responses/internalServerError"
           }
-        }
+        },
+        "servers": [
+          {
+            "url": "/api"
+          },
+          {
+            "url": "/api"
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -5024,10 +5040,18 @@
           "500": {
             "$ref": "#/components/responses/internalServerError"
           }
-        }
+        },
+        "servers": [
+          {
+            "url": "/api"
+          },
+          {
+            "url": "/api"
+          }
+        ]
       }
     },
-    "/datasources/uid/{uid}": {
+    "/datasources/uid/{sourceUid}": {
       "delete": {
         "tags": [
           "datasources"
@@ -5037,7 +5061,7 @@
         "operationId": "DeleteDataSourceByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "sourceUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -5072,7 +5096,7 @@
         "operationId": "GetDataSourceByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "sourceUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -5110,7 +5134,7 @@
         "operationId": "UpdateDataSourceByUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "sourceUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -5148,7 +5172,7 @@
         }
       }
     },
-    "/datasources/uid/{uid}/health": {
+    "/datasources/uid/{sourceUid}/health": {
       "get": {
         "tags": [
           "datasources",
@@ -5158,7 +5182,7 @@
         "operationId": "CheckDatasourceHealthWithUid",
         "parameters": [
           {
-            "name": "uid",
+            "name": "sourceUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -5185,7 +5209,7 @@
         }
       }
     },
-    "/datasources/uid/{uid}/lbac/teams": {
+    "/datasources/uid/{sourceUid}/lbac/teams": {
       "get": {
         "tags": [
           "enterprise"
@@ -5194,7 +5218,7 @@
         "operationId": "GetTeamLbacRulesApi",
         "parameters": [
           {
-            "name": "uid",
+            "name": "sourceUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -5231,7 +5255,7 @@
         "operationId": "UpdateTeamLbacRulesApi",
         "parameters": [
           {
-            "name": "uid",
+            "name": "sourceUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -5271,7 +5295,7 @@
         }
       }
     },
-    "/datasources/uid/{uid}/resources/{datasourceProxyRoute}": {
+    "/datasources/uid/{sourceUid}/resources/{datasourceProxyRoute}": {
       "get": {
         "tags": [
           "datasources"
@@ -5288,7 +5312,7 @@
             }
           },
           {
-            "name": "uid",
+            "name": "sourceUid",
             "in": "path",
             "required": true,
             "schema": {
@@ -6310,7 +6334,7 @@
         }
       }
     },
-    "/library-elements/{libraryElementUid}/connections": {
+    "/library-elements/{libraryElementUid}/connections/": {
       "get": {
         "tags": [
           "library_elements"
@@ -14166,6 +14190,7 @@
             "type": "string"
           },
           "errorType": {
+            "title": "ErrorType models the different API error types.",
             "type": "string"
           },
           "status": {
@@ -14323,7 +14348,10 @@
             "items": {
               "type": "string"
             },
-            "description": "Override the times when notifications should not be muted. These must match the name of a mute time interval defined\nin the alertmanager configuration time_intervals section. All notifications will be suppressed unless they are sent\nat the time that matches any interval."
+            "description": "Override the times when notifications should not be muted. These must match the name of a mute time interval defined\nin the alertmanager configuration time_intervals section. All notifications will be suppressed unless they are sent\nat the time that matches any interval.",
+            "example": [
+              "maintenance"
+            ]
           },
           "group_by": {
             "type": "array",
@@ -14334,6 +14362,11 @@
             "default": [
               "alertname",
               "grafana_folder"
+            ],
+            "example": [
+              "alertname",
+              "grafana_folder",
+              "cluster"
             ]
           },
           "group_interval": {
@@ -14351,12 +14384,15 @@
             "items": {
               "type": "string"
             },
-            "description": "Override the times when notifications should be muted. These must match the name of a mute time interval defined\nin the alertmanager configuration time_intervals section. When muted it will not send any notifications, but\notherwise acts normally."
+            "description": "Override the times when notifications should be muted. These must match the name of a mute time interval defined\nin the alertmanager configuration time_intervals section. When muted it will not send any notifications, but\notherwise acts normally.",
+            "example": [
+              "maintenance"
+            ]
           },
           "policy": {
             "type": "string",
             "description": "Name of the notification policy to route alerts through.\nMutually exclusive with all other fields, cannot be used with contact point routing via the \u0022receiver\u0022 field.",
-            "example": "Alerting Team"
+            "example": "\u0022Alerting Team\u0022"
           },
           "receiver": {
             "type": "string",
@@ -14854,15 +14890,14 @@
         "type": "object",
         "properties": {
           "Type": {
+            "title": "An ObjectIdentifier represents an ASN.1 OBJECT IDENTIFIER.",
             "type": "array",
             "items": {
               "type": "integer",
               "format": "int64"
             }
           },
-          "Value": {
-            "$ref": "#/components/schemas/AttributeTypeAndValueValue"
-          }
+          "Value": {}
         },
         "description": "When parsed as part of a pkix.Name structure in a crypto/x509 type,\nthe Value will be\n\n- a string if the ASN.1 type is PrintableString, IA5String,\nNumericString, BMPString, T61String, or UTF8String;\n- an int64 if the ASN.1 type is INTEGER;\n- an asn1.BitString if the ASN.1 type is BIT STRING;\n- a []byte if the ASN.1 type is OCTET STRING;\n- an asn1.ObjectIdentifier if the ASN.1 type is OBJECT IDENTIFIER;\n- a time.Time if the ASN.1 type is UTCTIME or GENERALIZEDTIME;\n- a bool if the ASN.1 type is BOOLEAN;\n- nil if the ASN.1 type is NULL;\n- an asn1.RawValue otherwise."
       },
@@ -14871,6 +14906,7 @@
         "type": "object",
         "properties": {
           "credentials": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "credentials_file": {
@@ -14951,6 +14987,7 @@
         "type": "object",
         "properties": {
           "password": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "password_file": {
@@ -15167,6 +15204,7 @@
           "ExtKeyUsage": {
             "type": "array",
             "items": {
+              "title": "ExtKeyUsage represents an extended set of actions that are valid for a given key.",
               "type": "integer",
               "description": "Each of the ExtKeyUsage* constants define a unique action.",
               "format": "int64"
@@ -15289,6 +15327,7 @@
           "PolicyIdentifiers": {
             "type": "array",
             "items": {
+              "title": "An ObjectIdentifier represents an ASN.1 OBJECT IDENTIFIER.",
               "type": "array",
               "items": {
                 "type": "integer",
@@ -15304,9 +15343,7 @@
             },
             "description": "PolicyMappings contains a list of policy mappings included in the certificate."
           },
-          "PublicKey": {
-            "$ref": "#/components/schemas/CertificatePublicKey"
-          },
+          "PublicKey": {},
           "PublicKeyAlgorithm": {
             "type": "integer",
             "format": "int64"
@@ -15396,6 +15433,7 @@
           "UnhandledCriticalExtensions": {
             "type": "array",
             "items": {
+              "title": "An ObjectIdentifier represents an ASN.1 OBJECT IDENTIFIER.",
               "type": "array",
               "items": {
                 "type": "integer",
@@ -15407,6 +15445,7 @@
           "UnknownExtKeyUsage": {
             "type": "array",
             "items": {
+              "title": "An ObjectIdentifier represents an ASN.1 OBJECT IDENTIFIER.",
               "type": "array",
               "items": {
                 "type": "integer",
@@ -15672,7 +15711,17 @@
             "items": {
               "$ref": "#/components/schemas/Transformation"
             },
-            "description": "Source data transformations"
+            "description": "Source data transformations",
+            "example": [
+              {
+                "type": "logfmt"
+              },
+              {
+                "expression": "(Superman|Batman)",
+                "type": "regex",
+                "variable": "name"
+              }
+            ]
           }
         }
       },
@@ -16379,9 +16428,11 @@
             "description": "Error is a property to be set if the corresponding DataQuery has an error."
           },
           "ErrorSource": {
+            "title": "Source type defines the status source.",
             "type": "string"
           },
           "Frames": {
+            "title": "Frames is a slice of Frame pointers.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Frame"
@@ -16635,6 +16686,7 @@
             "type": "string"
           },
           "errorType": {
+            "title": "ErrorType models the different API error types.",
             "type": "string"
           },
           "status": {
@@ -16663,12 +16715,14 @@
             "type": "string"
           },
           "auth_password": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "auth_password_file": {
             "type": "string"
           },
           "auth_secret": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "auth_username": {
@@ -16854,7 +16908,6 @@
         "type": "object"
       },
       "ExplorePanelsState": {
-        "type": "object",
         "description": "This is an object constructed with the keys as the values of the enum VisType and the value being a bag of properties"
       },
       "ExtKeyUsage": {
@@ -16902,6 +16955,7 @@
             "type": "boolean"
           },
           "Id": {
+            "title": "An ObjectIdentifier represents an ASN.1 OBJECT IDENTIFIER.",
             "type": "array",
             "items": {
               "type": "integer",
@@ -17116,6 +17170,7 @@
             "format": "double"
           },
           "CounterResetHint": {
+            "title": "CounterResetHint contains the known information about a counter reset,",
             "type": "integer",
             "description": "or alternatively that we are dealing with a gauge histogram, where counter resets do not apply.",
             "format": "uint8"
@@ -17201,6 +17256,7 @@
             "x-deprecated": true
           },
           "managedBy": {
+            "title": "ManagerKind is the type of manager, which is responsible for managing the resource.",
             "type": "string",
             "description": "It can be a user or a tool or a generic API client."
           },
@@ -17249,6 +17305,7 @@
             "format": "int64"
           },
           "managedBy": {
+            "title": "ManagerKind is the type of manager, which is responsible for managing the resource.",
             "type": "string",
             "description": "It can be a user or a tool or a generic API client."
           },
@@ -17335,9 +17392,10 @@
             "description": "Channel is the path to a stream in grafana live that has real-time updates for this data."
           },
           "custom": {
-            "$ref": "#/components/schemas/FrameMetaCustom"
+            "description": "Custom datasource specific values."
           },
           "dataTopic": {
+            "title": "DataTopic is used to identify which topic the frame should be assigned to.",
             "type": "string"
           },
           "executedQueryString": {
@@ -17364,6 +17422,7 @@
             "description": "PreferredVisualizationPluginId sets the panel plugin id to use to render the data when using Explore. If\nthe plugin cannot be found will fall back to PreferredVisualization."
           },
           "preferredVisualisationType": {
+            "title": "VisType is used to indicate how the data should be visualized in explore.",
             "type": "string"
           },
           "stats": {
@@ -17378,6 +17437,7 @@
             "description": "A FrameType string, when present in a frame\u0027s metadata, asserts that the\nframe\u0027s structure conforms to the FrameType\u0027s specification.\nThis property is currently optional, so FrameType may be FrameTypeUnknown even if the properties of\nthe Frame correspond to a defined FrameType."
           },
           "typeVersion": {
+            "title": "FrameType is a 2 number version (Major / Minor).",
             "type": "array",
             "items": {
               "type": "integer",
@@ -17939,6 +17999,7 @@
             "format": "url"
           },
           "opsgenie_api_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "opsgenie_api_key_file": {
@@ -17968,12 +18029,14 @@
             "type": "string"
           },
           "smtp_auth_password": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "smtp_auth_password_file": {
             "type": "string"
           },
           "smtp_auth_secret": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "smtp_auth_username": {
@@ -17999,6 +18062,7 @@
             "format": "url"
           },
           "victorops_api_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "victorops_api_key_file": {
@@ -18016,6 +18080,7 @@
             "type": "string"
           },
           "wechat_api_secret": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "wechat_api_url": {
@@ -18039,6 +18104,7 @@
             "$ref": "#/components/schemas/BasicAuth"
           },
           "bearer_token": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "bearer_token_file": {
@@ -18092,6 +18158,7 @@
           "secrets": {
             "type": "array",
             "items": {
+              "title": "Secret special type for storing secrets.",
               "type": "string"
             }
           },
@@ -18220,6 +18287,7 @@
             "type": "string"
           },
           "Mask": {
+            "title": "An IPMask is a bitmask that can be used to manipulate\nIP addresses for IP addressing and routing.",
             "type": "array",
             "items": {
               "type": "integer",
@@ -18416,11 +18484,9 @@
             "type": "string"
           },
           "panelsState": {
-            "$ref": "#/components/schemas/InternalDataLinkPanelsState"
+            "description": "This is an object constructed with the keys as the values of the enum VisType and the value being a bag of properties"
           },
-          "query": {
-            "$ref": "#/components/schemas/InternalDataLinkQuery"
-          },
+          "query": {},
           "timeRange": {
             "$ref": "#/components/schemas/TimeRange"
           },
@@ -18468,7 +18534,7 @@
             "format": "url"
           },
           "Key": {
-            "$ref": "#/components/schemas/JsonWebKeyKey"
+            "description": "Key is the Go in-memory representation of this key. It must have one\nof these types:\n- ed25519.PublicKey\n- ed25519.PrivateKey\n- *ecdsa.PublicKey\n- *ecdsa.PrivateKey\n- *rsa.PublicKey\n- *rsa.PrivateKey\n- []byte (a symmetric key)\n\nWhen marshaling this JSONWebKey into JSON, the \u0022kty\u0022 header parameter\nwill be automatically set based on the type of this field."
           },
           "KeyID": {
             "type": "string",
@@ -18632,9 +18698,7 @@
           "meta": {
             "$ref": "#/components/schemas/LibraryElementDtoMeta"
           },
-          "model": {
-            "$ref": "#/components/schemas/LibraryElementDtoModel"
-          },
+          "model": {},
           "name": {
             "type": "string"
           },
@@ -18858,6 +18922,7 @@
             "type": "string"
           },
           "Type": {
+            "title": "MatchType is an enum for label matching types.",
             "type": "integer",
             "format": "int64"
           },
@@ -18939,7 +19004,19 @@
             "items": {
               "$ref": "#/components/schemas/MetricRequestQueriesItem"
             },
-            "description": "queries.refId \u2013 Specifies an identifier of the query. Is optional and default to \u201CA\u201D.\nqueries.datasourceId \u2013 Specifies the data source to be queried. Each query in the request must have an unique datasourceId.\nqueries.maxDataPoints - Species maximum amount of data points that dashboard panel can render. Is optional and default to 100.\nqueries.intervalMs - Specifies the time interval in milliseconds of time series. Is optional and defaults to 1000."
+            "description": "queries.refId \u2013 Specifies an identifier of the query. Is optional and default to \u201CA\u201D.\nqueries.datasourceId \u2013 Specifies the data source to be queried. Each query in the request must have an unique datasourceId.\nqueries.maxDataPoints - Species maximum amount of data points that dashboard panel can render. Is optional and default to 100.\nqueries.intervalMs - Specifies the time interval in milliseconds of time series. Is optional and defaults to 1000.",
+            "example": [
+              {
+                "datasource": {
+                  "uid": "PD8C576611E62080A"
+                },
+                "format": "table",
+                "intervalMs": 86400000,
+                "maxDataPoints": 1092,
+                "rawSql": "SELECT 1 as valueOne, 2 as valueTwo",
+                "refId": "A"
+              }
+            ]
           },
           "to": {
             "type": "string",
@@ -19166,6 +19243,7 @@
         "type": "object",
         "properties": {
           "inspect": {
+            "title": "InspectType is a type for the Inspect property of a Notice.",
             "type": "integer",
             "format": "int64"
           },
@@ -19174,6 +19252,7 @@
             "description": "Link is an optional link for display in the user interface and can be an\nabsolute URL or a path relative to Grafana\u0027s root url."
           },
           "severity": {
+            "title": "NoticeSeverity is a type for the Severity property of a Notice.",
             "type": "integer",
             "format": "int64"
           },
@@ -19233,8 +19312,10 @@
             }
           },
           "object_matchers": {
+            "title": "ObjectMatchers is a list of matchers that can be used to filter alerts.",
             "type": "array",
             "items": {
+              "title": "ObjectMatcher is a matcher that can be used to filter alerts.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -19317,6 +19398,7 @@
             "$ref": "#/components/schemas/OAuth2ClaimsProperty"
           },
           "client_certificate_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "client_certificate_key_file": {
@@ -19333,6 +19415,7 @@
             "type": "string"
           },
           "client_secret": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "client_secret_file": {
@@ -19402,6 +19485,7 @@
         "title": "ObjectMatchers is a list of matchers that can be used to filter alerts.",
         "type": "array",
         "items": {
+          "title": "ObjectMatcher is a matcher that can be used to filter alerts.",
           "type": "array",
           "items": {
             "type": "string"
@@ -19416,6 +19500,7 @@
             "type": "string"
           },
           "api_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "api_key_file": {
@@ -19613,6 +19698,7 @@
             }
           },
           "routing_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "routing_key_file": {
@@ -19622,6 +19708,7 @@
             "type": "boolean"
           },
           "service_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "service_key_file": {
@@ -19715,7 +19802,7 @@
             "$ref": "#/components/schemas/PatchLibraryElementCommandKind"
           },
           "model": {
-            "$ref": "#/components/schemas/PatchLibraryElementCommandModel"
+            "description": "The JSON model for the library element."
           },
           "name": {
             "type": "string",
@@ -19980,9 +20067,7 @@
           "data": {
             "type": "string"
           },
-          "tags": {
-            "$ref": "#/components/schemas/PostGraphiteAnnotationsCmdTags"
-          },
+          "tags": {},
           "what": {
             "type": "string"
           },
@@ -20403,7 +20488,52 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AlertQuery"
-            }
+            },
+            "example": [
+              {
+                "datasourceUid": "__expr__",
+                "model": {
+                  "conditions": [
+                    {
+                      "evaluator": {
+                        "params": [
+                          0,
+                          0
+                        ],
+                        "type": "gt"
+                      },
+                      "operator": {
+                        "type": "and"
+                      },
+                      "query": {
+                        "params": []
+                      },
+                      "reducer": {
+                        "params": [],
+                        "type": "avg"
+                      },
+                      "type": "query"
+                    }
+                  ],
+                  "datasource": {
+                    "type": "__expr__",
+                    "uid": "__expr__"
+                  },
+                  "expression": "1 == 1",
+                  "hide": false,
+                  "intervalMs": 1000,
+                  "maxDataPoints": 43200,
+                  "refId": "A",
+                  "type": "math"
+                },
+                "queryType": "",
+                "refId": "A",
+                "relativeTimeRange": {
+                  "from": 0,
+                  "to": 0
+                }
+              }
+            ]
           },
           "execErrState": {
             "$ref": "#/components/schemas/ProvisionedAlertRuleExecErrState"
@@ -20508,6 +20638,7 @@
         "additionalProperties": {
           "type": "array",
           "items": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           }
         }
@@ -20686,6 +20817,7 @@
             "type": "string"
           },
           "token": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "token_file": {
@@ -20701,6 +20833,7 @@
             "type": "string"
           },
           "user_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "user_key_file": {
@@ -21282,9 +21415,7 @@
           "dashboard": {
             "$ref": "#/components/schemas/ReportDashboardId"
           },
-          "reportVariables": {
-            "$ref": "#/components/schemas/ReportDashboardReportVariables"
-          },
+          "reportVariables": {},
           "timeRange": {
             "$ref": "#/components/schemas/ReportTimeRange"
           }
@@ -21674,8 +21805,10 @@
             }
           },
           "object_matchers": {
+            "title": "ObjectMatchers is a list of matchers that can be used to filter alerts.",
             "type": "array",
             "items": {
+              "title": "ObjectMatcher is a matcher that can be used to filter alerts.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -21744,8 +21877,10 @@
             }
           },
           "object_matchers": {
+            "title": "ObjectMatchers is a list of matchers that can be used to filter alerts.",
             "type": "array",
             "items": {
+              "title": "ObjectMatcher is a matcher that can be used to filter alerts.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -21943,6 +22078,7 @@
             "type": "string"
           },
           "errorType": {
+            "title": "ErrorType models the different API error types.",
             "type": "string"
           },
           "status": {
@@ -22429,6 +22565,7 @@
             "type": "string"
           },
           "SecretKey": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           }
         },
@@ -22761,6 +22898,7 @@
             "description": "Disable target certificate validation."
           },
           "key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "key_file": {
@@ -22997,6 +23135,7 @@
             "type": "boolean"
           },
           "token": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "token_file": {
@@ -24119,6 +24258,7 @@
         "type": "object",
         "properties": {
           "api_key": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "api_key_file": {
@@ -24217,6 +24357,7 @@
             "type": "string"
           },
           "api_secret": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           },
           "api_url": {
@@ -25357,9 +25498,7 @@
           "$ref": "#/components/schemas/TeamDto"
         }
       },
-      "InterpolateDashboardResponseResponse": {
-        "type": "object"
-      },
+      "InterpolateDashboardResponseResponse": {},
       "JwksResponseResponse": {
         "type": "object",
         "properties": {
@@ -25616,9 +25755,7 @@
       },
       "AlertQueryExportModel": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/AlertQueryExportModelAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "AlertRuleExportAnnotations": {
         "type": "object",
@@ -25672,9 +25809,7 @@
       },
       "CorrelationConfigTarget": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CorrelationConfigTargetAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Target data query",
         "example": {
           "prop1": "value1",
@@ -25683,9 +25818,7 @@
       },
       "CorrelationConfigUpdateDtoTarget": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CorrelationConfigUpdateDtoTargetAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Target data query",
         "example": {
           "prop1": "value1",
@@ -25722,16 +25855,12 @@
       },
       "FieldConfigColor": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/FieldConfigColorAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Map values to a display color\nNOTE: this interface is under development in the frontend... so simple map for now"
       },
       "FieldConfigCustom": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/FieldConfigCustomAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Panel Specific Values"
       },
       "GettableApiAlertingConfigMuteTimeProvenances": {
@@ -25810,9 +25939,7 @@
       },
       "JiraConfigCustomFields": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/JiraConfigCustomFieldsAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "NotificationPolicyExportMatch": {
         "type": "object",
@@ -25823,9 +25950,7 @@
       },
       "OAuth2Claims": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/OAuth2ClaimsAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Claims is a map of claims to be added to the JWT token. Only used if\nGrantType is set to \u0022urn:ietf:params:oauth:grant-type:jwt-bearer\u0022."
       },
       "OAuth2EndpointParams": {
@@ -25924,29 +26049,21 @@
       },
       "PublicErrorExtra": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/PublicErrorExtraAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "QueryStatColor": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/QueryStatColorAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Map values to a display color\nNOTE: this interface is under development in the frontend... so simple map for now"
       },
       "QueryStatCustom": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/QueryStatCustomAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Panel Specific Values"
       },
       "RecordingRuleJsonQueriesItem": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/RecordingRuleJsonQueriesItemAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "RenameResourcesReceivers": {
         "type": "object",
@@ -26047,9 +26164,7 @@
       },
       "UnstructuredObject": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnstructuredObjectAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Object is a JSON compatible map with string, float, int, bool, []any,\nor map[string]any children."
       },
       "UpdateDataSourceCommandSecureJsonData": {
@@ -26089,16 +26204,12 @@
       },
       "PublicError2Extra": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/PublicError2ExtraAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Extra Additional information about the error"
       },
       "GetSsoSettingsResponseResponseSettings": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "ListSsoSettingsResponseResponseItem": {
         "type": "object",
@@ -26119,13 +26230,9 @@
       },
       "ListSsoSettingsResponseResponseItemSettings": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ListSsoSettingsResponseResponseItemSettingsAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
-      "DatasourceProxyPostByUiDcallsRequest": {
-        "type": "object"
-      },
+      "DatasourceProxyPostByUiDcallsRequest": {},
       "PostRenewLicenseTokenRequest": {
         "type": "object"
       },
@@ -26173,9 +26280,7 @@
       "RouteConvertPrometheusGetRuleGroup404YamlResponse": {
         "type": "object"
       },
-      "DatasourceProxyPostByUiDcallsRequestRequestBody": {
-        "type": "object"
-      },
+      "DatasourceProxyPostByUiDcallsRequestRequestBody": {},
       "PostRenewLicenseTokenRequestRequestBody": {
         "type": "object"
       },
@@ -26485,9 +26590,7 @@
           "$ref": "#/components/schemas/TeamDto"
         }
       },
-      "InterpolateDashboardResponseResponseContent": {
-        "type": "object"
-      },
+      "InterpolateDashboardResponseResponseContent": {},
       "ListRecordingRulesResponseResponseContent": {
         "type": "array",
         "items": {
@@ -26588,10 +26691,12 @@
         }
       },
       "AlertAnnotations": {
+        "title": "Labels is implemented by a single flat string holding name/value pairs.",
         "type": "object",
         "description": "Each name and value is preceded by its length, encoded as a single byte\nfor size 0-254, or the following 3 bytes little-endian, if the first byte is 255.\nMaximum length allowed is 2^24 or 16MB.\nNames are in order."
       },
       "AlertLabels": {
+        "title": "Labels is implemented by a single flat string holding name/value pairs.",
         "type": "object",
         "description": "Each name and value is preceded by its length, encoded as a single byte\nfor size 0-254, or the following 3 bytes little-endian, if the first byte is 255.\nMaximum length allowed is 2^24 or 16MB.\nNames are in order."
       },
@@ -26601,9 +26706,7 @@
       },
       "AlertQueryExportModelProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/AlertQueryExportModelPropertyAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "AlertRuleExportAnnotationsProperty": {
         "type": "object",
@@ -26618,10 +26721,12 @@
         }
       },
       "AlertingRuleAnnotations": {
+        "title": "Labels is implemented by a single flat string holding name/value pairs.",
         "type": "object",
         "description": "Each name and value is preceded by its length, encoded as a single byte\nfor size 0-254, or the following 3 bytes little-endian, if the first byte is 255.\nMaximum length allowed is 2^24 or 16MB.\nNames are in order."
       },
       "AlertingRuleLabels": {
+        "title": "Labels is implemented by a single flat string holding name/value pairs.",
         "type": "object",
         "description": "Each name and value is preceded by its length, encoded as a single byte\nfor size 0-254, or the following 3 bytes little-endian, if the first byte is 255.\nMaximum length allowed is 2^24 or 16MB.\nNames are in order."
       },
@@ -26660,9 +26765,6 @@
           "type": "string"
         }
       },
-      "AttributeTypeAndValueValue": {
-        "type": "object"
-      },
       "BacktestConfigLabelsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -26672,22 +26774,23 @@
       "CalculateDiffTargetUnsavedDashboard": {
         "type": "object"
       },
-      "CertificatePublicKey": {
-        "type": "object"
-      },
       "CorrelationConfigTargetProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CorrelationConfigTargetPropertyAdditionalProperties"
-        },
-        "description": "Target data query"
+        "additionalProperties": {},
+        "description": "Target data query",
+        "example": {
+          "prop1": "value1",
+          "prop2": "value"
+        }
       },
       "CorrelationConfigUpdateDtoTargetProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CorrelationConfigUpdateDtoTargetPropertyAdditionalProperties"
-        },
-        "description": "Target data query"
+        "additionalProperties": {},
+        "description": "Target data query",
+        "example": {
+          "prop1": "value1",
+          "prop2": "value"
+        }
       },
       "CreateLibraryElementCommandModelProperty": {
         "type": "object",
@@ -26751,16 +26854,12 @@
       },
       "FieldConfigColorProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/FieldConfigColorPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Map values to a display color\nNOTE: this interface is under development in the frontend... so simple map for now"
       },
       "FieldConfigCustomProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/FieldConfigCustomPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Panel Specific Values"
       },
       "FieldConfigMappingsItem": {
@@ -26773,10 +26872,6 @@
           "type": "boolean"
         },
         "description": "Metadata contains user accesses for a given resource\nEx: map[string]bool{\u0022create\u0022:true, \u0022delete\u0022: true}"
-      },
-      "FrameMetaCustom": {
-        "type": "object",
-        "description": "Custom datasource specific values."
       },
       "GetHomeDashboardResponseDashboard": {
         "type": "object"
@@ -26843,6 +26938,7 @@
         "additionalProperties": {
           "type": "array",
           "items": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           }
         }
@@ -26864,6 +26960,7 @@
         "description": "SourceMatch defines a set of labels that have to equal the given\nvalue for source alerts. Deprecated. Remove before v1.0 release."
       },
       "InhibitRuleSourceMatchRe": {
+        "title": "MatchRegexps represents a map of Regexp.",
         "type": "object",
         "additionalProperties": {
           "type": "string"
@@ -26877,30 +26974,15 @@
         "description": "TargetMatch defines a set of labels that have to equal the given\nvalue for target alerts. Deprecated. Remove before v1.0 release."
       },
       "InhibitRuleTargetMatchRe": {
+        "title": "MatchRegexps represents a map of Regexp.",
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "InternalDataLinkPanelsState": {
-        "type": "object",
-        "description": "This is an object constructed with the keys as the values of the enum VisType and the value being a bag of properties"
-      },
-      "InternalDataLinkQuery": {
-        "type": "object"
-      },
-      "JsonWebKeyKey": {
-        "type": "object",
-        "description": "Key is the Go in-memory representation of this key. It must have one\nof these types:\n- ed25519.PublicKey\n- ed25519.PrivateKey\n- *ecdsa.PublicKey\n- *ecdsa.PrivateKey\n- *rsa.PublicKey\n- *rsa.PrivateKey\n- []byte (a symmetric key)\n\nWhen marshaling this JSONWebKey into JSON, the \u0022kty\u0022 header parameter\nwill be automatically set based on the type of this field."
-      },
       "JiraConfigCustomFieldsProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/JiraConfigCustomFieldsPropertyAdditionalProperties"
-        }
-      },
-      "LibraryElementDtoModel": {
-        "type": "object"
+        "additionalProperties": {}
       },
       "MetricRequestQueriesItem": {
         "type": "object"
@@ -26913,6 +26995,7 @@
         "description": "Deprecated. Remove before v1.0 release."
       },
       "NotificationPolicyExportMatchRe": {
+        "title": "MatchRegexps represents a map of Regexp.",
         "type": "object",
         "additionalProperties": {
           "type": "string"
@@ -26920,9 +27003,7 @@
       },
       "OAuth2ClaimsProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/OAuth2ClaimsPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Claims is a map of claims to be added to the JWT token. Only used if\nGrantType is set to \u0022urn:ietf:params:oauth:grant-type:jwt-bearer\u0022."
       },
       "OAuth2EndpointParamsProperty": {
@@ -26936,6 +27017,7 @@
         "additionalProperties": {
           "type": "array",
           "items": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           }
         }
@@ -26961,14 +27043,7 @@
       "PatchAnnotationsCmdData": {
         "type": "object"
       },
-      "PatchLibraryElementCommandModel": {
-        "type": "object",
-        "description": "The JSON model for the library element."
-      },
       "PostAnnotationsCmdData": {
-        "type": "object"
-      },
-      "PostGraphiteAnnotationsCmdTags": {
         "type": "object"
       },
       "PostableExtendedRuleNodeAnnotationsProperty": {
@@ -27030,12 +27105,18 @@
         "type": "object",
         "additionalProperties": {
           "type": "string"
+        },
+        "example": {
+          "runbook_url": "https://supercoolrunbook.com/page/13"
         }
       },
       "ProvisionedAlertRuleLabelsProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
+        },
+        "example": {
+          "team": "sre-team-1"
         }
       },
       "ProxyConfigProxyConnectHeader": {
@@ -27043,17 +27124,17 @@
         "additionalProperties": {
           "type": "array",
           "items": {
+            "title": "Secret special type for storing secrets.",
             "type": "string"
           }
         }
       },
       "PublicErrorExtraProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/PublicErrorExtraPropertyAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "QueryDataResponseResults": {
+        "title": "Responses is a map of RefIDs (Unique Query ID) to DataResponses.",
         "type": "object",
         "additionalProperties": {
           "$ref": "#/components/schemas/DataResponse"
@@ -27065,16 +27146,12 @@
       },
       "QueryStatColorProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/QueryStatColorPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Map values to a display color\nNOTE: this interface is under development in the frontend... so simple map for now"
       },
       "QueryStatCustomProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/QueryStatCustomPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Panel Specific Values"
       },
       "QueryStatMappingsItem": {
@@ -27086,9 +27163,7 @@
       },
       "RecordingRuleJsonQueriesItemProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/RecordingRuleJsonQueriesItemPropertyAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "RenameResourcesReceiversProperty": {
         "type": "object",
@@ -27104,9 +27179,6 @@
         },
         "description": "TimeIntervals maps old time interval names to new time interval names"
       },
-      "ReportDashboardReportVariables": {
-        "type": "object"
-      },
       "RouteMatchProperty": {
         "type": "object",
         "additionalProperties": {
@@ -27115,6 +27187,7 @@
         "description": "Deprecated. Remove before v1.0 release."
       },
       "RouteMatchRe": {
+        "title": "MatchRegexps represents a map of Regexp.",
         "type": "object",
         "additionalProperties": {
           "type": "string"
@@ -27128,12 +27201,14 @@
         "description": "Deprecated. Remove before v1.0 release."
       },
       "RouteExportMatchRe": {
+        "title": "MatchRegexps represents a map of Regexp.",
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
       "RuleLabels": {
+        "title": "Labels is implemented by a single flat string holding name/value pairs.",
         "type": "object",
         "description": "Each name and value is preceded by its length, encoded as a single byte\nfor size 0-254, or the following 3 bytes little-endian, if the first byte is 255.\nMaximum length allowed is 2^24 or 16MB.\nNames are in order."
       },
@@ -27164,6 +27239,7 @@
         }
       },
       "SampleMetric": {
+        "title": "Labels is implemented by a single flat string holding name/value pairs.",
         "type": "object",
         "description": "Each name and value is preceded by its length, encoded as a single byte\nfor size 0-254, or the following 3 bytes little-endian, if the first byte is 255.\nMaximum length allowed is 2^24 or 16MB.\nNames are in order."
       },
@@ -27174,6 +27250,11 @@
         "type": "object",
         "additionalProperties": {
           "type": "boolean"
+        },
+        "example": {
+          "serviceaccounts:delete": true,
+          "serviceaccounts:read": true,
+          "serviceaccounts:write": true
         }
       },
       "ServiceAccountProfileDtoAccessControlProperty": {
@@ -27210,9 +27291,7 @@
       },
       "UnstructuredObjectProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnstructuredObjectPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Object is a JSON compatible map with string, float, int, bool, []any,\nor map[string]any children."
       },
       "UpdateAnnotationsCmdData": {
@@ -27281,6 +27360,11 @@
         "type": "object",
         "additionalProperties": {
           "type": "boolean"
+        },
+        "example": {
+          "create": false,
+          "read": true,
+          "write": false
         }
       },
       "PostableAlertAnnotations": {
@@ -27299,139 +27383,33 @@
       },
       "PublicError2ExtraProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/PublicError2ExtraPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Extra Additional information about the error"
       },
       "GetSsoSettingsResponseResponseSettingsProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "GetHomeDashboardResponseAllOf1Dashboard": {
         "type": "object"
       },
-      "AlertQueryExportModelAdditionalProperties": {
-        "type": "object"
-      },
-      "CorrelationConfigTargetAdditionalProperties": {
-        "type": "object"
-      },
-      "CorrelationConfigUpdateDtoTargetAdditionalProperties": {
-        "type": "object"
-      },
-      "FieldConfigColorAdditionalProperties": {
-        "type": "object"
-      },
-      "FieldConfigCustomAdditionalProperties": {
-        "type": "object"
-      },
-      "JiraConfigCustomFieldsAdditionalProperties": {
-        "type": "object"
-      },
-      "OAuth2ClaimsAdditionalProperties": {
-        "type": "object"
-      },
-      "PublicErrorExtraAdditionalProperties": {
-        "type": "object"
-      },
-      "QueryStatColorAdditionalProperties": {
-        "type": "object"
-      },
-      "QueryStatCustomAdditionalProperties": {
-        "type": "object"
-      },
-      "RecordingRuleJsonQueriesItemAdditionalProperties": {
-        "type": "object"
-      },
-      "UnstructuredObjectAdditionalProperties": {
-        "type": "object"
-      },
-      "PublicError2ExtraAdditionalProperties": {
-        "type": "object"
-      },
-      "GetSsoSettingsResponseResponseSettingsAdditionalProperties": {
-        "type": "object"
-      },
       "ListSsoSettingsResponseResponseItemSettingsProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ListSsoSettingsResponseResponseItemSettingsPropertyAdditionalProperties"
-        }
-      },
-      "ListSsoSettingsResponseResponseItemSettingsAdditionalProperties": {
-        "type": "object"
+        "additionalProperties": {}
       },
       "PatchProviderSettingsRequestSettings": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/PatchProviderSettingsRequestSettingsAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "UpdateProviderSettingsRequestSettings": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UpdateProviderSettingsRequestSettingsAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "AdminGetSettingsResponseResponseAdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
-      },
-      "AlertQueryExportModelPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "CorrelationConfigTargetPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "CorrelationConfigUpdateDtoTargetPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "FieldConfigColorPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "FieldConfigCustomPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "JiraConfigCustomFieldsPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "OAuth2ClaimsPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "PublicErrorExtraPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "QueryStatColorPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "QueryStatCustomPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "RecordingRuleJsonQueriesItemPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "UnstructuredObjectPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "PublicError2ExtraPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "GetSsoSettingsResponseResponseSettingsPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "ListSsoSettingsResponseResponseItemSettingsPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "PatchProviderSettingsRequestSettingsAdditionalProperties": {
-        "type": "object"
-      },
-      "UpdateProviderSettingsRequestSettingsAdditionalProperties": {
-        "type": "object"
       },
       "AddInviteFormRole": {
         "enum": [
@@ -27440,8 +27418,7 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "AddOrgUserCommandRole": {
         "enum": [
@@ -27450,8 +27427,7 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "AlertRuleExportExecErrState": {
         "enum": [
@@ -27460,7 +27436,6 @@
           "Error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AlertRuleExportExecErrState",
           "modelAsString": false,
@@ -27479,7 +27454,6 @@
           "OK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AlertRuleExportNoDataState",
           "modelAsString": false,
@@ -27498,7 +27472,6 @@
           "external"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AlertingStatusAlertmanagersChoice",
           "modelAsString": false,
@@ -27525,7 +27498,6 @@
           "Error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BacktestConfigExecErrState",
           "modelAsString": false,
@@ -27544,7 +27516,6 @@
           "OK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BacktestConfigNoDataState",
           "modelAsString": false,
@@ -27561,7 +27532,6 @@
           1
         ],
         "type": "integer",
-        "additionalProperties": false,
         "description": "Kind of element to create, Use 1 for library panels or 2 for c.\nDescription:\n- 1 - library panels",
         "format": "int64"
       },
@@ -27573,7 +27543,6 @@
           "Admin"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "Admin"
       },
       "CreateSnapshotRequestDtoResourceTypesItem": {
@@ -27591,7 +27560,6 @@
           "PLUGIN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CreateSnapshotRequestDtoResourceTypesItem",
           "modelAsString": false,
@@ -27650,8 +27618,7 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "DashboardAclUpdateItemRole": {
         "enum": [
@@ -27660,8 +27627,7 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "EmbeddedContactPointType": {
         "enum": [
@@ -27685,7 +27651,6 @@
           "wecom"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "webhook",
         "x-ms-enum": {
           "name": "EmbeddedContactPointType",
@@ -27780,7 +27745,6 @@
           "UNKNOWN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetSnapshotResponseDtoStatus",
           "modelAsString": false,
@@ -27835,7 +27799,6 @@
           "Error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GettableGrafanaRuleExecErrState",
           "modelAsString": false,
@@ -27854,7 +27817,6 @@
           "OK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GettableGrafanaRuleNoDataState",
           "modelAsString": false,
@@ -27873,7 +27835,6 @@
           "external"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GettableNGalertConfigAlertmanagersChoice",
           "modelAsString": false,
@@ -27910,7 +27871,6 @@
           "GENERIC_ERROR"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MigrateDataResponseItemDtoErrorCode",
           "modelAsString": false,
@@ -27979,7 +27939,6 @@
           "UNKNOWN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MigrateDataResponseItemDtoStatus",
           "modelAsString": false,
@@ -28022,7 +27981,6 @@
           "PLUGIN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MigrateDataResponseItemDtoType",
           "modelAsString": false,
@@ -28079,7 +28037,6 @@
           1
         ],
         "type": "integer",
-        "additionalProperties": false,
         "description": "Kind of element to create, Use 1 for library panels or 2 for c.\nDescription:\n- 1 - library panels",
         "format": "int64"
       },
@@ -28089,7 +28046,6 @@
           "dark"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PatchPrefsCmdTheme",
           "modelAsString": false,
@@ -28112,7 +28068,6 @@
           "Error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PostableGrafanaRuleExecErrState",
           "modelAsString": false,
@@ -28131,7 +28086,6 @@
           "OK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PostableGrafanaRuleNoDataState",
           "modelAsString": false,
@@ -28150,7 +28104,6 @@
           "external"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PostableNGalertConfigAlertmanagersChoice",
           "modelAsString": false,
@@ -28177,7 +28130,6 @@
           "Error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProvisionedAlertRuleExecErrState",
           "modelAsString": false,
@@ -28196,7 +28148,6 @@
           "OK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProvisionedAlertRuleNoDataState",
           "modelAsString": false,
@@ -28223,7 +28174,6 @@
           "PLUGIN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ResourceDependencyDtoDependenciesItem",
           "modelAsString": false,
@@ -28290,7 +28240,6 @@
           "PLUGIN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ResourceDependencyDtoResourceType",
           "modelAsString": false,
@@ -28356,7 +28305,6 @@
           "UNKNOWN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SnapshotDtoStatus",
           "modelAsString": false,
@@ -28411,8 +28359,7 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "TestTemplatesErrorResultKind": {
         "enum": [
@@ -28420,7 +28367,6 @@
           "execution_error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Kind of template error that occurred.",
         "x-ms-enum": {
           "name": "TestTemplatesErrorResultKind",
@@ -28444,7 +28390,6 @@
           ".Alert"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Scope that was successfully used to interpolate the template. If the root scope \u0022.\u0022 fails, more specific\nscopes will be tried, such as \u0022.Alerts\u0027, or \u0022.Alert\u0022.",
         "x-ms-enum": {
           "name": "TestTemplatesResultScope",
@@ -28471,7 +28416,6 @@
           "logfmt"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TransformationType",
           "modelAsString": false,
@@ -28494,8 +28438,7 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "UpdatePrefsCmdTheme": {
         "enum": [
@@ -28504,7 +28447,6 @@
           "system"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UpdatePrefsCmdTheme",
           "modelAsString": false,
@@ -28531,8 +28473,7 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "UserOrgDtoRole": {
         "enum": [
@@ -28541,15 +28482,13 @@
           "Editor",
           "Admin"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "LeftBracketUnprocessedActiveSuppressedRightBracketState": {
         "enum": [
           "[unprocessed active suppressed]"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "state",
         "x-ms-enum": {
           "name": "LeftBracketUnprocessedActiveSuppressedRightBracketState",
@@ -28567,7 +28506,6 @@
           "[ready settling disabled]"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "status",
         "x-ms-enum": {
           "name": "LeftBracketReadySettlingDisabledRightBracketStatus",
@@ -28585,7 +28523,6 @@
           "[expired active pending]"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "state",
         "x-ms-enum": {
           "name": "LeftBracketExpiredActivePendingRightBracketState",
@@ -28604,7 +28541,6 @@
           "annotation"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetAnnotationsTypeParameter",
           "modelAsString": false,
@@ -28625,15 +28561,13 @@
           "Edit",
           "View"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "GetLibraryElementsKindParameter": {
         "enum": [
           1
         ],
         "type": "integer",
-        "additionalProperties": false,
         "format": "int64"
       },
       "GetLibraryElementsSortDirectionParameter": {
@@ -28642,7 +28576,6 @@
           "alpha-desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetLibraryElementsSortDirectionParameter",
           "modelAsString": false,
@@ -28664,7 +28597,6 @@
           "time-asc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchQueriesSortParameter",
           "modelAsString": false,
@@ -28686,7 +28618,6 @@
           "dash-db"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchTypeParameter",
           "modelAsString": false,
@@ -28707,8 +28638,7 @@
           "Edit",
           "View"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "SearchSortParameter": {
         "enum": [
@@ -28716,7 +28646,6 @@
           "alpha-desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchSortParameter",
           "modelAsString": false,
@@ -28739,7 +28668,6 @@
           "hcl"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RouteGetAlertRulesExportFormatParameter",
           "modelAsString": false,
@@ -28766,7 +28694,6 @@
           "hcl"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RouteGetAlertRuleExportFormatParameter",
           "modelAsString": false,
@@ -28793,7 +28720,6 @@
           "hcl"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RouteGetContactpointsExportFormatParameter",
           "modelAsString": false,
@@ -28820,7 +28746,6 @@
           "hcl"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RouteGetAlertRuleGroupExportFormatParameter",
           "modelAsString": false,
@@ -28847,7 +28772,6 @@
           "hcl"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RouteExportMuteTimingsFormatParameter",
           "modelAsString": false,
@@ -28874,7 +28798,6 @@
           "hcl"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RouteExportMuteTimingFormatParameter",
           "modelAsString": false,

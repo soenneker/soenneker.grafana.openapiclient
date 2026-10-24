@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\uid\{sourceU-id}\correlations
+    /// Builds and executes requests for operations under \datasources\uid\{sourceUid}\correlations
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CorrelationsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CorrelationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/correlations", pathParameters)
+        public CorrelationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}/correlations", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CorrelationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/correlations", rawUrl)
+        public CorrelationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}/correlations", rawUrl)
         {
         }
         /// <summary>

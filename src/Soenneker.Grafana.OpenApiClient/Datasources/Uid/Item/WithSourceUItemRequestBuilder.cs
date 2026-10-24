@@ -16,10 +16,10 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\uid\{sourceU-id}
+    /// Builds and executes requests for operations under \datasources\uid\{sourceUid}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class SourceUItemRequestBuilder : BaseRequestBuilder
+    public partial class WithSourceUItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The correlations property</summary>
         public global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Correlations.CorrelationsRequestBuilder Correlations
@@ -42,19 +42,19 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
             get => new global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Resources.ResourcesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SourceUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}", pathParameters)
+        public WithSourceUItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SourceUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}", rawUrl)
+        public WithSourceUItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}", rawUrl)
         {
         }
         /// <summary>
@@ -211,11 +211,11 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.SourceUItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.WithSourceUItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

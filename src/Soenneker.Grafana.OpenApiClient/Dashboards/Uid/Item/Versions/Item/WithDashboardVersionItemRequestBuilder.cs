@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.Versions.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \dashboards\uid\{dashboardU-id}\versions\{dashboardVersionId}
+    /// Builds and executes requests for operations under \dashboards\uid\{dashboardUid}\versions\{dashboardVersionId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithDashboardVersionItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.Versions.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDashboardVersionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}/versions/{dashboardVersionId}", pathParameters)
+        public WithDashboardVersionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}/versions/{dashboardVersionId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.Versions.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDashboardVersionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardU%2Did}/versions/{dashboardVersionId}", rawUrl)
+        public WithDashboardVersionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/dashboards/uid/{dashboardUid}/versions/{dashboardVersionId}", rawUrl)
         {
         }
         /// <summary>

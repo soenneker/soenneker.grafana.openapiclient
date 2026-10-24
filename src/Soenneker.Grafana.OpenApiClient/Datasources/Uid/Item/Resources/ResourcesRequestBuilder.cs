@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Resources
 {
     /// <summary>
-    /// Builds and executes requests for operations under \datasources\uid\{sourceU-id}\resources
+    /// Builds and executes requests for operations under \datasources\uid\{sourceUid}\resources
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResourcesRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Resources
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResourcesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/resources", pathParameters)
+        public ResourcesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}/resources", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Grafana.OpenApiClient.Datasources.Uid.Item.Resources
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResourcesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceU%2Did}/resources", rawUrl)
+        public ResourcesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/datasources/uid/{sourceUid}/resources", rawUrl)
         {
         }
     }
