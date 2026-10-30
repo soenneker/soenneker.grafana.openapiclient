@@ -21,11 +21,13 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning
     public partial class ProvisioningRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The alertRules property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.AlertRulesRequestBuilder AlertRules
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.AlertRulesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The contactPoints property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.ContactPointsRequestBuilder ContactPoints
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.ContactPointsRequestBuilder(PathParameters, RequestAdapter);
@@ -36,16 +38,19 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.FolderRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The muteTimings property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.MuteTimingsRequestBuilder MuteTimings
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.MuteTimingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The policies property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Policies.PoliciesRequestBuilder Policies
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Policies.PoliciesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The templates property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.TemplatesRequestBuilder Templates
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.Templates.TemplatesRequestBuilder(PathParameters, RequestAdapter);

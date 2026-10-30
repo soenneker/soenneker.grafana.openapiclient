@@ -53,6 +53,8 @@ namespace Soenneker.Grafana.OpenApiClient.Snapshot.SharedOptions
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.GetSharingOptionsResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.GetSharingOptionsResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

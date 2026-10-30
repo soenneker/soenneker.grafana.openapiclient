@@ -57,6 +57,8 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.PublicDashboards
                 { "401", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PublicDashboardListResponseWithPagination>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PublicDashboardListResponseWithPagination.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

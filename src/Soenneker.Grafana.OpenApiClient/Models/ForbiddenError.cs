@@ -12,16 +12,26 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ForbiddenError : ApiException, IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("body") is { } nullNodeBody && nullNodeBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Body = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>PublicError is derived from Error and only contains informationavailable to the end user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.PublicError? Body { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PublicError? Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.PublicError? _explicitNullValueBody = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.PublicError Body { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.PublicError Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.PublicError _explicitNullValueBody = default!;
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => Body?.MessageEscaped ?? string.Empty; }
@@ -40,7 +50,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +71,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.PublicError>("body", Body);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

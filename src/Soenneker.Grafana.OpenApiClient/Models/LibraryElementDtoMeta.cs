@@ -11,46 +11,71 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LibraryElementDtoMeta : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("connectedDashboards") is { } nullNodeConnectedDashboards && nullNodeConnectedDashboards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectedDashboards = null;
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("createdBy") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("folderName") is { } nullNodeFolderName && nullNodeFolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderName = null;
+            if (parseNode.GetChildNode("folderUid") is { } nullNodeFolderUid && nullNodeFolderUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderUid = null;
+            if (parseNode.GetChildNode("updated") is { } nullNodeUpdated && nullNodeUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Updated = null;
+            if (parseNode.GetChildNode("updatedBy") is { } nullNodeUpdatedBy && nullNodeUpdatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedBy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The connectedDashboards property</summary>
-        public long? ConnectedDashboards { get; set; }
+        public long? ConnectedDashboards { get => _explicitNullValueConnectedDashboards; set { _explicitNullValueConnectedDashboards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connectedDashboards"); else _explicitNullProperties?.Remove("connectedDashboards"); } }
+        private long? _explicitNullValueConnectedDashboards = default!;
         /// <summary>The created property</summary>
-        public DateTimeOffset? Created { get; set; }
+        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private DateTimeOffset? _explicitNullValueCreated = default!;
         /// <summary>The createdBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser? CreatedBy { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser CreatedBy { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>The folderName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderName { get; set; }
+        public string? FolderName { get => _explicitNullValueFolderName; set { _explicitNullValueFolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderName"); else _explicitNullProperties?.Remove("folderName"); } }
+        private string? _explicitNullValueFolderName = default!;
 #nullable restore
 #else
-        public string FolderName { get; set; }
+        public string FolderName { get => _explicitNullValueFolderName; set { _explicitNullValueFolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderName"); else _explicitNullProperties?.Remove("folderName"); } }
+        private string _explicitNullValueFolderName = default!;
 #endif
         /// <summary>The folderUid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderUid { get; set; }
+        public string? FolderUid { get => _explicitNullValueFolderUid; set { _explicitNullValueFolderUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderUid"); else _explicitNullProperties?.Remove("folderUid"); } }
+        private string? _explicitNullValueFolderUid = default!;
 #nullable restore
 #else
-        public string FolderUid { get; set; }
+        public string FolderUid { get => _explicitNullValueFolderUid; set { _explicitNullValueFolderUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folderUid"); else _explicitNullProperties?.Remove("folderUid"); } }
+        private string _explicitNullValueFolderUid = default!;
 #endif
         /// <summary>The updated property</summary>
-        public DateTimeOffset? Updated { get; set; }
+        public DateTimeOffset? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private DateTimeOffset? _explicitNullValueUpdated = default!;
         /// <summary>The updatedBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser? UpdatedBy { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser? UpdatedBy { get => _explicitNullValueUpdatedBy; set { _explicitNullValueUpdatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedBy"); else _explicitNullProperties?.Remove("updatedBy"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser? _explicitNullValueUpdatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser UpdatedBy { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser UpdatedBy { get => _explicitNullValueUpdatedBy; set { _explicitNullValueUpdatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedBy"); else _explicitNullProperties?.Remove("updatedBy"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser _explicitNullValueUpdatedBy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMeta"/> and sets the default values.
@@ -67,7 +92,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMeta CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMeta();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMeta(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +125,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("folderUid", FolderUid);
             writer.WriteDateTimeOffsetValue("updated", Updated);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.LibraryElementDtoMetaUser>("updatedBy", UpdatedBy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,15 +11,30 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActiveUserStats : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active_admins_and_editors") is { } nullNodeActiveAdminsAndEditors && nullNodeActiveAdminsAndEditors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveAdminsAndEditors = null;
+            if (parseNode.GetChildNode("active_anonymous_devices") is { } nullNodeActiveAnonymousDevices && nullNodeActiveAnonymousDevices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveAnonymousDevices = null;
+            if (parseNode.GetChildNode("active_users") is { } nullNodeActiveUsers && nullNodeActiveUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveUsers = null;
+            if (parseNode.GetChildNode("active_viewers") is { } nullNodeActiveViewers && nullNodeActiveViewers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveViewers = null;
+        }
+
         /// <summary>The active_admins_and_editors property</summary>
-        public long? ActiveAdminsAndEditors { get; set; }
+        public long? ActiveAdminsAndEditors { get => _explicitNullValueActiveAdminsAndEditors; set { _explicitNullValueActiveAdminsAndEditors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_admins_and_editors"); else _explicitNullProperties?.Remove("active_admins_and_editors"); } }
+        private long? _explicitNullValueActiveAdminsAndEditors = default!;
         /// <summary>The active_anonymous_devices property</summary>
-        public long? ActiveAnonymousDevices { get; set; }
+        public long? ActiveAnonymousDevices { get => _explicitNullValueActiveAnonymousDevices; set { _explicitNullValueActiveAnonymousDevices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_anonymous_devices"); else _explicitNullProperties?.Remove("active_anonymous_devices"); } }
+        private long? _explicitNullValueActiveAnonymousDevices = default!;
         /// <summary>The active_users property</summary>
-        public long? ActiveUsers { get; set; }
+        public long? ActiveUsers { get => _explicitNullValueActiveUsers; set { _explicitNullValueActiveUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_users"); else _explicitNullProperties?.Remove("active_users"); } }
+        private long? _explicitNullValueActiveUsers = default!;
         /// <summary>The active_viewers property</summary>
-        public long? ActiveViewers { get; set; }
+        public long? ActiveViewers { get => _explicitNullValueActiveViewers; set { _explicitNullValueActiveViewers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_viewers"); else _explicitNullProperties?.Remove("active_viewers"); } }
+        private long? _explicitNullValueActiveViewers = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.ActiveUserStats CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.ActiveUserStats();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.ActiveUserStats(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("active_anonymous_devices", ActiveAnonymousDevices);
             writer.WriteLongValue("active_users", ActiveUsers);
             writer.WriteLongValue("active_viewers", ActiveViewers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

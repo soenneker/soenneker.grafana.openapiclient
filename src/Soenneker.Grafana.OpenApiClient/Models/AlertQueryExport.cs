@@ -11,48 +11,70 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AlertQueryExport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("datasourceUid") is { } nullNodeDatasourceUid && nullNodeDatasourceUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasourceUid = null;
+            if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
+            if (parseNode.GetChildNode("queryType") is { } nullNodeQueryType && nullNodeQueryType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryType = null;
+            if (parseNode.GetChildNode("refId") is { } nullNodeRefId && nullNodeRefId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefId = null;
+            if (parseNode.GetChildNode("relativeTimeRange") is { } nullNodeRelativeTimeRange && nullNodeRelativeTimeRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelativeTimeRange = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The datasourceUid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatasourceUid { get; set; }
+        public string? DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
+        private string? _explicitNullValueDatasourceUid = default!;
 #nullable restore
 #else
-        public string DatasourceUid { get; set; }
+        public string DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
+        private string _explicitNullValueDatasourceUid = default!;
 #endif
         /// <summary>The model property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty? Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty? _explicitNullValueModel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty Model { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExportModelProperty _explicitNullValueModel = default!;
 #endif
         /// <summary>The queryType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QueryType { get; set; }
+        public string? QueryType { get => _explicitNullValueQueryType; set { _explicitNullValueQueryType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryType"); else _explicitNullProperties?.Remove("queryType"); } }
+        private string? _explicitNullValueQueryType = default!;
 #nullable restore
 #else
-        public string QueryType { get; set; }
+        public string QueryType { get => _explicitNullValueQueryType; set { _explicitNullValueQueryType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryType"); else _explicitNullProperties?.Remove("queryType"); } }
+        private string _explicitNullValueQueryType = default!;
 #endif
         /// <summary>The refId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefId { get; set; }
+        public string? RefId { get => _explicitNullValueRefId; set { _explicitNullValueRefId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refId"); else _explicitNullProperties?.Remove("refId"); } }
+        private string? _explicitNullValueRefId = default!;
 #nullable restore
 #else
-        public string RefId { get; set; }
+        public string RefId { get => _explicitNullValueRefId; set { _explicitNullValueRefId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refId"); else _explicitNullProperties?.Remove("refId"); } }
+        private string _explicitNullValueRefId = default!;
 #endif
         /// <summary>The relativeTimeRange property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport? RelativeTimeRange { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport? RelativeTimeRange { get => _explicitNullValueRelativeTimeRange; set { _explicitNullValueRelativeTimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relativeTimeRange"); else _explicitNullProperties?.Remove("relativeTimeRange"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport? _explicitNullValueRelativeTimeRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport RelativeTimeRange { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport RelativeTimeRange { get => _explicitNullValueRelativeTimeRange; set { _explicitNullValueRelativeTimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relativeTimeRange"); else _explicitNullProperties?.Remove("relativeTimeRange"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport _explicitNullValueRelativeTimeRange = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("queryType", QueryType);
             writer.WriteStringValue("refId", RefId);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.RelativeTimeRangeExport>("relativeTimeRange", RelativeTimeRange);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

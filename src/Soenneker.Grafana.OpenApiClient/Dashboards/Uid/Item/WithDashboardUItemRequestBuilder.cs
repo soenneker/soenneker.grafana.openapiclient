@@ -28,7 +28,6 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.Permissions.PermissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The publicDashboards property</summary>
-        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards.PublicDashboardsRequestBuilder PublicDashboards
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards.PublicDashboardsRequestBuilder(PathParameters, RequestAdapter);
@@ -88,6 +87,8 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.DeleteDashboardResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DeleteDashboardResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -120,6 +121,8 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "406", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.DashboardFullWithMeta>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DashboardFullWithMeta.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

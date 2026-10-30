@@ -12,27 +12,47 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CacheConfigSetter : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dataSourceID") is { } nullNodeDataSourceID && nullNodeDataSourceID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSourceID = null;
+            if (parseNode.GetChildNode("dataSourceUID") is { } nullNodeDataSourceUID && nullNodeDataSourceUID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSourceUID = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("ttlQueriesMs") is { } nullNodeTtlQueriesMs && nullNodeTtlQueriesMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtlQueriesMs = null;
+            if (parseNode.GetChildNode("ttlResourcesMs") is { } nullNodeTtlResourcesMs && nullNodeTtlResourcesMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtlResourcesMs = null;
+            if (parseNode.GetChildNode("useDefaultTTL") is { } nullNodeUseDefaultTTL && nullNodeUseDefaultTTL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseDefaultTTL = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dataSourceID property</summary>
-        public long? DataSourceID { get; set; }
+        public long? DataSourceID { get => _explicitNullValueDataSourceID; set { _explicitNullValueDataSourceID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSourceID"); else _explicitNullProperties?.Remove("dataSourceID"); } }
+        private long? _explicitNullValueDataSourceID = default!;
         /// <summary>The dataSourceUID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataSourceUID { get; set; }
+        public string? DataSourceUID { get => _explicitNullValueDataSourceUID; set { _explicitNullValueDataSourceUID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSourceUID"); else _explicitNullProperties?.Remove("dataSourceUID"); } }
+        private string? _explicitNullValueDataSourceUID = default!;
 #nullable restore
 #else
-        public string DataSourceUID { get; set; }
+        public string DataSourceUID { get => _explicitNullValueDataSourceUID; set { _explicitNullValueDataSourceUID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSourceUID"); else _explicitNullProperties?.Remove("dataSourceUID"); } }
+        private string _explicitNullValueDataSourceUID = default!;
 #endif
         /// <summary>The enabled property</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>TTL MS, or &quot;time to live&quot;, is how long a cached item will stay in the cache before it is removed (in milliseconds)</summary>
-        public long? TtlQueriesMs { get; set; }
+        public long? TtlQueriesMs { get => _explicitNullValueTtlQueriesMs; set { _explicitNullValueTtlQueriesMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ttlQueriesMs"); else _explicitNullProperties?.Remove("ttlQueriesMs"); } }
+        private long? _explicitNullValueTtlQueriesMs = default!;
         /// <summary>The ttlResourcesMs property</summary>
-        public long? TtlResourcesMs { get; set; }
+        public long? TtlResourcesMs { get => _explicitNullValueTtlResourcesMs; set { _explicitNullValueTtlResourcesMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ttlResourcesMs"); else _explicitNullProperties?.Remove("ttlResourcesMs"); } }
+        private long? _explicitNullValueTtlResourcesMs = default!;
         /// <summary>If UseDefaultTTL is enabled, then the TTLQueriesMS and TTLResourcesMS in this object is always sent as the default TTL located in grafana.ini</summary>
-        public bool? UseDefaultTTL { get; set; }
+        public bool? UseDefaultTTL { get => _explicitNullValueUseDefaultTTL; set { _explicitNullValueUseDefaultTTL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useDefaultTTL"); else _explicitNullProperties?.Remove("useDefaultTTL"); } }
+        private bool? _explicitNullValueUseDefaultTTL = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigSetter"/> and sets the default values.
         /// </summary>
@@ -48,7 +68,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigSetter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigSetter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigSetter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +99,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("ttlQueriesMs", TtlQueriesMs);
             writer.WriteLongValue("ttlResourcesMs", TtlResourcesMs);
             writer.WriteBoolValue("useDefaultTTL", UseDefaultTTL);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

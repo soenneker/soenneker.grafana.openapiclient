@@ -20,7 +20,6 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules
     public partial class AlertRulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The export property</summary>
-        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Export.ExportRequestBuilder Export
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
@@ -75,6 +74,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
@@ -104,6 +105,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules
             {
                 { "400", global::Soenneker.Grafana.OpenApiClient.Models.ValidationError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

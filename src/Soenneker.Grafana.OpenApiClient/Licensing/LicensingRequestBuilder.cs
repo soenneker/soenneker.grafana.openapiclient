@@ -25,11 +25,13 @@ namespace Soenneker.Grafana.OpenApiClient.Licensing
             get => new global::Soenneker.Grafana.OpenApiClient.Licensing.Check.CheckRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The customPermissions property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissions.CustomPermissionsRequestBuilder CustomPermissions
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissions.CustomPermissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The customPermissionsCsv property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissionsCsv.CustomPermissionsCsvRequestBuilder CustomPermissionsCsv
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Licensing.CustomPermissionsCsv.CustomPermissionsCsvRequestBuilder(PathParameters, RequestAdapter);

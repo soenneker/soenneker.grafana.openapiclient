@@ -19,7 +19,6 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item
     public partial class WithUItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The export property</summary>
-        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item.Export.ExportRequestBuilder Export
         {
             get => new global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
@@ -60,6 +59,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -84,6 +85,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -112,6 +115,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.AlertRules.Item
             {
                 { "400", global::Soenneker.Grafana.OpenApiClient.Models.ValidationError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.ProvisionedAlertRule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

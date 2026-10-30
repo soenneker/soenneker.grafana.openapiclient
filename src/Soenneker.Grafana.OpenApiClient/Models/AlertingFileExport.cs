@@ -11,42 +11,63 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AlertingFileExport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("apiVersion") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
+            if (parseNode.GetChildNode("contactPoints") is { } nullNodeContactPoints && nullNodeContactPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactPoints = null;
+            if (parseNode.GetChildNode("groups") is { } nullNodeGroups && nullNodeGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Groups = null;
+            if (parseNode.GetChildNode("muteTimes") is { } nullNodeMuteTimes && nullNodeMuteTimes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MuteTimes = null;
+            if (parseNode.GetChildNode("policies") is { } nullNodePolicies && nullNodePolicies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policies = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The apiVersion property</summary>
-        public long? ApiVersion { get; set; }
+        public long? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiVersion"); else _explicitNullProperties?.Remove("apiVersion"); } }
+        private long? _explicitNullValueApiVersion = default!;
         /// <summary>The contactPoints property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport>? ContactPoints { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport>? ContactPoints { get => _explicitNullValueContactPoints; set { _explicitNullValueContactPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactPoints"); else _explicitNullProperties?.Remove("contactPoints"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport>? _explicitNullValueContactPoints = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport> ContactPoints { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport> ContactPoints { get => _explicitNullValueContactPoints; set { _explicitNullValueContactPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactPoints"); else _explicitNullProperties?.Remove("contactPoints"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport> _explicitNullValueContactPoints = default!;
 #endif
         /// <summary>The groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleGroupExport>? Groups { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleGroupExport>? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleGroupExport>? _explicitNullValueGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleGroupExport> Groups { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleGroupExport> Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleGroupExport> _explicitNullValueGroups = default!;
 #endif
         /// <summary>The muteTimes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeIntervalExport>? MuteTimes { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeIntervalExport>? MuteTimes { get => _explicitNullValueMuteTimes; set { _explicitNullValueMuteTimes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("muteTimes"); else _explicitNullProperties?.Remove("muteTimes"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeIntervalExport>? _explicitNullValueMuteTimes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeIntervalExport> MuteTimes { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeIntervalExport> MuteTimes { get => _explicitNullValueMuteTimes; set { _explicitNullValueMuteTimes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("muteTimes"); else _explicitNullProperties?.Remove("muteTimes"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeIntervalExport> _explicitNullValueMuteTimes = default!;
 #endif
         /// <summary>The policies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport>? Policies { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport>? Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policies"); else _explicitNullProperties?.Remove("policies"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport>? _explicitNullValuePolicies = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport> Policies { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport> Policies { get => _explicitNullValuePolicies; set { _explicitNullValuePolicies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policies"); else _explicitNullProperties?.Remove("policies"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport> _explicitNullValuePolicies = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleGroupExport>("groups", Groups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.MuteTimeIntervalExport>("muteTimes", MuteTimes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.NotificationPolicyExport>("policies", Policies);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

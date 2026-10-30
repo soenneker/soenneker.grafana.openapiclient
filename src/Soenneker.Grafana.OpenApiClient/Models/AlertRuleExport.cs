@@ -11,94 +11,142 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AlertRuleExport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("annotations") is { } nullNodeAnnotations && nullNodeAnnotations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Annotations = null;
+            if (parseNode.GetChildNode("condition") is { } nullNodeCondition && nullNodeCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Condition = null;
+            if (parseNode.GetChildNode("dashboardUid") is { } nullNodeDashboardUid && nullNodeDashboardUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DashboardUid = null;
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("execErrState") is { } nullNodeExecErrState && nullNodeExecErrState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecErrState = null;
+            if (parseNode.GetChildNode("for") is { } nullNodeFor && nullNodeFor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) For = null;
+            if (parseNode.GetChildNode("isPaused") is { } nullNodeIsPaused && nullNodeIsPaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPaused = null;
+            if (parseNode.GetChildNode("keepFiringFor") is { } nullNodeKeepFiringFor && nullNodeKeepFiringFor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepFiringFor = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("missing_series_evals_to_resolve") is { } nullNodeMissingSeriesEvalsToResolve && nullNodeMissingSeriesEvalsToResolve.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingSeriesEvalsToResolve = null;
+            if (parseNode.GetChildNode("noDataState") is { } nullNodeNoDataState && nullNodeNoDataState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoDataState = null;
+            if (parseNode.GetChildNode("notification_settings") is { } nullNodeNotificationSettings && nullNodeNotificationSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationSettings = null;
+            if (parseNode.GetChildNode("panelId") is { } nullNodePanelId && nullNodePanelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PanelId = null;
+            if (parseNode.GetChildNode("record") is { } nullNodeRecord && nullNodeRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Record = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("uid") is { } nullNodeUid && nullNodeUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The annotations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty? Annotations { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty? Annotations { get => _explicitNullValueAnnotations; set { _explicitNullValueAnnotations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("annotations"); else _explicitNullProperties?.Remove("annotations"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty? _explicitNullValueAnnotations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty Annotations { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty Annotations { get => _explicitNullValueAnnotations; set { _explicitNullValueAnnotations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("annotations"); else _explicitNullProperties?.Remove("annotations"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportAnnotationsProperty _explicitNullValueAnnotations = default!;
 #endif
         /// <summary>The condition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Condition { get; set; }
+        public string? Condition { get => _explicitNullValueCondition; set { _explicitNullValueCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("condition"); else _explicitNullProperties?.Remove("condition"); } }
+        private string? _explicitNullValueCondition = default!;
 #nullable restore
 #else
-        public string Condition { get; set; }
+        public string Condition { get => _explicitNullValueCondition; set { _explicitNullValueCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("condition"); else _explicitNullProperties?.Remove("condition"); } }
+        private string _explicitNullValueCondition = default!;
 #endif
         /// <summary>The dashboardUid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DashboardUid { get; set; }
+        public string? DashboardUid { get => _explicitNullValueDashboardUid; set { _explicitNullValueDashboardUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dashboardUid"); else _explicitNullProperties?.Remove("dashboardUid"); } }
+        private string? _explicitNullValueDashboardUid = default!;
 #nullable restore
 #else
-        public string DashboardUid { get; set; }
+        public string DashboardUid { get => _explicitNullValueDashboardUid; set { _explicitNullValueDashboardUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dashboardUid"); else _explicitNullProperties?.Remove("dashboardUid"); } }
+        private string _explicitNullValueDashboardUid = default!;
 #endif
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport>? Data { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport> Data { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.AlertQueryExport> _explicitNullValueData = default!;
 #endif
         /// <summary>The execErrState property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportExecErrState? ExecErrState { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportExecErrState? ExecErrState { get => _explicitNullValueExecErrState; set { _explicitNullValueExecErrState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execErrState"); else _explicitNullProperties?.Remove("execErrState"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportExecErrState? _explicitNullValueExecErrState = default!;
         /// <summary>A Duration represents the elapsed time between two instantsas an int64 nanosecond count. The representation limits thelargest representable duration to approximately 290 years.</summary>
-        public long? For { get; set; }
+        public long? For { get => _explicitNullValueFor; set { _explicitNullValueFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("for"); else _explicitNullProperties?.Remove("for"); } }
+        private long? _explicitNullValueFor = default!;
         /// <summary>The isPaused property</summary>
-        public bool? IsPaused { get; set; }
+        public bool? IsPaused { get => _explicitNullValueIsPaused; set { _explicitNullValueIsPaused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPaused"); else _explicitNullProperties?.Remove("isPaused"); } }
+        private bool? _explicitNullValueIsPaused = default!;
         /// <summary>A Duration represents the elapsed time between two instantsas an int64 nanosecond count. The representation limits thelargest representable duration to approximately 290 years.</summary>
-        public long? KeepFiringFor { get; set; }
+        public long? KeepFiringFor { get => _explicitNullValueKeepFiringFor; set { _explicitNullValueKeepFiringFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keepFiringFor"); else _explicitNullProperties?.Remove("keepFiringFor"); } }
+        private long? _explicitNullValueKeepFiringFor = default!;
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty? Labels { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty Labels { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportLabelsProperty _explicitNullValueLabels = default!;
 #endif
         /// <summary>The missing_series_evals_to_resolve property</summary>
-        public long? MissingSeriesEvalsToResolve { get; set; }
+        public long? MissingSeriesEvalsToResolve { get => _explicitNullValueMissingSeriesEvalsToResolve; set { _explicitNullValueMissingSeriesEvalsToResolve = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_series_evals_to_resolve"); else _explicitNullProperties?.Remove("missing_series_evals_to_resolve"); } }
+        private long? _explicitNullValueMissingSeriesEvalsToResolve = default!;
         /// <summary>The noDataState property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportNoDataState? NoDataState { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportNoDataState? NoDataState { get => _explicitNullValueNoDataState; set { _explicitNullValueNoDataState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noDataState"); else _explicitNullProperties?.Remove("noDataState"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExportNoDataState? _explicitNullValueNoDataState = default!;
         /// <summary>The notification_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport? NotificationSettings { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport? NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_settings"); else _explicitNullProperties?.Remove("notification_settings"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport? _explicitNullValueNotificationSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport NotificationSettings { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_settings"); else _explicitNullProperties?.Remove("notification_settings"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport _explicitNullValueNotificationSettings = default!;
 #endif
         /// <summary>The panelId property</summary>
-        public long? PanelId { get; set; }
+        public long? PanelId { get => _explicitNullValuePanelId; set { _explicitNullValuePanelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("panelId"); else _explicitNullProperties?.Remove("panelId"); } }
+        private long? _explicitNullValuePanelId = default!;
         /// <summary>The record property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport? Record { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport? Record { get => _explicitNullValueRecord; set { _explicitNullValueRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record"); else _explicitNullProperties?.Remove("record"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport? _explicitNullValueRecord = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport Record { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport Record { get => _explicitNullValueRecord; set { _explicitNullValueRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record"); else _explicitNullProperties?.Remove("record"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport _explicitNullValueRecord = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The uid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Uid { get; set; }
+        public string? Uid { get => _explicitNullValueUid; set { _explicitNullValueUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uid"); else _explicitNullProperties?.Remove("uid"); } }
+        private string? _explicitNullValueUid = default!;
 #nullable restore
 #else
-        public string Uid { get; set; }
+        public string Uid { get => _explicitNullValueUid; set { _explicitNullValueUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uid"); else _explicitNullProperties?.Remove("uid"); } }
+        private string _explicitNullValueUid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport"/> and sets the default values.
@@ -115,7 +163,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleExport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -166,6 +214,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleRecordExport>("record", Record);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("uid", Uid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

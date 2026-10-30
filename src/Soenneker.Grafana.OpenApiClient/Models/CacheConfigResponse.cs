@@ -11,41 +11,70 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CacheConfigResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("dataSourceID") is { } nullNodeDataSourceID && nullNodeDataSourceID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSourceID = null;
+            if (parseNode.GetChildNode("dataSourceUID") is { } nullNodeDataSourceUID && nullNodeDataSourceUID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSourceUID = null;
+            if (parseNode.GetChildNode("defaultTTLMs") is { } nullNodeDefaultTTLMs && nullNodeDefaultTTLMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTTLMs = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("ttlQueriesMs") is { } nullNodeTtlQueriesMs && nullNodeTtlQueriesMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtlQueriesMs = null;
+            if (parseNode.GetChildNode("ttlResourcesMs") is { } nullNodeTtlResourcesMs && nullNodeTtlResourcesMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TtlResourcesMs = null;
+            if (parseNode.GetChildNode("updated") is { } nullNodeUpdated && nullNodeUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Updated = null;
+            if (parseNode.GetChildNode("useDefaultTTL") is { } nullNodeUseDefaultTTL && nullNodeUseDefaultTTL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseDefaultTTL = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created property</summary>
-        public DateTimeOffset? Created { get; set; }
+        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private DateTimeOffset? _explicitNullValueCreated = default!;
         /// <summary>Fields that can be set by the API caller - read/write</summary>
-        public long? DataSourceID { get; set; }
+        public long? DataSourceID { get => _explicitNullValueDataSourceID; set { _explicitNullValueDataSourceID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSourceID"); else _explicitNullProperties?.Remove("dataSourceID"); } }
+        private long? _explicitNullValueDataSourceID = default!;
         /// <summary>The dataSourceUID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataSourceUID { get; set; }
+        public string? DataSourceUID { get => _explicitNullValueDataSourceUID; set { _explicitNullValueDataSourceUID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSourceUID"); else _explicitNullProperties?.Remove("dataSourceUID"); } }
+        private string? _explicitNullValueDataSourceUID = default!;
 #nullable restore
 #else
-        public string DataSourceUID { get; set; }
+        public string DataSourceUID { get => _explicitNullValueDataSourceUID; set { _explicitNullValueDataSourceUID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataSourceUID"); else _explicitNullProperties?.Remove("dataSourceUID"); } }
+        private string _explicitNullValueDataSourceUID = default!;
 #endif
         /// <summary>These are returned by the HTTP API, but are managed internally - read-onlyNote: &apos;created&apos; and &apos;updated&apos; are special properties managed automatically by xorm, but we are setting them manually</summary>
-        public long? DefaultTTLMs { get; set; }
+        public long? DefaultTTLMs { get => _explicitNullValueDefaultTTLMs; set { _explicitNullValueDefaultTTLMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultTTLMs"); else _explicitNullProperties?.Remove("defaultTTLMs"); } }
+        private long? _explicitNullValueDefaultTTLMs = default!;
         /// <summary>The enabled property</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>TTL MS, or &quot;time to live&quot;, is how long a cached item will stay in the cache before it is removed (in milliseconds)</summary>
-        public long? TtlQueriesMs { get; set; }
+        public long? TtlQueriesMs { get => _explicitNullValueTtlQueriesMs; set { _explicitNullValueTtlQueriesMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ttlQueriesMs"); else _explicitNullProperties?.Remove("ttlQueriesMs"); } }
+        private long? _explicitNullValueTtlQueriesMs = default!;
         /// <summary>The ttlResourcesMs property</summary>
-        public long? TtlResourcesMs { get; set; }
+        public long? TtlResourcesMs { get => _explicitNullValueTtlResourcesMs; set { _explicitNullValueTtlResourcesMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ttlResourcesMs"); else _explicitNullProperties?.Remove("ttlResourcesMs"); } }
+        private long? _explicitNullValueTtlResourcesMs = default!;
         /// <summary>The updated property</summary>
-        public DateTimeOffset? Updated { get; set; }
+        public DateTimeOffset? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private DateTimeOffset? _explicitNullValueUpdated = default!;
         /// <summary>If UseDefaultTTL is enabled, then the TTLQueriesMS and TTLResourcesMS in this object is always sent as the default TTL located in grafana.ini</summary>
-        public bool? UseDefaultTTL { get; set; }
+        public bool? UseDefaultTTL { get => _explicitNullValueUseDefaultTTL; set { _explicitNullValueUseDefaultTTL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useDefaultTTL"); else _explicitNullProperties?.Remove("useDefaultTTL"); } }
+        private bool? _explicitNullValueUseDefaultTTL = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigResponse"/> and sets the default values.
         /// </summary>
@@ -61,7 +90,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.CacheConfigResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +129,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("ttlResourcesMs", TtlResourcesMs);
             writer.WriteDateTimeOffsetValue("updated", Updated);
             writer.WriteBoolValue("useDefaultTTL", UseDefaultTTL);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

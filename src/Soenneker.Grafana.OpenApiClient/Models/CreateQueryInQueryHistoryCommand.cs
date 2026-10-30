@@ -12,24 +12,37 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateQueryInQueryHistoryCommand : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("datasourceUid") is { } nullNodeDatasourceUid && nullNodeDatasourceUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasourceUid = null;
+            if (parseNode.GetChildNode("queries") is { } nullNodeQueries && nullNodeQueries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Queries = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>UID of the data source for which are queries stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatasourceUid { get; set; }
+        public string? DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
+        private string? _explicitNullValueDatasourceUid = default!;
 #nullable restore
 #else
-        public string DatasourceUid { get; set; }
+        public string DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
+        private string _explicitNullValueDatasourceUid = default!;
 #endif
         /// <summary>The queries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries? Queries { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries? Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries? _explicitNullValueQueries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries Queries { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries _explicitNullValueQueries = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommand(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("datasourceUid", DatasourceUid);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries>("queries", Queries);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

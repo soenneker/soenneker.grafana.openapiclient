@@ -11,23 +11,39 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MassDeleteAnnotationsCmd : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("annotationId") is { } nullNodeAnnotationId && nullNodeAnnotationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnnotationId = null;
+            if (parseNode.GetChildNode("dashboardId") is { } nullNodeDashboardId && nullNodeDashboardId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DashboardId = null;
+            if (parseNode.GetChildNode("dashboardUID") is { } nullNodeDashboardUID && nullNodeDashboardUID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DashboardUID = null;
+            if (parseNode.GetChildNode("panelId") is { } nullNodePanelId && nullNodePanelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PanelId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The annotationId property</summary>
-        public long? AnnotationId { get; set; }
+        public long? AnnotationId { get => _explicitNullValueAnnotationId; set { _explicitNullValueAnnotationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("annotationId"); else _explicitNullProperties?.Remove("annotationId"); } }
+        private long? _explicitNullValueAnnotationId = default!;
         /// <summary>The dashboardId property</summary>
-        public long? DashboardId { get; set; }
+        public long? DashboardId { get => _explicitNullValueDashboardId; set { _explicitNullValueDashboardId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dashboardId"); else _explicitNullProperties?.Remove("dashboardId"); } }
+        private long? _explicitNullValueDashboardId = default!;
         /// <summary>The dashboardUID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DashboardUID { get; set; }
+        public string? DashboardUID { get => _explicitNullValueDashboardUID; set { _explicitNullValueDashboardUID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dashboardUID"); else _explicitNullProperties?.Remove("dashboardUID"); } }
+        private string? _explicitNullValueDashboardUID = default!;
 #nullable restore
 #else
-        public string DashboardUID { get; set; }
+        public string DashboardUID { get => _explicitNullValueDashboardUID; set { _explicitNullValueDashboardUID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dashboardUID"); else _explicitNullProperties?.Remove("dashboardUID"); } }
+        private string _explicitNullValueDashboardUID = default!;
 #endif
         /// <summary>The panelId property</summary>
-        public long? PanelId { get; set; }
+        public long? PanelId { get => _explicitNullValuePanelId; set { _explicitNullValuePanelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("panelId"); else _explicitNullProperties?.Remove("panelId"); } }
+        private long? _explicitNullValuePanelId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.MassDeleteAnnotationsCmd"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.MassDeleteAnnotationsCmd CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.MassDeleteAnnotationsCmd();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.MassDeleteAnnotationsCmd(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("dashboardId", DashboardId);
             writer.WriteStringValue("dashboardUID", DashboardUID);
             writer.WriteLongValue("panelId", PanelId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

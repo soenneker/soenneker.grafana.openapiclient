@@ -11,24 +11,37 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ChangeUserPasswordCommand : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("newPassword") is { } nullNodeNewPassword && nullNodeNewPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewPassword = null;
+            if (parseNode.GetChildNode("oldPassword") is { } nullNodeOldPassword && nullNodeOldPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldPassword = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The newPassword property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewPassword { get; set; }
+        public string? NewPassword { get => _explicitNullValueNewPassword; set { _explicitNullValueNewPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newPassword"); else _explicitNullProperties?.Remove("newPassword"); } }
+        private string? _explicitNullValueNewPassword = default!;
 #nullable restore
 #else
-        public string NewPassword { get; set; }
+        public string NewPassword { get => _explicitNullValueNewPassword; set { _explicitNullValueNewPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newPassword"); else _explicitNullProperties?.Remove("newPassword"); } }
+        private string _explicitNullValueNewPassword = default!;
 #endif
         /// <summary>The oldPassword property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OldPassword { get; set; }
+        public string? OldPassword { get => _explicitNullValueOldPassword; set { _explicitNullValueOldPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldPassword"); else _explicitNullProperties?.Remove("oldPassword"); } }
+        private string? _explicitNullValueOldPassword = default!;
 #nullable restore
 #else
-        public string OldPassword { get; set; }
+        public string OldPassword { get => _explicitNullValueOldPassword; set { _explicitNullValueOldPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldPassword"); else _explicitNullProperties?.Remove("oldPassword"); } }
+        private string _explicitNullValueOldPassword = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.ChangeUserPasswordCommand"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.ChangeUserPasswordCommand CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.ChangeUserPasswordCommand();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.ChangeUserPasswordCommand(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("newPassword", NewPassword);
             writer.WriteStringValue("oldPassword", OldPassword);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

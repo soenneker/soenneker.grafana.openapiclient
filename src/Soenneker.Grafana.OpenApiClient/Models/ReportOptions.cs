@@ -11,44 +11,67 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ReportOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("csvEncoding") is { } nullNodeCsvEncoding && nullNodeCsvEncoding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CsvEncoding = null;
+            if (parseNode.GetChildNode("layout") is { } nullNodeLayout && nullNodeLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Layout = null;
+            if (parseNode.GetChildNode("orientation") is { } nullNodeOrientation && nullNodeOrientation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Orientation = null;
+            if (parseNode.GetChildNode("pdfCombineOneFile") is { } nullNodePdfCombineOneFile && nullNodePdfCombineOneFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfCombineOneFile = null;
+            if (parseNode.GetChildNode("pdfShowTemplateVariables") is { } nullNodePdfShowTemplateVariables && nullNodePdfShowTemplateVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfShowTemplateVariables = null;
+            if (parseNode.GetChildNode("timeRange") is { } nullNodeTimeRange && nullNodeTimeRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeRange = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The csvEncoding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CsvEncoding { get; set; }
+        public string? CsvEncoding { get => _explicitNullValueCsvEncoding; set { _explicitNullValueCsvEncoding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvEncoding"); else _explicitNullProperties?.Remove("csvEncoding"); } }
+        private string? _explicitNullValueCsvEncoding = default!;
 #nullable restore
 #else
-        public string CsvEncoding { get; set; }
+        public string CsvEncoding { get => _explicitNullValueCsvEncoding; set { _explicitNullValueCsvEncoding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvEncoding"); else _explicitNullProperties?.Remove("csvEncoding"); } }
+        private string _explicitNullValueCsvEncoding = default!;
 #endif
         /// <summary>The layout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Layout { get; set; }
+        public string? Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        private string? _explicitNullValueLayout = default!;
 #nullable restore
 #else
-        public string Layout { get; set; }
+        public string Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        private string _explicitNullValueLayout = default!;
 #endif
         /// <summary>The orientation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Orientation { get; set; }
+        public string? Orientation { get => _explicitNullValueOrientation; set { _explicitNullValueOrientation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orientation"); else _explicitNullProperties?.Remove("orientation"); } }
+        private string? _explicitNullValueOrientation = default!;
 #nullable restore
 #else
-        public string Orientation { get; set; }
+        public string Orientation { get => _explicitNullValueOrientation; set { _explicitNullValueOrientation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orientation"); else _explicitNullProperties?.Remove("orientation"); } }
+        private string _explicitNullValueOrientation = default!;
 #endif
         /// <summary>The pdfCombineOneFile property</summary>
-        public bool? PdfCombineOneFile { get; set; }
+        public bool? PdfCombineOneFile { get => _explicitNullValuePdfCombineOneFile; set { _explicitNullValuePdfCombineOneFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfCombineOneFile"); else _explicitNullProperties?.Remove("pdfCombineOneFile"); } }
+        private bool? _explicitNullValuePdfCombineOneFile = default!;
         /// <summary>The pdfShowTemplateVariables property</summary>
-        public bool? PdfShowTemplateVariables { get; set; }
+        public bool? PdfShowTemplateVariables { get => _explicitNullValuePdfShowTemplateVariables; set { _explicitNullValuePdfShowTemplateVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfShowTemplateVariables"); else _explicitNullProperties?.Remove("pdfShowTemplateVariables"); } }
+        private bool? _explicitNullValuePdfShowTemplateVariables = default!;
         /// <summary>The timeRange property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange? TimeRange { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange? TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeRange"); else _explicitNullProperties?.Remove("timeRange"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange? _explicitNullValueTimeRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange TimeRange { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeRange"); else _explicitNullProperties?.Remove("timeRange"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange _explicitNullValueTimeRange = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.ReportOptions"/> and sets the default values.
@@ -65,7 +88,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.ReportOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.ReportOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.ReportOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteBoolValue("pdfCombineOneFile", PdfCombineOneFile);
             writer.WriteBoolValue("pdfShowTemplateVariables", PdfShowTemplateVariables);
             writer.WriteObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange>("timeRange", TimeRange);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -74,6 +74,8 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PublicDashboard>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PublicDashboard.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -105,6 +107,8 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards.Uid.Item.PublicDashboards
                 { "401", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.PublicError2.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.PublicDashboard>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.PublicDashboard.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

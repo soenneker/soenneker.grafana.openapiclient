@@ -11,48 +11,70 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ReportBrandingOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emailFooterLink") is { } nullNodeEmailFooterLink && nullNodeEmailFooterLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailFooterLink = null;
+            if (parseNode.GetChildNode("emailFooterMode") is { } nullNodeEmailFooterMode && nullNodeEmailFooterMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailFooterMode = null;
+            if (parseNode.GetChildNode("emailFooterText") is { } nullNodeEmailFooterText && nullNodeEmailFooterText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailFooterText = null;
+            if (parseNode.GetChildNode("emailLogoUrl") is { } nullNodeEmailLogoUrl && nullNodeEmailLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailLogoUrl = null;
+            if (parseNode.GetChildNode("reportLogoUrl") is { } nullNodeReportLogoUrl && nullNodeReportLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportLogoUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The emailFooterLink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailFooterLink { get; set; }
+        public string? EmailFooterLink { get => _explicitNullValueEmailFooterLink; set { _explicitNullValueEmailFooterLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailFooterLink"); else _explicitNullProperties?.Remove("emailFooterLink"); } }
+        private string? _explicitNullValueEmailFooterLink = default!;
 #nullable restore
 #else
-        public string EmailFooterLink { get; set; }
+        public string EmailFooterLink { get => _explicitNullValueEmailFooterLink; set { _explicitNullValueEmailFooterLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailFooterLink"); else _explicitNullProperties?.Remove("emailFooterLink"); } }
+        private string _explicitNullValueEmailFooterLink = default!;
 #endif
         /// <summary>The emailFooterMode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailFooterMode { get; set; }
+        public string? EmailFooterMode { get => _explicitNullValueEmailFooterMode; set { _explicitNullValueEmailFooterMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailFooterMode"); else _explicitNullProperties?.Remove("emailFooterMode"); } }
+        private string? _explicitNullValueEmailFooterMode = default!;
 #nullable restore
 #else
-        public string EmailFooterMode { get; set; }
+        public string EmailFooterMode { get => _explicitNullValueEmailFooterMode; set { _explicitNullValueEmailFooterMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailFooterMode"); else _explicitNullProperties?.Remove("emailFooterMode"); } }
+        private string _explicitNullValueEmailFooterMode = default!;
 #endif
         /// <summary>The emailFooterText property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailFooterText { get; set; }
+        public string? EmailFooterText { get => _explicitNullValueEmailFooterText; set { _explicitNullValueEmailFooterText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailFooterText"); else _explicitNullProperties?.Remove("emailFooterText"); } }
+        private string? _explicitNullValueEmailFooterText = default!;
 #nullable restore
 #else
-        public string EmailFooterText { get; set; }
+        public string EmailFooterText { get => _explicitNullValueEmailFooterText; set { _explicitNullValueEmailFooterText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailFooterText"); else _explicitNullProperties?.Remove("emailFooterText"); } }
+        private string _explicitNullValueEmailFooterText = default!;
 #endif
         /// <summary>The emailLogoUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailLogoUrl { get; set; }
+        public string? EmailLogoUrl { get => _explicitNullValueEmailLogoUrl; set { _explicitNullValueEmailLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailLogoUrl"); else _explicitNullProperties?.Remove("emailLogoUrl"); } }
+        private string? _explicitNullValueEmailLogoUrl = default!;
 #nullable restore
 #else
-        public string EmailLogoUrl { get; set; }
+        public string EmailLogoUrl { get => _explicitNullValueEmailLogoUrl; set { _explicitNullValueEmailLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailLogoUrl"); else _explicitNullProperties?.Remove("emailLogoUrl"); } }
+        private string _explicitNullValueEmailLogoUrl = default!;
 #endif
         /// <summary>The reportLogoUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReportLogoUrl { get; set; }
+        public string? ReportLogoUrl { get => _explicitNullValueReportLogoUrl; set { _explicitNullValueReportLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reportLogoUrl"); else _explicitNullProperties?.Remove("reportLogoUrl"); } }
+        private string? _explicitNullValueReportLogoUrl = default!;
 #nullable restore
 #else
-        public string ReportLogoUrl { get; set; }
+        public string ReportLogoUrl { get => _explicitNullValueReportLogoUrl; set { _explicitNullValueReportLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reportLogoUrl"); else _explicitNullProperties?.Remove("reportLogoUrl"); } }
+        private string _explicitNullValueReportLogoUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("emailFooterText", EmailFooterText);
             writer.WriteStringValue("emailLogoUrl", EmailLogoUrl);
             writer.WriteStringValue("reportLogoUrl", ReportLogoUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

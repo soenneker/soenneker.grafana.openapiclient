@@ -33,7 +33,6 @@ namespace Soenneker.Grafana.OpenApiClient.Folders.Item
             get => new global::Soenneker.Grafana.OpenApiClient.Folders.Item.Move.MoveRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The permissions property</summary>
-        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Folders.Item.Permissions.PermissionsRequestBuilder Permissions
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Folders.Item.Permissions.PermissionsRequestBuilder(PathParameters, RequestAdapter);
@@ -83,6 +82,8 @@ namespace Soenneker.Grafana.OpenApiClient.Folders.Item
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.DeleteFolderResponseResponse>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.DeleteFolderResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -113,6 +114,8 @@ namespace Soenneker.Grafana.OpenApiClient.Folders.Item
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.Folder>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.Folder.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -149,6 +152,8 @@ namespace Soenneker.Grafana.OpenApiClient.Folders.Item
                 { "404", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.Folder>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.Folder.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

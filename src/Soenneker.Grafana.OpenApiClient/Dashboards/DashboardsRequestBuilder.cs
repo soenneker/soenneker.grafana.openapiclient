@@ -22,11 +22,13 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards
     public partial class DashboardsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The db property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.Db.DbRequestBuilder Db
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Db.DbRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The home property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.Home.HomeRequestBuilder Home
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Home.HomeRequestBuilder(PathParameters, RequestAdapter);
@@ -47,6 +49,7 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.PublicDashboards.PublicDashboardsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tags property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.Tags.TagsRequestBuilder Tags
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Tags.TagsRequestBuilder(PathParameters, RequestAdapter);

@@ -11,61 +11,95 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ReportSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branding") is { } nullNodeBranding && nullNodeBranding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Branding = null;
+            if (parseNode.GetChildNode("embeddedImageTheme") is { } nullNodeEmbeddedImageTheme && nullNodeEmbeddedImageTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmbeddedImageTheme = null;
+            if (parseNode.GetChildNode("footerFontFamily") is { } nullNodeFooterFontFamily && nullNodeFooterFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterFontFamily = null;
+            if (parseNode.GetChildNode("footerItems") is { } nullNodeFooterItems && nullNodeFooterItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterItems = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("orgId") is { } nullNodeOrgId && nullNodeOrgId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgId = null;
+            if (parseNode.GetChildNode("pdfDashboardTitleEnabled") is { } nullNodePdfDashboardTitleEnabled && nullNodePdfDashboardTitleEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfDashboardTitleEnabled = null;
+            if (parseNode.GetChildNode("pdfHeaderEnabled") is { } nullNodePdfHeaderEnabled && nullNodePdfHeaderEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfHeaderEnabled = null;
+            if (parseNode.GetChildNode("pdfTheme") is { } nullNodePdfTheme && nullNodePdfTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfTheme = null;
+            if (parseNode.GetChildNode("pdfTimeRangeEnabled") is { } nullNodePdfTimeRangeEnabled && nullNodePdfTimeRangeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfTimeRangeEnabled = null;
+            if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The branding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions? Branding { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions? Branding { get => _explicitNullValueBranding; set { _explicitNullValueBranding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branding"); else _explicitNullProperties?.Remove("branding"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions? _explicitNullValueBranding = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions Branding { get; set; }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions Branding { get => _explicitNullValueBranding; set { _explicitNullValueBranding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branding"); else _explicitNullProperties?.Remove("branding"); } }
+        private global::Soenneker.Grafana.OpenApiClient.Models.ReportBrandingOptions _explicitNullValueBranding = default!;
 #endif
         /// <summary>The embeddedImageTheme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmbeddedImageTheme { get; set; }
+        public string? EmbeddedImageTheme { get => _explicitNullValueEmbeddedImageTheme; set { _explicitNullValueEmbeddedImageTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embeddedImageTheme"); else _explicitNullProperties?.Remove("embeddedImageTheme"); } }
+        private string? _explicitNullValueEmbeddedImageTheme = default!;
 #nullable restore
 #else
-        public string EmbeddedImageTheme { get; set; }
+        public string EmbeddedImageTheme { get => _explicitNullValueEmbeddedImageTheme; set { _explicitNullValueEmbeddedImageTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embeddedImageTheme"); else _explicitNullProperties?.Remove("embeddedImageTheme"); } }
+        private string _explicitNullValueEmbeddedImageTheme = default!;
 #endif
         /// <summary>The footerFontFamily property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FooterFontFamily { get; set; }
+        public string? FooterFontFamily { get => _explicitNullValueFooterFontFamily; set { _explicitNullValueFooterFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footerFontFamily"); else _explicitNullProperties?.Remove("footerFontFamily"); } }
+        private string? _explicitNullValueFooterFontFamily = default!;
 #nullable restore
 #else
-        public string FooterFontFamily { get; set; }
+        public string FooterFontFamily { get => _explicitNullValueFooterFontFamily; set { _explicitNullValueFooterFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footerFontFamily"); else _explicitNullProperties?.Remove("footerFontFamily"); } }
+        private string _explicitNullValueFooterFontFamily = default!;
 #endif
         /// <summary>The footerItems property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem>? FooterItems { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem>? FooterItems { get => _explicitNullValueFooterItems; set { _explicitNullValueFooterItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footerItems"); else _explicitNullProperties?.Remove("footerItems"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem>? _explicitNullValueFooterItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem> FooterItems { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem> FooterItems { get => _explicitNullValueFooterItems; set { _explicitNullValueFooterItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footerItems"); else _explicitNullProperties?.Remove("footerItems"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.FooterItem> _explicitNullValueFooterItems = default!;
 #endif
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The orgId property</summary>
-        public long? OrgId { get; set; }
+        public long? OrgId { get => _explicitNullValueOrgId; set { _explicitNullValueOrgId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgId"); else _explicitNullProperties?.Remove("orgId"); } }
+        private long? _explicitNullValueOrgId = default!;
         /// <summary>The pdfDashboardTitleEnabled property</summary>
-        public bool? PdfDashboardTitleEnabled { get; set; }
+        public bool? PdfDashboardTitleEnabled { get => _explicitNullValuePdfDashboardTitleEnabled; set { _explicitNullValuePdfDashboardTitleEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfDashboardTitleEnabled"); else _explicitNullProperties?.Remove("pdfDashboardTitleEnabled"); } }
+        private bool? _explicitNullValuePdfDashboardTitleEnabled = default!;
         /// <summary>The pdfHeaderEnabled property</summary>
-        public bool? PdfHeaderEnabled { get; set; }
+        public bool? PdfHeaderEnabled { get => _explicitNullValuePdfHeaderEnabled; set { _explicitNullValuePdfHeaderEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfHeaderEnabled"); else _explicitNullProperties?.Remove("pdfHeaderEnabled"); } }
+        private bool? _explicitNullValuePdfHeaderEnabled = default!;
         /// <summary>The pdfTheme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PdfTheme { get; set; }
+        public string? PdfTheme { get => _explicitNullValuePdfTheme; set { _explicitNullValuePdfTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfTheme"); else _explicitNullProperties?.Remove("pdfTheme"); } }
+        private string? _explicitNullValuePdfTheme = default!;
 #nullable restore
 #else
-        public string PdfTheme { get; set; }
+        public string PdfTheme { get => _explicitNullValuePdfTheme; set { _explicitNullValuePdfTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfTheme"); else _explicitNullProperties?.Remove("pdfTheme"); } }
+        private string _explicitNullValuePdfTheme = default!;
 #endif
         /// <summary>The pdfTimeRangeEnabled property</summary>
-        public bool? PdfTimeRangeEnabled { get; set; }
+        public bool? PdfTimeRangeEnabled { get => _explicitNullValuePdfTimeRangeEnabled; set { _explicitNullValuePdfTimeRangeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfTimeRangeEnabled"); else _explicitNullProperties?.Remove("pdfTimeRangeEnabled"); } }
+        private bool? _explicitNullValuePdfTimeRangeEnabled = default!;
         /// <summary>The userId property</summary>
-        public long? UserId { get; set; }
+        public long? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private long? _explicitNullValueUserId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.ReportSettings"/> and sets the default values.
         /// </summary>
@@ -81,7 +115,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.ReportSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.ReportSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.ReportSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +156,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteStringValue("pdfTheme", PdfTheme);
             writer.WriteBoolValue("pdfTimeRangeEnabled", PdfTimeRangeEnabled);
             writer.WriteLongValue("userId", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -53,6 +53,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Expor
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.RouteExportMuteTiming403Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

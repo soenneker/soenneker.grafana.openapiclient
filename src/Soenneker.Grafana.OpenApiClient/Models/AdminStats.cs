@@ -11,57 +11,112 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdminStats : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activeAdmins") is { } nullNodeActiveAdmins && nullNodeActiveAdmins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveAdmins = null;
+            if (parseNode.GetChildNode("activeDevices") is { } nullNodeActiveDevices && nullNodeActiveDevices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveDevices = null;
+            if (parseNode.GetChildNode("activeEditors") is { } nullNodeActiveEditors && nullNodeActiveEditors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveEditors = null;
+            if (parseNode.GetChildNode("activeSessions") is { } nullNodeActiveSessions && nullNodeActiveSessions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveSessions = null;
+            if (parseNode.GetChildNode("activeUsers") is { } nullNodeActiveUsers && nullNodeActiveUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveUsers = null;
+            if (parseNode.GetChildNode("activeViewers") is { } nullNodeActiveViewers && nullNodeActiveViewers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveViewers = null;
+            if (parseNode.GetChildNode("admins") is { } nullNodeAdmins && nullNodeAdmins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Admins = null;
+            if (parseNode.GetChildNode("alerts") is { } nullNodeAlerts && nullNodeAlerts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alerts = null;
+            if (parseNode.GetChildNode("dailyActiveAdmins") is { } nullNodeDailyActiveAdmins && nullNodeDailyActiveAdmins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyActiveAdmins = null;
+            if (parseNode.GetChildNode("dailyActiveEditors") is { } nullNodeDailyActiveEditors && nullNodeDailyActiveEditors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyActiveEditors = null;
+            if (parseNode.GetChildNode("dailyActiveSessions") is { } nullNodeDailyActiveSessions && nullNodeDailyActiveSessions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyActiveSessions = null;
+            if (parseNode.GetChildNode("dailyActiveUsers") is { } nullNodeDailyActiveUsers && nullNodeDailyActiveUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyActiveUsers = null;
+            if (parseNode.GetChildNode("dailyActiveViewers") is { } nullNodeDailyActiveViewers && nullNodeDailyActiveViewers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyActiveViewers = null;
+            if (parseNode.GetChildNode("dashboards") is { } nullNodeDashboards && nullNodeDashboards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dashboards = null;
+            if (parseNode.GetChildNode("datasources") is { } nullNodeDatasources && nullNodeDatasources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Datasources = null;
+            if (parseNode.GetChildNode("editors") is { } nullNodeEditors && nullNodeEditors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Editors = null;
+            if (parseNode.GetChildNode("monthlyActiveUsers") is { } nullNodeMonthlyActiveUsers && nullNodeMonthlyActiveUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyActiveUsers = null;
+            if (parseNode.GetChildNode("orgs") is { } nullNodeOrgs && nullNodeOrgs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Orgs = null;
+            if (parseNode.GetChildNode("playlists") is { } nullNodePlaylists && nullNodePlaylists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Playlists = null;
+            if (parseNode.GetChildNode("snapshots") is { } nullNodeSnapshots && nullNodeSnapshots.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Snapshots = null;
+            if (parseNode.GetChildNode("stars") is { } nullNodeStars && nullNodeStars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stars = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+            if (parseNode.GetChildNode("viewers") is { } nullNodeViewers && nullNodeViewers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Viewers = null;
+        }
+
         /// <summary>The activeAdmins property</summary>
-        public long? ActiveAdmins { get; set; }
+        public long? ActiveAdmins { get => _explicitNullValueActiveAdmins; set { _explicitNullValueActiveAdmins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeAdmins"); else _explicitNullProperties?.Remove("activeAdmins"); } }
+        private long? _explicitNullValueActiveAdmins = default!;
         /// <summary>The activeDevices property</summary>
-        public long? ActiveDevices { get; set; }
+        public long? ActiveDevices { get => _explicitNullValueActiveDevices; set { _explicitNullValueActiveDevices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeDevices"); else _explicitNullProperties?.Remove("activeDevices"); } }
+        private long? _explicitNullValueActiveDevices = default!;
         /// <summary>The activeEditors property</summary>
-        public long? ActiveEditors { get; set; }
+        public long? ActiveEditors { get => _explicitNullValueActiveEditors; set { _explicitNullValueActiveEditors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeEditors"); else _explicitNullProperties?.Remove("activeEditors"); } }
+        private long? _explicitNullValueActiveEditors = default!;
         /// <summary>The activeSessions property</summary>
-        public long? ActiveSessions { get; set; }
+        public long? ActiveSessions { get => _explicitNullValueActiveSessions; set { _explicitNullValueActiveSessions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeSessions"); else _explicitNullProperties?.Remove("activeSessions"); } }
+        private long? _explicitNullValueActiveSessions = default!;
         /// <summary>The activeUsers property</summary>
-        public long? ActiveUsers { get; set; }
+        public long? ActiveUsers { get => _explicitNullValueActiveUsers; set { _explicitNullValueActiveUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeUsers"); else _explicitNullProperties?.Remove("activeUsers"); } }
+        private long? _explicitNullValueActiveUsers = default!;
         /// <summary>The activeViewers property</summary>
-        public long? ActiveViewers { get; set; }
+        public long? ActiveViewers { get => _explicitNullValueActiveViewers; set { _explicitNullValueActiveViewers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeViewers"); else _explicitNullProperties?.Remove("activeViewers"); } }
+        private long? _explicitNullValueActiveViewers = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The admins property</summary>
-        public long? Admins { get; set; }
+        public long? Admins { get => _explicitNullValueAdmins; set { _explicitNullValueAdmins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admins"); else _explicitNullProperties?.Remove("admins"); } }
+        private long? _explicitNullValueAdmins = default!;
         /// <summary>The alerts property</summary>
-        public long? Alerts { get; set; }
+        public long? Alerts { get => _explicitNullValueAlerts; set { _explicitNullValueAlerts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alerts"); else _explicitNullProperties?.Remove("alerts"); } }
+        private long? _explicitNullValueAlerts = default!;
         /// <summary>The dailyActiveAdmins property</summary>
-        public long? DailyActiveAdmins { get; set; }
+        public long? DailyActiveAdmins { get => _explicitNullValueDailyActiveAdmins; set { _explicitNullValueDailyActiveAdmins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyActiveAdmins"); else _explicitNullProperties?.Remove("dailyActiveAdmins"); } }
+        private long? _explicitNullValueDailyActiveAdmins = default!;
         /// <summary>The dailyActiveEditors property</summary>
-        public long? DailyActiveEditors { get; set; }
+        public long? DailyActiveEditors { get => _explicitNullValueDailyActiveEditors; set { _explicitNullValueDailyActiveEditors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyActiveEditors"); else _explicitNullProperties?.Remove("dailyActiveEditors"); } }
+        private long? _explicitNullValueDailyActiveEditors = default!;
         /// <summary>The dailyActiveSessions property</summary>
-        public long? DailyActiveSessions { get; set; }
+        public long? DailyActiveSessions { get => _explicitNullValueDailyActiveSessions; set { _explicitNullValueDailyActiveSessions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyActiveSessions"); else _explicitNullProperties?.Remove("dailyActiveSessions"); } }
+        private long? _explicitNullValueDailyActiveSessions = default!;
         /// <summary>The dailyActiveUsers property</summary>
-        public long? DailyActiveUsers { get; set; }
+        public long? DailyActiveUsers { get => _explicitNullValueDailyActiveUsers; set { _explicitNullValueDailyActiveUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyActiveUsers"); else _explicitNullProperties?.Remove("dailyActiveUsers"); } }
+        private long? _explicitNullValueDailyActiveUsers = default!;
         /// <summary>The dailyActiveViewers property</summary>
-        public long? DailyActiveViewers { get; set; }
+        public long? DailyActiveViewers { get => _explicitNullValueDailyActiveViewers; set { _explicitNullValueDailyActiveViewers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyActiveViewers"); else _explicitNullProperties?.Remove("dailyActiveViewers"); } }
+        private long? _explicitNullValueDailyActiveViewers = default!;
         /// <summary>The dashboards property</summary>
-        public long? Dashboards { get; set; }
+        public long? Dashboards { get => _explicitNullValueDashboards; set { _explicitNullValueDashboards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dashboards"); else _explicitNullProperties?.Remove("dashboards"); } }
+        private long? _explicitNullValueDashboards = default!;
         /// <summary>The datasources property</summary>
-        public long? Datasources { get; set; }
+        public long? Datasources { get => _explicitNullValueDatasources; set { _explicitNullValueDatasources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasources"); else _explicitNullProperties?.Remove("datasources"); } }
+        private long? _explicitNullValueDatasources = default!;
         /// <summary>The editors property</summary>
-        public long? Editors { get; set; }
+        public long? Editors { get => _explicitNullValueEditors; set { _explicitNullValueEditors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editors"); else _explicitNullProperties?.Remove("editors"); } }
+        private long? _explicitNullValueEditors = default!;
         /// <summary>The monthlyActiveUsers property</summary>
-        public long? MonthlyActiveUsers { get; set; }
+        public long? MonthlyActiveUsers { get => _explicitNullValueMonthlyActiveUsers; set { _explicitNullValueMonthlyActiveUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthlyActiveUsers"); else _explicitNullProperties?.Remove("monthlyActiveUsers"); } }
+        private long? _explicitNullValueMonthlyActiveUsers = default!;
         /// <summary>The orgs property</summary>
-        public long? Orgs { get; set; }
+        public long? Orgs { get => _explicitNullValueOrgs; set { _explicitNullValueOrgs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgs"); else _explicitNullProperties?.Remove("orgs"); } }
+        private long? _explicitNullValueOrgs = default!;
         /// <summary>The playlists property</summary>
-        public long? Playlists { get; set; }
+        public long? Playlists { get => _explicitNullValuePlaylists; set { _explicitNullValuePlaylists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlists"); else _explicitNullProperties?.Remove("playlists"); } }
+        private long? _explicitNullValuePlaylists = default!;
         /// <summary>The snapshots property</summary>
-        public long? Snapshots { get; set; }
+        public long? Snapshots { get => _explicitNullValueSnapshots; set { _explicitNullValueSnapshots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapshots"); else _explicitNullProperties?.Remove("snapshots"); } }
+        private long? _explicitNullValueSnapshots = default!;
         /// <summary>The stars property</summary>
-        public long? Stars { get; set; }
+        public long? Stars { get => _explicitNullValueStars; set { _explicitNullValueStars = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stars"); else _explicitNullProperties?.Remove("stars"); } }
+        private long? _explicitNullValueStars = default!;
         /// <summary>The tags property</summary>
-        public long? Tags { get; set; }
+        public long? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private long? _explicitNullValueTags = default!;
         /// <summary>The users property</summary>
-        public long? Users { get; set; }
+        public long? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private long? _explicitNullValueUsers = default!;
         /// <summary>The viewers property</summary>
-        public long? Viewers { get; set; }
+        public long? Viewers { get => _explicitNullValueViewers; set { _explicitNullValueViewers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewers"); else _explicitNullProperties?.Remove("viewers"); } }
+        private long? _explicitNullValueViewers = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AdminStats"/> and sets the default values.
         /// </summary>
@@ -77,7 +132,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.AdminStats CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.AdminStats();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.AdminStats(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -144,6 +199,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteLongValue("tags", Tags);
             writer.WriteLongValue("users", Users);
             writer.WriteLongValue("viewers", Viewers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

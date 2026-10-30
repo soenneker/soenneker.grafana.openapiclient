@@ -33,6 +33,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org
             get => new global::Soenneker.Grafana.OpenApiClient.Org.Invites.InvitesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The preferences property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Org.Preferences.PreferencesRequestBuilder Preferences
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Org.Preferences.PreferencesRequestBuilder(PathParameters, RequestAdapter);
@@ -87,6 +88,8 @@ namespace Soenneker.Grafana.OpenApiClient.Org
                 { "401", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.OrgDetailsDto>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.OrgDetailsDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -118,6 +121,8 @@ namespace Soenneker.Grafana.OpenApiClient.Org
                 { "401", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.SuccessResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

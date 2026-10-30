@@ -55,6 +55,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item
             {
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.PublicError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -85,6 +87,8 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.ContactPoints.Item
                 { "400", global::Soenneker.Grafana.OpenApiClient.Models.ValidationError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Grafana.OpenApiClient.Models.PublicError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.RoutePutContactpoint202Response>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.RoutePutContactpoint202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

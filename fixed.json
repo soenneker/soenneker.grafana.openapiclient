@@ -8843,10 +8843,30 @@
         ],
         "responses": {
           "200": {
-            "$ref": "#/components/responses/contentResponse"
+            "description": "(empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenderReportCsVsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/ContentResponseResponseContent"
+                }
+              }
+            }
           },
           "204": {
-            "$ref": "#/components/responses/noContentResponse"
+            "description": "(empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenderReportCsVsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/NoContentResponseResponseContent"
+                }
+              }
+            }
           },
           "400": {
             "$ref": "#/components/responses/badRequestError"
@@ -28816,6 +28836,16 @@
             }
           ]
         }
+      },
+      "RenderReportCsVsSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ContentResponseResponseContent"
+          },
+          {
+            "$ref": "#/components/schemas/NoContentResponseResponseContent"
+          }
+        ]
       }
     },
     "responses": {

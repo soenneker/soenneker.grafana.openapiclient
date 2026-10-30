@@ -11,36 +11,56 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SyncResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Elapsed") is { } nullNodeElapsed && nullNodeElapsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elapsed = null;
+            if (parseNode.GetChildNode("FailedUsers") is { } nullNodeFailedUsers && nullNodeFailedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedUsers = null;
+            if (parseNode.GetChildNode("MissingUserIds") is { } nullNodeMissingUserIds && nullNodeMissingUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingUserIds = null;
+            if (parseNode.GetChildNode("Started") is { } nullNodeStarted && nullNodeStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Started = null;
+            if (parseNode.GetChildNode("UpdatedUserIds") is { } nullNodeUpdatedUserIds && nullNodeUpdatedUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedUserIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A Duration represents the elapsed time between two instantsas an int64 nanosecond count. The representation limits thelargest representable duration to approximately 290 years.</summary>
-        public long? Elapsed { get; set; }
+        public long? Elapsed { get => _explicitNullValueElapsed; set { _explicitNullValueElapsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Elapsed"); else _explicitNullProperties?.Remove("Elapsed"); } }
+        private long? _explicitNullValueElapsed = default!;
         /// <summary>The FailedUsers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser>? FailedUsers { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser>? FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedUsers"); else _explicitNullProperties?.Remove("FailedUsers"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser>? _explicitNullValueFailedUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser> FailedUsers { get; set; }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser> FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedUsers"); else _explicitNullProperties?.Remove("FailedUsers"); } }
+        private List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser> _explicitNullValueFailedUsers = default!;
 #endif
         /// <summary>The MissingUserIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? MissingUserIds { get; set; }
+        public List<long?>? MissingUserIds { get => _explicitNullValueMissingUserIds; set { _explicitNullValueMissingUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MissingUserIds"); else _explicitNullProperties?.Remove("MissingUserIds"); } }
+        private List<long?>? _explicitNullValueMissingUserIds = default!;
 #nullable restore
 #else
-        public List<long?> MissingUserIds { get; set; }
+        public List<long?> MissingUserIds { get => _explicitNullValueMissingUserIds; set { _explicitNullValueMissingUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MissingUserIds"); else _explicitNullProperties?.Remove("MissingUserIds"); } }
+        private List<long?> _explicitNullValueMissingUserIds = default!;
 #endif
         /// <summary>The Started property</summary>
-        public DateTimeOffset? Started { get; set; }
+        public DateTimeOffset? Started { get => _explicitNullValueStarted; set { _explicitNullValueStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Started"); else _explicitNullProperties?.Remove("Started"); } }
+        private DateTimeOffset? _explicitNullValueStarted = default!;
         /// <summary>The UpdatedUserIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? UpdatedUserIds { get; set; }
+        public List<long?>? UpdatedUserIds { get => _explicitNullValueUpdatedUserIds; set { _explicitNullValueUpdatedUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatedUserIds"); else _explicitNullProperties?.Remove("UpdatedUserIds"); } }
+        private List<long?>? _explicitNullValueUpdatedUserIds = default!;
 #nullable restore
 #else
-        public List<long?> UpdatedUserIds { get; set; }
+        public List<long?> UpdatedUserIds { get => _explicitNullValueUpdatedUserIds; set { _explicitNullValueUpdatedUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatedUserIds"); else _explicitNullProperties?.Remove("UpdatedUserIds"); } }
+        private List<long?> _explicitNullValueUpdatedUserIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.SyncResult"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.SyncResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.SyncResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.SyncResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<long?>("MissingUserIds", MissingUserIds);
             writer.WriteDateTimeOffsetValue("Started", Started);
             writer.WriteCollectionOfPrimitiveValues<long?>("UpdatedUserIds", UpdatedUserIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

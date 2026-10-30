@@ -102,6 +102,7 @@ namespace Soenneker.Grafana.OpenApiClient
             get => new global::Soenneker.Grafana.OpenApiClient.Ds.DsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The folders property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Folders.FoldersRequestBuilder Folders
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Folders.FoldersRequestBuilder(PathParameters, RequestAdapter);
@@ -137,6 +138,7 @@ namespace Soenneker.Grafana.OpenApiClient
             get => new global::Soenneker.Grafana.OpenApiClient.Orgs.OrgsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The playlists property</summary>
+        [Obsolete("")]
         public global::Soenneker.Grafana.OpenApiClient.Playlists.PlaylistsRequestBuilder Playlists
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Playlists.PlaylistsRequestBuilder(PathParameters, RequestAdapter);

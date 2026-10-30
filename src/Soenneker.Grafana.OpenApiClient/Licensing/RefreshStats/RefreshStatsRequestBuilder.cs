@@ -53,6 +53,8 @@ namespace Soenneker.Grafana.OpenApiClient.Licensing.RefreshStats
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Grafana.OpenApiClient.Models.ActiveUserStats>(requestInfo, global::Soenneker.Grafana.OpenApiClient.Models.ActiveUserStats.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

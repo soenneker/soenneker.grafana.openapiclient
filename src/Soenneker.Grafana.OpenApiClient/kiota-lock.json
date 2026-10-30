@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "937083569BE3F59A06AEE1F0F9030E6867842C025F107CD55D387F5ABA5481C92E3BF9AF6D6D00148C9D06E224C8A9CBA3EA954BCE15F34D24C075C1844796B2",
+  "descriptionHash": "2AB5BFDB33903822CD90D4488DC7CEC37EC3B0F0F8A6EF1A0BDA4FDB6521ECEF2653C6516C0A428CBCF39D16F419BB51095BC1ABCACBEFA9A6FF9C5ADCBAC6F9",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "GrafanaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Grafana.OpenApiClient",

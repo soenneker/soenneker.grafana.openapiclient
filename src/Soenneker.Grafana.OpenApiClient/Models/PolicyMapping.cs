@@ -11,24 +11,37 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PolicyMapping : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("IssuerDomainPolicy") is { } nullNodeIssuerDomainPolicy && nullNodeIssuerDomainPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuerDomainPolicy = null;
+            if (parseNode.GetChildNode("SubjectDomainPolicy") is { } nullNodeSubjectDomainPolicy && nullNodeSubjectDomainPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubjectDomainPolicy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>IssuerDomainPolicy contains a policy OID the issuing certificate considersequivalent to SubjectDomainPolicy in the subject certificate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuerDomainPolicy { get; set; }
+        public string? IssuerDomainPolicy { get => _explicitNullValueIssuerDomainPolicy; set { _explicitNullValueIssuerDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IssuerDomainPolicy"); else _explicitNullProperties?.Remove("IssuerDomainPolicy"); } }
+        private string? _explicitNullValueIssuerDomainPolicy = default!;
 #nullable restore
 #else
-        public string IssuerDomainPolicy { get; set; }
+        public string IssuerDomainPolicy { get => _explicitNullValueIssuerDomainPolicy; set { _explicitNullValueIssuerDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IssuerDomainPolicy"); else _explicitNullProperties?.Remove("IssuerDomainPolicy"); } }
+        private string _explicitNullValueIssuerDomainPolicy = default!;
 #endif
         /// <summary>SubjectDomainPolicy contains a OID the issuing certificate considersequivalent to IssuerDomainPolicy in the subject certificate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubjectDomainPolicy { get; set; }
+        public string? SubjectDomainPolicy { get => _explicitNullValueSubjectDomainPolicy; set { _explicitNullValueSubjectDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectDomainPolicy"); else _explicitNullProperties?.Remove("SubjectDomainPolicy"); } }
+        private string? _explicitNullValueSubjectDomainPolicy = default!;
 #nullable restore
 #else
-        public string SubjectDomainPolicy { get; set; }
+        public string SubjectDomainPolicy { get => _explicitNullValueSubjectDomainPolicy; set { _explicitNullValueSubjectDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectDomainPolicy"); else _explicitNullProperties?.Remove("SubjectDomainPolicy"); } }
+        private string _explicitNullValueSubjectDomainPolicy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.PolicyMapping(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("IssuerDomainPolicy", IssuerDomainPolicy);
             writer.WriteStringValue("SubjectDomainPolicy", SubjectDomainPolicy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

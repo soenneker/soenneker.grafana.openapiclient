@@ -11,64 +11,92 @@ namespace Soenneker.Grafana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AlertRuleNotificationSettingsExport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active_time_intervals") is { } nullNodeActiveTimeIntervals && nullNodeActiveTimeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveTimeIntervals = null;
+            if (parseNode.GetChildNode("group_by") is { } nullNodeGroupBy && nullNodeGroupBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupBy = null;
+            if (parseNode.GetChildNode("group_interval") is { } nullNodeGroupInterval && nullNodeGroupInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupInterval = null;
+            if (parseNode.GetChildNode("group_wait") is { } nullNodeGroupWait && nullNodeGroupWait.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupWait = null;
+            if (parseNode.GetChildNode("mute_time_intervals") is { } nullNodeMuteTimeIntervals && nullNodeMuteTimeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MuteTimeIntervals = null;
+            if (parseNode.GetChildNode("receiver") is { } nullNodeReceiver && nullNodeReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receiver = null;
+            if (parseNode.GetChildNode("repeat_interval") is { } nullNodeRepeatInterval && nullNodeRepeatInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepeatInterval = null;
+        }
+
         /// <summary>The active_time_intervals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ActiveTimeIntervals { get; set; }
+        public List<string>? ActiveTimeIntervals { get => _explicitNullValueActiveTimeIntervals; set { _explicitNullValueActiveTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_time_intervals"); else _explicitNullProperties?.Remove("active_time_intervals"); } }
+        private List<string>? _explicitNullValueActiveTimeIntervals = default!;
 #nullable restore
 #else
-        public List<string> ActiveTimeIntervals { get; set; }
+        public List<string> ActiveTimeIntervals { get => _explicitNullValueActiveTimeIntervals; set { _explicitNullValueActiveTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_time_intervals"); else _explicitNullProperties?.Remove("active_time_intervals"); } }
+        private List<string> _explicitNullValueActiveTimeIntervals = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The group_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? GroupBy { get; set; }
+        public List<string>? GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        private List<string>? _explicitNullValueGroupBy = default!;
 #nullable restore
 #else
-        public List<string> GroupBy { get; set; }
+        public List<string> GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        private List<string> _explicitNullValueGroupBy = default!;
 #endif
         /// <summary>The group_interval property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupInterval { get; set; }
+        public string? GroupInterval { get => _explicitNullValueGroupInterval; set { _explicitNullValueGroupInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_interval"); else _explicitNullProperties?.Remove("group_interval"); } }
+        private string? _explicitNullValueGroupInterval = default!;
 #nullable restore
 #else
-        public string GroupInterval { get; set; }
+        public string GroupInterval { get => _explicitNullValueGroupInterval; set { _explicitNullValueGroupInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_interval"); else _explicitNullProperties?.Remove("group_interval"); } }
+        private string _explicitNullValueGroupInterval = default!;
 #endif
         /// <summary>The group_wait property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupWait { get; set; }
+        public string? GroupWait { get => _explicitNullValueGroupWait; set { _explicitNullValueGroupWait = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_wait"); else _explicitNullProperties?.Remove("group_wait"); } }
+        private string? _explicitNullValueGroupWait = default!;
 #nullable restore
 #else
-        public string GroupWait { get; set; }
+        public string GroupWait { get => _explicitNullValueGroupWait; set { _explicitNullValueGroupWait = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_wait"); else _explicitNullProperties?.Remove("group_wait"); } }
+        private string _explicitNullValueGroupWait = default!;
 #endif
         /// <summary>The mute_time_intervals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MuteTimeIntervals { get; set; }
+        public List<string>? MuteTimeIntervals { get => _explicitNullValueMuteTimeIntervals; set { _explicitNullValueMuteTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_time_intervals"); else _explicitNullProperties?.Remove("mute_time_intervals"); } }
+        private List<string>? _explicitNullValueMuteTimeIntervals = default!;
 #nullable restore
 #else
-        public List<string> MuteTimeIntervals { get; set; }
+        public List<string> MuteTimeIntervals { get => _explicitNullValueMuteTimeIntervals; set { _explicitNullValueMuteTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_time_intervals"); else _explicitNullProperties?.Remove("mute_time_intervals"); } }
+        private List<string> _explicitNullValueMuteTimeIntervals = default!;
 #endif
         /// <summary>The receiver property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Receiver { get; set; }
+        public string? Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
+        private string? _explicitNullValueReceiver = default!;
 #nullable restore
 #else
-        public string Receiver { get; set; }
+        public string Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
+        private string _explicitNullValueReceiver = default!;
 #endif
         /// <summary>The repeat_interval property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepeatInterval { get; set; }
+        public string? RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeat_interval"); else _explicitNullProperties?.Remove("repeat_interval"); } }
+        private string? _explicitNullValueRepeatInterval = default!;
 #nullable restore
 #else
-        public string RepeatInterval { get; set; }
+        public string RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeat_interval"); else _explicitNullProperties?.Remove("repeat_interval"); } }
+        private string _explicitNullValueRepeatInterval = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         public static global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Grafana.OpenApiClient.Models.AlertRuleNotificationSettingsExport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("mute_time_intervals", MuteTimeIntervals);
             writer.WriteStringValue("receiver", Receiver);
             writer.WriteStringValue("repeat_interval", RepeatInterval);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
