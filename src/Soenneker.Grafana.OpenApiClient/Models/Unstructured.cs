@@ -18,7 +18,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("Object") is null) { _explicitNullValueObject = default!; _explicitNullProperties?.Remove("Object"); }
+            else if (parseNode.GetChildNode("Object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>Object is a JSON compatible map with string, float, int, bool, []any,or map[string]any children.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Object"); else _explicitNullProperties?.Remove("Object"); } }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("Object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Object"); else _explicitNullProperties?.Remove("Object"); } }
         private global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty? _explicitNullValueObject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Object"); else _explicitNullProperties?.Remove("Object"); } }
+        public global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; AdditionalData?.Remove("Object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Object"); else _explicitNullProperties?.Remove("Object"); } }
         private global::Soenneker.Grafana.OpenApiClient.Models.UnstructuredObjectProperty _explicitNullValueObject = default!;
 #endif
         /// <summary>

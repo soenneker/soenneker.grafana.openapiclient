@@ -18,8 +18,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("datasourceUid") is { } nullNodeDatasourceUid && nullNodeDatasourceUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasourceUid = null;
-            if (parseNode.GetChildNode("queries") is { } nullNodeQueries && nullNodeQueries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Queries = null;
+            if (parseNode.GetChildNode("datasourceUid") is null) { _explicitNullValueDatasourceUid = default!; _explicitNullProperties?.Remove("datasourceUid"); }
+            else if (parseNode.GetChildNode("datasourceUid") is { } nullNodeDatasourceUid && nullNodeDatasourceUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasourceUid = null;
+            if (parseNode.GetChildNode("queries") is null) { _explicitNullValueQueries = default!; _explicitNullProperties?.Remove("queries"); }
+            else if (parseNode.GetChildNode("queries") is { } nullNodeQueries && nullNodeQueries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Queries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>UID of the data source for which are queries stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
+        public string? DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; AdditionalData?.Remove("datasourceUid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
         private string? _explicitNullValueDatasourceUid = default!;
 #nullable restore
 #else
-        public string DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
+        public string DatasourceUid { get => _explicitNullValueDatasourceUid; set { _explicitNullValueDatasourceUid = value; AdditionalData?.Remove("datasourceUid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasourceUid"); else _explicitNullProperties?.Remove("datasourceUid"); } }
         private string _explicitNullValueDatasourceUid = default!;
 #endif
         /// <summary>The queries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries? Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries? Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; AdditionalData?.Remove("queries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
         private global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries? _explicitNullValueQueries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
+        public global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; AdditionalData?.Remove("queries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
         private global::Soenneker.Grafana.OpenApiClient.Models.CreateQueryInQueryHistoryCommandQueries _explicitNullValueQueries = default!;
 #endif
         /// <summary>

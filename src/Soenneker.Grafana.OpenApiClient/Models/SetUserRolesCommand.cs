@@ -17,27 +17,30 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("global") is { } nullNodeGlobal && nullNodeGlobal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Global = null;
-            if (parseNode.GetChildNode("includeHidden") is { } nullNodeIncludeHidden && nullNodeIncludeHidden.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeHidden = null;
-            if (parseNode.GetChildNode("roleUids") is { } nullNodeRoleUids && nullNodeRoleUids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleUids = null;
+            if (parseNode.GetChildNode("global") is null) { _explicitNullValueGlobal = default!; _explicitNullProperties?.Remove("global"); }
+            else if (parseNode.GetChildNode("global") is { } nullNodeGlobal && nullNodeGlobal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Global = null;
+            if (parseNode.GetChildNode("includeHidden") is null) { _explicitNullValueIncludeHidden = default!; _explicitNullProperties?.Remove("includeHidden"); }
+            else if (parseNode.GetChildNode("includeHidden") is { } nullNodeIncludeHidden && nullNodeIncludeHidden.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeHidden = null;
+            if (parseNode.GetChildNode("roleUids") is null) { _explicitNullValueRoleUids = default!; _explicitNullProperties?.Remove("roleUids"); }
+            else if (parseNode.GetChildNode("roleUids") is { } nullNodeRoleUids && nullNodeRoleUids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleUids = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The global property</summary>
-        public bool? Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
+        public bool? Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; AdditionalData?.Remove("global"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
         private bool? _explicitNullValueGlobal = default!;
         /// <summary>The includeHidden property</summary>
-        public bool? IncludeHidden { get => _explicitNullValueIncludeHidden; set { _explicitNullValueIncludeHidden = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeHidden"); else _explicitNullProperties?.Remove("includeHidden"); } }
+        public bool? IncludeHidden { get => _explicitNullValueIncludeHidden; set { _explicitNullValueIncludeHidden = value; AdditionalData?.Remove("includeHidden"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeHidden"); else _explicitNullProperties?.Remove("includeHidden"); } }
         private bool? _explicitNullValueIncludeHidden = default!;
         /// <summary>The roleUids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RoleUids { get => _explicitNullValueRoleUids; set { _explicitNullValueRoleUids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUids"); else _explicitNullProperties?.Remove("roleUids"); } }
+        public List<string>? RoleUids { get => _explicitNullValueRoleUids; set { _explicitNullValueRoleUids = value; AdditionalData?.Remove("roleUids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUids"); else _explicitNullProperties?.Remove("roleUids"); } }
         private List<string>? _explicitNullValueRoleUids = default!;
 #nullable restore
 #else
-        public List<string> RoleUids { get => _explicitNullValueRoleUids; set { _explicitNullValueRoleUids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUids"); else _explicitNullProperties?.Remove("roleUids"); } }
+        public List<string> RoleUids { get => _explicitNullValueRoleUids; set { _explicitNullValueRoleUids = value; AdditionalData?.Remove("roleUids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUids"); else _explicitNullProperties?.Remove("roleUids"); } }
         private List<string> _explicitNullValueRoleUids = default!;
 #endif
         /// <summary>

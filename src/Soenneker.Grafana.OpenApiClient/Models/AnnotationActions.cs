@@ -17,21 +17,24 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("canAdd") is { } nullNodeCanAdd && nullNodeCanAdd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanAdd = null;
-            if (parseNode.GetChildNode("canDelete") is { } nullNodeCanDelete && nullNodeCanDelete.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanDelete = null;
-            if (parseNode.GetChildNode("canEdit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
+            if (parseNode.GetChildNode("canAdd") is null) { _explicitNullValueCanAdd = default!; _explicitNullProperties?.Remove("canAdd"); }
+            else if (parseNode.GetChildNode("canAdd") is { } nullNodeCanAdd && nullNodeCanAdd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanAdd = null;
+            if (parseNode.GetChildNode("canDelete") is null) { _explicitNullValueCanDelete = default!; _explicitNullProperties?.Remove("canDelete"); }
+            else if (parseNode.GetChildNode("canDelete") is { } nullNodeCanDelete && nullNodeCanDelete.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanDelete = null;
+            if (parseNode.GetChildNode("canEdit") is null) { _explicitNullValueCanEdit = default!; _explicitNullProperties?.Remove("canEdit"); }
+            else if (parseNode.GetChildNode("canEdit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The canAdd property</summary>
-        public bool? CanAdd { get => _explicitNullValueCanAdd; set { _explicitNullValueCanAdd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canAdd"); else _explicitNullProperties?.Remove("canAdd"); } }
+        public bool? CanAdd { get => _explicitNullValueCanAdd; set { _explicitNullValueCanAdd = value; AdditionalData?.Remove("canAdd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canAdd"); else _explicitNullProperties?.Remove("canAdd"); } }
         private bool? _explicitNullValueCanAdd = default!;
         /// <summary>The canDelete property</summary>
-        public bool? CanDelete { get => _explicitNullValueCanDelete; set { _explicitNullValueCanDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canDelete"); else _explicitNullProperties?.Remove("canDelete"); } }
+        public bool? CanDelete { get => _explicitNullValueCanDelete; set { _explicitNullValueCanDelete = value; AdditionalData?.Remove("canDelete"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canDelete"); else _explicitNullProperties?.Remove("canDelete"); } }
         private bool? _explicitNullValueCanDelete = default!;
         /// <summary>The canEdit property</summary>
-        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canEdit"); else _explicitNullProperties?.Remove("canEdit"); } }
+        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; AdditionalData?.Remove("canEdit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canEdit"); else _explicitNullProperties?.Remove("canEdit"); } }
         private bool? _explicitNullValueCanEdit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AnnotationActions"/> and sets the default values.

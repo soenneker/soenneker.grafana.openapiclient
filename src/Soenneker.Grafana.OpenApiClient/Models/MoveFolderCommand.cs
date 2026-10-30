@@ -18,7 +18,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("parentUid") is { } nullNodeParentUid && nullNodeParentUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentUid = null;
+            if (parseNode.GetChildNode("parentUid") is null) { _explicitNullValueParentUid = default!; _explicitNullProperties?.Remove("parentUid"); }
+            else if (parseNode.GetChildNode("parentUid") is { } nullNodeParentUid && nullNodeParentUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentUid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The parentUid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentUid { get => _explicitNullValueParentUid; set { _explicitNullValueParentUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentUid"); else _explicitNullProperties?.Remove("parentUid"); } }
+        public string? ParentUid { get => _explicitNullValueParentUid; set { _explicitNullValueParentUid = value; AdditionalData?.Remove("parentUid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentUid"); else _explicitNullProperties?.Remove("parentUid"); } }
         private string? _explicitNullValueParentUid = default!;
 #nullable restore
 #else
-        public string ParentUid { get => _explicitNullValueParentUid; set { _explicitNullValueParentUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentUid"); else _explicitNullProperties?.Remove("parentUid"); } }
+        public string ParentUid { get => _explicitNullValueParentUid; set { _explicitNullValueParentUid = value; AdditionalData?.Remove("parentUid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentUid"); else _explicitNullProperties?.Remove("parentUid"); } }
         private string _explicitNullValueParentUid = default!;
 #endif
         /// <summary>

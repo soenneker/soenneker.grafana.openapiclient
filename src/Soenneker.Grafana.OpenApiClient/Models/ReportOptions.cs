@@ -17,12 +17,18 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("csvEncoding") is { } nullNodeCsvEncoding && nullNodeCsvEncoding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CsvEncoding = null;
-            if (parseNode.GetChildNode("layout") is { } nullNodeLayout && nullNodeLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Layout = null;
-            if (parseNode.GetChildNode("orientation") is { } nullNodeOrientation && nullNodeOrientation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Orientation = null;
-            if (parseNode.GetChildNode("pdfCombineOneFile") is { } nullNodePdfCombineOneFile && nullNodePdfCombineOneFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfCombineOneFile = null;
-            if (parseNode.GetChildNode("pdfShowTemplateVariables") is { } nullNodePdfShowTemplateVariables && nullNodePdfShowTemplateVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfShowTemplateVariables = null;
-            if (parseNode.GetChildNode("timeRange") is { } nullNodeTimeRange && nullNodeTimeRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeRange = null;
+            if (parseNode.GetChildNode("csvEncoding") is null) { _explicitNullValueCsvEncoding = default!; _explicitNullProperties?.Remove("csvEncoding"); }
+            else if (parseNode.GetChildNode("csvEncoding") is { } nullNodeCsvEncoding && nullNodeCsvEncoding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CsvEncoding = null;
+            if (parseNode.GetChildNode("layout") is null) { _explicitNullValueLayout = default!; _explicitNullProperties?.Remove("layout"); }
+            else if (parseNode.GetChildNode("layout") is { } nullNodeLayout && nullNodeLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Layout = null;
+            if (parseNode.GetChildNode("orientation") is null) { _explicitNullValueOrientation = default!; _explicitNullProperties?.Remove("orientation"); }
+            else if (parseNode.GetChildNode("orientation") is { } nullNodeOrientation && nullNodeOrientation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Orientation = null;
+            if (parseNode.GetChildNode("pdfCombineOneFile") is null) { _explicitNullValuePdfCombineOneFile = default!; _explicitNullProperties?.Remove("pdfCombineOneFile"); }
+            else if (parseNode.GetChildNode("pdfCombineOneFile") is { } nullNodePdfCombineOneFile && nullNodePdfCombineOneFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfCombineOneFile = null;
+            if (parseNode.GetChildNode("pdfShowTemplateVariables") is null) { _explicitNullValuePdfShowTemplateVariables = default!; _explicitNullProperties?.Remove("pdfShowTemplateVariables"); }
+            else if (parseNode.GetChildNode("pdfShowTemplateVariables") is { } nullNodePdfShowTemplateVariables && nullNodePdfShowTemplateVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PdfShowTemplateVariables = null;
+            if (parseNode.GetChildNode("timeRange") is null) { _explicitNullValueTimeRange = default!; _explicitNullProperties?.Remove("timeRange"); }
+            else if (parseNode.GetChildNode("timeRange") is { } nullNodeTimeRange && nullNodeTimeRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeRange = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The csvEncoding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CsvEncoding { get => _explicitNullValueCsvEncoding; set { _explicitNullValueCsvEncoding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvEncoding"); else _explicitNullProperties?.Remove("csvEncoding"); } }
+        public string? CsvEncoding { get => _explicitNullValueCsvEncoding; set { _explicitNullValueCsvEncoding = value; AdditionalData?.Remove("csvEncoding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvEncoding"); else _explicitNullProperties?.Remove("csvEncoding"); } }
         private string? _explicitNullValueCsvEncoding = default!;
 #nullable restore
 #else
-        public string CsvEncoding { get => _explicitNullValueCsvEncoding; set { _explicitNullValueCsvEncoding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvEncoding"); else _explicitNullProperties?.Remove("csvEncoding"); } }
+        public string CsvEncoding { get => _explicitNullValueCsvEncoding; set { _explicitNullValueCsvEncoding = value; AdditionalData?.Remove("csvEncoding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvEncoding"); else _explicitNullProperties?.Remove("csvEncoding"); } }
         private string _explicitNullValueCsvEncoding = default!;
 #endif
         /// <summary>The layout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        public string? Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; AdditionalData?.Remove("layout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
         private string? _explicitNullValueLayout = default!;
 #nullable restore
 #else
-        public string Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        public string Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; AdditionalData?.Remove("layout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
         private string _explicitNullValueLayout = default!;
 #endif
         /// <summary>The orientation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Orientation { get => _explicitNullValueOrientation; set { _explicitNullValueOrientation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orientation"); else _explicitNullProperties?.Remove("orientation"); } }
+        public string? Orientation { get => _explicitNullValueOrientation; set { _explicitNullValueOrientation = value; AdditionalData?.Remove("orientation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orientation"); else _explicitNullProperties?.Remove("orientation"); } }
         private string? _explicitNullValueOrientation = default!;
 #nullable restore
 #else
-        public string Orientation { get => _explicitNullValueOrientation; set { _explicitNullValueOrientation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orientation"); else _explicitNullProperties?.Remove("orientation"); } }
+        public string Orientation { get => _explicitNullValueOrientation; set { _explicitNullValueOrientation = value; AdditionalData?.Remove("orientation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orientation"); else _explicitNullProperties?.Remove("orientation"); } }
         private string _explicitNullValueOrientation = default!;
 #endif
         /// <summary>The pdfCombineOneFile property</summary>
-        public bool? PdfCombineOneFile { get => _explicitNullValuePdfCombineOneFile; set { _explicitNullValuePdfCombineOneFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfCombineOneFile"); else _explicitNullProperties?.Remove("pdfCombineOneFile"); } }
+        public bool? PdfCombineOneFile { get => _explicitNullValuePdfCombineOneFile; set { _explicitNullValuePdfCombineOneFile = value; AdditionalData?.Remove("pdfCombineOneFile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfCombineOneFile"); else _explicitNullProperties?.Remove("pdfCombineOneFile"); } }
         private bool? _explicitNullValuePdfCombineOneFile = default!;
         /// <summary>The pdfShowTemplateVariables property</summary>
-        public bool? PdfShowTemplateVariables { get => _explicitNullValuePdfShowTemplateVariables; set { _explicitNullValuePdfShowTemplateVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfShowTemplateVariables"); else _explicitNullProperties?.Remove("pdfShowTemplateVariables"); } }
+        public bool? PdfShowTemplateVariables { get => _explicitNullValuePdfShowTemplateVariables; set { _explicitNullValuePdfShowTemplateVariables = value; AdditionalData?.Remove("pdfShowTemplateVariables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pdfShowTemplateVariables"); else _explicitNullProperties?.Remove("pdfShowTemplateVariables"); } }
         private bool? _explicitNullValuePdfShowTemplateVariables = default!;
         /// <summary>The timeRange property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange? TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeRange"); else _explicitNullProperties?.Remove("timeRange"); } }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange? TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; AdditionalData?.Remove("timeRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeRange"); else _explicitNullProperties?.Remove("timeRange"); } }
         private global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange? _explicitNullValueTimeRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeRange"); else _explicitNullProperties?.Remove("timeRange"); } }
+        public global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; AdditionalData?.Remove("timeRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeRange"); else _explicitNullProperties?.Remove("timeRange"); } }
         private global::Soenneker.Grafana.OpenApiClient.Models.ReportTimeRange _explicitNullValueTimeRange = default!;
 #endif
         /// <summary>

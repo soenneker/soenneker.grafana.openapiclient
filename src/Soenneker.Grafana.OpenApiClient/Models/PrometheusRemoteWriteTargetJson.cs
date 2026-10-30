@@ -17,9 +17,12 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("data_source_uid") is { } nullNodeDataSourceUid && nullNodeDataSourceUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSourceUid = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("remote_write_path") is { } nullNodeRemoteWritePath && nullNodeRemoteWritePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoteWritePath = null;
+            if (parseNode.GetChildNode("data_source_uid") is null) { _explicitNullValueDataSourceUid = default!; _explicitNullProperties?.Remove("data_source_uid"); }
+            else if (parseNode.GetChildNode("data_source_uid") is { } nullNodeDataSourceUid && nullNodeDataSourceUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataSourceUid = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("remote_write_path") is null) { _explicitNullValueRemoteWritePath = default!; _explicitNullProperties?.Remove("remote_write_path"); }
+            else if (parseNode.GetChildNode("remote_write_path") is { } nullNodeRemoteWritePath && nullNodeRemoteWritePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoteWritePath = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The data_source_uid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataSourceUid { get => _explicitNullValueDataSourceUid; set { _explicitNullValueDataSourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_source_uid"); else _explicitNullProperties?.Remove("data_source_uid"); } }
+        public string? DataSourceUid { get => _explicitNullValueDataSourceUid; set { _explicitNullValueDataSourceUid = value; AdditionalData?.Remove("data_source_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_source_uid"); else _explicitNullProperties?.Remove("data_source_uid"); } }
         private string? _explicitNullValueDataSourceUid = default!;
 #nullable restore
 #else
-        public string DataSourceUid { get => _explicitNullValueDataSourceUid; set { _explicitNullValueDataSourceUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_source_uid"); else _explicitNullProperties?.Remove("data_source_uid"); } }
+        public string DataSourceUid { get => _explicitNullValueDataSourceUid; set { _explicitNullValueDataSourceUid = value; AdditionalData?.Remove("data_source_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_source_uid"); else _explicitNullProperties?.Remove("data_source_uid"); } }
         private string _explicitNullValueDataSourceUid = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The remote_write_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RemoteWritePath { get => _explicitNullValueRemoteWritePath; set { _explicitNullValueRemoteWritePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_write_path"); else _explicitNullProperties?.Remove("remote_write_path"); } }
+        public string? RemoteWritePath { get => _explicitNullValueRemoteWritePath; set { _explicitNullValueRemoteWritePath = value; AdditionalData?.Remove("remote_write_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_write_path"); else _explicitNullProperties?.Remove("remote_write_path"); } }
         private string? _explicitNullValueRemoteWritePath = default!;
 #nullable restore
 #else
-        public string RemoteWritePath { get => _explicitNullValueRemoteWritePath; set { _explicitNullValueRemoteWritePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_write_path"); else _explicitNullProperties?.Remove("remote_write_path"); } }
+        public string RemoteWritePath { get => _explicitNullValueRemoteWritePath; set { _explicitNullValueRemoteWritePath = value; AdditionalData?.Remove("remote_write_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remote_write_path"); else _explicitNullProperties?.Remove("remote_write_path"); } }
         private string _explicitNullValueRemoteWritePath = default!;
 #endif
         /// <summary>

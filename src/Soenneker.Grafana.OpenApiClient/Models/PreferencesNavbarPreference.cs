@@ -17,7 +17,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bookmarkUrls") is { } nullNodeBookmarkUrls && nullNodeBookmarkUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookmarkUrls = null;
+            if (parseNode.GetChildNode("bookmarkUrls") is null) { _explicitNullValueBookmarkUrls = default!; _explicitNullProperties?.Remove("bookmarkUrls"); }
+            else if (parseNode.GetChildNode("bookmarkUrls") is { } nullNodeBookmarkUrls && nullNodeBookmarkUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookmarkUrls = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The bookmarkUrls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BookmarkUrls { get => _explicitNullValueBookmarkUrls; set { _explicitNullValueBookmarkUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookmarkUrls"); else _explicitNullProperties?.Remove("bookmarkUrls"); } }
+        public List<string>? BookmarkUrls { get => _explicitNullValueBookmarkUrls; set { _explicitNullValueBookmarkUrls = value; AdditionalData?.Remove("bookmarkUrls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookmarkUrls"); else _explicitNullProperties?.Remove("bookmarkUrls"); } }
         private List<string>? _explicitNullValueBookmarkUrls = default!;
 #nullable restore
 #else
-        public List<string> BookmarkUrls { get => _explicitNullValueBookmarkUrls; set { _explicitNullValueBookmarkUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookmarkUrls"); else _explicitNullProperties?.Remove("bookmarkUrls"); } }
+        public List<string> BookmarkUrls { get => _explicitNullValueBookmarkUrls; set { _explicitNullValueBookmarkUrls = value; AdditionalData?.Remove("bookmarkUrls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookmarkUrls"); else _explicitNullProperties?.Remove("bookmarkUrls"); } }
         private List<string> _explicitNullValueBookmarkUrls = default!;
 #endif
         /// <summary>

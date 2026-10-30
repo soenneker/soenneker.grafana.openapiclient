@@ -17,13 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authTokenId") is { } nullNodeAuthTokenId && nullNodeAuthTokenId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthTokenId = null;
+            if (parseNode.GetChildNode("authTokenId") is null) { _explicitNullValueAuthTokenId = default!; _explicitNullProperties?.Remove("authTokenId"); }
+            else if (parseNode.GetChildNode("authTokenId") is { } nullNodeAuthTokenId && nullNodeAuthTokenId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthTokenId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authTokenId property</summary>
-        public long? AuthTokenId { get => _explicitNullValueAuthTokenId; set { _explicitNullValueAuthTokenId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authTokenId"); else _explicitNullProperties?.Remove("authTokenId"); } }
+        public long? AuthTokenId { get => _explicitNullValueAuthTokenId; set { _explicitNullValueAuthTokenId = value; AdditionalData?.Remove("authTokenId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authTokenId"); else _explicitNullProperties?.Remove("authTokenId"); } }
         private long? _explicitNullValueAuthTokenId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.RevokeAuthTokenCmd"/> and sets the default values.

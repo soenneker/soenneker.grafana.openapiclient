@@ -17,49 +17,54 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Elapsed") is { } nullNodeElapsed && nullNodeElapsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elapsed = null;
-            if (parseNode.GetChildNode("FailedUsers") is { } nullNodeFailedUsers && nullNodeFailedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedUsers = null;
-            if (parseNode.GetChildNode("MissingUserIds") is { } nullNodeMissingUserIds && nullNodeMissingUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingUserIds = null;
-            if (parseNode.GetChildNode("Started") is { } nullNodeStarted && nullNodeStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Started = null;
-            if (parseNode.GetChildNode("UpdatedUserIds") is { } nullNodeUpdatedUserIds && nullNodeUpdatedUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedUserIds = null;
+            if (parseNode.GetChildNode("Elapsed") is null) { _explicitNullValueElapsed = default!; _explicitNullProperties?.Remove("Elapsed"); }
+            else if (parseNode.GetChildNode("Elapsed") is { } nullNodeElapsed && nullNodeElapsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elapsed = null;
+            if (parseNode.GetChildNode("FailedUsers") is null) { _explicitNullValueFailedUsers = default!; _explicitNullProperties?.Remove("FailedUsers"); }
+            else if (parseNode.GetChildNode("FailedUsers") is { } nullNodeFailedUsers && nullNodeFailedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedUsers = null;
+            if (parseNode.GetChildNode("MissingUserIds") is null) { _explicitNullValueMissingUserIds = default!; _explicitNullProperties?.Remove("MissingUserIds"); }
+            else if (parseNode.GetChildNode("MissingUserIds") is { } nullNodeMissingUserIds && nullNodeMissingUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingUserIds = null;
+            if (parseNode.GetChildNode("Started") is null) { _explicitNullValueStarted = default!; _explicitNullProperties?.Remove("Started"); }
+            else if (parseNode.GetChildNode("Started") is { } nullNodeStarted && nullNodeStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Started = null;
+            if (parseNode.GetChildNode("UpdatedUserIds") is null) { _explicitNullValueUpdatedUserIds = default!; _explicitNullProperties?.Remove("UpdatedUserIds"); }
+            else if (parseNode.GetChildNode("UpdatedUserIds") is { } nullNodeUpdatedUserIds && nullNodeUpdatedUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedUserIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A Duration represents the elapsed time between two instantsas an int64 nanosecond count. The representation limits thelargest representable duration to approximately 290 years.</summary>
-        public long? Elapsed { get => _explicitNullValueElapsed; set { _explicitNullValueElapsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Elapsed"); else _explicitNullProperties?.Remove("Elapsed"); } }
+        public long? Elapsed { get => _explicitNullValueElapsed; set { _explicitNullValueElapsed = value; AdditionalData?.Remove("Elapsed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Elapsed"); else _explicitNullProperties?.Remove("Elapsed"); } }
         private long? _explicitNullValueElapsed = default!;
         /// <summary>The FailedUsers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser>? FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedUsers"); else _explicitNullProperties?.Remove("FailedUsers"); } }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser>? FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; AdditionalData?.Remove("FailedUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedUsers"); else _explicitNullProperties?.Remove("FailedUsers"); } }
         private List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser>? _explicitNullValueFailedUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser> FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedUsers"); else _explicitNullProperties?.Remove("FailedUsers"); } }
+        public List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser> FailedUsers { get => _explicitNullValueFailedUsers; set { _explicitNullValueFailedUsers = value; AdditionalData?.Remove("FailedUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedUsers"); else _explicitNullProperties?.Remove("FailedUsers"); } }
         private List<global::Soenneker.Grafana.OpenApiClient.Models.FailedUser> _explicitNullValueFailedUsers = default!;
 #endif
         /// <summary>The MissingUserIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? MissingUserIds { get => _explicitNullValueMissingUserIds; set { _explicitNullValueMissingUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MissingUserIds"); else _explicitNullProperties?.Remove("MissingUserIds"); } }
+        public List<long?>? MissingUserIds { get => _explicitNullValueMissingUserIds; set { _explicitNullValueMissingUserIds = value; AdditionalData?.Remove("MissingUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MissingUserIds"); else _explicitNullProperties?.Remove("MissingUserIds"); } }
         private List<long?>? _explicitNullValueMissingUserIds = default!;
 #nullable restore
 #else
-        public List<long?> MissingUserIds { get => _explicitNullValueMissingUserIds; set { _explicitNullValueMissingUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MissingUserIds"); else _explicitNullProperties?.Remove("MissingUserIds"); } }
+        public List<long?> MissingUserIds { get => _explicitNullValueMissingUserIds; set { _explicitNullValueMissingUserIds = value; AdditionalData?.Remove("MissingUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MissingUserIds"); else _explicitNullProperties?.Remove("MissingUserIds"); } }
         private List<long?> _explicitNullValueMissingUserIds = default!;
 #endif
         /// <summary>The Started property</summary>
-        public DateTimeOffset? Started { get => _explicitNullValueStarted; set { _explicitNullValueStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Started"); else _explicitNullProperties?.Remove("Started"); } }
+        public DateTimeOffset? Started { get => _explicitNullValueStarted; set { _explicitNullValueStarted = value; AdditionalData?.Remove("Started"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Started"); else _explicitNullProperties?.Remove("Started"); } }
         private DateTimeOffset? _explicitNullValueStarted = default!;
         /// <summary>The UpdatedUserIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? UpdatedUserIds { get => _explicitNullValueUpdatedUserIds; set { _explicitNullValueUpdatedUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatedUserIds"); else _explicitNullProperties?.Remove("UpdatedUserIds"); } }
+        public List<long?>? UpdatedUserIds { get => _explicitNullValueUpdatedUserIds; set { _explicitNullValueUpdatedUserIds = value; AdditionalData?.Remove("UpdatedUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatedUserIds"); else _explicitNullProperties?.Remove("UpdatedUserIds"); } }
         private List<long?>? _explicitNullValueUpdatedUserIds = default!;
 #nullable restore
 #else
-        public List<long?> UpdatedUserIds { get => _explicitNullValueUpdatedUserIds; set { _explicitNullValueUpdatedUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatedUserIds"); else _explicitNullProperties?.Remove("UpdatedUserIds"); } }
+        public List<long?> UpdatedUserIds { get => _explicitNullValueUpdatedUserIds; set { _explicitNullValueUpdatedUserIds = value; AdditionalData?.Remove("UpdatedUserIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatedUserIds"); else _explicitNullProperties?.Remove("UpdatedUserIds"); } }
         private List<long?> _explicitNullValueUpdatedUserIds = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("loginOrEmail") is { } nullNodeLoginOrEmail && nullNodeLoginOrEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginOrEmail = null;
-            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("loginOrEmail") is null) { _explicitNullValueLoginOrEmail = default!; _explicitNullProperties?.Remove("loginOrEmail"); }
+            else if (parseNode.GetChildNode("loginOrEmail") is { } nullNodeLoginOrEmail && nullNodeLoginOrEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginOrEmail = null;
+            if (parseNode.GetChildNode("role") is null) { _explicitNullValueRole = default!; _explicitNullProperties?.Remove("role"); }
+            else if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The loginOrEmail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginOrEmail { get => _explicitNullValueLoginOrEmail; set { _explicitNullValueLoginOrEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginOrEmail"); else _explicitNullProperties?.Remove("loginOrEmail"); } }
+        public string? LoginOrEmail { get => _explicitNullValueLoginOrEmail; set { _explicitNullValueLoginOrEmail = value; AdditionalData?.Remove("loginOrEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginOrEmail"); else _explicitNullProperties?.Remove("loginOrEmail"); } }
         private string? _explicitNullValueLoginOrEmail = default!;
 #nullable restore
 #else
-        public string LoginOrEmail { get => _explicitNullValueLoginOrEmail; set { _explicitNullValueLoginOrEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginOrEmail"); else _explicitNullProperties?.Remove("loginOrEmail"); } }
+        public string LoginOrEmail { get => _explicitNullValueLoginOrEmail; set { _explicitNullValueLoginOrEmail = value; AdditionalData?.Remove("loginOrEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loginOrEmail"); else _explicitNullProperties?.Remove("loginOrEmail"); } }
         private string _explicitNullValueLoginOrEmail = default!;
 #endif
         /// <summary>The role property</summary>
-        public global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        public global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole? _explicitNullValueRole = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommand"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "loginOrEmail", n => { LoginOrEmail = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole>(); } },
+                { "role", n => { var parsed = n.GetEnumValue<global::Soenneker.Grafana.OpenApiClient.Models.AddOrgUserCommandRole>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRole = default; _explicitNullProperties?.Remove("role"); AdditionalData["role"] = unknown; } else { Role = parsed; AdditionalData.Remove("role"); } } },
             };
         }
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("IP") is { } nullNodeIP && nullNodeIP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IP = null;
-            if (parseNode.GetChildNode("Mask") is { } nullNodeMask && nullNodeMask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mask = null;
+            if (parseNode.GetChildNode("IP") is null) { _explicitNullValueIP = default!; _explicitNullProperties?.Remove("IP"); }
+            else if (parseNode.GetChildNode("IP") is { } nullNodeIP && nullNodeIP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IP = null;
+            if (parseNode.GetChildNode("Mask") is null) { _explicitNullValueMask = default!; _explicitNullProperties?.Remove("Mask"); }
+            else if (parseNode.GetChildNode("Mask") is { } nullNodeMask && nullNodeMask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mask = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The IP property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IP { get => _explicitNullValueIP; set { _explicitNullValueIP = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IP"); else _explicitNullProperties?.Remove("IP"); } }
+        public string? IP { get => _explicitNullValueIP; set { _explicitNullValueIP = value; AdditionalData?.Remove("IP"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IP"); else _explicitNullProperties?.Remove("IP"); } }
         private string? _explicitNullValueIP = default!;
 #nullable restore
 #else
-        public string IP { get => _explicitNullValueIP; set { _explicitNullValueIP = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IP"); else _explicitNullProperties?.Remove("IP"); } }
+        public string IP { get => _explicitNullValueIP; set { _explicitNullValueIP = value; AdditionalData?.Remove("IP"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IP"); else _explicitNullProperties?.Remove("IP"); } }
         private string _explicitNullValueIP = default!;
 #endif
         /// <summary>See type [IPNet] and func [ParseCIDR] for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<byte?>? Mask { get => _explicitNullValueMask; set { _explicitNullValueMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Mask"); else _explicitNullProperties?.Remove("Mask"); } }
+        public List<byte?>? Mask { get => _explicitNullValueMask; set { _explicitNullValueMask = value; AdditionalData?.Remove("Mask"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Mask"); else _explicitNullProperties?.Remove("Mask"); } }
         private List<byte?>? _explicitNullValueMask = default!;
 #nullable restore
 #else
-        public List<byte?> Mask { get => _explicitNullValueMask; set { _explicitNullValueMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Mask"); else _explicitNullProperties?.Remove("Mask"); } }
+        public List<byte?> Mask { get => _explicitNullValueMask; set { _explicitNullValueMask = value; AdditionalData?.Remove("Mask"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Mask"); else _explicitNullProperties?.Remove("Mask"); } }
         private List<byte?> _explicitNullValueMask = default!;
 #endif
         /// <summary>

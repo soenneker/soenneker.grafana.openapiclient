@@ -17,24 +17,32 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active_time_intervals") is { } nullNodeActiveTimeIntervals && nullNodeActiveTimeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveTimeIntervals = null;
-            if (parseNode.GetChildNode("group_by") is { } nullNodeGroupBy && nullNodeGroupBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupBy = null;
-            if (parseNode.GetChildNode("group_interval") is { } nullNodeGroupInterval && nullNodeGroupInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupInterval = null;
-            if (parseNode.GetChildNode("group_wait") is { } nullNodeGroupWait && nullNodeGroupWait.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupWait = null;
-            if (parseNode.GetChildNode("mute_time_intervals") is { } nullNodeMuteTimeIntervals && nullNodeMuteTimeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MuteTimeIntervals = null;
-            if (parseNode.GetChildNode("policy") is { } nullNodePolicy && nullNodePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policy = null;
-            if (parseNode.GetChildNode("receiver") is { } nullNodeReceiver && nullNodeReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receiver = null;
-            if (parseNode.GetChildNode("repeat_interval") is { } nullNodeRepeatInterval && nullNodeRepeatInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepeatInterval = null;
+            if (parseNode.GetChildNode("active_time_intervals") is null) { _explicitNullValueActiveTimeIntervals = default!; _explicitNullProperties?.Remove("active_time_intervals"); }
+            else if (parseNode.GetChildNode("active_time_intervals") is { } nullNodeActiveTimeIntervals && nullNodeActiveTimeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveTimeIntervals = null;
+            if (parseNode.GetChildNode("group_by") is null) { _explicitNullValueGroupBy = default!; _explicitNullProperties?.Remove("group_by"); }
+            else if (parseNode.GetChildNode("group_by") is { } nullNodeGroupBy && nullNodeGroupBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupBy = null;
+            if (parseNode.GetChildNode("group_interval") is null) { _explicitNullValueGroupInterval = default!; _explicitNullProperties?.Remove("group_interval"); }
+            else if (parseNode.GetChildNode("group_interval") is { } nullNodeGroupInterval && nullNodeGroupInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupInterval = null;
+            if (parseNode.GetChildNode("group_wait") is null) { _explicitNullValueGroupWait = default!; _explicitNullProperties?.Remove("group_wait"); }
+            else if (parseNode.GetChildNode("group_wait") is { } nullNodeGroupWait && nullNodeGroupWait.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupWait = null;
+            if (parseNode.GetChildNode("mute_time_intervals") is null) { _explicitNullValueMuteTimeIntervals = default!; _explicitNullProperties?.Remove("mute_time_intervals"); }
+            else if (parseNode.GetChildNode("mute_time_intervals") is { } nullNodeMuteTimeIntervals && nullNodeMuteTimeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MuteTimeIntervals = null;
+            if (parseNode.GetChildNode("policy") is null) { _explicitNullValuePolicy = default!; _explicitNullProperties?.Remove("policy"); }
+            else if (parseNode.GetChildNode("policy") is { } nullNodePolicy && nullNodePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policy = null;
+            if (parseNode.GetChildNode("receiver") is null) { _explicitNullValueReceiver = default!; _explicitNullProperties?.Remove("receiver"); }
+            else if (parseNode.GetChildNode("receiver") is { } nullNodeReceiver && nullNodeReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receiver = null;
+            if (parseNode.GetChildNode("repeat_interval") is null) { _explicitNullValueRepeatInterval = default!; _explicitNullProperties?.Remove("repeat_interval"); }
+            else if (parseNode.GetChildNode("repeat_interval") is { } nullNodeRepeatInterval && nullNodeRepeatInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepeatInterval = null;
         }
 
         /// <summary>Override the times when notifications should not be muted. These must match the name of a mute time interval definedin the alertmanager configuration time_intervals section. All notifications will be suppressed unless they are sentat the time that matches any interval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ActiveTimeIntervals { get => _explicitNullValueActiveTimeIntervals; set { _explicitNullValueActiveTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_time_intervals"); else _explicitNullProperties?.Remove("active_time_intervals"); } }
+        public List<string>? ActiveTimeIntervals { get => _explicitNullValueActiveTimeIntervals; set { _explicitNullValueActiveTimeIntervals = value; AdditionalData?.Remove("active_time_intervals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_time_intervals"); else _explicitNullProperties?.Remove("active_time_intervals"); } }
         private List<string>? _explicitNullValueActiveTimeIntervals = default!;
 #nullable restore
 #else
-        public List<string> ActiveTimeIntervals { get => _explicitNullValueActiveTimeIntervals; set { _explicitNullValueActiveTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_time_intervals"); else _explicitNullProperties?.Remove("active_time_intervals"); } }
+        public List<string> ActiveTimeIntervals { get => _explicitNullValueActiveTimeIntervals; set { _explicitNullValueActiveTimeIntervals = value; AdditionalData?.Remove("active_time_intervals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_time_intervals"); else _explicitNullProperties?.Remove("active_time_intervals"); } }
         private List<string> _explicitNullValueActiveTimeIntervals = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -42,71 +50,71 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>Override the labels by which incoming alerts are grouped together. For example, multiple alerts coming in forcluster=A and alertname=LatencyHigh would be batched into a single group. To aggregate by all possible labelsuse the special value &apos;...&apos; as the sole label name.This effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be whatyou want, unless you have a very low alert volume or your upstream notification system performs its own grouping.Must include &apos;alertname&apos; and &apos;grafana_folder&apos; if not using &apos;...&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        public List<string>? GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; AdditionalData?.Remove("group_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
         private List<string>? _explicitNullValueGroupBy = default!;
 #nullable restore
 #else
-        public List<string> GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        public List<string> GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; AdditionalData?.Remove("group_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
         private List<string> _explicitNullValueGroupBy = default!;
 #endif
         /// <summary>Override how long to wait before sending a notification about new alerts that are added to a group of alerts forwhich an initial notification has already been sent. (Usually ~5m or more.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupInterval { get => _explicitNullValueGroupInterval; set { _explicitNullValueGroupInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_interval"); else _explicitNullProperties?.Remove("group_interval"); } }
+        public string? GroupInterval { get => _explicitNullValueGroupInterval; set { _explicitNullValueGroupInterval = value; AdditionalData?.Remove("group_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_interval"); else _explicitNullProperties?.Remove("group_interval"); } }
         private string? _explicitNullValueGroupInterval = default!;
 #nullable restore
 #else
-        public string GroupInterval { get => _explicitNullValueGroupInterval; set { _explicitNullValueGroupInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_interval"); else _explicitNullProperties?.Remove("group_interval"); } }
+        public string GroupInterval { get => _explicitNullValueGroupInterval; set { _explicitNullValueGroupInterval = value; AdditionalData?.Remove("group_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_interval"); else _explicitNullProperties?.Remove("group_interval"); } }
         private string _explicitNullValueGroupInterval = default!;
 #endif
         /// <summary>Override how long to initially wait to send a notification for a group of alerts. Allows to wait for aninhibiting alert to arrive or collect more initial alerts for the same group. (Usually ~0s to few minutes.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupWait { get => _explicitNullValueGroupWait; set { _explicitNullValueGroupWait = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_wait"); else _explicitNullProperties?.Remove("group_wait"); } }
+        public string? GroupWait { get => _explicitNullValueGroupWait; set { _explicitNullValueGroupWait = value; AdditionalData?.Remove("group_wait"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_wait"); else _explicitNullProperties?.Remove("group_wait"); } }
         private string? _explicitNullValueGroupWait = default!;
 #nullable restore
 #else
-        public string GroupWait { get => _explicitNullValueGroupWait; set { _explicitNullValueGroupWait = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_wait"); else _explicitNullProperties?.Remove("group_wait"); } }
+        public string GroupWait { get => _explicitNullValueGroupWait; set { _explicitNullValueGroupWait = value; AdditionalData?.Remove("group_wait"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_wait"); else _explicitNullProperties?.Remove("group_wait"); } }
         private string _explicitNullValueGroupWait = default!;
 #endif
         /// <summary>Override the times when notifications should be muted. These must match the name of a mute time interval definedin the alertmanager configuration time_intervals section. When muted it will not send any notifications, butotherwise acts normally.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MuteTimeIntervals { get => _explicitNullValueMuteTimeIntervals; set { _explicitNullValueMuteTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_time_intervals"); else _explicitNullProperties?.Remove("mute_time_intervals"); } }
+        public List<string>? MuteTimeIntervals { get => _explicitNullValueMuteTimeIntervals; set { _explicitNullValueMuteTimeIntervals = value; AdditionalData?.Remove("mute_time_intervals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_time_intervals"); else _explicitNullProperties?.Remove("mute_time_intervals"); } }
         private List<string>? _explicitNullValueMuteTimeIntervals = default!;
 #nullable restore
 #else
-        public List<string> MuteTimeIntervals { get => _explicitNullValueMuteTimeIntervals; set { _explicitNullValueMuteTimeIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_time_intervals"); else _explicitNullProperties?.Remove("mute_time_intervals"); } }
+        public List<string> MuteTimeIntervals { get => _explicitNullValueMuteTimeIntervals; set { _explicitNullValueMuteTimeIntervals = value; AdditionalData?.Remove("mute_time_intervals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_time_intervals"); else _explicitNullProperties?.Remove("mute_time_intervals"); } }
         private List<string> _explicitNullValueMuteTimeIntervals = default!;
 #endif
         /// <summary>Name of the notification policy to route alerts through.Mutually exclusive with all other fields, cannot be used with contact point routing via the &quot;receiver&quot; field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy"); else _explicitNullProperties?.Remove("policy"); } }
+        public string? Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; AdditionalData?.Remove("policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy"); else _explicitNullProperties?.Remove("policy"); } }
         private string? _explicitNullValuePolicy = default!;
 #nullable restore
 #else
-        public string Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy"); else _explicitNullProperties?.Remove("policy"); } }
+        public string Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; AdditionalData?.Remove("policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy"); else _explicitNullProperties?.Remove("policy"); } }
         private string _explicitNullValuePolicy = default!;
 #endif
         /// <summary>Name of the receiver to send notifications to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
+        public string? Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; AdditionalData?.Remove("receiver"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
         private string? _explicitNullValueReceiver = default!;
 #nullable restore
 #else
-        public string Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
+        public string Receiver { get => _explicitNullValueReceiver; set { _explicitNullValueReceiver = value; AdditionalData?.Remove("receiver"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiver"); else _explicitNullProperties?.Remove("receiver"); } }
         private string _explicitNullValueReceiver = default!;
 #endif
         /// <summary>Override how long to wait before sending a notification again if it has already been sent successfully for analert. (Usually ~3h or more).Note that this parameter is implicitly bound by Alertmanager&apos;s `--data.retention` configuration flag.Notifications will be resent after either repeat_interval or the data retention period have passed, whicheveroccurs first. `repeat_interval` should not be less than `group_interval`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeat_interval"); else _explicitNullProperties?.Remove("repeat_interval"); } }
+        public string? RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; AdditionalData?.Remove("repeat_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeat_interval"); else _explicitNullProperties?.Remove("repeat_interval"); } }
         private string? _explicitNullValueRepeatInterval = default!;
 #nullable restore
 #else
-        public string RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeat_interval"); else _explicitNullProperties?.Remove("repeat_interval"); } }
+        public string RepeatInterval { get => _explicitNullValueRepeatInterval; set { _explicitNullValueRepeatInterval = value; AdditionalData?.Remove("repeat_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repeat_interval"); else _explicitNullProperties?.Remove("repeat_interval"); } }
         private string _explicitNullValueRepeatInterval = default!;
 #endif
         /// <summary>

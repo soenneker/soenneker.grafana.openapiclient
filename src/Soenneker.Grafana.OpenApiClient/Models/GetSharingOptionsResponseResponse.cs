@@ -17,34 +17,37 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("externalEnabled") is { } nullNodeExternalEnabled && nullNodeExternalEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalEnabled = null;
-            if (parseNode.GetChildNode("externalSnapshotName") is { } nullNodeExternalSnapshotName && nullNodeExternalSnapshotName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSnapshotName = null;
-            if (parseNode.GetChildNode("externalSnapshotURL") is { } nullNodeExternalSnapshotURL && nullNodeExternalSnapshotURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSnapshotURL = null;
+            if (parseNode.GetChildNode("externalEnabled") is null) { _explicitNullValueExternalEnabled = default!; _explicitNullProperties?.Remove("externalEnabled"); }
+            else if (parseNode.GetChildNode("externalEnabled") is { } nullNodeExternalEnabled && nullNodeExternalEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalEnabled = null;
+            if (parseNode.GetChildNode("externalSnapshotName") is null) { _explicitNullValueExternalSnapshotName = default!; _explicitNullProperties?.Remove("externalSnapshotName"); }
+            else if (parseNode.GetChildNode("externalSnapshotName") is { } nullNodeExternalSnapshotName && nullNodeExternalSnapshotName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSnapshotName = null;
+            if (parseNode.GetChildNode("externalSnapshotURL") is null) { _explicitNullValueExternalSnapshotURL = default!; _explicitNullProperties?.Remove("externalSnapshotURL"); }
+            else if (parseNode.GetChildNode("externalSnapshotURL") is { } nullNodeExternalSnapshotURL && nullNodeExternalSnapshotURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalSnapshotURL = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The externalEnabled property</summary>
-        public bool? ExternalEnabled { get => _explicitNullValueExternalEnabled; set { _explicitNullValueExternalEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalEnabled"); else _explicitNullProperties?.Remove("externalEnabled"); } }
+        public bool? ExternalEnabled { get => _explicitNullValueExternalEnabled; set { _explicitNullValueExternalEnabled = value; AdditionalData?.Remove("externalEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalEnabled"); else _explicitNullProperties?.Remove("externalEnabled"); } }
         private bool? _explicitNullValueExternalEnabled = default!;
         /// <summary>The externalSnapshotName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalSnapshotName { get => _explicitNullValueExternalSnapshotName; set { _explicitNullValueExternalSnapshotName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotName"); else _explicitNullProperties?.Remove("externalSnapshotName"); } }
+        public string? ExternalSnapshotName { get => _explicitNullValueExternalSnapshotName; set { _explicitNullValueExternalSnapshotName = value; AdditionalData?.Remove("externalSnapshotName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotName"); else _explicitNullProperties?.Remove("externalSnapshotName"); } }
         private string? _explicitNullValueExternalSnapshotName = default!;
 #nullable restore
 #else
-        public string ExternalSnapshotName { get => _explicitNullValueExternalSnapshotName; set { _explicitNullValueExternalSnapshotName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotName"); else _explicitNullProperties?.Remove("externalSnapshotName"); } }
+        public string ExternalSnapshotName { get => _explicitNullValueExternalSnapshotName; set { _explicitNullValueExternalSnapshotName = value; AdditionalData?.Remove("externalSnapshotName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotName"); else _explicitNullProperties?.Remove("externalSnapshotName"); } }
         private string _explicitNullValueExternalSnapshotName = default!;
 #endif
         /// <summary>The externalSnapshotURL property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalSnapshotURL { get => _explicitNullValueExternalSnapshotURL; set { _explicitNullValueExternalSnapshotURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotURL"); else _explicitNullProperties?.Remove("externalSnapshotURL"); } }
+        public string? ExternalSnapshotURL { get => _explicitNullValueExternalSnapshotURL; set { _explicitNullValueExternalSnapshotURL = value; AdditionalData?.Remove("externalSnapshotURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotURL"); else _explicitNullProperties?.Remove("externalSnapshotURL"); } }
         private string? _explicitNullValueExternalSnapshotURL = default!;
 #nullable restore
 #else
-        public string ExternalSnapshotURL { get => _explicitNullValueExternalSnapshotURL; set { _explicitNullValueExternalSnapshotURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotURL"); else _explicitNullProperties?.Remove("externalSnapshotURL"); } }
+        public string ExternalSnapshotURL { get => _explicitNullValueExternalSnapshotURL; set { _explicitNullValueExternalSnapshotURL = value; AdditionalData?.Remove("externalSnapshotURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalSnapshotURL"); else _explicitNullProperties?.Remove("externalSnapshotURL"); } }
         private string _explicitNullValueExternalSnapshotURL = default!;
 #endif
         /// <summary>

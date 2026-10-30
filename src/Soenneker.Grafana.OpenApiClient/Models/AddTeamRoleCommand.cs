@@ -17,7 +17,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("roleUid") is { } nullNodeRoleUid && nullNodeRoleUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleUid = null;
+            if (parseNode.GetChildNode("roleUid") is null) { _explicitNullValueRoleUid = default!; _explicitNullProperties?.Remove("roleUid"); }
+            else if (parseNode.GetChildNode("roleUid") is { } nullNodeRoleUid && nullNodeRoleUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleUid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The roleUid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleUid { get => _explicitNullValueRoleUid; set { _explicitNullValueRoleUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUid"); else _explicitNullProperties?.Remove("roleUid"); } }
+        public string? RoleUid { get => _explicitNullValueRoleUid; set { _explicitNullValueRoleUid = value; AdditionalData?.Remove("roleUid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUid"); else _explicitNullProperties?.Remove("roleUid"); } }
         private string? _explicitNullValueRoleUid = default!;
 #nullable restore
 #else
-        public string RoleUid { get => _explicitNullValueRoleUid; set { _explicitNullValueRoleUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUid"); else _explicitNullProperties?.Remove("roleUid"); } }
+        public string RoleUid { get => _explicitNullValueRoleUid; set { _explicitNullValueRoleUid = value; AdditionalData?.Remove("roleUid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleUid"); else _explicitNullProperties?.Remove("roleUid"); } }
         private string _explicitNullValueRoleUid = default!;
 #endif
         /// <summary>

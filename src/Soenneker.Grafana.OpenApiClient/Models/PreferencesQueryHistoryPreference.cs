@@ -17,7 +17,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("homeTab") is { } nullNodeHomeTab && nullNodeHomeTab.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HomeTab = null;
+            if (parseNode.GetChildNode("homeTab") is null) { _explicitNullValueHomeTab = default!; _explicitNullProperties?.Remove("homeTab"); }
+            else if (parseNode.GetChildNode("homeTab") is { } nullNodeHomeTab && nullNodeHomeTab.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HomeTab = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>one of: &apos;&apos; | &apos;query&apos; | &apos;starred&apos;;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HomeTab { get => _explicitNullValueHomeTab; set { _explicitNullValueHomeTab = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("homeTab"); else _explicitNullProperties?.Remove("homeTab"); } }
+        public string? HomeTab { get => _explicitNullValueHomeTab; set { _explicitNullValueHomeTab = value; AdditionalData?.Remove("homeTab"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("homeTab"); else _explicitNullProperties?.Remove("homeTab"); } }
         private string? _explicitNullValueHomeTab = default!;
 #nullable restore
 #else
-        public string HomeTab { get => _explicitNullValueHomeTab; set { _explicitNullValueHomeTab = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("homeTab"); else _explicitNullProperties?.Remove("homeTab"); } }
+        public string HomeTab { get => _explicitNullValueHomeTab; set { _explicitNullValueHomeTab = value; AdditionalData?.Remove("homeTab"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("homeTab"); else _explicitNullProperties?.Remove("homeTab"); } }
         private string _explicitNullValueHomeTab = default!;
 #endif
         /// <summary>

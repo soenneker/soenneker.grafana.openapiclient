@@ -17,8 +17,10 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("IssuerDomainPolicy") is { } nullNodeIssuerDomainPolicy && nullNodeIssuerDomainPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuerDomainPolicy = null;
-            if (parseNode.GetChildNode("SubjectDomainPolicy") is { } nullNodeSubjectDomainPolicy && nullNodeSubjectDomainPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubjectDomainPolicy = null;
+            if (parseNode.GetChildNode("IssuerDomainPolicy") is null) { _explicitNullValueIssuerDomainPolicy = default!; _explicitNullProperties?.Remove("IssuerDomainPolicy"); }
+            else if (parseNode.GetChildNode("IssuerDomainPolicy") is { } nullNodeIssuerDomainPolicy && nullNodeIssuerDomainPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuerDomainPolicy = null;
+            if (parseNode.GetChildNode("SubjectDomainPolicy") is null) { _explicitNullValueSubjectDomainPolicy = default!; _explicitNullProperties?.Remove("SubjectDomainPolicy"); }
+            else if (parseNode.GetChildNode("SubjectDomainPolicy") is { } nullNodeSubjectDomainPolicy && nullNodeSubjectDomainPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubjectDomainPolicy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>IssuerDomainPolicy contains a policy OID the issuing certificate considersequivalent to SubjectDomainPolicy in the subject certificate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuerDomainPolicy { get => _explicitNullValueIssuerDomainPolicy; set { _explicitNullValueIssuerDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IssuerDomainPolicy"); else _explicitNullProperties?.Remove("IssuerDomainPolicy"); } }
+        public string? IssuerDomainPolicy { get => _explicitNullValueIssuerDomainPolicy; set { _explicitNullValueIssuerDomainPolicy = value; AdditionalData?.Remove("IssuerDomainPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IssuerDomainPolicy"); else _explicitNullProperties?.Remove("IssuerDomainPolicy"); } }
         private string? _explicitNullValueIssuerDomainPolicy = default!;
 #nullable restore
 #else
-        public string IssuerDomainPolicy { get => _explicitNullValueIssuerDomainPolicy; set { _explicitNullValueIssuerDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IssuerDomainPolicy"); else _explicitNullProperties?.Remove("IssuerDomainPolicy"); } }
+        public string IssuerDomainPolicy { get => _explicitNullValueIssuerDomainPolicy; set { _explicitNullValueIssuerDomainPolicy = value; AdditionalData?.Remove("IssuerDomainPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IssuerDomainPolicy"); else _explicitNullProperties?.Remove("IssuerDomainPolicy"); } }
         private string _explicitNullValueIssuerDomainPolicy = default!;
 #endif
         /// <summary>SubjectDomainPolicy contains a OID the issuing certificate considersequivalent to IssuerDomainPolicy in the subject certificate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubjectDomainPolicy { get => _explicitNullValueSubjectDomainPolicy; set { _explicitNullValueSubjectDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectDomainPolicy"); else _explicitNullProperties?.Remove("SubjectDomainPolicy"); } }
+        public string? SubjectDomainPolicy { get => _explicitNullValueSubjectDomainPolicy; set { _explicitNullValueSubjectDomainPolicy = value; AdditionalData?.Remove("SubjectDomainPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectDomainPolicy"); else _explicitNullProperties?.Remove("SubjectDomainPolicy"); } }
         private string? _explicitNullValueSubjectDomainPolicy = default!;
 #nullable restore
 #else
-        public string SubjectDomainPolicy { get => _explicitNullValueSubjectDomainPolicy; set { _explicitNullValueSubjectDomainPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectDomainPolicy"); else _explicitNullProperties?.Remove("SubjectDomainPolicy"); } }
+        public string SubjectDomainPolicy { get => _explicitNullValueSubjectDomainPolicy; set { _explicitNullValueSubjectDomainPolicy = value; AdditionalData?.Remove("SubjectDomainPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectDomainPolicy"); else _explicitNullProperties?.Remove("SubjectDomainPolicy"); } }
         private string _explicitNullValueSubjectDomainPolicy = default!;
 #endif
         /// <summary>

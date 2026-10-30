@@ -17,13 +17,14 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isGrafanaAdmin") is { } nullNodeIsGrafanaAdmin && nullNodeIsGrafanaAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGrafanaAdmin = null;
+            if (parseNode.GetChildNode("isGrafanaAdmin") is null) { _explicitNullValueIsGrafanaAdmin = default!; _explicitNullProperties?.Remove("isGrafanaAdmin"); }
+            else if (parseNode.GetChildNode("isGrafanaAdmin") is { } nullNodeIsGrafanaAdmin && nullNodeIsGrafanaAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGrafanaAdmin = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isGrafanaAdmin property</summary>
-        public bool? IsGrafanaAdmin { get => _explicitNullValueIsGrafanaAdmin; set { _explicitNullValueIsGrafanaAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isGrafanaAdmin"); else _explicitNullProperties?.Remove("isGrafanaAdmin"); } }
+        public bool? IsGrafanaAdmin { get => _explicitNullValueIsGrafanaAdmin; set { _explicitNullValueIsGrafanaAdmin = value; AdditionalData?.Remove("isGrafanaAdmin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isGrafanaAdmin"); else _explicitNullProperties?.Remove("isGrafanaAdmin"); } }
         private bool? _explicitNullValueIsGrafanaAdmin = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AdminUpdateUserPermissionsForm"/> and sets the default values.

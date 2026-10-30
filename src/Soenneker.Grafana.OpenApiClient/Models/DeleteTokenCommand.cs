@@ -17,7 +17,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("instance") is { } nullNodeInstance && nullNodeInstance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instance = null;
+            if (parseNode.GetChildNode("instance") is null) { _explicitNullValueInstance = default!; _explicitNullProperties?.Remove("instance"); }
+            else if (parseNode.GetChildNode("instance") is { } nullNodeInstance && nullNodeInstance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instance = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <summary>The instance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Instance { get => _explicitNullValueInstance; set { _explicitNullValueInstance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance"); else _explicitNullProperties?.Remove("instance"); } }
+        public string? Instance { get => _explicitNullValueInstance; set { _explicitNullValueInstance = value; AdditionalData?.Remove("instance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance"); else _explicitNullProperties?.Remove("instance"); } }
         private string? _explicitNullValueInstance = default!;
 #nullable restore
 #else
-        public string Instance { get => _explicitNullValueInstance; set { _explicitNullValueInstance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance"); else _explicitNullProperties?.Remove("instance"); } }
+        public string Instance { get => _explicitNullValueInstance; set { _explicitNullValueInstance = value; AdditionalData?.Remove("instance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance"); else _explicitNullProperties?.Remove("instance"); } }
         private string _explicitNullValueInstance = default!;
 #endif
         /// <summary>
