@@ -95,6 +95,17 @@
           },
           "500": {
             "$ref": "#/components/responses/internalServerError"
+          },
+          "200": {
+            "description": "(empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleDto"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -1293,6 +1304,17 @@
           },
           "403": {
             "$ref": "#/components/responses/forbiddenError"
+          },
+          "200": {
+            "description": "AcceptedResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseBody"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       }
@@ -3041,6 +3063,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       }
@@ -3082,6 +3115,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       },
@@ -3223,6 +3267,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "x-raw-request": "true"
@@ -3273,6 +3328,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       },
@@ -3400,6 +3466,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       }
@@ -3441,6 +3518,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       },
@@ -3582,6 +3670,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "x-raw-request": "true"
@@ -3632,6 +3731,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ConvertPrometheusResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConvertPrometheusResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       },
@@ -6477,6 +6587,17 @@
           },
           "500": {
             "$ref": "#/components/responses/internalServerError"
+          },
+          "200": {
+            "description": "AcceptedResponse",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponseBody"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       },
@@ -9495,6 +9616,17 @@
           },
           "500": {
             "$ref": "#/components/responses/internalServerError"
+          },
+          "200": {
+            "description": "(empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceAccountDto"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -11583,6 +11715,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "ProvisionedAlertRule",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProvisionedAlertRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "deprecated": true
@@ -11649,7 +11792,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "application/terraform\u002Bhcl": {
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
@@ -11906,7 +12051,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "application/terraform\u002Bhcl": {
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
@@ -12071,6 +12218,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "EmbeddedContactPoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmbeddedContactPoint"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "deprecated": true
@@ -12127,7 +12285,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "application/terraform\u002Bhcl": {
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
@@ -12302,6 +12462,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Ack",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoutePutContactpoint202Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "deprecated": true
@@ -12536,7 +12707,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "application/terraform\u002Bhcl": {
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
@@ -12691,6 +12864,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "MuteTimeInterval",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MuteTimeInterval"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "deprecated": true
@@ -12730,7 +12914,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "application/terraform\u002Bhcl": {
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
@@ -12964,6 +13150,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "MuteTimeInterval",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MuteTimeInterval"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "deprecated": true
@@ -13012,7 +13209,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "application/terraform\u002Bhcl": {
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
@@ -13105,6 +13304,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Ack",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RouteResetPolicyTree202Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "deprecated": true
@@ -13205,6 +13415,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Ack",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoutePutPolicyTree202Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "deprecated": true
@@ -13225,7 +13446,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "application/terraform\u002Bhcl": {
                 "schema": {
                   "$ref": "#/components/schemas/AlertingFileExport"
@@ -13521,6 +13744,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "NotificationTemplate",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationTemplate"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "deprecated": true
@@ -13586,6 +13820,17 @@
           },
           "500": {
             "$ref": "#/components/responses/internalServerError"
+          },
+          "200": {
+            "description": "An OKResponse is returned if the request was successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponseBody"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       },
@@ -13667,6 +13912,17 @@
           },
           "500": {
             "$ref": "#/components/responses/internalServerError"
+          },
+          "200": {
+            "description": "An OKResponse is returned if the request was successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponseBody"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       },
@@ -13713,6 +13969,17 @@
           },
           "500": {
             "$ref": "#/components/responses/internalServerError"
+          },
+          "200": {
+            "description": "An OKResponse is returned if the request was successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponseBody"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
