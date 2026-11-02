@@ -45,7 +45,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.RouteDeleteAlertRuleGroup404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.RouteDeleteAlertRuleGroup404ResponseError">When receiving a 404 status code</exception>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,7 +60,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.Folder.Item.RuleGroups
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "403", global::Soenneker.Grafana.OpenApiClient.Models.ForbiddenError.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Grafana.OpenApiClient.Models.RouteDeleteAlertRuleGroup404Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Grafana.OpenApiClient.Models.RouteDeleteAlertRuleGroup404ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

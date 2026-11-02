@@ -39,7 +39,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Expor
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.RouteExportMuteTiming403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.RouteExportMuteTiming403ResponseError">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Grafana.OpenApiClient.Models.AlertingFileExport?> GetAsync(Action<RequestConfiguration<global::Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Export.ExportRequestBuilder.ExportRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Grafana.OpenApiClient.V1.Provisioning.MuteTimings.Item.Expor
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "403", global::Soenneker.Grafana.OpenApiClient.Models.RouteExportMuteTiming403Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Grafana.OpenApiClient.Models.RouteExportMuteTiming403ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
