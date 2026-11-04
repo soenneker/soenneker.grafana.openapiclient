@@ -21,6 +21,8 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             else if (parseNode.GetChildNode("alertId") is { } nullNodeAlertId && nullNodeAlertId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlertId = null;
             if (parseNode.GetChildNode("alertName") is null) { _explicitNullValueAlertName = default!; _explicitNullProperties?.Remove("alertName"); }
             else if (parseNode.GetChildNode("alertName") is { } nullNodeAlertName && nullNodeAlertName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlertName = null;
+            if (parseNode.GetChildNode("alertUID") is null) { _explicitNullValueAlertUID = default!; _explicitNullProperties?.Remove("alertUID"); }
+            else if (parseNode.GetChildNode("alertUID") is { } nullNodeAlertUID && nullNodeAlertUID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlertUID = null;
             if (parseNode.GetChildNode("avatarUrl") is null) { _explicitNullValueAvatarUrl = default!; _explicitNullProperties?.Remove("avatarUrl"); }
             else if (parseNode.GetChildNode("avatarUrl") is { } nullNodeAvatarUrl && nullNodeAvatarUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarUrl = null;
             if (parseNode.GetChildNode("created") is null) { _explicitNullValueCreated = default!; _explicitNullProperties?.Remove("created"); }
@@ -61,7 +63,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The alertId property</summary>
+        /// <summary>Deprecated. Use alertUID instead.</summary>
         public long? AlertId { get => _explicitNullValueAlertId; set { _explicitNullValueAlertId = value; AdditionalData?.Remove("alertId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alertId"); else _explicitNullProperties?.Remove("alertId"); } }
         private long? _explicitNullValueAlertId = default!;
         /// <summary>The alertName property</summary>
@@ -73,6 +75,16 @@ namespace Soenneker.Grafana.OpenApiClient.Models
 #else
         public string AlertName { get => _explicitNullValueAlertName; set { _explicitNullValueAlertName = value; AdditionalData?.Remove("alertName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alertName"); else _explicitNullProperties?.Remove("alertName"); } }
         private string _explicitNullValueAlertName = default!;
+#endif
+        /// <summary>The alertUID property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AlertUID { get => _explicitNullValueAlertUID; set { _explicitNullValueAlertUID = value; AdditionalData?.Remove("alertUID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alertUID"); else _explicitNullProperties?.Remove("alertUID"); } }
+        private string? _explicitNullValueAlertUID = default!;
+#nullable restore
+#else
+        public string AlertUID { get => _explicitNullValueAlertUID; set { _explicitNullValueAlertUID = value; AdditionalData?.Remove("alertUID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alertUID"); else _explicitNullProperties?.Remove("alertUID"); } }
+        private string _explicitNullValueAlertUID = default!;
 #endif
         /// <summary>The avatarUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,6 +237,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             {
                 { "alertId", n => { AlertId = n.GetLongValue(); } },
                 { "alertName", n => { AlertName = n.GetStringValue(); } },
+                { "alertUID", n => { AlertUID = n.GetStringValue(); } },
                 { "avatarUrl", n => { AvatarUrl = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetLongValue(); } },
                 { "dashboardId", n => { DashboardId = n.GetLongValue(); } },
@@ -254,6 +267,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("alertId", AlertId);
             writer.WriteStringValue("alertName", AlertName);
+            writer.WriteStringValue("alertUID", AlertUID);
             writer.WriteStringValue("avatarUrl", AvatarUrl);
             writer.WriteLongValue("created", Created);
             writer.WriteLongValue("dashboardId", DashboardId);

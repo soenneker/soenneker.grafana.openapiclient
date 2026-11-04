@@ -53,7 +53,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AnnotationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/annotations{?alertId*,alertUID*,dashboardId*,dashboardUID*,from*,limit*,matchAny*,panelId*,tags*,to*,type*,userId*,userUID*}", pathParameters)
+        public AnnotationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/annotations{?alertUID*,dashboardId*,dashboardUID*,from*,limit*,matchAny*,panelId*,tags*,to*,type*,userId*,userUID*}", pathParameters)
         {
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AnnotationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/annotations{?alertId*,alertUID*,dashboardId*,dashboardUID*,from*,limit*,matchAny*,panelId*,tags*,to*,type*,userId*,userUID*}", rawUrl)
+        public AnnotationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/annotations{?alertUID*,dashboardId*,dashboardUID*,from*,limit*,matchAny*,panelId*,tags*,to*,type*,userId*,userUID*}", rawUrl)
         {
         }
         /// <summary>
@@ -70,6 +70,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         /// <returns>A List&lt;global::Soenneker.Grafana.OpenApiClient.Models.Annotation&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,6 +85,7 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Grafana.OpenApiClient.Models.ErrorResponseBody.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
@@ -181,9 +183,6 @@ namespace Soenneker.Grafana.OpenApiClient.Annotations
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AnnotationsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Find annotations for a specified alert rule by its ID.deprecated: AlertID is deprecated and will be removed in future versions. Please use AlertUID instead.</summary>
-            [QueryParameter("alertId")]
-            public long? AlertId { get; set; }
             /// <summary>Find annotations for a specified alert rule by its UID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
