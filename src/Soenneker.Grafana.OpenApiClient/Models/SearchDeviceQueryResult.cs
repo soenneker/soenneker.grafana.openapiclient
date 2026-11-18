@@ -71,7 +71,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "devices", n => { Devices = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDto>(global::Soenneker.Grafana.OpenApiClient.Models.DeviceSearchHitDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "page", n => { Page = n.GetLongValue(); } },

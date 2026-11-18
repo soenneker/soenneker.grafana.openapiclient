@@ -105,7 +105,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "dashboard", n => { Dashboard = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.SaveDashboardCommandDashboard>(global::Soenneker.Grafana.OpenApiClient.Models.SaveDashboardCommandDashboard.CreateFromDiscriminatorValue); } },
                 { "folderId", n => { FolderId = n.GetLongValue(); } },

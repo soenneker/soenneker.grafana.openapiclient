@@ -182,7 +182,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "accessControl", n => { AccessControl = n.GetObjectValue<global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDtoAccessControlProperty>(global::Soenneker.Grafana.OpenApiClient.Models.UserSearchHitDtoAccessControlProperty.CreateFromDiscriminatorValue); } },
                 { "authLabels", n => { AuthLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

@@ -9,6 +9,7 @@ using Soenneker.Grafana.OpenApiClient.Dashboards.Interpolate;
 using Soenneker.Grafana.OpenApiClient.Dashboards.PublicDashboards;
 using Soenneker.Grafana.OpenApiClient.Dashboards.Tags;
 using Soenneker.Grafana.OpenApiClient.Dashboards.Uid;
+using Soenneker.Grafana.OpenApiClient.Dashboards.Variables;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -58,6 +59,11 @@ namespace Soenneker.Grafana.OpenApiClient.Dashboards
         public global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.UidRequestBuilder Uid
         {
             get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Uid.UidRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The variables property</summary>
+        public global::Soenneker.Grafana.OpenApiClient.Dashboards.Variables.VariablesRequestBuilder Variables
+        {
+            get => new global::Soenneker.Grafana.OpenApiClient.Dashboards.Variables.VariablesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Grafana.OpenApiClient.Dashboards.DashboardsRequestBuilder"/> and sets the default values.

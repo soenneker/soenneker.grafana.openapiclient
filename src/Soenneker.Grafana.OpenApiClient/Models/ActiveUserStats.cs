@@ -64,7 +64,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "active_admins_and_editors", n => { ActiveAdminsAndEditors = n.GetLongValue(); } },
                 { "active_anonymous_devices", n => { ActiveAnonymousDevices = n.GetLongValue(); } },

@@ -97,7 +97,7 @@ namespace Soenneker.Grafana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "apiVersion", n => { ApiVersion = n.GetLongValue(); } },
                 { "contactPoints", n => { ContactPoints = n.GetCollectionOfObjectValues<global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport>(global::Soenneker.Grafana.OpenApiClient.Models.ContactPointExport.CreateFromDiscriminatorValue)?.AsList(); } },
