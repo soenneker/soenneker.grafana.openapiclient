@@ -41,7 +41,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/org/users{?limit*,query*}", pathParameters)
+        public UsersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/org/users{?limit*,query*,userId*,userUid*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/org/users{?limit*,query*}", rawUrl)
+        public UsersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/org/users{?limit*,query*,userId*,userUid*}", rawUrl)
         {
         }
         /// <summary>
@@ -185,6 +185,19 @@ namespace Soenneker.Grafana.OpenApiClient.Org.Users
             [QueryParameter("query")]
             public string Query { get; set; }
             #pragma warning restore CS1591
+#endif
+            /// <summary>Filter by the exact numerical user ID within the current organization.</summary>
+            [QueryParameter("userId")]
+            public long? UserId { get; set; }
+            /// <summary>Filter by the exact user UID within the current organization.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("userUid")]
+            public string? UserUid { get; set; }
+#nullable restore
+#else
+            [QueryParameter("userUid")]
+            public string UserUid { get; set; }
 #endif
         }
     }

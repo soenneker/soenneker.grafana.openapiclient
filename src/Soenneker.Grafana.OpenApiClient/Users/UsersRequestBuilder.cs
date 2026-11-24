@@ -33,7 +33,7 @@ namespace Soenneker.Grafana.OpenApiClient.Users
         /// <summary>Gets an item from the Soenneker.Grafana.OpenApiClient.users.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUserItemRequestBuilder"/></returns>
-        public global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUserItemRequestBuilder this[long position]
+        public global::Soenneker.Grafana.OpenApiClient.Users.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
